@@ -3,10 +3,13 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(10px);
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-
+	@include media-breakpoint-up(xxl) {
+		--bs-gutter-x: 20px;
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
@@ -18,8 +21,37 @@
 		padding: 0;
 	}
 	a{
+		position: relative;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		text-transform: uppercase;
+		color: $body-color;
+		text-decoration: none;
+		padding: 1.1875rem 9px;
+		font-size: 15px;
+		@include media-breakpoint-up(xxl) {
+			padding: rem(19) 20px;
+			font-size: 16px;
+		}
+		@media (min-width: 1600px) {
+			padding: rem(19) 29px;
+		}
+		&::before {
+			@include mt;
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 5px;
+			background-color: transparent;
+			border-radius: 2px;
+		}
+		&:hover {
+			&::before {
+				background-color: $secondary;
+			}
+		}
 	}
 }
 
@@ -27,7 +59,7 @@
 
 .toggle-menu-mobile {
 	--h: #{em(2)};
-	--color: #{$primary};
+	--color: #{#101010};
 	--position: calc(var(--h) * 2);
 	&.on span {
 		--color: transparent;
@@ -38,20 +70,22 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	height: calc(var(--h)* 6);
 	position: relative; 
 	font-size: 32px;
-	width: 1em;
+	width: rem(42);
 	cursor: pointer;
 	span:after,
 	span:before {
 		content: "";
 		position: absolute;
 		left: 0;
+		border-radius: 2px;
 	} 
 	span {
 		@include a-cent(y);
 		display: block;
+		border-radius: 2px;
 	}
 
 	span:before { 
@@ -67,7 +101,7 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: rem(42);
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;

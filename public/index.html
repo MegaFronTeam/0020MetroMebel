@@ -2,10 +2,27 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>тест dffsdf dfsdтест 2222</title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=480,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 480 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=480,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
@@ -13,47 +30,147 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<nav>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">каталог продукции</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">акции</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">готовые решения</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">услуги</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">доставка и оплата</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покупателям</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">компания</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="container">
-						<div class="row">
-							<div class="col order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="container-fluid">
+					<div class="header__inner">
+						<!-- start topLine-->
+						<div class="topLine section" id="topLine">
+							<div class="topLine__wrap">
+								<div class="topLine__row row">
+									<div class="col col-md-auto order-md-1 order-xl-1">
+										<div class="topLine__city">Москва
 										</div>
-										<nav>
-											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-											</ul>
-										</nav>
+									</div>
+									<div class="col-auto col-xl order-md-3 order-xl-2 d-none d-md-block">
+										<div class="topLine__text text-xl-center">Приём заказов по телефону: <span>Пн-Чт: 8:00 - 18:00. </span><span>Пн: 8:00-17:00</span>
+										</div>
+									</div>
+									<div class="col col-xl-auto order-md-2 order-xl-3 d-none d-md-block">
+										<div class="topLine__text text-center text-xl-left">ул. Стахановская, д.6 стр. 9
+										</div>
+									</div>
+									<div class="col-auto order-md-4 order-xl-4">
+										<a class="topLine__mail" href="mailto:msk+166727754@metrommebel.ru">
+											<svg class="icon icon-mail ">
+												<use xlink:href="img/svg/sprite.svg#mail"></use>
+											</svg><span>msk+166727754@metrommebel.ru</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
+						<!-- end topLine-->
+						<!-- start top-nav-->
+						<div class="top-nav block-with-lazy">
+							<div class="top-nav__row row">
+								<div class="col-6 col-lg-auto order-1 order-lg-1">
+									<a class="top-nav__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
+										<div class="top-nav__text">Продажа металлической мебели и оборудования для бизнеса и дома
+										</div>
+									</a>
+								</div>
+								<div class="col col-lg-12 col-xxl-auto order-4 order-lg-last order-xxl-2 ms-xxl-auto">
+									<div class="top-nav__search">
+										<div class="top-nav__hidden">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</div>
+										<form>
+											<input type="text" placeholder="Поиск по каталогу"/>
+											<button type="submit"> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-6 col-lg-auto order-2 order-lg-3 ms-auto">
+									<div class="top-nav__call-back">
+										<a class="top-nav__tel top-nav__tel--gray" href="tel:+74951722624">+ 7 (495) 172-26-24
+										</a>
+										<a class="top-nav__tel" href="tel:88005558141">&nbsp;&nbsp;&nbsp;&nbsp;8 (800) 555-81-41
+										</a>
+										<a class="top-nav__modal-call d-none d-sm-block" href="#">Заказать обратный звонок
+										</a>
+									</div>
+								</div>
+								<div class="col-auto order-5 order-lg-4">
+									<div class="top-nav__links">
+										<a class="top-nav__link" href="#">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg>
+										</a>
+										<a class="top-nav__link" href="#">
+											<svg class="icon icon-diagram ">
+												<use xlink:href="img/svg/sprite.svg#diagram"></use>
+											</svg>
+										</a>
+										<a class="top-nav__link active" href="#">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+											<div class="top-nav__counter">3
+											</div>
+										</a>
+										<a class="top-nav__link" href="#">
+											<svg class="icon icon-person ">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="col-auto d-lg-none order-3 order-lg-5">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+								</div>
+							</div>
+							<div class="top-nav__menu-row row">
+								<div class="col-12 order-lg-0 order-last">
+									<div class="menu-mobile menu-mobile--js">
+										<div class="menu-mobile__inner">
+											<nav>
+												<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">каталог продукции</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">акции</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">готовые решения</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">услуги</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">доставка и оплата</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покупателям</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">компания</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">контакты</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- end top-nav-->
 					</div>
 				</div>
-				<!-- end top-nav-->
-				<!-- start topLine-->
-				<div class="topLine section" id="topLine">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>topLine</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end topLine-->
 			</header>
 			<!-- end header-->
 			<main>
@@ -67,205 +184,39 @@
 					</div>
 				</div>
 				<!-- end headerBlock-->
-				<!-- start sCatalog-->
-				<div class="sCatalog section">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCatalog</h2>
-							<p>Выкупаем проблемные автомобили в день обращения</p>
-						</div>
-						<div class="sCatalog__row row">
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-1.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
+				<!-- start sAdvantages-->
+				<section class="sAdvantages section" id="sAdvantages">
+					<div class="sAdvantages__container container-fluid container-lg"><img class="bg" src="img/sAdvantages-img-1.png" alt="" loading="lazy"/>
+						<div class="sAdvantages__row row">
+							<div class="col-xxl-auto ms-auto">
+								<div class="sAdvantages__content">
+									<div class="sAdvantages__vertical">METROMMEBEL
 									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-2.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-3.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-4.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-5.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-6.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-7.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-8.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end sCatalog-->
-				<!-- start sForm-->
-				<section class="sForm section" id="sForm">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sForm</h2>
-						</div>
-						<div class="sForm__row row">
-						</div>
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+									<p>Наша компания&nbsp;&mdash; <span>Метпроммебель занимается продажей качественной специализированной мебели </span> от&nbsp;популярных производителей, охватывая цикл&nbsp;&mdash; от задумки нового изделия до&nbsp;его доставки к&nbsp;покупателю.</p>
+									<p class="text-secondary">Работаем с&nbsp;физическими лицами, коммерческими и&nbsp;бюджетными организациями.</p>
+									<p>Наши изделия формируют удобные рабочие и&nbsp;общественные пространства, радуя своей функциональностью, надежностью и&nbsp;внешним видом. Все товары сертифицированы.</p><img class="img-1" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-2" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-3" src="img/svg/square.svg" alt="" loading="lazy"/>
 								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-							</form>
+							</div>
+							<div class="col-xxl-auto">
+								<ul>
+									<li><span>12</span>
+										<p>лет на рынке</p>
+									</li>
+									<li><span>990</span>
+										<p>довольных клиентов</p>
+									</li>
+									<li><span>1</span>
+										<p>год гарантии на&nbsp;всю продукцию</p>
+									</li>
+									<li><span>12</span>
+										<p>вся продукция сертифицирована</p>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
-				<!-- end sForm-->
-				<!-- start sContact-->
-				<section class="sContact section" id="sContact">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sContact</h2>
-						</div>
-						<div class="sContact__row row">
-						</div>
-					</div>
-				</section>
-				<!-- end sContact-->
+				<!-- end sAdvantages-->
 			</main>
 			<footer class="footer section">
 				<div class="container">

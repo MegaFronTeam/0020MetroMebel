@@ -1,9 +1,21 @@
 mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+		//- .container
+		+e.wrap
+			+e.row.row
+				.col.col-md-auto.order-md-1.order-xl-1
+					+e.city
+						| Москва
+						//- +icon('')
+				.col-auto.col-xl.order-md-3.order-xl-2.d-none.d-md-block
+					+e.text.text-xl-center Приём заказов по телефону: 
+						span Пн-Чт: 8:00 - 18:00. 
+						span Пн: 8:00-17:00
+				.col.col-xl-auto.order-md-2.order-xl-3.d-none.d-md-block
+					+e.text.text-center.text-xl-left ул. Стахановская, д.6 стр. 9
+				.col-auto.order-md-4.order-xl-4
+					+e.mail(href="mailto:msk+166727754@metrommebel.ru")
+						+icon('mail')
+						span msk+166727754@metrommebel.ru
 	// end topLine

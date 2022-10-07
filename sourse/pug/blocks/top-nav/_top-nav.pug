@@ -11,7 +11,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -20,14 +20,48 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+		//- .container
+		+e.row.row
+			.col-6.col-lg-auto.order-1.order-lg-1
+				+e.logo(href="#")
+					+img('img/logo.png')
+					+e.text Продажа металлической мебели и оборудования для бизнеса и дома
+			//- .col-auto
+			.col.col-lg-12.col-xxl-auto.order-4.order-lg-last.order-xxl-2.ms-xxl-auto
+				+e.search
+					+e.hidden
+						+icon('search')
+					form
+						input(type="text" placeholder='Поиск по каталогу')
+						button(type="submit") 
+							+icon('search')
+			.col-6.col-lg-auto.order-2.order-lg-3.ms-auto
+				+e.call-back
+					+e.tel--gray(href="tel:+74951722624") + 7 (495) 172-26-24
+					+e.tel(href="tel:88005558141") &nbsp;&nbsp;&nbsp;&nbsp;8 (800) 555-81-41
+					+e.modal-call(href='#').d-none.d-sm-block Заказать обратный звонок
+			.col-auto.order-5.order-lg-4
+				+e.links
+					+e.link(href="#")
+						//- +img('img/svg/heart.svg')
+						+icon('like')
+					+e.link(href="#")
+						//- +img('img/svg/diagram.svg')
+						+icon('diagram')
+					+e.link.active(href="#")
+						//- +img('img/svg/basket.svg')
+						+icon('cart')
+						+e.counter 3
+					+e.link(href="#")
+						//- +img('img/svg/user.svg')
+						+icon('person')
+			.col-auto.d-lg-none.order-3.order-lg-5
+				+menu-toggle()
+		+e.menu-row.row
+			.col-12.order-lg-0.order-last
+				//- +menu-toggle()
+				.menu-mobile.menu-mobile--js
+					.menu-mobile__inner
+						//- +menu-toggle()
+						+mnu()
 	// end top-nav
