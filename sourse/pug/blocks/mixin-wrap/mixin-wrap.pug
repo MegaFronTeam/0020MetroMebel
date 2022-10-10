@@ -13,7 +13,7 @@ include components/ddgroup.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('chevron-right')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 		+icon('chevron-right')
 //- /arrow for swiper-slider
@@ -45,3 +45,13 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin headline(text, all)
+	+b.headline
+		+e.title
+			span
+			.h4!= text
+		if all
+			+e.showmore(href="#")
+				| весь каталог
+				+icon('arrow-right')

@@ -390,6 +390,16 @@ function eventHandler() {
 	});
 
 	// modal window
+	let defSlidersWraps = document.querySelectorAll('.default-slider-wrap');
+	defSlidersWraps.forEach(defSlidersWrap => {
+		const defaultSwiper = new Swiper(defSlidersWrap.querySelector('.default-slider'), {
+			slidesPerView: 'auto',
+			navigation: {
+				nextEl: defSlidersWrap.querySelector('.swiper-button-next'),
+				prevEl: defSlidersWrap.querySelector('.swiper-button-prev'),
+			},
+		});
+	});
 
 };
 if (document.readyState !== 'loading') {

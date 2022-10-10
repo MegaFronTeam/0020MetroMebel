@@ -1,0 +1,15 @@
+mixin sPopularManufacturers(data)
+	// start sPopularManufacturers
+	+b.SECTION.sPopularManufacturers.section#sPopularManufacturers&attributes(attributes)
+		.container
+			+headline('Популярные производители')
+			+e.slider-wrapper.default-slider-wrap
+				+e.slider.default-slider
+					.swiper-wrapper
+						mixin item()
+							+e.slide.swiper-slide
+								+img('img/sPopularManufacturers-img-1.png')
+						-for(let i=0; i<10; i++)
+							+item
+				+arrow()
+	// end sPopularManufacturers

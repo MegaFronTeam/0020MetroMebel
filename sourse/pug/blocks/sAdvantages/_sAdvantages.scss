@@ -180,6 +180,19 @@
 					bottom: rem(24);
 				}
 			}
+			&.dot {
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					background-color: $gray-900;
+					right: 54px;
+    			top: -62px;
+				}
+			}
 		}
 		p {
 			font-size: rem(14);

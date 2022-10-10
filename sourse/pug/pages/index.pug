@@ -14,6 +14,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sPopularManufacturers/_sPopularManufacturers.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -34,7 +36,8 @@ block pagecontent
 	main
 		+headerBlock 
 		+sAdvantages
-		
+		+sPopular
+		+sPopularManufacturers
 	+footer()
       
 
