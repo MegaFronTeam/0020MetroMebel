@@ -1,9 +1,16 @@
 
-	// start .sForm
-	.sForm {
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .sForm
+.sForm {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(53)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(88)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(52)};
+		--sPB: #{rem(120)};
+	}
 	&__container {
 		@include media-breakpoint-down(md) {
 			padding: 0;
@@ -32,7 +39,6 @@
 		position: relative;
 		background-color: $gray-900;
 		padding: rem(87) rem(87);
-		margin-bottom: rem(54);
 		z-index: 1;
 		@include media-breakpoint-up(md) {
 			padding: rem(111) rem(175) rem(68) ;
