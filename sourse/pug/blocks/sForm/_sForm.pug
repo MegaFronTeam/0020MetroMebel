@@ -1,13 +1,18 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
+		+e.container.container-fluid.container-lg
 			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
+				.col-xl-5.d-none.d-xl-block
+				.col-xl-7
+					+form-wrap
+						+e.vertical METROMMEBEL
+						p Будте всегда в курсе. #[span Подпишитесь на нашу рассылку.] Вас ждут новинки, скидки, предложения!
+						+input("Ваше Имя",'text')
+						+input("Ваш email",'text')
+						+e.policy *Нажимая кнопку, вы даете согласие на обработку персональных данных
+						+e.btn.btn(type='sumbit') Подписаться
+						+img('img/svg/square.svg').img-1
+						+img('img/svg/square.svg').img-2
+						+img('img/svg/square.svg').img-3
 	// end sForm

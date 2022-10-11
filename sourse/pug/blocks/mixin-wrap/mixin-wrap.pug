@@ -25,9 +25,9 @@ mixin ie11()
 
 mixin addblock()
 	+b.addBlock
-		+e.btn--minus(type="button")
-		input(type="text" value="1")
 		+e.btn--plus(type="button")
+		input(type="text" value="1")
+		+e.btn--minus(type="button")
 
 
 
@@ -46,12 +46,50 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin headline(text, all)
+mixin headline(text, all, innertext)
 	+b.headline
 		+e.title
-			span
-			.h4!= text
+			+e.plus
+			.h4!= text 
+				span!= innertext
 		if all
 			+e.showmore(href="#")
 				| весь каталог
 				+icon('arrow-right')
+
+mixin card()
+	+b.card
+		+e.aside--left
+		+e.aside--right
+			+e.links
+				+e.link(href="#")
+					+icon('like')
+				+e.link(href="#")
+					+icon('diagram')
+				+e.link(href="#")
+					+icon('cart')
+		+e.content
+			+e.img-slider--js
+				.swiper-wrapper
+					-for(i = 0; i < 4; i++)
+						+e.slide.swiper-slide
+							+e.img-wrap
+								.img-wrap-center
+									+img('img/wardrobe.png')
+				.swiper-pagination
+			+e.title Цветной четырехсекционный шкаф для одежды
+			+img('img/stars.png').stars
+			ul
+				mixin li(title, text)
+					li
+						span!= title
+						span.doted
+						span!= text
+				+li('Высота', '1860мм')
+				+li('Ширина', '600мм')
+				+li('Глубина', '500мм')
+				+li('Цвет', 'Серый')
+			+e.price 8 000 руб.
+			+e.footer
+				+e.btn.btn.btn-secondary Заказать
+				+addblock

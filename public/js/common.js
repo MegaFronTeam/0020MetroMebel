@@ -401,6 +401,27 @@ function eventHandler() {
 		});
 	});
 
+	const cardtSwiper = new Swiper('.card__img-slider--js', {
+		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
+	});
+
+	$('.zIndex').hover(function() {
+		if(window.innerWidth >= 992) {
+			$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
+		}
+	}, function() {
+		if(window.innerWidth >= 992) {
+			$(this).removeClass('zIndexHover');
+			setTimeout(() => {
+				$(this).removeClass('zIndexHoverImportant');
+			}, 360);
+		}
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

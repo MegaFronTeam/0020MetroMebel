@@ -1,0 +1,110 @@
+// start .sSlider
+.sSlider {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(52)};
+	// --sTPB: #{rem()};
+	&--bg {
+		background-color: rgba($color: #eaeaea, $alpha: .09);
+	}
+	@include media-breakpoint-up(md) {
+		// --sPT: #{rem()};
+		// --sPB: #{rem()};
+		--sPT: #{rem(52)};
+		--sPB: #{rem(84)};
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	.container {
+		position: relative;
+	}
+	.img-1, .img-2, .img-3 {
+		position: absolute;
+		opacity: 0.14;
+		z-index: -1;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			max-width: rem(134);
+		}
+	}
+	.img-1 {
+    top: 70px;
+    left: 20px;
+		@include media-breakpoint-up(lg) { 
+			left: -511px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		@include media-breakpoint-up(md) {
+			top: 50px;
+			left: 20px;
+		}
+	}
+	.img-2 {
+		top: 290px;
+    left: 30px;
+		@include media-breakpoint-up(lg) {
+			bottom: 0%;
+			left: -295px;
+		}
+		@include media-breakpoint-up(md) {
+			top: 500px;
+    	left: 40px;
+		}
+	}
+	.img-3 {
+		@include media-breakpoint-up(lg) {
+			right: -610px;
+			top: 20%;
+		}
+		@include media-breakpoint-down(sm) {
+			left: 20px;
+			top: 81%;
+		}
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slider-wrapper {
+		@include media-breakpoint-down(md) {
+			margin-left: rem(39);
+		}
+	}
+	&__slider {
+		padding: rem(20) 0;
+		margin: rem(-20) rem(-16);
+		overflow: hidden;
+	}
+	&__slide {
+		max-width: max-content;
+		height: auto;
+
+		margin: 0 rem(16);
+	}
+	.swiper-button-hand {
+		top: 110px;
+		@include media-breakpoint-up(lg) {
+			--swiperArrowPosition: -81px;
+		}
+		&-prev {
+			left: calc(var(--swiperArrowPosition) - rem(39));
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSlider

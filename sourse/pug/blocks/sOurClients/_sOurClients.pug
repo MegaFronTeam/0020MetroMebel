@@ -1,0 +1,17 @@
+mixin sOurClients(data)
+	// start sOurClients
+	+b.SECTION.sOurClients.section#sOurClients&attributes(attributes)
+		.container
+			+headline('Наши клиенты')
+			+e.row.row
+				mixin item(i)
+					+e.col.col-auto
+						+e.item
+							+img(`img/sOurClients-img-${i}.png`)
+				-for(let i =0; i < 2; i++)
+					+item(1)
+					+item(2)
+					+item(3)
+					+item(1)
+					+item(2)
+	// end sOurClients

@@ -1,0 +1,17 @@
+mixin sSlider(images, title, subtitle)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			if images
+				+img('img/svg/square.svg').img-1
+				+img('img/svg/square.svg').img-2
+				+img('img/svg/square.svg').img-3
+			+headline(title, '', subtitle)
+			+e.slider-wrapper.default-slider-wrap
+				+e.slider.default-slider
+					.swiper-wrapper
+						-for(let i = 0; i < 6; i++)
+							+e.slide.swiper-slide.zIndex
+								+card()
+				+arrow()
+	// end sSlider

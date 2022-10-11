@@ -522,3 +522,20 @@ iframe {
 	cursor: pointer;
 }
 
+.img-wrap-center {
+	@include a-cent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.btn-secondary {
+	--bs-btn-color: #fff;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-active-color: #fff;
+	--bs-btn-disabled-color: #fff;
+}

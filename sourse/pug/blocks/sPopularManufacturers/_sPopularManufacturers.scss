@@ -1,19 +1,31 @@
 // start .sPopularManufacturers
 .sPopularManufacturers {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(50)};
+	--sPB: #{rem(38)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(70)};
+		--sPB: #{rem(43)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(100)};
+		--sPB: #{rem(75)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
-	.headline {
-		@include media-breakpoint-up(md) {
-			margin-left: rem(158);
-		}
-	}
+	// .headline {
+	// 	@include media-breakpoint-up(md) {
+	// 		margin-left: rem(158);
+	// 	}
+	// }
 	&__slider-wrapper {
+		margin-left: rem(36);
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+		}
 	}
 	&__slider {
 		--bs-gutter-x: #{rem(70)};
