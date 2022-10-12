@@ -2,8 +2,15 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		+e.container.container-fluid.container-lg
+			+img('img/svg/square.svg').square-1
+			+img('img/svg/square.svg').square-2
+			+img('img/svg/square.svg').square-3
 			+e.row.row
-				.col-xl-5.d-none.d-xl-block
+				+e.col.col-xl-5.d-none.d-xl-block
+					+e.bg.bg-wrap
+						+e.img-wrap.picture-bg
+							img(src="img/sForm-bg-1.png", alt="").bg
+					+img('img/sForm-img-1.png').img
 				.col-xl-7
 					+form-wrap
 						+e.vertical METROMMEBEL

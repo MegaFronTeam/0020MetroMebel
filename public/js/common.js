@@ -422,6 +422,31 @@ function eventHandler() {
 		}
 	});
 
+	let mainSl = {
+		slidesPerView: 1,
+		simulateTouch: false,
+		effect: 'fade',
+		loop: true,
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	}
+
+	const headerBlockMiddleSwiper = new Swiper('.headerBlock__swiper-middle--js', {
+		...mainSl,
+	});
+	const headerBlockTextSwiper = new Swiper('.headerBlock__swiper-text--js', {
+		spaceBetween: 50,
+		...mainSl,
+	});
+	const headerBlockBgSwiper = new Swiper('.headerBlock__swiper-bg--js', {
+		...mainSl,
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

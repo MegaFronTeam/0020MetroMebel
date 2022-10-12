@@ -1,9 +1,79 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
+		+e.container.container-fluid.container-lg
+			+e.row.row
+				.col-12.col-md-auto
+					+e.logo-wrap
+						+img('img/logo.png')
+					+e.caption 2009-2022, metrommebel.ru (МетПромМебель) - металлическая мебель, металлические шкафы и стеллажи
+					+img('img/ya-feedback.png').ya
+				.col-6.col-md-auto
+					+e.title Каталог
+					ul
+						li
+							a(href="#") Металлические шкафы
+						li
+							a(href="#") Металлические стеллажи
+						li
+							a(href="#") Верстаки
+						li
+							a(href="#") Мебель для раздевалок
+						li
+							a(href="#") Мебель для производства и склада
+						li
+							a(href="#") Почтовые ящики
+						li
+							a(href="#") Медицинская мебель
+						li
+							a(href="#") Пищевое оборудование
+						li
+							a(href="#") Офисная мебель
+				.col-6.col-md-auto
+					+e.title полезная информация
+					ul
+						li
+							a(href="#") Доставка и оплата
+						li
+							a(href="#") Обмен и возврат
+						li
+							a(href="#") Гарантия
+						li
+							a(href="#") Вопросы-ответы
+						li
+							a(href="#") Новости
+						li
+							a(href="#") Контакты
+						li
+							a(href="#") Карта сайта
+				.col-12.col-md
+					+e.inner-row.row
+						.col
+							+e.title контакты
+							+e.tel(href="tel:74951722624") 7 (495) 172-26-24
+							+e.tel(href="tel:88005558141") 8 (800) 555-81-41
+							+soc()
+								+item-sos('vk')
+								+item-sos('instagram')
+								+item-sos('fb')
+								+item-sos('ok')
+						.col-auto
+							+e.info(href="#")
+								+icon('mail')
+								| msk+166727754@metrommebel.ru
+							+e.info
+								+icon('mail')
+								| Москва, ул. Стахановская, д.6&nbsp;стр.&nbsp;9
+							+e.info
+								+icon('mail')
+								| Режим работы:<br>Пн-Чт: 8:00 - 18:00<br>Пт: 8:00-17:00
+						.col-12
+							+b.form-wrap
+								+input('Ваш email', 'email')
+								button.btn.btn-primary(type="submit") Подписаться на рассылку
+			+e.footer-row.row
 				.col
-					
-				.col Footer
-				.col
+					+e.text Информация на&nbsp;сайте не&nbsp;является публичной офертой. Производитель оставляет за&nbsp;собой право вносить изменения в&nbsp;конструкцию изделия, не&nbsp;ухудшающие его потребительсткие свойства. Копирование материалов без письменного разрешения запрещено.
 				.col-auto
+					+img('img/master-card.png')
+				.col-auto
+					+img('img/visa-card.png')

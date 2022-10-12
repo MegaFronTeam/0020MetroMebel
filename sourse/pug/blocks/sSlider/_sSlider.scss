@@ -83,7 +83,9 @@
 	&__slider {
 		padding: rem(20) 0;
 		margin: rem(-20) rem(-16);
-		overflow: hidden;
+		// @include media-breakpoint-up(xl) {
+		// 	overflow: hidden;
+		// }
 	}
 	&__slide {
 		max-width: max-content;

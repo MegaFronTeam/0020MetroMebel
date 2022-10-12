@@ -1,9 +1,15 @@
 
 // start .header
 .header {
+	position: relative;
+	z-index: 10;
 	.container-fluid {
 		@include media-breakpoint-up(xxl) {
 			max-width: rem(1596);
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 		@include media-breakpoint-down(xxl) {
 			padding: 0;
