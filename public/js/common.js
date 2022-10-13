@@ -446,6 +446,17 @@ function eventHandler() {
 	const headerBlockBgSwiper = new Swiper('.headerBlock__swiper-bg--js', {
 		...mainSl,
 	});
+	const headerBlockImgSwiper = new Swiper('.headerBlock__swiper-img--js', {
+		...mainSl,
+	});
+
+	const sProdCardSwiper = new Swiper('.sProdCard__slider--js', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 
 };
 if (document.readyState !== 'loading') {

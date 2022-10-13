@@ -62,7 +62,8 @@ mixin in-c(typ="checkbox", text, name= typ )
 		if block
 			block 
 		else
-			+e.SPAN.text.form-check-label= text
+			if text
+				+e.SPAN.text.form-check-label= text
  
 mixin add-file(n)
 	+b.add-file

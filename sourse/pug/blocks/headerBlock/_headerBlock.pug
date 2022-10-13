@@ -35,8 +35,11 @@ mixin headerBlock()
 								+icon('settings')
 								p Возможность отсрочки платежа
 				.col-md-6
-					+e.img-wrap
-						+img('img/header-img-1.png')
+					+e.swiper-img--js.swiper
+							.swiper-wrapper
+								.swiper-slide
+									+e.img-slide
+										+img('img/header-img-1.png')
 					+e.bg-wrap
 						+e.swiper-bg--js.swiper
 							.swiper-wrapper

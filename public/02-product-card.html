@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>Карточка товара</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=480,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -28,7 +28,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="prod-card">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -174,329 +174,334 @@
 			</header>
 			<!-- end header-->
 			<main>
-				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
+				<div class="page-head">
 					<div class="container">
-						<div class="headerBlock__swiper-middle headerBlock__swiper-middle--js swiper d-none d-md-block">
-							<div class="swiper-wrapper">
-								<div class="headerBlock__slide-middle swiper-slide">
-									<div class="headerBlock__text">Камера хранения для сумок на 20 ячеек
-									</div>
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg>
-								</div>
-								<div class="headerBlock__slide-middle swiper-slide">
-									<div class="headerBlock__text">Камера хранения для сумок на 20 ячеек
-									</div>
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg>
-								</div>
-								<div class="headerBlock__slide-middle swiper-slide">
-									<div class="headerBlock__text">Камера хранения для сумок на 20 ячеек
-									</div>
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="headerBlock__row row">
-							<div class="col-md-6">
-								<div class="headerBlock__swiper-text headerBlock__swiper-text--js swiper">
-									<div class="swiper-wrapper">
-										<div class="headerBlock__slide-txt swiper-slide">
-											<h1>металлическая мебель 0
-											</h1>
-											<p>Комплексная установка под ключ для вашего бизнеса!</p>
-										</div>
-										<div class="headerBlock__slide-txt swiper-slide">
-											<h1>металлическая мебель 1
-											</h1>
-											<p>Комплексная установка под ключ для вашего бизнеса!</p>
-										</div>
-										<div class="headerBlock__slide-txt swiper-slide">
-											<h1>металлическая мебель 2
-											</h1>
-											<p>Комплексная установка под ключ для вашего бизнеса!</p>
-										</div>
-									</div>
-								</div>
-								<div class="headerBlock__row-item row">
-									<div class="col-6">
-										<div class="headerBlock__item">
-											<svg class="icon icon-settings ">
-												<use xlink:href="img/svg/sprite.svg#settings"></use>
-											</svg>
-											<p>Монтаж и сборка под&nbsp;ключ</p>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="headerBlock__item">
-											<svg class="icon icon-track ">
-												<use xlink:href="img/svg/sprite.svg#track"></use>
-											</svg>
-											<p>Круглосуточная доставка по всей России</p>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="headerBlock__item">
-											<svg class="icon icon-discount ">
-												<use xlink:href="img/svg/sprite.svg#discount"></use>
-											</svg>
-											<p>Актуальные цены на сайте</p>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="headerBlock__item">
-											<svg class="icon icon-settings ">
-												<use xlink:href="img/svg/sprite.svg#settings"></use>
-											</svg>
-											<p>Возможность отсрочки платежа</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="headerBlock__swiper-img headerBlock__swiper-img--js swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="headerBlock__img-slide"><img src="img/header-img-1.png" alt="" loading="lazy"/>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="headerBlock__bg-wrap">
-									<div class="headerBlock__swiper-bg headerBlock__swiper-bg--js swiper">
-										<div class="swiper-wrapper">
-											<div class="headerBlock__slide-bg swiper-slide"><img src="img/header-bg-1.jpg"/>
-											</div>
-											<div class="headerBlock__slide-bg swiper-slide"><img src="img/header-bg-1.jpg"/>
-											</div>
-											<div class="headerBlock__slide-bg swiper-slide"><img src="img/header-bg-1.jpg"/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="headerBlock__swiper-wrapper d-none d-md-block">
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-						</div>
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Металлическая офисная мебель</span>
+										<meta itemprop="position" content="3"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Металлические офисные шкафы</span>
+										<meta itemprop="position" content="4"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Шкафы архивные металлические</span>
+										<meta itemprop="position" content="5"/></a></li>
+							</ol>
+						</nav>
+						<h1>Офисный архивный шкаф со стеклянными дверцами</h1>
 					</div>
 				</div>
-				<!-- end headerBlock-->
-				<!-- start sAdvantages-->
-				<section class="sAdvantages section" id="sAdvantages">
-					<div class="sAdvantages__container container-fluid container-lg"><img class="bg" src="img/sAdvantages-img-1.png" alt="" loading="lazy"/>
-						<div class="sAdvantages__row row">
-							<div class="col-xxl-auto ms-auto">
-								<div class="sAdvantages__content">
-									<div class="sAdvantages__vertical">METROMMEBEL
+				<!-- start sProdCard-->
+				<section class="sProdCard section" id="sProdCard">
+					<div class="container">
+						<div class="sProdCard__row row">
+							<div class="sProdCard__col col-xxl-auto">
+								<div class="sProdCard__swiper-wrap">
+									<div class="sProdCard__slider sProdCard__slider--js swiper">
+										<div class="swiper-wrapper">
+											<div class="sProdCard__slide swiper-slide">
+												<div class="sProdCard__img-wrap">
+													<div class="img-wrap-center"><img src="img/sProdCard-img-1.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+											</div>
+											<div class="sProdCard__slide swiper-slide">
+												<div class="sProdCard__img-wrap">
+													<div class="img-wrap-center"><img src="img/sProdCard-img-1.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+											</div>
+											<div class="sProdCard__slide swiper-slide">
+												<div class="sProdCard__img-wrap">
+													<div class="img-wrap-center"><img src="img/sProdCard-img-1.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<p>Наша компания&nbsp;&mdash; <span>Метпроммебель занимается продажей качественной специализированной мебели </span> от&nbsp;популярных производителей, охватывая цикл&nbsp;&mdash; от задумки нового изделия до&nbsp;его доставки к&nbsp;покупателю.</p>
-									<p class="text-secondary">Работаем с&nbsp;физическими лицами, коммерческими и&nbsp;бюджетными организациями.</p>
-									<p>Наши изделия формируют удобные рабочие и&nbsp;общественные пространства, радуя своей функциональностью, надежностью и&nbsp;внешним видом. Все товары сертифицированы.</p><img class="img-1" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-2" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-3" src="img/svg/square.svg" alt="" loading="lazy"/>
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+									<div class="sProdCard__links">
+										<a class="sProdCard__link" href="#">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg>
+										</a>
+										<a class="sProdCard__link" href="#">
+											<svg class="icon icon-diagram ">
+												<use xlink:href="img/svg/sprite.svg#diagram"></use>
+											</svg>
+										</a>
+										<a class="sProdCard__link" href="#">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</div>
-							<div class="col-xxl-auto">
-								<ul>
-									<li><span>12</span>
-										<p>лет на рынке</p>
-									</li>
-									<li><span>990</span>
-										<p>довольных клиентов</p>
-									</li>
-									<li><span>1</span>
-										<p>год гарантии на&nbsp;всю продукцию</p>
-									</li>
-									<li><span class="dot"></span>
-										<p>вся продукция сертифицирована</p>
-									</li>
-								</ul>
+							<div class="col-xxl">
+								<div class="row">
+									<div class="col">
+										<div class="sProdCard__head-wrap"><img src="img/stars.png" alt="" loading="lazy"/>
+											<div class="sProdCard__creator">
+												 Производитель:<img src="img/logo.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="sProdCard__text-wrap">
+											<p>Габариты: ВxШxГ в мм / 1860x500x530</p>
+											<p>Тип: сборный</p>
+											<p>Количество человек: 1</p>
+										</div>
+									</div>
+								</div>
+								<div class="sProdCard__main-row row">
+									<div class="col-md">
+										<div class="sProdCard__headline">
+											<h4>29 010 руб.</h4>
+											<div class="sProdCard__has">Есть в наличии
+											</div>
+										</div>
+										<div class="sProdCard__products">
+											<h6>Выберите товар:</h6>
+											<div class="sProdCard__radio-wrap">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 3</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 4</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 5</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 6</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 7</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="radio"/><span class="custom-input__count">Количество полок: 8</span><span class="custom-input__articul">Артикул: 21500</span>
+												</label>
+											</div>
+										</div>
+										<div class="sProdCard__accessories">
+											<h6>Аксессуары:</h6>
+											<div class="sProdCard__inner-row row">
+												<div class="col-12 col-sm">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="accessory" type="radio"/><span class="custom-input__text form-check-label">ВЛ-К Панель облицовочная к опоре</span>
+													</label>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__articul">
+														 Артикул: 21500
+														<div class="addBlock">
+															<button class="addBlock__btn addBlock__btn--plus" type="button">
+															</button>
+															<input type="text" value="1"/>
+															<button class="addBlock__btn addBlock__btn--minus" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__price">Цена: 10 500 руб.
+													</div>
+												</div>
+											</div>
+											<div class="sProdCard__inner-row row">
+												<div class="col-12 col-sm">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="accessory" type="radio"/><span class="custom-input__text form-check-label">ВЛ-К Панель облицовочная к опоре</span>
+													</label>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__articul">
+														 Артикул: 21500
+														<div class="addBlock">
+															<button class="addBlock__btn addBlock__btn--plus" type="button">
+															</button>
+															<input type="text" value="1"/>
+															<button class="addBlock__btn addBlock__btn--minus" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__price">Цена: 10 500 руб.
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sProdCard__choose-colors">
+											<h6>Выберите цвет:</h6>
+											<div class="sProdCard__colors-row row">
+												<div class="col-12 col-sm-auto">
+													<div class="sProdCard__color-head">ВЛ-К Панель облицовочная к опоре
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__colors">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #fedd51;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #fe7e37;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #ca1c18;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #80257f;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #346cb4;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #84c5be;"/>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" style="--bg: #31823c;"/>
+														</label>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="sProdCard__price">Цена: 10 500 руб.
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sProdCard__footer-row row">
+											<div class="col-auto">
+												<div class="sProdCard__btn btn btn-secondary">В корзину
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="addBlock">
+													<button class="addBlock__btn addBlock__btn--plus" type="button">
+													</button>
+													<input type="text" value="1"/>
+													<button class="addBlock__btn addBlock__btn--minus" type="button">
+													</button>
+												</div>
+											</div>
+											<div class="col-auto">
+												<a class="sProdCard__buy" href="#">Купить в 1 клик
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-auto">
+										<div class="sProdCard__head-row row">
+											<div class="col">
+												<a class="sProdCard__btn-dicount btn btn-primary" href="#">Запросить скидку
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="sProdCard__print" href="#">
+													<svg class="icon icon-print ">
+														<use xlink:href="img/svg/sprite.svg#print"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="sProdCard__delivery">
+											<h6>Доставка</h6>
+											<p>Доставка по Москве в пределах МКАД - <span>1 000 руб.</span></p>
+											<p>Доставка по&nbsp;Москве в&nbsp;пределах МКАД при заказе от&nbsp;10&nbsp;000&nbsp;руб.&nbsp;&mdash;<span>&nbsp;бесплатно</span></p>
+										</div>
+										<a class="sProdCard__calculate btn btn-outline-primary" href="#">Расчитать<br>стоимость доставки
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg>
+										</a>
+										<div class="sProdCard__payment">
+											<h6>Доставка</h6>
+											<p>
+												<svg class="icon icon-money ">
+													<use xlink:href="img/svg/sprite.svg#money"></use>
+												</svg>Наличные
+											</p>
+											<p>
+												<svg class="icon icon-money ">
+													<use xlink:href="img/svg/sprite.svg#money"></use>
+												</svg>Безналичные
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="sProdCard__advantages-row row">
+											<div class="col-6 col-md-auto">
+												<div class="sProdCard__item">
+													<svg class="icon icon-refund ">
+														<use xlink:href="img/svg/sprite.svg#refund"></use>
+													</svg>Гарантия<br>возврата
+												</div>
+											</div>
+											<div class="col-6 col-md-auto">
+												<div class="sProdCard__item">
+													<svg class="icon icon-track ">
+														<use xlink:href="img/svg/sprite.svg#track"></use>
+													</svg>Круглосуточная<br>доставка по всей России
+												</div>
+											</div>
+											<div class="col-6 col-md-auto">
+												<div class="sProdCard__item">
+													<svg class="icon icon-award ">
+														<use xlink:href="img/svg/sprite.svg#award"></use>
+													</svg>Товар<br>сертифицирован
+												</div>
+											</div>
+											<div class="col-6 col-md-auto">
+												<div class="sProdCard__item">
+													<svg class="icon icon-award ">
+														<use xlink:href="img/svg/sprite.svg#award"></use>
+													</svg>Возможность<br>отсрочки платежа
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sProdCard__footer-btn-row row">
+							<div class="col-6 col-md-auto">
+								<a class="sProdCard__footer-btn btn" href="#">Характеристики
+								</a>
+							</div>
+							<div class="col-6 col-md-auto">
+								<a class="sProdCard__footer-btn btn" href="#">Описание
+								</a>
+							</div>
+							<div class="col-6 col-md-auto">
+								<a class="sProdCard__footer-btn btn" href="#">Отзывы
+								</a>
+							</div>
+							<div class="col-6 col-md-auto">
+								<a class="sProdCard__footer-btn btn" href="#">Сертификат соответствия
+								</a>
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- end sAdvantages-->
-				<!-- start sPopular-->
-				<section class="sPopular section" id="sPopular">
-					<div class="container-fluid container-lg">
-						<div class="headline">
-							<div class="headline__title">
-								<div class="headline__plus">
-								</div>
-								<div class="h4">Популярные категории<span></span></div>
-							</div>
-							<a class="headline__showmore" href="#">весь каталог
-								<svg class="icon icon-arrow-right ">
-									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="sPopular__slider-wrapper default-slider-wrap">
-							<div class="sPopular__slider default-slider">
-								<div class="swiper-wrapper">
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">Шкафы металлические
-													</div>
-													<p>Сушильные шкафы<br>Для обуви шкафы<br>Для раздевалок шкафы<br>Для одежды шкафы<br>Для инструментов шкафы<br>Медицинские шкафы</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-1.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">металлические стеллажи
-													</div>
-													<p>Архивные стеллажи<br>Усиленные стеллажи<br>Серии МКФ стеллажи<br>Среднегрузовые стеллажи<br>Полочные стеллажи<br>Для одежды</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-2.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">верстаки
-													</div>
-													<p>Слесарные верстаки ВЛ-К<br>Верстаки ВЛ<br>Верстаки ВС<br>Столярные верстаки<br>Верстаки Эксперт и Мастер<br>Верстаки РМ</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-3.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">Мебель для раздевалок
-													</div>
-													<p>Сушильные шкафы<br>Для обуви шкафы<br>Для раздевалок шкафы<br>Скамейки для раздевалок<br>Замки для металлических шкафов</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-4.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">мебель для производства и склада
-													</div>
-													<p>Верстаки<br>Шкафы для одежды<br>Шкафы инструментальные<br>Оборудование для газовых баллонов<br>Грузовые тележки</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-5.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">почтовые ящики
-													</div>
-													<p>Для частных домов<br>В подъезд дома<br>Из нержавеющей стали<br>Деревянные<br>Ящики Базис<br>Ящики Базис Лайт</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-6.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">медицинская мебель
-													</div>
-													<p>Медицинские шкафы<br>Столы медицинские<br>Тележки медицинские<br>Кровати медицинские<br>Аптечки медицинские<br>Медицинские банкетки</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-7.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">пищевое оборудование
-													</div>
-													<p>Нейтральное оборудование<br>Вентиляционное оборудование<br>Оборудование для фастфуда<br>Тепловое оборудование<br>Готовые решения для бизнеса<br>Колеса для пищевого оборудования</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-8.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="sPopular__slide swiper-slide">
-											<a class="sPopular__item" href="#">
-												<div class="sPopular__content">
-													<div class="sPopular__title">офисная мебель
-													</div>
-													<p>Картотечные шкафы<br>Офисные шкафы<br>Офисные тумбы<br>Офисные столы<br>Сейфы<br>Стулья и табуретки</p>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-												<div class="sPopular__img-wrap"><img src="img/sPopular-img-9.png" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-								</div>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sPopular-->
+				<!-- end sProdCard-->
 				<!-- start sSlider-->
-				<section class="sSlider section sSlider sSlider--bg" id="sSlider">
-					<div class="container"><img class="img-1" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-2" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-3" src="img/svg/square.svg" alt="" loading="lazy"/>
+				<section class="sSlider section" id="sSlider">
+					<div class="container">
 						<div class="headline">
 							<div class="headline__title">
 								<div class="headline__plus">
 								</div>
-								<div class="h4">Лучшие предложения на<span>5 июня 2022</span></div>
+								<div class="h4">Похожие товары<span></span></div>
 							</div>
 						</div>
 						<div class="sSlider__slider-wrapper default-slider-wrap">
@@ -987,7 +992,7 @@
 							<div class="headline__title">
 								<div class="headline__plus">
 								</div>
-								<div class="h4">Распродажа<span>Новинки</span></div>
+								<div class="h4">Вы просматривали<span></span></div>
 							</div>
 						</div>
 						<div class="sSlider__slider-wrapper default-slider-wrap">
@@ -1471,38 +1476,149 @@
 					</div>
 				</section>
 				<!-- end sSlider-->
-				<!-- start sPopularManufacturers-->
-				<section class="sPopularManufacturers section" id="sPopularManufacturers">
-					<div class="container">
+				<!-- start sPopular-->
+				<section class="sPopular section" id="sPopular">
+					<div class="container-fluid container-lg">
 						<div class="headline">
 							<div class="headline__title">
 								<div class="headline__plus">
 								</div>
-								<div class="h4">Популярные производители<span></span></div>
+								<div class="h4">Популярные категории<span></span></div>
 							</div>
+							<a class="headline__showmore" href="#">весь каталог
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</a>
 						</div>
-						<div class="sPopularManufacturers__slider-wrapper default-slider-wrap">
-							<div class="sPopularManufacturers__slider default-slider">
+						<div class="sPopular__slider-wrapper default-slider-wrap">
+							<div class="sPopular__slider default-slider">
 								<div class="swiper-wrapper">
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">Шкафы металлические
+													</div>
+													<p>Сушильные шкафы<br>Для обуви шкафы<br>Для раздевалок шкафы<br>Для одежды шкафы<br>Для инструментов шкафы<br>Медицинские шкафы</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-1.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">металлические стеллажи
+													</div>
+													<p>Архивные стеллажи<br>Усиленные стеллажи<br>Серии МКФ стеллажи<br>Среднегрузовые стеллажи<br>Полочные стеллажи<br>Для одежды</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-2.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">верстаки
+													</div>
+													<p>Слесарные верстаки ВЛ-К<br>Верстаки ВЛ<br>Верстаки ВС<br>Столярные верстаки<br>Верстаки Эксперт и Мастер<br>Верстаки РМ</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-3.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">Мебель для раздевалок
+													</div>
+													<p>Сушильные шкафы<br>Для обуви шкафы<br>Для раздевалок шкафы<br>Скамейки для раздевалок<br>Замки для металлических шкафов</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-4.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">мебель для производства и склада
+													</div>
+													<p>Верстаки<br>Шкафы для одежды<br>Шкафы инструментальные<br>Оборудование для газовых баллонов<br>Грузовые тележки</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-5.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">почтовые ящики
+													</div>
+													<p>Для частных домов<br>В подъезд дома<br>Из нержавеющей стали<br>Деревянные<br>Ящики Базис<br>Ящики Базис Лайт</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-6.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">медицинская мебель
+													</div>
+													<p>Медицинские шкафы<br>Столы медицинские<br>Тележки медицинские<br>Кровати медицинские<br>Аптечки медицинские<br>Медицинские банкетки</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-7.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">пищевое оборудование
+													</div>
+													<p>Нейтральное оборудование<br>Вентиляционное оборудование<br>Оборудование для фастфуда<br>Тепловое оборудование<br>Готовые решения для бизнеса<br>Колеса для пищевого оборудования</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-8.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
-										</div>
-										<div class="sPopularManufacturers__slide swiper-slide"><img src="img/sPopularManufacturers-img-1.png" alt="" loading="lazy"/>
+										<div class="sPopular__slide swiper-slide">
+											<a class="sPopular__item" href="#">
+												<div class="sPopular__content">
+													<div class="sPopular__title">офисная мебель
+													</div>
+													<p>Картотечные шкафы<br>Офисные шкафы<br>Офисные тумбы<br>Офисные столы<br>Сейфы<br>Стулья и табуретки</p>
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="sPopular__img-wrap"><img src="img/sPopular-img-9.png" alt="" loading="lazy"/>
+												</div>
+											</a>
 										</div>
 								</div>
 							</div>
@@ -1519,95 +1635,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- end sPopularManufacturers-->
-				<!-- start sOurClients-->
-				<section class="sOurClients section" id="sOurClients">
-					<div class="container">
-						<div class="headline">
-							<div class="headline__title">
-								<div class="headline__plus">
-								</div>
-								<div class="h4">Наши клиенты<span></span></div>
-							</div>
-						</div>
-						<div class="sOurClients__row row">
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-1.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-2.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-3.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-1.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-2.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-1.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-2.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-3.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-1.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-							<div class="sOurClients__col col-auto">
-								<div class="sOurClients__item"><img src="img/sOurClients-img-2.png" alt="" loading="lazy"/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sOurClients-->
-				<!-- start sForm-->
-				<section class="sForm section" id="sForm">
-					<div class="sForm__container container-fluid container-lg"><img class="square-1" src="img/svg/square.svg" alt="" loading="lazy"/><img class="square-2" src="img/svg/square.svg" alt="" loading="lazy"/><img class="square-3" src="img/svg/square.svg" alt="" loading="lazy"/>
-						<div class="sForm__row row">
-							<div class="sForm__col col-xl-5 d-none d-xl-block">
-								<div class="sForm__bg bg-wrap">
-									<div class="sForm__img-wrap picture-bg"><img class="bg" src="img/sForm-bg-1.png" alt=""/>
-									</div>
-								</div><img class="img" src="img/sForm-img-1.png" alt="" loading="lazy"/>
-							</div>
-							<div class="col-xl-7">
-								<div class="form-wrap">
-									<form>
-										<div class="form-wrap__vertical">METROMMEBEL
-										</div>
-										<p>Будте всегда в курсе. <span>Подпишитесь на нашу рассылку.</span> Вас ждут новинки, скидки, предложения!</p>
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваш email"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<div class="form-wrap__policy">*Нажимая кнопку, вы даете согласие на обработку персональных данных
-										</div>
-										<button class="form-wrap__btn btn" type="sumbit">Подписаться
-										</button><img class="img-1" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-2" src="img/svg/square.svg" alt="" loading="lazy"/><img class="img-3" src="img/svg/square.svg" alt="" loading="lazy"/>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sForm-->
+				<!-- end sPopular-->
 			</main>
 			<footer class="footer section">
 				<div class="footer__container container-fluid container-lg">

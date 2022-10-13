@@ -1,6 +1,7 @@
 .footer {
 	--sPT: #{rem(53)};
 	--sPB: #{rem(41)};
+	background-color: #fff;
 	@include media-breakpoint-up(sm) {
 		--sPT: #{rem(88)};
 		--sPB: #{rem(48)};
@@ -219,6 +220,20 @@
 		@include media-breakpoint-up(lg) {
 			max-width: none;
 			font-size: rem(16);
+		}
+	}
+	&__img-wrap {
+		@include roww('8px', 'm');
+		@include media-breakpoint-down(sm) {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			--bs-gutter-y: var(--bs-gutter-x);
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
 		}
 	}
 @include media-breakpoint-up(xl) {}
