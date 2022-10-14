@@ -39,13 +39,20 @@ block pagecontent
 		//- +sAdvantages
 		+sProdCard
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
-		+sSlider('', 'Похожие товары')
-		+sSlider('', 'Вы просматривали')
-		+sPopular
+		+sSlider('', 'Похожие товары', '', 'true')
+			+img('img/svg/square.svg').square.square--2
+		+sSlider('', 'Вы просматривали', '', 'true')
+			+img('img/svg/square.svg').square.square--3
+		+sPopular('true')
+			+img('img/svg/square.svg').square.square--4
+			+img('img/svg/square.svg').square.square--5
+			+img('img/svg/square.svg').square.square--6
 		//- +sPopularManufacturers
 		//- +sOurClients
-		//- +sForm2
+		+sForm2
 	+footer()
+		+img('img/svg/square.svg').square.square--7
+		+img('img/svg/square.svg').square.square--8
       
 
 

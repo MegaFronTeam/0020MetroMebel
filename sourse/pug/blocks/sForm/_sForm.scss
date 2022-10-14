@@ -200,40 +200,43 @@
 			}
 		}
 	}
-	&__wrap {
-		background-color: #fff;
-		@include media-breakpoint-up(lg) {
-			padding: rem(42) rem(208) rem(113) rem(268);
-			box-shadow: 0 14px 16px rgba(0, 0, 0, 0.11);
-		}
-		@include media-breakpoint-up(xxl) {
-			padding: rem(113) rem(208) rem(113) rem(268);
-		}
-		.h1 {
-			max-width: rem(560);
-			padding-bottom: rem(25);
-			margin-bottom: rem(25);
-			position: relative;
-			&:before {
-				content: '';
-				position: absolute;
-				display: block;
-				bottom: 0;
-				left: -10px;
-				width: 100px;
-				height: 5px;
-				background-color: $secondary;
-				@include media-breakpoint-up(lg) {
-					left: -50px;
+	&--2 {
+		.form-wrap {
+			background-color: #fff;
+			@include media-breakpoint-up(lg) {
+				padding: rem(42) rem(208) rem(113) rem(268);
+				box-shadow: 0 14px 16px rgba(0, 0, 0, 0.11);
+			}
+			@include media-breakpoint-up(xxl) {
+				padding: rem(113) rem(208) rem(113) rem(268);
+			}
+			.h1 {
+				max-width: rem(560);
+				padding-bottom: rem(25);
+				margin-bottom: rem(25);
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					bottom: 0;
+					left: -10px;
+					width: 100px;
+					height: 5px;
+					background-color: $secondary;
+					@include media-breakpoint-up(lg) {
+						left: -50px;
+					}
 				}
 			}
-		}
-		h4 {
-			max-width: rem(560);
-			font-weight: 400;
-			margin-bottom: 0;
-		}
-		.form-wrap {
+			h4 {
+				max-width: rem(560);
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+			&__row {
+				--bs-gutter-y: #{rem(40)};
+			}
 			&__input-wrap {
 				max-width: rem(325);
 				margin-left: auto;
@@ -261,6 +264,12 @@
 				border-radius: 0;
 				--bs-btn-padding-y: #{rem(11)};
 				--bs-btn-font-size: #{rem(14)};
+			}
+			&__wrap {
+				@include media-breakpoint-down(xxl) {
+					max-width: rem(325);
+					margin-right: auto;
+				}
 			}
 		}
 	}

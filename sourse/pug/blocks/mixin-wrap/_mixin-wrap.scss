@@ -190,6 +190,9 @@
 			color: currentColor;
 			font-weight: 400;
 			margin-bottom: 0;
+			@include media-breakpoint-down(md) {
+				font-size: rem(18);
+			}
 		}
 		span {
 			margin-left: rem(12);
@@ -227,6 +230,9 @@
 			flex: 0 0 auto;
 			margin-left: rem(30);
 			font-size: rem(20);
+			@include media-breakpoint-down(md) {
+				margin-left: rem(8);
+			}
 		}
 		&:before {
 			content: '';
@@ -248,13 +254,18 @@
 
 .card {
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 	max-width: rem(257);
 	background-color: #fff;
 	position: relative;
 	box-shadow: 0 0 13px transparent;
 	&:hover{
-		.card__aside {
+		.card__aside{
+			opacity: 1;
+			pointer-events: all;
+		}
+		.card__bottom-card {
+			// display: block;
 			opacity: 1;
 			pointer-events: all;
 		}
@@ -390,6 +401,82 @@
 		}
 		.icon {
 			font-size: rem(22);
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 28px;
+		left: 0;
+		background-color: var(--bg, $gray-300);
+		font-size: rem(14);
+		color: #fff;
+		padding: rem(1) rem(7);
+		border-radius: 0 3px 3px 0;
+		&--right {
+			top: 80px;
+			left: unset;
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+	}
+	&__bottom-card {
+		@include mt;
+		opacity: 0;
+		pointer-events: none;
+		// display: none;
+		position: absolute;
+		background-color: #fff;
+		top: 100%;
+		left: -100px;
+		width: calc(100% + 200px);
+		padding: 0 rem(28) rem(29);
+		z-index: 1;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+			z-index: -2;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: -20px;
+			background-color: #fff;
+			z-index: -1;
+		}
+	}
+	&__buy {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: rem(215);
+		margin: 0 auto;
+		margin-bottom: rem(25);
+		a {
+			font-size: rem(14);
+		}
+		p {
+			color: #6ab40b;
+			font-size: rem(12);
+			margin-bottom: 0;
+		}
+	}
+	&__articul {
+		max-width: max-content;
+    margin: 0 auto;
+    min-width: 215px;
+		font-size: rem(14);
+		span {
+			color: #000;
 		}
 	}
 }

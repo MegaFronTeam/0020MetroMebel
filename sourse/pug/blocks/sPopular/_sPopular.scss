@@ -46,27 +46,57 @@
 	}
 	&__slider-wrapper {
 		position: relative;
+		.swiper-button-hand {
+			top: unset;
+			bottom: -30px;
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+		.bg {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			max-width: rem(464);
+			display: none;
+			@include media-breakpoint-between(md, xxl) {
+				display: block;
+			}
+		}
 	}
 	&__slider {
 		--bs-gutter-x: 22px;
 		margin-left: calc(var(--bs-gutter-x) * -1/2);
 		margin-right: calc(var(--bs-gutter-x) * -1/2);
+
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: 16px;
+			max-width: rem(800);
+			margin: 0 auto;
+		}
 		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: 33px;
+			--bs-gutter-x: 22px;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: none;
 		}
 		.swiper-wrapper {
 			& > * {
 				margin-left: calc(var(--bs-gutter-x) * 1/2);
 				margin-right: calc(var(--bs-gutter-x) * 1/2);
 			}
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 				flex-wrap: wrap;
-				justify-content: center;
+				// justify-content: center;
 				transform: none !important;
 				--bs-gutter-y: #{rem(42)};
 				& > * {
 					margin-top: var(--bs-gutter-y);
 				}
+			}
+			@include media-breakpoint-up(xxl) {
+				justify-content: center;
 			}
 		}
 	}
@@ -83,6 +113,7 @@
 		justify-content: space-between;
 		padding: rem(39) rem(18) rem(25) rem(18);
 		box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+		background-color: #fff;
 		text-decoration: none;
 		@include media-breakpoint-up(xl) {
 			min-width: rem(457);
@@ -159,11 +190,23 @@
 			}
 		}
 	}
-	.swiper-button-hand {
-		top: unset;
-		bottom: -30px;
-		@include media-breakpoint-up(sm) {
-			display: none;
+	&__def-slider-wrap {
+		.swiper-button-hand {
+			@include media-breakpoint-up(xxl) {
+				--swiperArrowPosition: -120px;
+			}
+		}
+	}
+	&__def-slider {
+		@include media-breakpoint-up(xxl) {
+			padding: 20px;
+			margin: -20px;
+			overflow: hidden;
+		}
+		.sPopular {
+			&__slide {
+				margin-right: rem(33);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

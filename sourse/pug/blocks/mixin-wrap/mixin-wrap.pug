@@ -57,8 +57,13 @@ mixin headline(text, all, innertext)
 				| весь каталог
 				+icon('arrow-right')
 
-mixin card()
+mixin card(label)
 	+b.card
+		//- +e.bottom-card
+		//- 	+e.buy
+		//- 		a(href="#") Купить в 1 клик
+		//- 		p Есть в наличии
+		//- 	+e.articul #[span Артикул: ] 23388, 23389
 		+e.aside--left
 		+e.aside--right
 			+e.links
@@ -69,6 +74,9 @@ mixin card()
 				+e.link(href="#")
 					+icon('cart')
 		+e.content
+			if label
+				+e.label(style="--bg: #6ab40b") -35%
+				+e.label--right(style="--bg: #fb4420") NEW
 			+e.img-slider--js
 				.swiper-wrapper
 					-for(i = 0; i < 4; i++)
@@ -93,3 +101,8 @@ mixin card()
 			+e.footer
 				+e.btn.btn.btn-secondary Заказать
 				+addblock
+		+e.bottom-card
+				+e.buy
+					a(href="#") Купить в 1 клик
+					p Есть в наличии
+				+e.articul #[span Артикул: ] 23388, 23389

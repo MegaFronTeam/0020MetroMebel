@@ -1,7 +1,8 @@
-mixin sSlider(images, title, subtitle)
+mixin sSlider(images, title, subtitle, label)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
-		.container
+		+e.container.container
+			block
 			if images
 				+img('img/svg/square.svg').img-1
 				+img('img/svg/square.svg').img-2
@@ -12,6 +13,6 @@ mixin sSlider(images, title, subtitle)
 					.swiper-wrapper
 						-for(let i = 0; i < 6; i++)
 							+e.slide.swiper-slide.zIndex
-								+card()
+								+card(label)
 				+arrow()
 	// end sSlider

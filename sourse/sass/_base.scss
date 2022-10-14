@@ -555,19 +555,66 @@ iframe {
 }
 
 .prod-card {
-	@include media-breakpoint-up(xxl) {
-		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			content: '';
-			height: 100%;
-			width: 680px;
-			left: 0;
-			top: 0;
-			background-color: #f5f5f5;
+	.sSlider, .sPopular, .sForm {
+		&__container {
+			@include media-breakpoint-up(xxl) {
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					content: '';
+					height: calc(100% + var(--sPT) + var(--sPB));
+					width: 680px;
+					left: -542px;
+					top: calc(var(--sPT) * -1);
+					background-color: #f5f5f5;
+					display: block;
+					z-index: -2;
+				}
+			}
+		}
+	}
+	.square {
+		opacity: 0.14;
+		display: none;
+		pointer-events: none;
+		@include media-breakpoint-up(xxl) {
 			display: block;
-			z-index: -1;
+		}
+		&--2 {
+			position: absolute;
+			top: -40px;
+			right: -510px;
+		}
+		&--3 {
+			position: absolute;
+			left: -595px;
+			bottom: -100px;
+		}
+		&--4 {
+			position: absolute;
+			top: 253px;
+			left: -495px;
+		}
+		&--5 {
+			position: absolute;
+			top: 13px;
+			right: -511px;
+		}
+		&--6 {
+			position: absolute;
+			top: 373px;
+   		right: -451px;
+		}
+		&--7 {
+			position: absolute;
+			top: -48px;
+			left: -561px;
+		}
+		&--8 {
+			position: absolute;
+			left: -348px;
+			top: 212px;
 		}
 	}
 }

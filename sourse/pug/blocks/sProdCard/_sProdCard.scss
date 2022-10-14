@@ -10,6 +10,21 @@
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(45)};
 	}
+	&__container {
+		position: relative;
+	}
+	.square {
+		opacity: 0.14;
+		display: none;
+		@include media-breakpoint-up(xxl) {
+			display: block;
+		}
+		&--1 {
+			position: absolute;
+			left: -590px;
+			bottom: 80px;
+		}
+	}
 	&__row{
 		--bs-gutter-x: #{rem(32)};
 		--bs-gutter-y: #{rem(55)};

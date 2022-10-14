@@ -27,8 +27,8 @@
 		}
 	}
 	.img-1 {
-    top: 70px;
-    left: 20px;
+    left: -100px;
+    top: 60px;
 		@include media-breakpoint-up(lg) { 
 			left: -511px;
 			top: 50%;
@@ -40,8 +40,8 @@
 		}
 	}
 	.img-2 {
-		top: 290px;
-    left: 30px;
+		left: -70px;
+    top: 560px;
 		@include media-breakpoint-up(lg) {
 			bottom: 0%;
 			left: -295px;
@@ -52,7 +52,9 @@
 		}
 	}
 	.img-3 {
+		display: none;
 		@include media-breakpoint-up(lg) {
+			display: block;
 			right: -610px;
 			top: 20%;
 		}
@@ -83,7 +85,7 @@
 	&__slider {
 		padding: rem(20) 0;
 		margin: rem(-20) rem(-16);
-		// @include media-breakpoint-up(xl) {
+		// @include media-breakpoint-up(xxl) {
 		// 	overflow: hidden;
 		// }
 	}
@@ -95,11 +97,13 @@
 	}
 	.swiper-button-hand {
 		top: 110px;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			--swiperArrowPosition: -81px;
 		}
 		&-prev {
-			left: calc(var(--swiperArrowPosition) - rem(39));
+			@include media-breakpoint-up(xxl) {
+				left: calc(var(--swiperArrowPosition) - rem(39));
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

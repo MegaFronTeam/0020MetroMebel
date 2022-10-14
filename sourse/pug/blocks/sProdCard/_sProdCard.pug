@@ -1,7 +1,8 @@
 mixin sProdCard(data)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
-		.container
+		+e.container.container
+			+img('img/svg/square.svg').square.square--1
 			+e.row.row
 				+e.col.col-xxl-auto
 					+e.swiper-wrap

@@ -27,14 +27,14 @@ mixin sForm()
 mixin sForm2()
 	// start sForm
 	+b.SECTION.sForm--2.section#sForm&attributes(attributes)
-		.container
-			+e.wrap
-				+form-wrap
-					.row.align-items-center
-						.col-auto
-							.h1 Нужна помощь в подборе мебели и оборудования?
-							h4 Оставьте свои контактные данные и наш специалист свяжется с Вами в ближайшее время
-						.col
+		+e.container.container
+			+form-wrap
+				+e.row.row.align-items-center
+					.col-auto
+						.h1 Нужна помощь в подборе мебели и оборудования?
+						h4 Оставьте свои контактные данные и наш специалист свяжется с Вами в ближайшее время
+					.col
+						+e.wrap
 							+input("Ваше Имя",'text')
 							+input("Ваш email",'text')
 							+e.policy *Нажимая кнопку, вы даете согласие на обработку персональных данных
