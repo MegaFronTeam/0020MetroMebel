@@ -106,3 +106,24 @@ mixin card(label)
 					a(href="#") Купить в 1 клик
 					p Есть в наличии
 				+e.articul #[span Артикул: ] 23388, 23389
+
+mixin advatages()
+	+b.advatages
+		.container
+			+e.row-item.row
+				.col-6.col-lg
+					+e.item
+						+icon('settings')
+						p Монтаж и сборка под&nbsp;ключ
+				.col-6.col-lg
+					+e.item
+						+icon('track')
+						p Круглосуточная доставка по всей России
+				.col-6.col-lg
+					+e.item
+						+icon('discount')
+						p Актуальные цены на сайте
+				.col-6.col-lg
+					+e.item
+						+icon('settings')
+						p Возможность отсрочки платежа
