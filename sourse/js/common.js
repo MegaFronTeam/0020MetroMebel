@@ -267,12 +267,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -457,6 +457,22 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+	let category = document.querySelector('.filter__category--js');
+	if(category) {
+		category.addEventListener('click', function() {
+			$('.filter__category-body').slideToggle();
+			$(this).toggleClass('active');
+		});
+	}
+
+	$('.default-ion-slider').ionRangeSlider({
+		type: "double",
+		min: 0,
+		max: 1000000,
+		from: 550
+});
+// .slideToggle
 
 };
 if (document.readyState !== 'loading') {

@@ -15,6 +15,40 @@
  		width: 100%;
  		display: block;
  	}
+	 .custom-input {
+		position: relative;
+		padding-left: rem(24);
+		margin-bottom: rem(7);
+		// @include media-breakpoint-up(sm) {
+		// 	margin-bottom: 0;
+		// }
+		&__input {
+			@include a-cent(y);
+			width: 14px;
+			height: 14px;
+			border: 1px solid #e6e6e6;
+			background-color: #fcfbfb;
+			border-radius: 0;
+			left: 0;
+			margin-left: 0;
+			&:checked {
+				background-image: none;
+				background-color: $secondary;
+				border-color: $secondary;
+			}
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		&__text {
+			display: block;
+			color: $gray-900;
+			font-size: rem(14);
+			@include media-breakpoint-up(sm) {
+				max-width: rem(150);
+			}
+		}
+	}
 }
 
 

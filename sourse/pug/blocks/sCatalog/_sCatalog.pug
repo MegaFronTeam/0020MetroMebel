@@ -1,41 +1,125 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+		+e.container.container
+			.row 
+				.col
+					+b.filter
+						//- +e.filter-btn
+						h5 фильтр по параметрам
+						+e.parameters
+							+ddGroup()
+								+ddGroupItem('Цена')
+									+e.slide
+										.default-ion-slider
+								+ddGroupItem('Длина столешницы')
+									+b.form-wrap--2
+										.row
+											.col-6
+												+in-c('radio', '200 мм (10)')
+											.col-6
+												+in-c('radio', '1000 мм (1)')
+											.col-6
+												+in-c('radio', '1110 мм (10)')
+											.col-6
+												+in-c('radio', '1200 мм (10)')
+											.col-6
+												+in-c('radio', '1400 мм (3)')
+											.col-6
+												+in-c('radio', '1700 мм (10)')
+											.col-6
+												+in-c('radio', '2000 мм (5)')
+								+ddGroupItem('Высота в мм')
+									+e.slide
+										.default-ion-slider
+								+ddGroupItem('Длина в мм')
+									+e.slide
+										.default-ion-slider
+								+ddGroupItem('Глубина в мм')
+									+e.slide
+										.default-ion-slider
+								+ddGroupItem('По назначению')
+									+b.form-wrap
+										+in-c('radio', 'для балкона')
+										+in-c('radio', 'для цветов')
+										+in-c('radio', 'для кладовки')
+										+in-c('radio', 'для подвала')
+										+in-c('radio', 'для склада')
+						+e.btns
+							+e.btn(href="#") Показать
+							+e.btn--secondary(href="#") Сбросить
+						+e.categories
+							+ddGroup()
+								+ddGroupItem('Категории')
+									mixin item(i)
+										+e.wrap
+											+e.header
+												+e.img-wrap
+													.img-wrap-center
+														+img(`img/category-img-${i}.png`)
+												+e.title Металлические стеллажи
+											+e.body
+												ul
+													li 
+														a(href="#") Архивные стеллажи
+													li 
+														a(href="#") Стеллажи усиленные
+													li 
+														a(href="#") Паллетные стеллажи
+													li 
+														a(href="#") Полочные стеллажи
+													li 
+														a(href="#") Консольные стеллажи
+													li 
+														a(href="#") Мобильные стеллажи
+													li 
+														a(href="#") Грузовые стеллажи
+													li 
+														a(href="#") Стеллажи универсальные
+													li 
+														a(href="#") Стеллажи из нержавеющей стали
+													li 
+														a(href="#") Оцинкованные стеллажи
+													li 
+														a(href="#") Складские стеллажи
+													li 
+														a(href="#") Офисные стеллажи
+													li 
+														a(href="#") Стеллажи для дома
+													li 
+														a(href="#") Для гаража
+													li 
+														a(href="#") Для балконов
+													li 
+														a(href="#") Для колес
+													li 
+														a(href="#") Для одежды
+													li 
+														a(href="#") Для бутылей
+													li 
+														a(href="#") Для инструментов
+													li 
+														a(href="#") С перфорированными полками
+													li 
+														a(href="#") Сборные разборные серии СТ
+													li 
+														a(href="#") Серия СТП
+													li 
+														a(href="#") Серия СКУ
+													li 
+														a(href="#") Серия МКФ
+									-for(let i = 1; i <= 10; i++)
+										+item(i)
+						+e.news
+							+ddGroup()
+								+ddGroupItem('Свежие новости')
+									+e.news-item
+										+e.news-title “Расширение ассортиметра”
+										p В нашем ассортименте появились гидравлические штабелёры
+										+e.news-date 31 августа 2022
+									+e.news-item
+										+e.news-title “Поздравляем с майскими праздниками”
+										p График работы нашей компании в майские праздники
+										+e.news-date 28 апреля 2022
+				.col-auto
 	// end sCatalog
