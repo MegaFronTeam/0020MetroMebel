@@ -308,7 +308,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -471,8 +471,15 @@ function eventHandler() {
 		min: 0,
 		max: 1000000,
 		from: 550
-});
-// .slideToggle
+	});
+
+	let filterBtn = document.querySelector('.sCatalog__cotrol-btn--js');
+	if(filterBtn) {
+		filterBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			$('.filter').toggleClass('active');
+		});
+	};
 
 };
 if (document.readyState !== 'loading') {

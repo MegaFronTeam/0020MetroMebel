@@ -2,11 +2,12 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		+e.container.container
-			.row 
-				.col
+			img(src="img/svg/square.svg" alt='').square
+			+e.row.row 
+				.col-auto
 					+b.filter
 						//- +e.filter-btn
-						h5 фильтр по параметрам
+						h5.d-none.d-xl-block фильтр по параметрам
 						+e.parameters
 							+ddGroup()
 								+ddGroupItem('Цена')
@@ -110,7 +111,7 @@ mixin sCatalog(data)
 														a(href="#") Серия МКФ
 									-for(let i = 1; i <= 10; i++)
 										+item(i)
-						+e.news
+						+e.news.d-none.d-xl-block
 							+ddGroup()
 								+ddGroupItem('Свежие новости')
 									+e.news-item
@@ -121,5 +122,57 @@ mixin sCatalog(data)
 										+e.news-title “Поздравляем с майскими праздниками”
 										p График работы нашей компании в майские праздники
 										+e.news-date 28 апреля 2022
-				.col-auto
+				.col
+					+e.other-products
+						mixin other-product(i, title)
+							+e.other-product(href='#')
+								+e.img-wrap
+									.img-wrap-center 
+										+img(`img/product-img-${i}.png`)
+								+e.product-title!= title
+								+e.product-desc Нагрузка - 300 кг
+						+other-product(1, 'Слесарные верстаки&nbsp;ВЛ-К')
+						+other-product(2, 'Верстаки ВЛ')
+						+other-product(3, 'Верстаки ВС')
+						+other-product(4, 'Столярные верстаки')
+						+other-product(5, 'Верстаки Эксперт и Мастер')
+						+other-product(6, 'Верстаки PM')
+					+e.show-more(href="#")
+						| Смотреть все
+						+icon('arrow-right')
+					+e.radio-btns
+						mixin radio-btn(text)
+							+e.LABEL.radio-btn
+								input(type="radio" name="radio-btn")
+								span!= text
+						+radio-btn('Однотумбовые')
+						+radio-btn('Двухтумбовые')
+						+radio-btn('Бестумбовые')
+						+radio-btn('Мобильные')
+						+radio-btn('1 000 мм')
+						+radio-btn('1 500 мм')
+						+radio-btn('2 000 мм')
+					+e.sort
+						+e.sort-title Сортировать по:
+						+input('По названию', 'select')
+						+input('Цене', 'select')
+						+input('Популярности', 'select')
+						+e.sort-link(href="#").d-none.d-md-block Новинки
+						+e.control-row.row
+							.col-auto.d-xl-none
+								+e.cotrol-btn--js(href='#')
+									+img('img/filter.png')
+							.col-auto.d-none.d-lg-block
+								+e.cotrol-btn(href='#')
+									+img('img/control-1.png')
+							.col-auto.d-none.d-lg-block
+								+e.cotrol-btn(href='#')
+									+img('img/control-2.png')
+					+e.catalog-row.row
+						-for(let i = 1; i <= 8; i++)
+							.col-md-6.col-xl-4.col-xxl-3.zIndex
+								+card('true')
+			+e.catalog-bottom
+				+pugin()
+				+e.text Стеллажи с&nbsp;нагрузкой до&nbsp;120&nbsp;кг недорого от&nbsp;официального дилера. Доступная цена без дилерской наценки. В&nbsp;каталоге более 9&nbsp;моделей в&nbsp;наличии или под заказ. Вы можете купить, уточнить цену, получить информацию, оставив заявку или позвонить по&nbsp;телефону: + 7 (495) 172-21-96. Железная мебель в&nbsp;интернет-магазине “МетПромМебель.” Доставка по&nbsp;Москве и&nbsp;в&nbsp;другие города и&nbsp;регионы России.
 	// end sCatalog

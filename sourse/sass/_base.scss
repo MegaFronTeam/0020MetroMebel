@@ -682,4 +682,24 @@ iframe {
 			}
 		}
 	}
+	.square {
+		position: absolute;
+		opacity: 0.14;
+		&--1 {
+			right: -490px;
+			top: 130px;
+		}
+		&--2 {
+			bottom: -40px;
+			left: -490px;
+		}
+		&--3 {
+			left: -560px;
+ 		  top: -20px;
+		}
+		&--4 {
+			left: -348px;
+			top: 240px;
+		}
+	}
 }

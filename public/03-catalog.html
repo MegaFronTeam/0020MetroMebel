@@ -194,11 +194,11 @@
 				</div>
 				<!-- start sCatalog-->
 				<div class="sCatalog section">
-					<div class="sCatalog__container container">
-						<div class="row"> 
-							<div class="col">
+					<div class="sCatalog__container container"><img class="square" src="img/svg/square.svg" alt=""/>
+						<div class="sCatalog__row row"> 
+							<div class="col-auto">
 								<div class="filter">
-									<h5>фильтр по параметрам</h5>
+									<h5 class="d-none d-xl-block">фильтр по параметрам</h5>
 									<div class="filter__parameters">
 										<div class="dd-group dd-group-js">
 											<div class="dd-group__item">
@@ -691,7 +691,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="filter__news">
+									<div class="filter__news d-none d-xl-block">
 										<div class="dd-group dd-group-js">
 											<div class="dd-group__item">
 												<div class="dd-group__head dd-head-js">Свежие новости
@@ -717,7 +717,885 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto"></div>
+							<div class="col">
+								<div class="sCatalog__other-products">
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-1.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Слесарные верстаки&nbsp;ВЛ-К
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-2.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Верстаки ВЛ
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-3.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Верстаки ВС
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-4.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Столярные верстаки
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-5.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Верстаки Эксперт и Мастер
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+									<a class="sCatalog__other-product" href="#">
+										<div class="sCatalog__img-wrap">
+											<div class="img-wrap-center"> <img src="img/product-img-6.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sCatalog__product-title">Верстаки PM
+										</div>
+										<div class="sCatalog__product-desc">Нагрузка - 300 кг
+										</div>
+									</a>
+								</div>
+								<a class="sCatalog__show-more" href="#">Смотреть все
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg>
+								</a>
+								<div class="sCatalog__radio-btns">
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>Однотумбовые</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>Двухтумбовые</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>Бестумбовые</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>Мобильные</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>1 000 мм</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>1 500 мм</span>
+									</label>
+									<label class="sCatalog__radio-btn">
+										<input type="radio" name="radio-btn"/><span>2 000 мм</span>
+									</label>
+								</div>
+								<div class="sCatalog__sort">
+									<div class="sCatalog__sort-title">Сортировать по:
+									</div>
+									<div class="sCatalog__input-wrap form-group">
+										<select class="sCatalog__input form-select" name="select">
+											<option value="По названию">По названию</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="sCatalog__input-wrap form-group">
+										<select class="sCatalog__input form-select" name="select">
+											<option value="Цене">Цене</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="sCatalog__input-wrap form-group">
+										<select class="sCatalog__input form-select" name="select">
+											<option value="Популярности">Популярности</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<a class="sCatalog__sort-link d-none d-md-block" href="#">Новинки
+									</a>
+									<div class="sCatalog__control-row row">
+										<div class="col-auto d-xl-none">
+											<a class="sCatalog__cotrol-btn sCatalog__cotrol-btn--js" href="#"><img src="img/filter.png" alt="" loading="lazy"/>
+											</a>
+										</div>
+										<div class="col-auto d-none d-lg-block">
+											<a class="sCatalog__cotrol-btn" href="#"><img src="img/control-1.png" alt="" loading="lazy"/>
+											</a>
+										</div>
+										<div class="col-auto d-none d-lg-block">
+											<a class="sCatalog__cotrol-btn" href="#"><img src="img/control-2.png" alt="" loading="lazy"/>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__catalog-row row">
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-4 col-xxl-3 zIndex">
+										<div class="card">
+											<div class="card__aside card__aside--left">
+											</div>
+											<div class="card__aside card__aside--right">
+												<div class="card__links">
+													<a class="card__link" href="#">
+														<svg class="icon icon-like ">
+															<use xlink:href="img/svg/sprite.svg#like"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-diagram ">
+															<use xlink:href="img/svg/sprite.svg#diagram"></use>
+														</svg>
+													</a>
+													<a class="card__link" href="#">
+														<svg class="icon icon-cart ">
+															<use xlink:href="img/svg/sprite.svg#cart"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+											<div class="card__content">
+												<div class="card__label" style="--bg: #6ab40b">-35%
+												</div>
+												<div class="card__label card__label--right" style="--bg: #fb4420">NEW
+												</div>
+												<div class="card__img-slider card__img-slider--js">
+													<div class="swiper-wrapper">
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+														<div class="card__slide swiper-slide">
+															<div class="card__img-wrap">
+																<div class="img-wrap-center"><img src="img/wardrobe.png" alt="" loading="lazy"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+												<div class="card__title">Цветной четырехсекционный шкаф для одежды
+												</div><img class="stars" src="img/stars.png" alt="" loading="lazy"/>
+												<ul>
+														<li><span>Высота</span><span class="doted"></span><span>1860мм</span></li>
+														<li><span>Ширина</span><span class="doted"></span><span>600мм</span></li>
+														<li><span>Глубина</span><span class="doted"></span><span>500мм</span></li>
+														<li><span>Цвет</span><span class="doted"></span><span>Серый</span></li>
+												</ul>
+												<div class="card__price">8 000 руб.
+												</div>
+												<div class="card__footer">
+													<div class="card__btn btn btn-secondary">Заказать
+													</div>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+														<input type="text" value="1"/>
+														<button class="addBlock__btn addBlock__btn--minus" type="button">
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="card__bottom-card">
+												<div class="card__buy"><a href="#">Купить в 1 клик</a>
+													<p>Есть в наличии</p>
+												</div>
+												<div class="card__articul"><span>Артикул: </span> 23388, 23389
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCatalog__catalog-bottom">
+							<div class="pagination-wrapper">
+								<ul class="page-numbers">
+											<li><span class="page-numbers active"> 1</span>
+											</li>
+											<li><a class="page-numbers" href="#">1</a>
+											</li>
+											<li><a class="page-numbers" href="#">2</a>
+											</li>
+											<li><a class="page-numbers" href="#">3</a>
+											</li>
+											<li><a class="page-numbers" href="#">4</a>
+											</li>
+											<li><a class="page-numbers" href="#">5</a>
+											</li>
+											<li><a class="page-numbers" href="#">6</a>
+											</li>
+											<li>
+											</li>
+											<li><span class="page-numbers unactive">. . .</span>
+											</li>
+											<li><a class="next page-numbers" href="#">
+													<svg class="icon icon-chevron-right ">
+														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+													</svg></a>
+											</li>
+								</ul>
+							</div>
+							<div class="sCatalog__text">Стеллажи с&nbsp;нагрузкой до&nbsp;120&nbsp;кг недорого от&nbsp;официального дилера. Доступная цена без дилерской наценки. В&nbsp;каталоге более 9&nbsp;моделей в&nbsp;наличии или под заказ. Вы можете купить, уточнить цену, получить информацию, оставив заявку или позвонить по&nbsp;телефону: + 7 (495) 172-21-96. Железная мебель в&nbsp;интернет-магазине “МетПромМебель.” Доставка по&nbsp;Москве и&nbsp;в&nbsp;другие города и&nbsp;регионы России.
+							</div>
 						</div>
 					</div>
 				</div>
@@ -753,7 +1631,7 @@
 				<!-- end sMetalFurniture-->
 				<!-- start sSlider-->
 				<section class="sSlider section" id="sSlider">
-					<div class="sSlider__container container">
+					<div class="sSlider__container container"><img class="square square--1" src="img/svg/square.svg" alt=""><img class="square square--2" src="img/svg/square.svg" alt="">
 						<div class="headline">
 							<div class="headline__title">
 								<div class="headline__plus">
@@ -1310,7 +2188,7 @@
 				<!-- end sSlider-->
 				<!-- start sSlider-->
 				<section class="sSlider section" id="sSlider">
-					<div class="sSlider__container container">
+					<div class="sSlider__container container"><img class="square square--3" src="img/svg/square.svg" alt=""><img class="square square--4" src="img/svg/square.svg" alt="">
 						<div class="headline">
 							<div class="headline__title">
 								<div class="headline__plus">

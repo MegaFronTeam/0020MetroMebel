@@ -127,13 +127,88 @@ mixin sProdCard(data)
 										//- +icon('wallet')
 										+icon('award')
 										| Возможность<br>отсрочки платежа
-			+e.footer-btn-row.row
-				.col-6.col-md-auto
-					+e.footer-btn.btn(href="#") Характеристики
-				.col-6.col-md-auto
-					+e.footer-btn.btn(href="#") Описание
-				.col-6.col-md-auto
-					+e.footer-btn.btn(href="#") Отзывы
-				.col-6.col-md-auto
-					+e.footer-btn.btn(href="#") Сертификат соответствия
+			.tabs
+				+e.footer-btn-row.tabs__caption
+					+e.footer-btn.btn.tabs__btn.active Характеристики
+					+e.footer-btn.btn.tabs__btn Описание
+					+e.footer-btn.btn.tabs__btn Отзывы
+					+e.footer-btn.btn.tabs__btn Сертификат соответствия
+					//- +e.footer-btn-row.row
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+				.tabs__content
+					+e.features
+						ul
+							li
+								span Гарантия (мес)
+								span.doted
+								span 12
+							li
+								span Страна производства
+								span.doted
+								span Россия
+						+e.features-title основные характеристики:
+						ul
+							li
+								span Цвет
+								span.doted
+								span светло-серый (RAL 7035)
+							li
+								span Габариты ВxШxГ в мм
+								span.doted
+								span 1950x800x400
+							li
+								span Тип
+								span.doted
+								span сварной
+							li
+								span Количество человек
+								span.doted
+								span 1
+				.tabs__content
+					+e.desc
+						p Для бухгалтерских, финансовых, других офисных документов в папках типа "Корона".
+						p Комплектация: 4 металлические полки, 2 запираемые дверцы с ручками, замок с 2 ключами.
+						p Дверцы: стекло 4 мм в металлической раме.
+						p Нагрузка на полку: 
+							span 25 кг.
+						p Покрытие: порошковая краска.: 
+							span светло-серый (RAL 7035)
+						p Габариты ВxШxГ в мм: 
+							span 1950x800x400
+						p Тип: 
+							span сварной
+				.tabs__content.active
+					+e.review
+						+form-wrap
+							.h4 Отзыв к товару “Офисный архивный шкаф со стеклянными дверцами”
+							+e.stars
+								| Оцените товар
+								+img('img/grayStars.png')
+							+e.row.row
+								.col-12
+									+input('', 'text', 'Ваше Имя')
+								.col-sm-6
+									+input('', 'textarea', 'Достоинства')
+								.col-sm-6
+									+input('', 'textarea', 'Недостатки')
+								.col-12
+									+input('', 'textarea', '* Комментарий')
+								.col-auto 
+									+e.BUTTON.btn--cancel.btn Отменить
+								.col-auto
+									+e.BUTTON.btn.btn.btn-secondary(type='submit') Отправить
+				.tabs__content
+					+e.certificates
+						a(href="#")
+							+img('img/certificates-img-1.png')
+							| Инструкция по эксплуатации / установке
+						a(href="#")
+							+img('img/certificates-img-2.png')
+							| Вкладыш по энергоэффективности и шумам
+						a(href="#")
+							+img('img/certificates-img-3.png')
+							| Характеристики продукта
 	// end sProdCard
