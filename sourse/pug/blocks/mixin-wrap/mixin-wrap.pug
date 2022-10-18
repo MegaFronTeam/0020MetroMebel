@@ -122,3 +122,71 @@ mixin advatages()
 					+e.item
 						+icon('settings')
 						p Возможность отсрочки платежа
+
+mixin oneInRowcard()
+	+b.card--oneinrow
+		+e.row.row
+			+e.left-side-col.col
+				+e.label--right(style="--bg: #fb4420") NEW
+				+e.links
+					+e.link(href="#")
+						+icon('like')
+					+e.link(href="#")
+						+icon('diagram')
+					+e.link(href="#")
+						+icon('cart')
+				+e.img-slider--js
+					.swiper-wrapper
+						-for(i = 0; i < 4; i++)
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/product-img-7.png')
+					.swiper-pagination
+			.col
+				+e.title Верстак 2000 с экраном с консолями и тумбой с 5 выдвижными ящиками
+				+e.inner-row.row
+					.col
+						+img('img/stars.png').stars
+						+e.full-price
+							+e.price 33 037 руб.
+							+e.old-price 34 000 руб.
+						+e.footer
+							+e.btn.btn.btn-secondary Заказать
+							+addblock
+						+e.buy
+							a(href="#") Купить в 1 клик
+							p Есть в наличии
+					.col.d-none.d-xxl-block
+						ul
+							mixin li(title, text)
+								li
+									span!= title
+									span.doted
+									span!= text
+							+li('Высота', '1860мм')
+							+li('Ширина', '600мм')
+							+li('Глубина', '500мм')
+							+li('Цвет', 'Серый')
+						+e.articul #[span Артикул: ]<br> 
+							p 32756: одинарный экран с консолями, тумба слева
+							p 32764: одинарный экран с консолями, тумба справа
+							p 32757: двойной экран, тумба слева
+							p 32765: двойной экран, тумба справа\
+			.col-12.d-flex.d-xxl-none
+				+e.footer-wrap 
+					ul
+						mixin li(title, text)
+							li
+								span!= title
+								span.doted
+								span!= text
+						+li('Высота', '1860мм')
+						+li('Ширина', '600мм')
+						+li('Глубина', '500мм')
+						+li('Цвет', 'Серый')
+					+e.articul #[span Артикул: ]<br> 
+						p 32756: одинарный экран с консолями, тумба слева
+						p 32764: одинарный экран с консолями, тумба справа
+						p 32757: двойной экран, тумба слева
+						p 32765: двойной экран, тумба справа\

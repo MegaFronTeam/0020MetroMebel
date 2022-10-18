@@ -497,6 +497,130 @@
 			color: #000;
 		}
 	}
+	&__full-price {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(28);
+	}
+	&__old-price {
+		font-size: rem(14);
+		text-decoration: line-through;
+		margin-left: rem(31);
+	}
+	&--oneinrow {
+		padding: rem(42) rem(17) rem(42) rem(21);
+		max-width: none;
+		@include media-breakpoint-up(md) {
+			
+			padding: rem(42) rem(17) rem(42) rem(42);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(36) rem(17) rem(43) rem(106);
+		}
+		&:hover {
+			&::before {
+				box-shadow: none;
+			}
+		}
+		.card {
+			&__content {
+			}
+			&__img-slider {
+				max-width: rem(135);
+				margin-bottom: 0;
+				padding-bottom: rem(46.800);
+   			margin-top: 20px;
+				margin: 0 auto;
+				@include media-breakpoint-up(xxl) {
+					margin: 0;
+				}
+			}
+			&__img-wrap {
+				--ratio: 150/135;
+			}
+			&__label {
+				&--right {
+					left: 6px;
+    			top: -20px;
+					right: unset;
+					border-radius: 0 3px 3px 0;
+					@include media-breakpoint-up(md) {
+						left: -15px;
+					}
+					@include media-breakpoint-up(xxl) {
+						right: 80px;
+						top: 44px;
+						left: unset;
+						border-radius: 3px 0 0 3px;
+					}
+				}
+			}
+			&__links {
+				position: absolute;
+				left: 6px;
+    		top: 30px;
+				@include media-breakpoint-up(md) {
+					left: -15px;
+				}
+				@include media-breakpoint-up(xxl) {
+					right: calc(var(--bs-gutter-x) / 2);
+					top: 0;
+					left: unset;
+				}
+			}
+			&__left-side-col {
+				// max-width: rem(313);
+				position: relative;
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(md) {
+					max-width: rem(313);
+					margin-bottom: 0;
+				}
+			}
+			&__row {
+				--bs-gutter-x: #{rem(54)};
+				--bs-gutter-y: #{rem(0)};
+				@include media-breakpoint-down(md) {
+					justify-content: center;
+				}
+			}
+			&__title {
+				max-width: none;
+				margin-bottom: rem(29);
+			}
+			.stars {
+				margin-bottom: rem(28);
+			}
+			&__price {
+				margin-bottom: 0;
+			}
+			&__footer {
+				margin-bottom: rem(28);
+			}
+			&__buy {
+				margin-left: 0;
+			}
+			&__articul {
+				margin: 0;
+				p {
+					margin-bottom: 0;
+				}
+			}
+			&__footer-wrap {
+				display: flex;
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				flex-direction: column;
+				@include media-breakpoint-up(md) {
+					flex-direction: row;
+				}
+			}
+		}
+		ul {
+			max-width: rem(215);
+		}
+	}
 }
 
 .zIndexHover {

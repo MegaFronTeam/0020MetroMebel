@@ -1,4 +1,4 @@
-mixin sCatalog(data)
+mixin sCatalog(card='true')
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		+e.container.container
@@ -168,10 +168,16 @@ mixin sCatalog(data)
 							.col-auto.d-none.d-lg-block
 								+e.cotrol-btn(href='#')
 									+img('img/control-2.png')
-					+e.catalog-row.row
-						-for(let i = 1; i <= 8; i++)
-							.col-md-6.col-xl-4.col-xxl-3.zIndex
-								+card('true')
+					if card 
+						+e.catalog-row.row
+							-for(let i = 1; i <= 8; i++)
+								.col-md-6.col-xl-4.col-xxl-3.zIndex
+									+card('true')
+					else
+						+e.catalog-row--2.row
+							-for(let i = 1; i <= 4; i++)
+								.col-12
+									+oneInRowcard('true')
 			+e.catalog-bottom
 				+pugin()
 				+e.text Стеллажи с&nbsp;нагрузкой до&nbsp;120&nbsp;кг недорого от&nbsp;официального дилера. Доступная цена без дилерской наценки. В&nbsp;каталоге более 9&nbsp;моделей в&nbsp;наличии или под заказ. Вы можете купить, уточнить цену, получить информацию, оставив заявку или позвонить по&nbsp;телефону: + 7 (495) 172-21-96. Железная мебель в&nbsp;интернет-магазине “МетПромМебель.” Доставка по&nbsp;Москве и&nbsp;в&nbsp;другие города и&nbsp;регионы России.

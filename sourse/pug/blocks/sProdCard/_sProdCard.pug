@@ -1,14 +1,24 @@
-mixin sProdCard(data)
+mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		+e.container.container
 			+img('img/svg/square.svg').square.square--1
 			+e.row.row
 				+e.col.col-xxl-auto
+					if thumbSlider
+						+e.thumb-arrow-wrap
+							+arrow()
+							+e.thumb-slider--thumb-js
+								.swiper-wrapper
+									-for(let i = 0; i < 6; i++)
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.png')
 					+e.swiper-wrap
 						+e.slider--js.swiper
 							.swiper-wrapper
-								-for(let i = 0; i < 3; i++)
+								-for(let i = 0; i < 6; i++)
 									+e.slide.swiper-slide
 										+e.img-wrap
 											.img-wrap-center
@@ -39,43 +49,56 @@ mixin sProdCard(data)
 							+e.headline
 								h4 29 010 руб.
 								+e.has Есть в наличии
-							+e.products
-								h6 Выберите товар:
-								+e.radio-wrap
-									-for(let i = 3; i<=8; i++)
-										+in-c('radio', '', 'product')
-											+e.count Количество полок: #[!= i]
-											+e.articul Артикул: 21500
-							+e.accessories
-								h6 Аксессуары:
-								-for(let i = 0; i<2; i++)
-									+e.inner-row.row
-										.col-12.col-sm
-											+in-c('radio', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
+							if firstVariant
+								+e.products
+									h6 Выберите товар:
+									+e.radio-wrap
+										-for(let i = 3; i<=8; i++)
+											+in-c('radio', '', 'product')
+												+e.count Количество полок: #[!= i]
+												+e.articul Артикул: 21500
+								+e.accessories
+									h6 Аксессуары:
+									-for(let i = 0; i<2; i++)
+										+e.inner-row.row
+											.col-12.col-sm
+												+in-c('radio', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
+											.col-auto
+												+e.articul 
+													| Артикул: 21500
+													+addblock()
+											.col-auto
+												+e.price Цена: 10 500 руб.
+								+e.choose-colors
+									h6 Выберите цвет:
+									+e.colors-row.row
+										.col-12.col-sm-auto
+											+e.color-head ВЛ-К Панель облицовочная к опоре
 										.col-auto
-											+e.articul 
-												| Артикул: 21500
-												+addblock()
+											+e.colors
+												+in-c('radio', '', 'color')(style='--bg: #fedd51')
+												+in-c('radio', '', 'color')(style='--bg: #fe7e37')
+												+in-c('radio', '', 'color')(style='--bg: #ca1c18')
+												+in-c('radio', '', 'color')(style='--bg: #80257f')
+												+in-c('radio', '', 'color')(style='--bg: #346cb4')
+												+in-c('radio', '', 'color')(style='--bg: #84c5be')
+												+in-c('radio', '', 'color')(style='--bg: #31823c')
+										.col-auto
+											+addblock()
 										.col-auto
 											+e.price Цена: 10 500 руб.
-							+e.choose-colors
-								h6 Выберите цвет:
-								+e.colors-row.row
-									.col-12.col-sm-auto
-										+e.color-head ВЛ-К Панель облицовочная к опоре
-									.col-auto
-										+e.colors
-											+in-c('radio', '', 'color')(style='--bg: #fedd51')
-											+in-c('radio', '', 'color')(style='--bg: #fe7e37')
-											+in-c('radio', '', 'color')(style='--bg: #ca1c18')
-											+in-c('radio', '', 'color')(style='--bg: #80257f')
-											+in-c('radio', '', 'color')(style='--bg: #346cb4')
-											+in-c('radio', '', 'color')(style='--bg: #84c5be')
-											+in-c('radio', '', 'color')(style='--bg: #31823c')
-									.col-auto
-										+addblock()
-									.col-auto
-										+e.price Цена: 10 500 руб.
+							if secondVariant
+								+e.arrow-wrap
+									+e.color-slider--js.swiper
+										.swiper-wrapper
+											-for(let i = 0; i < 8; i++)
+												+e.color-slide.swiper-slide
+													+in-c('radio', '', 'color')
+														+e.articul Артикул: 21500
+														+e.price Цена: 6 560 р.
+														+e.color 
+														+e.status Разобранный
+									+arrow()
 							+e.footer-row.row
 								.col-auto
 									+e.btn.btn.btn-secondary В корзину

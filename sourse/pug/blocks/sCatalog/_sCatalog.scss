@@ -32,16 +32,16 @@
 		--bs-gutter-x: 0;
 		// --bs-gutter-y: var(--bs-gutter-x);
 
-		margin-bottom: rem(51);
+		margin-bottom: rem(21);
 		position: relative;
 		@include media-breakpoint-up(md) {
-			margin-bottom: rem(68);
+			// margin-bottom: rem(68);
 		}
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(21)};
 		}
 		@include media-breakpoint-up(xxl) {
-			margin-bottom: rem(204);
+			// margin-bottom: rem(28);
 		}
 	}
 	&__other-products {
@@ -237,6 +237,9 @@
 	&__catalog-row {
 		--bs-gutter-x: #{rem(35)};
 		--bs-gutter-y: #{rem(35)};
+		&--2 {
+			--bs-gutter-y: #{rem(0)};
+		}
 	}
 	.card {
 		border: 1px solid #f1f0f0;
@@ -309,7 +312,7 @@
 	background-color: #fff;
 	@include media-breakpoint-up(xl) {
 		padding: rem(41) rem(15) rem(41) rem(60);
-		height: 100%;
+		// height: 100%;
 		max-width: rem(339);
 		min-width: rem(340);
 	}

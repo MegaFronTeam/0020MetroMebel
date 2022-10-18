@@ -455,12 +455,24 @@ function eventHandler() {
 		...mainSl,
 	});
 
+	const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
+		slidesPerView: 5,
+		spaceBetween: 4,
+		direction: 'vertical',
+		navigation: {
+			nextEl: '.sProdCard__swiper-wrap .swiper-button-next',
+			prevEl: '.sProdCard__swiper-wrap .swiper-button-prev',
+		},
+	});
 	const sProdCardSwiper = new Swiper('.sProdCard__slider--js', {
 		slidesPerView: 1,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sProdCard__swiper-wrap .swiper-button-next',
+			prevEl: '.sProdCard__swiper-wrap .swiper-button-prev',
 		},
+		// thumbs: {
+		// 	swiper: sProdCardThumbSwiper,
+		// },
 	});
 
 	let category = document.querySelector('.filter__category--js');
@@ -493,7 +505,14 @@ function eventHandler() {
 		document.querySelector('.filepond')
 	);
 
-
+	const sProdCardColorSwiper = new Swiper('.sProdCard__color-slider--js', {
+		slidesPerView: 4,
+		spaceBetween: 3,
+		navigation: {
+			nextEl: '.sProdCard__arrow-wrap .swiper-button-next',
+			prevEl: '.sProdCard__arrow-wrap .swiper-button-prev',
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
