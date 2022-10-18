@@ -603,6 +603,7 @@
 				color: $gray-900;
 				font-size: rem(14);
 				margin-bottom: rem(14);
+				display: block;
 			}
 			textarea {
 				min-height: rem(98);
@@ -620,7 +621,108 @@
 					--bs-btn-bg: #dadada;
 				}
 			}
+			.filepond {
+				&--credits {
+					display: none;
+				}
+				&--panel {
+					background-color: transparent !important;
+					border-radius: 5px;
+					border: 1px solid #717070 !important;
+					width: rem(76) !important;
+					&:before {
+						content: "";
+						position: absolute;
+						@include a-cent;
+						background-image: url('../img/camera.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center;
+						display: block;
+						width: rem(31);
+						height: rem(23);
+					}
+				}
+				&--item-panel {
+					opacity: 0;
+				}
+				&--panel-center {
+					background-color: transparent;
+				}
+				&--drop-label {
+					min-height:0 !important;
+					& > *{
+						display: none;
+					}
+				}
+				&--root {
+					display: block;
+					// width: rem(76) !important;
+					min-height: rem(98) !important;
+					max-height: rem(460) !important;
+				}
+				&--panel-top, &--panel-bottom {
+					background-color: transparent;
+				}
+				&--image-preview-wrapper {
+					position: absolute;
+
+				}
+				&--list {
+					left: rem(80);
+				}
+				&--list-scroller {
+					height: 400px;
+					position: relative;
+					overflow-y: scroll;
+					overflow-x: visible;
+				}
+			}
+			&__file-wrap {
+				position: relative;
+				z-index: 1;
+			}
+			&__file-content {
+				position: absolute;
+				left: rem(96);
+				bottom: 0;
+				z-index: -1;
+			}
+			&__file-title {
+				font-size: rem(14);
+				color: $gray-900;
+			}
+			&__file-text {
+				font-size: rem(14);
+				color: $gray-600;
+			}
 		}
+	}
+	&__real-review-row {
+		--bs-gutter-y: #{rem(42)};
+		margin-bottom: rem(42);
+	}
+	&__real-review {
+		img {
+			margin-bottom: rem(13);
+		}
+		p {
+			color: $gray-900;
+			margin-bottom: 0;
+			font-size: rem(14);
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+		}
+	}
+	&__real-review-head {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(8);
+	}
+	&__name {
+		color: #000;
+		margin-right: rem(15);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

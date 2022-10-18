@@ -2,6 +2,11 @@
 mixin mnu()
 	nav
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			li.menu-item.menu-item--hover(itemprop="item" )
+				a(href="#" itemprop="url")
+					+icon('squares')
+					| каталог продукции
+				+catalogDropdown()
 			each link in nav
 				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				if link.subnav

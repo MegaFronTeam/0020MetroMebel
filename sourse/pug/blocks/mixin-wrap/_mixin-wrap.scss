@@ -321,17 +321,35 @@
 	}
 	&__img-slider {
 		padding-bottom: rem(26);
+		position: relative;
 	}
 	.swiper-pagination {
 		bottom: 0;
+		height: 100%;
 		&-bullet {
+			position: relative;
 			width: 20px;
-			height: 2px;
+			// height: 2px;
+			height: 100%;
 			margin: 0 3.5px;
-			background-color: #cdcdcd;
-			border-radius: 1px;
+			background-color: transparent;
+			// border-radius: 1px;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 20px;
+				height: 2px;
+				background-color: #cdcdcd;
+				border-radius: 1px;
+				left: 0;
+				bottom: 0;
+			}
 			&-active {
-				background-color: $secondary;
+				background-color: transparent;
+				&:before {
+					background-color: $secondary;
+				}
 			}
 		}
 	}

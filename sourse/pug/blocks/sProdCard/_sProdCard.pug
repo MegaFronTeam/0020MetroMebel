@@ -138,7 +138,7 @@ mixin sProdCard(data)
 					//- 	.col-6.col-md-auto
 					//- 	.col-6.col-md-auto
 					//- 	.col-6.col-md-auto
-				.tabs__content
+				.tabs__content.active
 					+e.features
 						ul
 							li
@@ -180,8 +180,23 @@ mixin sProdCard(data)
 							span 1950x800x400
 						p Тип: 
 							span сварной
-				.tabs__content.active
+				.tabs__content
 					+e.review
+						+e.real-review-row.row
+							.col-md-6
+								+e.real-review
+									+e.real-review-head
+										+e.name Сергей
+										+e.date 19.09.2022
+									+img('img/stars.png')
+									p Спасибо огромное. Шкаф идеально вписался в&nbsp;наш офис. Отличное качество и&nbsp;прекрасный сервис. Шкафом остались довольны. Цена, сроки установки.
+							.col-md-6
+								+e.real-review
+									+e.real-review-head
+										+e.name Сергей
+										+e.date 19.09.2022
+									+img('img/stars.png')
+									p Спасибо огромное. Шкаф идеально вписался в&nbsp;наш офис. Отличное качество и&nbsp;прекрасный сервис. Шкафом остались довольны. Цена, сроки установки.
 						+form-wrap
 							.h4 Отзыв к товару “Офисный архивный шкаф со стеклянными дверцами”
 							+e.stars
@@ -196,6 +211,14 @@ mixin sProdCard(data)
 									+input('', 'textarea', 'Недостатки')
 								.col-12
 									+input('', 'textarea', '* Комментарий')
+								.col-12
+									+e.file-wrap
+										label
+											+e.SPAN.input-title Загрузите до 5 фотографий
+											input(type="file" class="filepond" multiple)
+										+e.file-content
+											+e.file-title Нажмите на область с иконкой
+											+e.file-text Фото до 10 МБ. Формат JPG, JPEG, PNG, BMP, GIF
 								.col-auto 
 									+e.BUTTON.btn--cancel.btn Отменить
 								.col-auto

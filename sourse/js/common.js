@@ -406,7 +406,12 @@ function eventHandler() {
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
+	});
+
+	$('.card__img-slider--js .swiper-pagination-bullet').hover(function() {
+		$( this ).trigger( "click" );
 	});
 
 	$('.zIndex').hover(function() {
@@ -480,6 +485,14 @@ function eventHandler() {
 			$('.filter').toggleClass('active');
 		});
 	};
+
+	FilePond.registerPlugin(
+		FilePondPluginImagePreview
+	);
+	FilePond.create(
+		document.querySelector('.filepond')
+	);
+
 
 };
 if (document.readyState !== 'loading') {

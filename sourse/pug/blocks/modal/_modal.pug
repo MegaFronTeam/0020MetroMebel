@@ -5,13 +5,18 @@ mixin modal()
 	div(id="modal-call"  style="display: none" )
 		+b.modal-win
 			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+				+e.vertical METROMMEBEL
+				+e.title.form-data.h3 Затрудняетесь с выбором?
+				p.after-headline Оставьте свой номер телефона, и&nbsp;наши менеджеры перезвонят вам в&nbsp;течение нескольких минут. Просим обратить внимание, что звонки совершаются только в&nbsp;рабочее время (с&nbsp;понедельника по&nbsp;четверг с&nbsp;09.00 до&nbsp;18.00 и&nbsp;в&nbsp;пятницу с&nbsp;09.00 до&nbsp;17.00)
+				+input("Ваше Имя", 'text')(required)
+				+input("Ваш Телефон", 'tel')(required)
+				+e.policy *Нажимая кнопку, вы даете согласие на обработку персональных данных
+				+e.btns
+					+e.BUTTON.btn.btn.btn-secondary(type="submit"  )  Жду звонка
+					+e.BUTTON.btn.btn.btn-light(type="submit"  )  Жду звонка
+				+img('img/svg/square.svg').img-1
+				+img('img/svg/square.svg').img-2
+				+img('img/svg/square.svg').img-3
 	// #modal-call
 	
 	// end modals

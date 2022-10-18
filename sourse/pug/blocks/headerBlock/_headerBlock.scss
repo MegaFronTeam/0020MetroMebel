@@ -111,7 +111,7 @@
 		color: $gray-900;
 		background-color: #fff;
 		box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
-		z-index: 12;
+		z-index: 5;
 		@include media-breakpoint-up(lg) {
 			left: 56%;
 		}

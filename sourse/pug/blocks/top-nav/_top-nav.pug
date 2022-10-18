@@ -39,7 +39,7 @@ mixin top-nav()
 				+e.call-back
 					+e.tel--gray(href="tel:+74951722624") + 7 (495) 172-26-24
 					+e.tel(href="tel:88005558141") &nbsp;&nbsp;&nbsp;&nbsp;8 (800) 555-81-41
-					+e.modal-call(href='#').d-none.d-sm-block Заказать обратный звонок
+					+e.modal-call(href='#' data-src='modal-call' data-fancybox="modal").d-none.d-sm-block Заказать обратный звонок
 			.col-auto.order-5.order-lg-4
 				+e.links
 					+e.link(href="#")
@@ -64,4 +64,40 @@ mixin top-nav()
 					.menu-mobile__inner
 						//- +menu-toggle()
 						+mnu()
+
 	// end top-nav
+mixin catalogDropdown()
+	+b.catalog-dropdown
+		+e.dropdown-content
+			mixin item(i, text)
+				+e.wrap
+					+e.catalog-item
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/category-img-${i}.png`)
+						p!= text 
+					+e.show-more
+						.h4!= text
+						ul
+							mixin listItem(link)
+								li
+									a(href="#")!= link
+							+listItem('Слесарные верстаки ВЛ-К')
+							+listItem('Верстаки ВЛ')
+							+listItem('Верстаки ВС')
+							+listItem('Столярные верстаки')
+							+listItem('Верстаки Эксперт и Мастер')
+							+listItem('Верстаки РМ')
+							+listItem('Столы монтажные')
+							+listItem('Столы монтажные СР нагрузка на столешницу 250 кг')
+							+listItem('Столы монтажные СР-М нагрузка на столешницу 300 кг')
+			+item(1, 'Металлические стеллажи')
+			+item(2, 'Верстаки')
+			+item(3, 'Металлические шкафы')
+			+item(4, 'Мебель для раздевалок')
+			+item(5, 'Мебель для производства и склада')
+			+item(6, 'Почтовые ящики')
+			+item(7, 'Медицинская мебель')
+			+item(8, 'Пищевое оборудование')
+			+item(9, 'Офисная мебель')
+			+item(10, 'Прочие изделия')

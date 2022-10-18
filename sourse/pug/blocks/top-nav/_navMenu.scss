@@ -14,48 +14,117 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	li{
+	.menu-item{
 		
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
-	}
-	a{
-		position: relative;
-		display: block;
-		text-transform: uppercase;
-		color: $body-color;
-		text-decoration: none;
-		padding: 1.1875rem 9px;
-		font-size: 15px;
-		@include media-breakpoint-up(xxl) {
-			padding: rem(19) 20px;
-			font-size: 16px;
-		}
-		@media (min-width: 1600px) {
-			padding: rem(19) 29px;
-		}
-		&::before {
-			@include mt;
-			content: '';
-			position: absolute;
+		& > a {
+			position: relative;
 			display: block;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background-color: transparent;
-			border-radius: 2px;
-		}
-		&:hover {
+			text-transform: uppercase;
+			color: $body-color;
+			text-decoration: none;
+			padding: 1.1875rem 6px;
+			font-size: 15px;
+			@media (min-width: 1040px) {
+				padding: 1.1875rem 9px;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding: rem(19) 20px;
+				font-size: 16px;
+			}
+			@media (min-width: 1600px) {
+				padding: rem(19) 29px;
+			}
 			&::before {
-				background-color: $secondary;
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background-color: transparent;
+				border-radius: 2px;
+			}
+			&:hover {
+				&::before {
+					background-color: $secondary;
+				}
+			}
+			svg {
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 2px;
+				font-size: rem(16);
+				margin-right: rem(14);
+				vertical-align: text-top;
+				@include media-breakpoint-up(xl) {
+					font-size: rem(21);
+					margin-right: rem(28);
+				}
 			}
 		}
 	}
+	// a{
+	// 	position: relative;
+	// 	display: block;
+	// 	text-transform: uppercase;
+	// 	color: $body-color;
+	// 	text-decoration: none;
+	// 	padding: 1.1875rem 6px;
+	// 	font-size: 15px;
+	// 	@media (min-width: 1040px) {
+	// 		padding: 1.1875rem 9px;
+	// 	}
+	// 	@include media-breakpoint-up(xxl) {
+	// 		padding: rem(19) 20px;
+	// 		font-size: 16px;
+	// 	}
+	// 	@media (min-width: 1600px) {
+	// 		padding: rem(19) 29px;
+	// 	}
+	// 	&::before {
+	// 		@include mt;
+	// 		content: '';
+	// 		position: absolute;
+	// 		display: block;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		height: 5px;
+	// 		background-color: transparent;
+	// 		border-radius: 2px;
+	// 	}
+	// 	&:hover {
+	// 		&::before {
+	// 			background-color: $secondary;
+	// 		}
+	// 	}
+	// 	svg {
+	// 		fill: none;
+	// 		stroke: currentColor;
+	// 		stroke-width: 2px;
+	// 		font-size: rem(16);
+	// 		margin-right: rem(14);
+	// 		vertical-align: text-top;
+	// 		@include media-breakpoint-up(xl) {
+	// 			font-size: rem(21);
+	// 			margin-right: rem(28);
+	// 		}
+	// 	}
+	// }
 }
 
-
+.menu-item--hover {
+	&:hover {
+		.catalog-dropdown {
+			transform: scaleY(1);
+		}
+	}
+}
 
 .toggle-menu-mobile {
 	--h: #{em(2)};

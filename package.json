@@ -45,6 +45,7 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
     "filepond": "^4.30.4",
+    "filepond-plugin-image-preview": "^4.6.11",
     "inputmask": "^5.0.7",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.1",
