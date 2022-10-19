@@ -300,6 +300,7 @@
 		position: absolute;
 		// width: calc(100vw - 400px - (100vw - 1560px));
 		// max-width: 100%;
+		width: calc(100% - 438px);
 		height: 100%;
 		top: 0;
 		left: rem(400);
@@ -307,6 +308,9 @@
 		border-left: 1px solid $gray-200;
 		@include media-breakpoint-up(xl) {
 			padding: rem(72) rem(44);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: calc(100% - 402px);
 		}
 		.h4 {
 			text-decoration: underline;
