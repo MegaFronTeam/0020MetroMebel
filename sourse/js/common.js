@@ -460,8 +460,18 @@ function eventHandler() {
 		spaceBetween: 4,
 		direction: 'vertical',
 		navigation: {
+			nextEl: '.sProdCard__thumb-arrow-wrap .swiper-button-next',
+			prevEl: '.sProdCard__thumb-arrow-wrap .swiper-button-prev',
+		},
+	});
+	const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js2', {
+		slidesPerView: 1,
+		navigation: {
 			nextEl: '.sProdCard__swiper-wrap .swiper-button-next',
 			prevEl: '.sProdCard__swiper-wrap .swiper-button-prev',
+		},
+		thumbs: {
+			swiper: sProdCardThumbSwiper,
 		},
 	});
 	const sProdCardSwiper = new Swiper('.sProdCard__slider--js', {
