@@ -1,6 +1,6 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.sForm.section#sForm&attributes(attributes)
 		+e.container.container-fluid.container-lg
 			+img('img/svg/square.svg').square-1
 			+img('img/svg/square.svg').square-2
@@ -18,7 +18,7 @@ mixin sForm()
 						+input("Ваше Имя",'text')
 						+input("Ваш email",'text')
 						+e.policy *Нажимая кнопку, вы даете согласие на обработку персональных данных
-						+e.btn.btn(type='sumbit') Подписаться
+						+e.btn.btn(type='submit') Подписаться
 						+img('img/svg/square.svg').img-1
 						+img('img/svg/square.svg').img-2
 						+img('img/svg/square.svg').img-3
@@ -38,4 +38,4 @@ mixin sForm2()
 							+input("Ваше Имя",'text')
 							+input("Ваш email",'text')
 							+e.policy *Нажимая кнопку, вы даете согласие на обработку персональных данных
-							+e.btn.btn.btn-primary(type='sumbit') Подписаться
+							+e.BUTTON.btn.btn.btn-primary(type='submit') Подписаться

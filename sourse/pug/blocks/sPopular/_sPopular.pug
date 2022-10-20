@@ -1,6 +1,6 @@
 mixin sPopular(def)
 	// start sPopular
-	+b.SECTION.sPopular.section#sPopular&attributes(attributes)
+	+b.sPopular.section#sPopular&attributes(attributes)
 		+e.container.container-fluid.container-lg
 			block
 			+headline('Популярные категории', 'true')
@@ -29,7 +29,7 @@ mixin sPopular(def)
 					+arrow()
 			else 
 				+e.slider-wrapper.default-slider-wrap
-					img(src="img/sAdvantages-img-2.png").bg
+					img(src="img/sAdvantages-img-2.png" alt="").bg
 					+e.slider.default-slider
 						.swiper-wrapper
 							+item(1, 'Шкафы металлические', 'Сушильные шкафы<br>Для обуви шкафы<br>Для раздевалок шкафы<br>Для одежды шкафы<br>Для инструментов шкафы<br>Медицинские шкафы')
