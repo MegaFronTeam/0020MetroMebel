@@ -97,10 +97,12 @@
 	}
 	.swiper-button-hand {
 		top: 110px;
+		--swiperArrowPosition: -31px;
 		@include media-breakpoint-up(xxl) {
 			--swiperArrowPosition: -81px;
 		}
 		&-prev {
+			--swiperArrowPosition: -68px;
 			@include media-breakpoint-up(xxl) {
 				left: calc(var(--swiperArrowPosition) - rem(39));
 			}

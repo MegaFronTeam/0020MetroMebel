@@ -8,7 +8,9 @@ mixin sPopularManufacturers(data)
 					.swiper-wrapper
 						mixin item()
 							+e.slide.swiper-slide
-								+img('img/sPopularManufacturers-img-1.png')
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/sPopularManufacturers-img-1.png')
 						-for(let i=0; i<10; i++)
 							+item
 				+arrow()

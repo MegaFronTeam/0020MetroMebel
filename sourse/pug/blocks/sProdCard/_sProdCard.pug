@@ -4,7 +4,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 		+e.container.container
 			+img('img/svg/square.svg').square.square--1
 			+e.row.row
-				+e.col.col-xxl-auto
+				+e.col.col-xl-auto
 					if thumbSlider
 						+e.full-slider-wrap
 							+e.thumb-arrow-wrap
@@ -49,7 +49,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									+icon('diagram')
 								+e.link(href="#")
 									+icon('cart')
-				.col-xxl
+				.col-xl
 					.row
 						.col
 							+e.head-wrap
@@ -63,7 +63,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 								p Тип: сборный
 								p Количество человек: 1
 					+e.main-row.row
-						.col-md
+						.col-md.col-xl-12.col-xxl
 							+e.headline
 								h4 29 010 руб.
 								+e.has Есть в наличии
@@ -80,7 +80,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									-for(let i = 0; i<2; i++)
 										+e.inner-row.row
 											.col-12.col-sm
-												+in-c('radio', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
+												+in-c('checkbox', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
 											.col-auto
 												+e.articul 
 													| Артикул: 21500
@@ -124,7 +124,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									+addblock()
 								.col-auto
 									+e.buy(href="#") Купить в 1 клик
-						.col-md-auto
+						.col-md-auto.col-xl-12.col-xxl-auto
 							+e.head-row.row
 								.col
 									+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку

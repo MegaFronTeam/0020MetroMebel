@@ -52,7 +52,7 @@
 		position: relative;
 	}
 	&__bg {
-		margin-left: calc(-50vw + 50% - var(--asideW)*-1/2);
+		margin-left: calc(-50vw + 50% - var(--asideW)*-1/2 - 25px);
 		z-index: -1;
 		right: calc(var(--bs-gutter-x) * -2 - 13px);
 		width: 50vw;
@@ -167,7 +167,7 @@
 	
 			&__input-wrap {
 				margin-bottom: rem(6);
-				max-width: rem(325);
+				// max-width: rem(325);
 			}
 			&__input {
 				background-color: transparent;
@@ -201,6 +201,12 @@
 		}
 	}
 	&--2 {
+		.sForm__container {
+			position: relative;
+			@include media-breakpoint-down(md) {
+				padding: 0 18px;
+			}
+		}
 		.form-wrap {
 			background-color: #fff;
 			@include media-breakpoint-up(lg) {
@@ -238,7 +244,7 @@
 				--bs-gutter-y: #{rem(40)};
 			}
 			&__input-wrap {
-				max-width: rem(325);
+				// max-width: rem(325);
 				margin-left: auto;
 				margin-bottom: rem(6);
 			}

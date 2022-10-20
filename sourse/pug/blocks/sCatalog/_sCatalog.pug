@@ -164,10 +164,11 @@ mixin sCatalog(card='true')
 									+img('img/filter.png')
 							.col-auto.d-none.d-lg-block
 								+e.cotrol-btn(href='#')
-									+img('img/control-1.png')
+									//- +img('img/control-1.png')
+									+icon('control-1')
 							.col-auto.d-none.d-lg-block
 								+e.cotrol-btn(href='#')
-									+img('img/control-2.png')
+									+icon('control-2')
 					if card 
 						+e.catalog-row.row
 							-for(let i = 1; i <= 8; i++)

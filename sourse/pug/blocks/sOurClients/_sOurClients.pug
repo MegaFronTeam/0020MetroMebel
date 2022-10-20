@@ -7,7 +7,9 @@ mixin sOurClients(data)
 				mixin item(i)
 					+e.col.col-auto
 						+e.item
-							+img(`img/sOurClients-img-${i}.png`)
+							+e.img-wrap 
+								.img-wrap-center
+									+img(`img/sOurClients-img-${i}.png`)
 				-for(let i =0; i < 2; i++)
 					+item(1)
 					+item(2)

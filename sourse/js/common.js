@@ -508,6 +508,15 @@ function eventHandler() {
 		});
 	};
 
+	document.addEventListener('click', function(event) {
+		// let filter = document.querySelector('.filter');
+		let filter = event.target.closest(".filter"); // (1)
+		let filterBtn = event.target.closest('.sCatalog__cotrol-btn--js'); // (1)
+		if(!filter && !filterBtn) {
+			$('.filter').removeClass('active');
+		}
+	})
+
 	FilePond.registerPlugin(
 		FilePondPluginImagePreview
 	);

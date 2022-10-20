@@ -227,9 +227,9 @@
 		}
 		.icon {
 			flex: 0 0 auto;
-			font-size: rem(20);
+			font-size: rem(30);
 			color: $primary;
-			margin-right: rem(17);
+			margin-right: rem(7);
 			@include media-breakpoint-up(xl) {
 				font-size: rem(40);
 				margin-right: rem(40);

@@ -86,6 +86,9 @@
 			@include media-breakpoint-down(sm) {
 				display: none;
 			}
+			@include media-breakpoint-between(lg, xxl) {
+				display: none;
+			}
 		}
 		input {
 			width: 100%;
@@ -119,6 +122,9 @@
 		}
 		@include media-breakpoint-up(sm) {
 			display: none;
+		}
+		@include media-breakpoint-between(lg, xxl) {
+			display: block;
 		}
 	}
 	&__call-back {

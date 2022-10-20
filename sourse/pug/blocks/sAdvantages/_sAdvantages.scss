@@ -153,10 +153,11 @@
 			font-weight: 700;
 			position: relative;
 			padding-right: rem(53);
+			min-width: 118px;
 			@include media-breakpoint-up(md) {
 				font-size: rem(48);
 				padding-right: rem(40);
-
+				
 				text-align: right;
 			}
 			@include media-breakpoint-up(lg) {
@@ -192,10 +193,16 @@
 					right: 37px;
     			top: -34px;
 					@include media-breakpoint-up(md) {
+						top: -43px;
+					}
+					@include media-breakpoint-up(lg) {
 						width: 14px;
 						height: 14px;
 						right: 54px;
-    				top: -62px;
+						top: -46px;
+					}
+					@include media-breakpoint-up(xxl) {
+						top: -62px;
 					}
 				}
 			}

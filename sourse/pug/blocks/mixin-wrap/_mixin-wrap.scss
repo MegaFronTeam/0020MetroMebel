@@ -74,17 +74,18 @@
 	// border-radius: 23px;
 	display: flex;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 	input{
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(29);
-		width: rem(29);
+		height: rem(28);
+		width: rem(28);
 	}
 	&__btn{
+		@include mt;
 		color: inherit;
-		height: rem(29);
+		height: rem(28);
 		position: relative;
 		border-radius: 50%;
 		background: none !important;
@@ -94,7 +95,7 @@
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(29);
+		width: rem(28);
 		&::before,
 		&::after{
 			content: '';
@@ -106,6 +107,9 @@
 		}
 		&--plus::after{
 			transform: rotate(90deg);
+		}
+		&:hover {
+			border-color: $primary;
 		}
 	}
 }
@@ -174,17 +178,20 @@
 	}
 	&__title {
 		color: $primary;
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			height: 39px;
-			width: 567px;
-			background-color: #fff;
-			left: -39px;
-			top: 0;
-			z-index: -1;
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	display: block;
+		// 	height: 39px;
+		// 	width: 567px;
+		// 	background-color: #fff;
+		// 	left: -39px;
+		// 	top: 0;
+		// 	z-index: -1;
+		// }
+		background-color: #fff;
+		padding-right: rem(39);
+		padding-left: rem(39);
 		.h4 {
 			display: inline-block;
 			color: currentColor;
@@ -192,6 +199,9 @@
 			margin-bottom: 0;
 			@include media-breakpoint-down(md) {
 				font-size: rem(18);
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: rem(16);
 			}
 		}
 		span {
@@ -205,6 +215,9 @@
 		width: 15px;
 		height: 15px;
 		margin-right: rem(36);
+		@include media-breakpoint-down(sm) {
+			margin-right: rem(16);
+		} 
 		&:before, &:after {
 			content: '';
 			position: absolute;
@@ -260,17 +273,19 @@
 	position: relative;
 	box-shadow: 0 0 13px transparent;
 	&:hover{
-		.card__aside{
-			opacity: 1;
-			pointer-events: all;
-		}
-		.card__bottom-card {
-			// display: block;
-			opacity: 1;
-			pointer-events: all;
-		}
-		&::before {
-			box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+		@include media-breakpoint-up(xl) {
+			.card__aside{
+				opacity: 1;
+				pointer-events: all;
+			}
+			.card__bottom-card {
+				// display: block;
+				opacity: 1;
+				pointer-events: all;
+			}
+			&::before {
+				box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+			}
 		}
 	}
 	&:before {

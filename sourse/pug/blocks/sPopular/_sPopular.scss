@@ -105,8 +105,8 @@
 		height: auto;
 	}
 	&__item {
-		max-width: rem(457);
-		min-width: rem(350);
+		// max-width: rem(457);
+		min-width: rem(457);
 		min-height: rem(314);
 		height: 100%;
 		display: flex;
@@ -115,6 +115,10 @@
 		box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
 		background-color: #fff;
 		text-decoration: none;
+		@include media-breakpoint-up(md) {
+			max-width: rem(457);
+			min-width: rem(350);
+		}
 		@include media-breakpoint-up(xl) {
 			min-width: rem(457);
 			min-height: rem(326);
@@ -159,8 +163,11 @@
 	&__img-wrap {
 		position: relative;
 		width: 100%;
-		max-width: 126px;
+		max-width: 181px;
 		display: flex;
+		@include media-breakpoint-up(md) {
+			max-width: 126px;
+		}
 		@include media-breakpoint-up(xl) {
 			max-width: 188px;
 		}
@@ -179,11 +186,14 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			max-width: 135px;
 			max-height: 135px;
 			border: 3px solid $secondary;
 			margin-top: auto;
 			margin-bottom: rem(32);
+			max-width: rem(172);
+			@include media-breakpoint-up(md) {
+				max-width: 135px;
+			}
 			@include media-breakpoint-up(xl) {
 				max-width: 188px;
 				max-height: 135px;

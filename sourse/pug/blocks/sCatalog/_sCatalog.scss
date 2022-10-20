@@ -125,7 +125,7 @@
 	&__radio-btns {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		// justify-content: flex-end;
 		flex-wrap: wrap;
 		@include roww('13px', 'm');
 		margin-bottom: rem(75);
@@ -239,6 +239,19 @@
 		--bs-gutter-y: #{rem(35)};
 		&--2 {
 			--bs-gutter-y: #{rem(0)};
+		}
+	}
+	&__cotrol-btn {
+		width: 24px;
+		height: 34px;
+		color: $gray-600;
+		&:hover, &.active {
+			color: $secondary;
+		}
+		svg {
+			font-size: rem(24);
+			height: 1em;
+			width: 1em;
 		}
 	}
 	.card {
