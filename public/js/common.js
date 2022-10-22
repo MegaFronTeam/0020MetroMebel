@@ -394,6 +394,7 @@ function eventHandler() {
 	defSlidersWraps.forEach(defSlidersWrap => {
 		const defaultSwiper = new Swiper(defSlidersWrap.querySelector('.default-slider'), {
 			slidesPerView: 'auto',
+			observer: true,
 			navigation: {
 				nextEl: defSlidersWrap.querySelector('.swiper-button-next'),
 				prevEl: defSlidersWrap.querySelector('.swiper-button-prev'),
@@ -432,6 +433,7 @@ function eventHandler() {
 		simulateTouch: false,
 		effect: 'fade',
 		loop: true,
+		// reverseDirection: true,
 		fadeEffect: {
 			crossFade: true
 		},

@@ -81,6 +81,13 @@
 		}
 	}
 	&__img-slide {
+		&:nth-child(even) {
+			img {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__img-wrap {
 		text-align: center;
 		img {
 			width: 100%;

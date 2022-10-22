@@ -57,7 +57,7 @@ mixin headline(text, all, innertext)
 				| весь каталог
 				+icon('arrow-right')
 
-mixin card(label)
+mixin card(label, count=3)
 	+b.card
 		+e.aside--left
 		+e.aside--right
@@ -74,11 +74,15 @@ mixin card(label)
 				+e.label--right(style="--bg: #fb4420") NEW
 			+e.img-slider--js
 				.swiper-wrapper
-					-for(i = 0; i < 4; i++)
+					-for(i = 0; i < count; i++)
 						+e.slide.swiper-slide
 							+e.img-wrap
 								.img-wrap-center
 									+img('img/wardrobe.png')
+						+e.slide.swiper-slide
+							+e.img-wrap
+								.img-wrap-center
+									+img('https://metprommebel.ru/upload/medialibrary/326/326ef3efb17ba2d70fa3d40c9d1fd15d.jpg')
 				.swiper-pagination
 			+e.title Цветной четырехсекционный шкаф для одежды
 			+img('img/stars.png').stars

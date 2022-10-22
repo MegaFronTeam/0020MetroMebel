@@ -11,8 +11,42 @@ mixin sSlider(images, title, subtitle, label)
 			+e.slider-wrapper.default-slider-wrap
 				+e.slider.default-slider
 					.swiper-wrapper
-						-for(let i = 0; i < 6; i++)
+						-for(let i = 0; i < 5; i++)
 							+e.slide.swiper-slide.zIndex
 								+card(label)
+						+e.slide.swiper-slide.zIndex
+							+card(label, 1)
 				+arrow()
 	// end sSlider
+
+mixin sSlider2(title, subtitle, label)
+	// start sSlider
+	+b.sSlider.section&attributes(attributes)
+		+e.container.container
+			.tabs
+				+b.headline
+					+e.title
+						+e.plus
+						.tabs__caption
+							.h4.tabs__btn.active!= title 
+							.h4.tabs__btn!= subtitle
+				.tabs__content.active
+					+e.slider-wrapper.default-slider-wrap
+						+e.slider.default-slider
+							.swiper-wrapper
+								-for(let i = 0; i < 5; i++)
+									+e.slide.swiper-slide.zIndex
+										+card(label)
+								+e.slide.swiper-slide.zIndex
+									+card(label, 1)
+						+arrow()
+				.tabs__content
+					+e.slider-wrapper.default-slider-wrap
+						+e.slider.default-slider
+							.swiper-wrapper
+								-for(let i = 0; i < 5; i++)
+									+e.slide.swiper-slide.zIndex
+										+card(label)
+								+e.slide.swiper-slide.zIndex
+									+card(label, 1)
+						+arrow()

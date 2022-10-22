@@ -65,6 +65,9 @@
 		@include media-breakpoint-up(sm) {
 			// bottom: 0;
 			// top: 0;
+			// --swiperArrowPosition: -100px;
+		}
+		@media (min-width: 1640px) {
 			--swiperArrowPosition: -100px;
 		}
 		@include media-breakpoint-up(md) {
@@ -73,7 +76,10 @@
 	}
 	&__img-wrap {
 		@include block(186, 136);
-		min-width: rem(186);
+		min-width: rem(106);
+		@include media-breakpoint-up(sm) {
+			min-width: rem(186);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
