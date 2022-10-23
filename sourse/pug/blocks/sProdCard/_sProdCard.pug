@@ -4,7 +4,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 		+e.container.container
 			+img('img/svg/square.svg').square.square--1
 			+e.row.row
-				+e.col.col-xl-auto
+				+e.col.col-lg-auto
 					if thumbSlider
 						+e.full-slider-wrap
 							+e.thumb-arrow-wrap
@@ -49,7 +49,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									+icon('diagram')
 								+e.link(href="#")
 									+icon('cart')
-				.col-xl
+				.col-lg
 					.row
 						.col
 							+e.head-wrap
@@ -57,13 +57,13 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 								+e.creator 
 									| Производитель:
 									+img('img/logo.png')
-						.col-12
+					+e.main-row.row
+						//- .col
+						.col-md.col-lg-12.col-xl
 							+e.text-wrap
 								p Габариты: ВxШxГ в мм / 1860x500x530
 								p Тип: сборный
 								p Количество человек: 1
-					+e.main-row.row
-						.col-md.col-xl-12.col-xxl
 							+e.headline
 								h4 29 010 руб.
 								+e.has Есть в наличии
@@ -79,13 +79,13 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									h6 Аксессуары:
 									-for(let i = 0; i<2; i++)
 										+e.inner-row.row
-											.col-12.col-sm
+											.col-12.col-sm.order-xl-1.order-xxl-1
 												+in-c('checkbox', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
-											.col-auto
+											.col-auto.order-xl-3.order-xxl-2
 												+e.articul 
 													| Артикул: 21500
 													+addblock()
-											.col-auto
+											.col-auto.order-xl-2.order-xxl-3
 												+e.price Цена: 10 500 руб.
 								+e.choose-colors
 									h6 Выберите цвет:
@@ -124,11 +124,13 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									+addblock()
 								.col-auto
 									+e.buy(href="#") Купить в 1 клик
-						.col-md-auto.col-xl-12.col-xxl-auto
-							+e.head-row.row
-								.col
-									+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
 								.col-auto
+									+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
+						.col-lg-auto.col-lg-12.col-xl-auto
+							+e.head-row.row
+								//- .col
+								//- 	+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
+								.col-auto.ms-auto
 									+e.print(href='#')
 										+icon('print')
 							+e.delivery

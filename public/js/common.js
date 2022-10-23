@@ -404,6 +404,7 @@ function eventHandler() {
 
 	const cardtSwiper = new Swiper('.card__img-slider--js', {
 		slidesPerView: 1,
+		spaceBetween: 2,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -495,12 +496,93 @@ function eventHandler() {
 		});
 	}
 
-	$('.default-ion-slider').ionRangeSlider({
-		type: "double",
-		min: 0,
-		max: 1000000,
-		from: 550
-	});
+	(function rangeSlider( $ ){
+
+    if ( $('.default-ion-slider').length == 0 ) {
+        return false;
+    }
+
+    $(function() {
+
+        $('.default-ion-slider').each(function () {
+            // Grab our DOM elements
+            var $range = $(this);
+            var $itemsInGroup = $( '[data-slider-group="' + $range.data('slider-group') + '"]' );
+            var $fromInput = $itemsInGroup.filter(".js-input-from");
+            var $toInput = $itemsInGroup.filter(".js-input-to");
+
+            // Initialize some global variables
+            var range, min, max, from, to;
+
+            // Update the input fields with the correct to and from values
+            var updateValues = function () {
+                $fromInput.prop("value", from);
+                $toInput.prop("value", to);
+            };
+
+            // Set properties from ionRangeSlider
+            var getProps = function (data) {
+                from = data.from;
+                to = data.to;
+                min = data.min;
+                max = data.max;
+            }
+
+            // Attach change and start events to the slider
+            $range.ionRangeSlider({
+                onChange: function (data) {
+                    getProps(data);
+                    updateValues();
+                },
+                onStart: function (data) {
+                    getProps(data);
+                    updateValues();
+                }
+            });
+
+            // Save the slider instance to a variable
+            range = $range.data("ionRangeSlider");
+
+            // Update the slider values with the variables from our inputs
+            var updateRange = function () {
+                range.update({
+                    from: from,
+                    to: to
+                });
+            };
+
+            // Attach change events to the "from" input field
+            $fromInput.on("change", function () {
+                from = +$(this).prop("value");
+                if (typeof min !== "undefined" && from < min) {
+                    from = min;
+                }
+                if (from > to) {
+                    from = to;
+                }
+
+                updateValues();
+                updateRange();
+            });
+
+            // Attach change events to the "to" input field
+            $toInput.on("change", function () {
+                to = +$(this).prop("value");
+                if (typeof max !== "undefined" && to > max) {
+                    to = max;
+                }
+                if (to < from) {
+                    to = from;
+                }
+
+                updateValues();
+                updateRange();
+            });
+        });
+
+    });
+
+	})( jQuery );
 
 	let filterBtn = document.querySelector('.sCatalog__cotrol-btn--js');
 	if(filterBtn) {
@@ -527,13 +609,25 @@ function eventHandler() {
 	);
 
 	const sProdCardColorSwiper = new Swiper('.sProdCard__color-slider--js', {
-		slidesPerView: 4,
+		slidesPerView: 'auto',
 		spaceBetween: 3,
 		navigation: {
 			nextEl: '.sProdCard__arrow-wrap .swiper-button-next',
 			prevEl: '.sProdCard__arrow-wrap .swiper-button-prev',
 		},
 	});
+
+	let scrollTopBtn = document.querySelector('.scrollTop');
+	$(document).scroll(function() {
+		let y = $(this).scrollTop();
+		if (y > 800) {
+			$(scrollTopBtn).addClass('active');
+		} else {
+			$(scrollTopBtn).removeClass('active');
+		}
+	});
+
+	scrollTopBtn.addEventListener('click', () => window.scrollTo(0, 0));
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

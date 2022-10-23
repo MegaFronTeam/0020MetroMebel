@@ -534,7 +534,7 @@
 		}
 		&:hover {
 			&::before {
-				box-shadow: none;
+				content: unset;
 			}
 		}
 		.card {
@@ -590,6 +590,12 @@
 				@include media-breakpoint-up(md) {
 					max-width: rem(313);
 					margin-bottom: 0;
+				}
+				@media (min-width: 1300px) {
+					max-width: rem(211);
+				}
+				@include media-breakpoint-up(xxl) {
+					max-width: rem(313);
 				}
 			}
 			&__row {
@@ -737,5 +743,35 @@
 				font-size: rem(18);
 			}
 		}
+	}
+}
+
+.scrollTop {
+	@include mt;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: $gray-200;
+	color: #000;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1000;
+	opacity: 0;
+	pointer-events: none;
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+	&:hover {
+		background-color: $primary;
+		color: #fff;
+	}
+	svg {
+		font-size: 20px;
 	}
 }

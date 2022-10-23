@@ -46,10 +46,11 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin headline(text, all, innertext)
+mixin headline(text, all, innertext, plus=true)
 	+b.headline
 		+e.title
-			+e.plus
+			if plus
+				+e.plus
 			.h4!= text 
 				span!= innertext
 		if all
@@ -161,7 +162,7 @@ mixin oneInRowcard()
 						+e.buy
 							a(href="#") Купить в 1 клик
 							p Есть в наличии
-					.col.d-none.d-xxl-block
+					.col.d-none.d-xl-block
 						ul
 							mixin li(title, text)
 								li
@@ -177,7 +178,7 @@ mixin oneInRowcard()
 							p 32764: одинарный экран с консолями, тумба справа
 							p 32757: двойной экран, тумба слева
 							p 32765: двойной экран, тумба справа\
-			.col-12.d-flex.d-xxl-none
+			.col-12.d-flex.d-xl-none
 				+e.footer-wrap 
 					ul
 						mixin li(title, text)
@@ -194,3 +195,7 @@ mixin oneInRowcard()
 						p 32764: одинарный экран с консолями, тумба справа
 						p 32757: двойной экран, тумба слева
 						p 32765: двойной экран, тумба справа\
+
+mixin scrollTop()
+	+b.scrollTop
+		+icon('arrow-up')

@@ -330,7 +330,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col col-lg-auto order-4 order-lg-last order-xxl-2">
+								<div class="col order-4 order-lg-last order-xxl-2">
 									<div class="top-nav__search">
 										<div class="top-nav__hidden">
 											<svg class="icon icon-search ">
@@ -684,7 +684,10 @@
 												</div>
 												<div class="dd-group__content dd-content-js">
 													<div class="dd-group__slide">
-														<div class="default-ion-slider"></div>
+														<div class="dd-group__extra-controls extra-controls"><input type="text" class="js-input-from" value="0" data-slider-group="price"/>
+<input type="text" class="js-input-to" value="0" data-slider-group="price"/>
+														</div>
+														<input class="default-ion-slider" data-slider-group="price" data-min="0" data-max="1000000" data-type="double"/>
 													</div>
 												</div>
 											</div>
@@ -731,7 +734,10 @@
 												</div>
 												<div class="dd-group__content dd-content-js">
 													<div class="dd-group__slide">
-														<div class="default-ion-slider"></div>
+														<div class="dd-group__extra-controls extra-controls"><input type="text" class="js-input-from" value="0" data-slider-group="height"/>
+<input type="text" class="js-input-to" value="0" data-slider-group="height"/>
+														</div>
+														<input class="default-ion-slider" data-slider-group="height" data-min="0" data-max="1000000" data-type="double"/>
 													</div>
 												</div>
 											</div>
@@ -740,7 +746,10 @@
 												</div>
 												<div class="dd-group__content dd-content-js">
 													<div class="dd-group__slide">
-														<div class="default-ion-slider"></div>
+														<div class="dd-group__extra-controls extra-controls"><input type="text" class="js-input-from" value="0" data-slider-group="width"/>
+<input type="text" class="js-input-to" value="0" data-slider-group="width"/>
+														</div>
+														<input class="default-ion-slider" data-slider-group="width" data-min="0" data-max="1000000" data-type="double"/>
 													</div>
 												</div>
 											</div>
@@ -749,7 +758,10 @@
 												</div>
 												<div class="dd-group__content dd-content-js">
 													<div class="dd-group__slide">
-														<div class="default-ion-slider"></div>
+														<div class="dd-group__extra-controls extra-controls"><input type="text" class="js-input-from" value="0" data-slider-group="depth"/>
+<input type="text" class="js-input-to" value="0" data-slider-group="depth"/>
+														</div>
+														<input class="default-ion-slider" data-slider-group="depth" data-min="0" data-max="1000000" data-type="double"/>
 													</div>
 												</div>
 											</div>
@@ -3607,5 +3619,10 @@
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="js/common.js"></script>
+		<div class="scrollTop">
+			<svg class="icon icon-arrow-up ">
+				<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+			</svg>
+		</div>
 	</body>
 </html>

@@ -1,9 +1,9 @@
-mixin sPopular(def)
+mixin sPopular(def, plus=true)
 	// start sPopular
 	+b.sPopular.section#sPopular&attributes(attributes)
 		+e.container.container-fluid.container-lg
 			block
-			+headline('Популярные категории', 'true')
+			+headline('Популярные категории', 'true', '', plus)
 			mixin item(i, title, ...items)
 				+e.slide.swiper-slide
 					+e.item

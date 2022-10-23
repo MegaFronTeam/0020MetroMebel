@@ -1,4 +1,4 @@
-mixin sSlider(images, title, subtitle, label)
+mixin sSlider(images, title, subtitle, label, plus=true)
 	// start sSlider
 	+b.sSlider.section&attributes(attributes)
 		+e.container.container
@@ -7,7 +7,7 @@ mixin sSlider(images, title, subtitle, label)
 				+img('img/svg/square.svg').img-1
 				+img('img/svg/square.svg').img-2
 				+img('img/svg/square.svg').img-3
-			+headline(title, '', subtitle)
+			+headline(title, '', subtitle, plus)
 			+e.slider-wrapper.default-slider-wrap
 				+e.slider.default-slider
 					.swiper-wrapper

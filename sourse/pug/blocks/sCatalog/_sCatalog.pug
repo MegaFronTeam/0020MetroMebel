@@ -12,7 +12,15 @@ mixin sCatalog(card='true')
 							+ddGroup()
 								+ddGroupItem('Цена')
 									+e.slide
-										.default-ion-slider
+										+e.extra-controls.extra-controls
+											<input type="text" class="js-input-from" value="0" data-slider-group="price"/>
+											<input type="text" class="js-input-to" value="0" data-slider-group="price"/>
+										input.default-ion-slider(
+											data-slider-group="price"
+											data-min="0"
+											data-max="1000000"
+											data-type="double"
+										)
 								+ddGroupItem('Длина столешницы')
 									+b.form-wrap--2
 										.row
@@ -32,13 +40,37 @@ mixin sCatalog(card='true')
 												+in-c('radio', '2000 мм (5)')
 								+ddGroupItem('Высота в мм')
 									+e.slide
-										.default-ion-slider
+										+e.extra-controls.extra-controls
+											<input type="text" class="js-input-from" value="0" data-slider-group="height"/>
+											<input type="text" class="js-input-to" value="0" data-slider-group="height"/>
+										input.default-ion-slider(
+											data-slider-group="height"
+											data-min="0"
+											data-max="1000000"
+											data-type="double"
+										)
 								+ddGroupItem('Длина в мм')
 									+e.slide
-										.default-ion-slider
+										+e.extra-controls.extra-controls
+											<input type="text" class="js-input-from" value="0" data-slider-group="width"/>
+											<input type="text" class="js-input-to" value="0" data-slider-group="width"/>
+										input.default-ion-slider(
+											data-slider-group="width"
+											data-min="0"
+											data-max="1000000"
+											data-type="double"
+										)
 								+ddGroupItem('Глубина в мм')
 									+e.slide
-										.default-ion-slider
+										+e.extra-controls.extra-controls
+											<input type="text" class="js-input-from" value="0" data-slider-group="depth"/>
+											<input type="text" class="js-input-to" value="0" data-slider-group="depth"/>
+										input.default-ion-slider(
+											data-slider-group="depth"
+											data-min="0"
+											data-max="1000000"
+											data-type="double"
+										)
 								+ddGroupItem('По назначению')
 									+b.form-wrap
 										+in-c('radio', 'для балкона')

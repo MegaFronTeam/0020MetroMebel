@@ -6,9 +6,10 @@ mixin headerBlock()
 				.swiper-wrapper
 					-for(let i = 0; i<3; i++)
 						+e.slide-middle.swiper-slide
-							+e.text Камера хранения для сумок на 20 ячеек 
-								!= i
-							+icon('arrow-right')
+							a(href="#") 
+								+e.text Камера хранения для сумок на 20 ячеек 
+									!= i
+								+icon('arrow-right')
 			+e.row.row
 				.col-md-6
 					+e.swiper-text--js.swiper
