@@ -435,6 +435,7 @@ function eventHandler() {
 		effect: 'fade',
 		loop: true,
 		// reverseDirection: true,
+		enabled: false,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -442,6 +443,11 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		breakpoints: {
+			768: {
+				enabled: true,
+			},
+		}
 	}
 
 	const headerBlockMiddleSwiper = new Swiper('.headerBlock__swiper-middle--js', {

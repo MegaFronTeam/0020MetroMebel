@@ -177,6 +177,11 @@
 			color: $primary;
 			font-size: rem(19);
 		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 1px;
+		}
 	}
 	&__inner-row {
 		--bs-gutter-x: 0;

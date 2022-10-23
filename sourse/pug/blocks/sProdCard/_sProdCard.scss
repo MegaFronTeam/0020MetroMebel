@@ -369,7 +369,6 @@
 		// @include media-breakpoint-up(xxl) {
 		// 	--bs-gutter-x: #{rem(35)};
 		// }
-
 		.addBlock {
 			input {
 				@include media-breakpoint-down(sm) {
@@ -437,6 +436,10 @@
 				font-size: rem(35);
 			}
 			// &-award
+		}
+		img {
+			flex: 0 0 auto;
+			margin-right: rem(20);
 		}
 	}
 	&__main-row {
@@ -535,6 +538,13 @@
 				color: $secondary;
 				margin-right: rem(7);
 			}
+		}
+	}
+	&__payment-wrap {
+		display: flex;	
+		align-items: center;
+		img {
+			margin-right: rem(7);
 		}
 	}
 	&__footer-btn-row {
@@ -711,6 +721,7 @@
 				}
 			}
 			.filepond {
+				cursor: pointer;
 				&--credits {
 					display: none;
 				}
@@ -761,7 +772,8 @@
 					left: rem(80);
 				}
 				&--list-scroller {
-					height: 400px;
+					height: 100% !important;
+					max-height: 400px;
 					position: relative;
 					overflow-y: scroll;
 					overflow-x: visible;
@@ -1013,6 +1025,10 @@
 				}
 			}
 		}
+	}
+	&__main-col {
+		position: relative;
+    z-index: 2;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

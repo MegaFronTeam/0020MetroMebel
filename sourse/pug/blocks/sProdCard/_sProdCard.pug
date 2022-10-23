@@ -59,7 +59,7 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 									+img('img/logo.png')
 					+e.main-row.row
 						//- .col
-						.col-md.col-lg-12.col-xl
+						+e.main-col.col-md.col-lg-12.col-xl
 							+e.text-wrap
 								p Габариты: ВxШxГ в мм / 1860x500x530
 								p Тип: сборный
@@ -147,10 +147,9 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 								p
 									+icon('money')
 									| Наличные
-								p
-									+icon('money')
-									| Безналичные
-					.row
+								+e.payment-wrap
+									+img('img/card-money.png')
+									p Безналичные
 						.col-12
 							+e.advantages-row.row
 								.col-6.col-md-auto
@@ -168,7 +167,8 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 								.col-6.col-md-auto
 									+e.item
 										//- +icon('wallet')
-										+icon('award')
+										//- +icon('award')
+										+img('img/wallet.png')
 										| Возможность<br>отсрочки платежа
 			.tabs
 				+e.footer-btn-row.tabs__caption

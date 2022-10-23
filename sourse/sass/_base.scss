@@ -703,3 +703,11 @@ iframe {
 		}
 	}
 }
+
+.prod-card-main {
+	@include media-breakpoint-only(xl) {
+		.sProdCard__accessories, .sProdCard__choose-colors, .sProdCard__footer-row {
+			margin-right: -57%;
+		}
+	}
+}

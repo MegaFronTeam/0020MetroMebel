@@ -31,7 +31,7 @@
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="prod-card">
+	<body class="prod-card prod-card-main">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -758,7 +758,7 @@
 									</div>
 								</div>
 								<div class="sProdCard__main-row row">
-									<div class="col-md col-lg-12 col-xl">
+									<div class="sProdCard__main-col col-md col-lg-12 col-xl">
 										<div class="sProdCard__text-wrap">
 											<p>Габариты: ВxШxГ в мм / 1860x500x530</p>
 											<p>Тип: сборный</p>
@@ -924,15 +924,11 @@
 													<use xlink:href="img/svg/sprite.svg#money"></use>
 												</svg>Наличные
 											</p>
-											<p>
-												<svg class="icon icon-money ">
-													<use xlink:href="img/svg/sprite.svg#money"></use>
-												</svg>Безналичные
-											</p>
+											<div class="sProdCard__payment-wrap"><img src="img/card-money.png" alt="" loading="lazy"/>
+												<p>Безналичные</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="row">
 									<div class="col-12">
 										<div class="sProdCard__advantages-row row">
 											<div class="col-6 col-md-auto">
@@ -957,10 +953,7 @@
 												</div>
 											</div>
 											<div class="col-6 col-md-auto">
-												<div class="sProdCard__item">
-													<svg class="icon icon-award ">
-														<use xlink:href="img/svg/sprite.svg#award"></use>
-													</svg>Возможность<br>отсрочки платежа
+												<div class="sProdCard__item"><img src="img/wallet.png" alt="" loading="lazy"/>Возможность<br>отсрочки платежа
 												</div>
 											</div>
 										</div>
@@ -2682,15 +2675,9 @@
 											<use xlink:href="img/svg/sprite.svg#mail"></use>
 										</svg>msk+166727754@metrommebel.ru
 									</a>
-									<div class="footer__info">
-										<svg class="icon icon-mail ">
-											<use xlink:href="img/svg/sprite.svg#mail"></use>
-										</svg>Москва, ул. Стахановская, д.6&nbsp;стр.&nbsp;9
+									<div class="footer__info"><img src="img/time-left-icon.png" alt="" loading="lazy"/>Москва, ул. Стахановская, д.6&nbsp;стр.&nbsp;9
 									</div>
-									<div class="footer__info">
-										<svg class="icon icon-mail ">
-											<use xlink:href="img/svg/sprite.svg#mail"></use>
-										</svg>Режим работы:<br>Пн-Чт: 8:00 - 18:00<br>Пт: 8:00-17:00
+									<div class="footer__info"><img src="img/map-icon.png" alt="" loading="lazy"/>Режим работы:<br>Пн-Чт: 8:00 - 18:00<br>Пт: 8:00-17:00
 									</div>
 								</div>
 								<div class="col-12">

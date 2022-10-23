@@ -6,12 +6,16 @@ mixin sPopularManufacturers(data)
 			+e.slider-wrapper.default-slider-wrap
 				+e.slider.default-slider
 					.swiper-wrapper
-						mixin item()
+						mixin item(i='img/sPopularManufacturers-img-1.png')
 							+e.slide.swiper-slide
 								+e.img-wrap
 									.img-wrap-center
-										+img('img/sPopularManufacturers-img-1.png')
-						-for(let i=0; i<10; i++)
+										+img(i)
+						-for(let i=0; i<2; i++)
+							+item
+						+item('img/sOurClients-img-4.png')
+						+item('img/sOurClients-img-5.png')
+						-for(let i=0; i<6; i++)
 							+item
 				+arrow()
 	// end sPopularManufacturers
