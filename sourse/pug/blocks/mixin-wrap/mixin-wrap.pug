@@ -58,7 +58,13 @@ mixin headline(text, all, innertext, plus=true)
 				| весь каталог
 				+icon('arrow-right')
 
-mixin card(label, count=3)
+mixin cardList(listTitle, listText)
+	li
+		span!= listTitle
+		span.doted
+		span!= listText
+
+mixin card(label, title='Цветной четырехсекционный шкаф для одежды', articul='23388, 23389', ...imgs)
 	+b.card
 		+e.aside--left
 		+e.aside--right
@@ -75,28 +81,16 @@ mixin card(label, count=3)
 				+e.label--right(style="--bg: #fb4420") NEW
 			+e.img-slider--js
 				.swiper-wrapper
-					-for(i = 0; i < count; i++)
+					each img in imgs
 						+e.slide.swiper-slide
 							+e.img-wrap
 								.img-wrap-center
-									+img('img/wardrobe.png')
-						+e.slide.swiper-slide
-							+e.img-wrap
-								.img-wrap-center
-									+img('https://metprommebel.ru/upload/medialibrary/326/326ef3efb17ba2d70fa3d40c9d1fd15d.jpg')
+									+img(img)
 				.swiper-pagination
-			+e.title Цветной четырехсекционный шкаф для одежды
+			+e.title!= title 
 			+img('img/stars.png').stars
-			ul
-				mixin li(title, text)
-					li
-						span!= title
-						span.doted
-						span!= text
-				+li('Высота', '1860мм')
-				+li('Ширина', '600мм')
-				+li('Глубина', '500мм')
-				+li('Цвет', 'Серый')
+			ul 
+				block
 			+e.price 8 000 руб.
 			+e.footer
 				+e.btn.btn.btn-secondary Заказать
@@ -105,7 +99,9 @@ mixin card(label, count=3)
 				+e.buy
 					a(href="#") Купить в 1 клик
 					p Есть в наличии
-				+e.articul #[span Артикул: ] 23388, 23389
+				+e.articul 
+					span Артикул: 
+					!= articul
 
 mixin advatages()
 	+b.advatages
@@ -129,7 +125,7 @@ mixin advatages()
 						+img('img/wallet.png')
 						p Возможность отсрочки платежа
 
-mixin oneInRowcard()
+mixin oneInRowcard(title, articul, ...imgs)
 	+b.card--oneinrow
 		+e.row.row
 			+e.left-side-col.col
@@ -143,14 +139,14 @@ mixin oneInRowcard()
 						+icon('cart')
 				+e.img-slider--js
 					.swiper-wrapper
-						-for(i = 0; i < 4; i++)
+						each img in imgs
 							+e.slide.swiper-slide
 								+e.img-wrap
 									.img-wrap-center
-										+img('img/product-img-7.png')
+										+img(img)
 					.swiper-pagination
 			.col
-				+e.title Верстак 2000 с экраном с консолями и тумбой с 5 выдвижными ящиками
+				+e.title!= title
 				+e.inner-row.row
 					.col
 						+img('img/stars.png').stars
@@ -165,37 +161,23 @@ mixin oneInRowcard()
 							p Есть в наличии
 					.col.d-none.d-xl-block
 						ul
-							mixin li(title, text)
-								li
-									span!= title
-									span.doted
-									span!= text
-							+li('Высота', '1860мм')
-							+li('Ширина', '600мм')
-							+li('Глубина', '500мм')
-							+li('Цвет', 'Серый')
+							block
+							//- +li('Высота', '1860мм')
+							//- +li('Ширина', '600мм')
+							//- +li('Глубина', '500мм')
+							//- +li('Цвет', 'Серый')
 						+e.articul #[span Артикул: ]<br> 
-							p 32756: одинарный экран с консолями, тумба слева
-							p 32764: одинарный экран с консолями, тумба справа
-							p 32757: двойной экран, тумба слева
-							p 32765: двойной экран, тумба справа\
+							!= articul
 			.col-12.d-flex.d-xl-none
 				+e.footer-wrap 
 					ul
-						mixin li(title, text)
-							li
-								span!= title
-								span.doted
-								span!= text
-						+li('Высота', '1860мм')
-						+li('Ширина', '600мм')
-						+li('Глубина', '500мм')
-						+li('Цвет', 'Серый')
+						block
+						//- +li('Высота', '1860мм')
+						//- +li('Ширина', '600мм')
+						//- +li('Глубина', '500мм')
+						//- +li('Цвет', 'Серый')
 					+e.articul #[span Артикул: ]<br> 
-						p 32756: одинарный экран с консолями, тумба слева
-						p 32764: одинарный экран с консолями, тумба справа
-						p 32757: двойной экран, тумба слева
-						p 32765: двойной экран, тумба справа\
+						!= articul
 
 mixin scrollTop()
 	+b.scrollTop

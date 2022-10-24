@@ -106,12 +106,12 @@
 			--swiperArrowPosition: -81px;
 		}
 		&-prev {
-			@include media-breakpoint-up(xl) {
-				--swiperArrowPosition: -68px;
-			}
-			@include media-breakpoint-up(xxl) {
-				left: calc(var(--swiperArrowPosition) - rem(39));
-			}
+			// @include media-breakpoint-up(xxl) {
+			// 	--swiperArrowPosition: -68px;
+			// }
+			// @include media-breakpoint-up(xxl) {
+			// 	left: calc(var(--swiperArrowPosition) - rem(39));
+			// }
 		}
 	}
 

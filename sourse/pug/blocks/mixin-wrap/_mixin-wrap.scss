@@ -269,6 +269,7 @@
 	width: 100%;
 	height: 100%;
 	max-width: rem(257);
+	// min-width: rem(257);
 	background-color: #fff;
 	position: relative;
 	box-shadow: 0 0 13px transparent;
@@ -639,7 +640,9 @@
 			}
 		}
 		ul {
-			max-width: rem(215);
+			@include media-breakpoint-up(md) {
+				max-width: rem(215);
+			}
 		}
 	}
 }

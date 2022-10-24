@@ -243,6 +243,15 @@
 	&__catalog-row {
 		--bs-gutter-x: #{rem(35)};
 		--bs-gutter-y: #{rem(35)};
+		@include media-breakpoint-up(xl) {
+			max-width: rem(778px);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(1038px);
+		}
+		@media (min-width: 1500px) {
+			max-width: rem(1380);
+		}
 		&--2 {
 			--bs-gutter-y: #{rem(0)};
 		}
@@ -260,8 +269,21 @@
 			width: 1em;
 		}
 	}
+	&__catalog-col {
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 2);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: calc(100% / 3);
+		}
+		@media (min-width: 1500px) {
+			width: calc(100% / 4);
+		}
+	}
 	.card {
 		border: 1px solid #f1f0f0;
+		width: 100%;
+		max-width: none;
 		@include media-breakpoint-down(xl) {
 			max-width: none;
 		}

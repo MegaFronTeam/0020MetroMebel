@@ -203,14 +203,71 @@ mixin sCatalog(card='true')
 									+icon('control-2')
 					if card 
 						+e.catalog-row.row
-							-for(let i = 1; i <= 8; i++)
-								.col-md-6.col-xl-4.col-xxl-3.zIndex
-									+card('true')
+							-for(let i = 1; i <= 4; i++)
+								+e.catalog-col.col.zIndex
+									+card(true, 'Стеллаж паллетный фронтальный 6000x9125x1100', '20237, 20238, 20239, 20240, 20241, 20242', '', 'https://metprommebel.ru/upload/iblock/e68/e688294f889a8fbc5973b5eb47a10731.png', 'https://metprommebel.ru/upload/iblock/81d/81dbe1e6d1833b0d406374c514b75029.png', 'https://metprommebel.ru/upload/iblock/670/670dad602dc61888e33a532153681b3b.png')
+										+cardList('Тип', 'сборный')
+										+cardList('Высота', '3000мм')
+										+cardList('Ширина', '5475мм')
+										+cardList('Глубина', '1100мм')
+										+cardList('Количество ярусов:', '20100: 2, 20101: 3, 20102: 4')
+								+e.catalog-col.col.zIndex
+									+card(true, 'Верстак 1000 с экраном и светодиодным светильником', '32461: без экрана<br>32460: одинарный экран<br>32459: одинарный экран с консолями<br>32458: двойной экран', '', 'https://metprommebel.ru/upload/iblock/63e/63e90fa40721d6168c38e9d8ee463985.png', 'https://metprommebel.ru/upload/iblock/eda/edadd38bfafb9869617e4079f039ae44.png')
+										+cardList('Тип', 'сборный')
+										+cardList('Грузоподъёмность (нагрузка)', '300кг')
+										+cardList('Наличие колёс', 'есть')
+										+cardList('Высота', '825мм')
+										+cardList('Ширина', '1000мм')
+										+cardList('Глубина', '700мм')
+								+e.catalog-col.col.zIndex
+									+card(true, 'Шкаф картотечный ШК-4 формат А4', '10703', '', 'https://metprommebel.ru/upload/iblock/a0b/a0ba3ce9ead3530fb9ba4738d4156a84.png', 'https://metprommebel.ru/upload/iblock/bd4/bd40e0ad7ee3f30091f2f0d5065d99de.png', 'https://metprommebel.ru/upload/iblock/413/41356e34f67c3ec3092d2dc149852aa4.png', 'https://metprommebel.ru/upload/iblock/467/46720831bf570ec260ba7d6a6cdf70f5.png')
+										+cardList('Тип', 'сварной')
+										+cardList('Количество ящиков', '4')
+										+cardList('Высота', '1310мм')
+										+cardList('Ширина', '485мм')
+										+cardList('Глубина', '600мм')
+										+cardList('Цвет ', 'светло-серый (RAL 7035)')
+								+e.catalog-col.col.zIndex
+									+card(true, 'Ящик почтовый на 5 квартир Базис Лайт', '15605', '', 'https://metprommebel.ru/upload/iblock/461/461751d3c3e7215326c690ce49c4e9b8.png', 'https://metprommebel.ru/upload/iblock/b35/b35a413186423477c39041b17eb8750d.png')
+										+cardList('Тип', 'сварной')
+										+cardList('Количество секций (ячеек)', '5')
+										+cardList('Вес', '5,37кг')
+										+cardList('Высота', '550мм')
+										+cardList('Ширина', '330мм')
+										+cardList('Глубина', '150мм')
 					else
 						+e.catalog-row--2.row
-							-for(let i = 1; i <= 4; i++)
-								.col-12
-									+oneInRowcard('true')
+							.col-12
+								+oneInRowcard('Стеллаж паллетный фронтальный 6000x9125x1100', '20237, 20238, 20239, 20240, 20241, 20242', 'https://metprommebel.ru/upload/iblock/e68/e688294f889a8fbc5973b5eb47a10731.png', 'https://metprommebel.ru/upload/iblock/81d/81dbe1e6d1833b0d406374c514b75029.png', 'https://metprommebel.ru/upload/iblock/670/670dad602dc61888e33a532153681b3b.png')
+									+cardList('Тип', 'сборный')
+									+cardList('Высота', '3000мм')
+									+cardList('Ширина', '5475мм')
+									+cardList('Глубина', '1100мм')
+									+cardList('Количество ярусов:', '20100: 2, 20101: 3, 20102: 4')
+							.col-12
+								+oneInRowcard('Верстак 1000 с экраном и светодиодным светильником', '32461: без экрана<br>32460: одинарный экран<br>32459: одинарный экран с консолями<br>32458: двойной экран', 'https://metprommebel.ru/upload/iblock/63e/63e90fa40721d6168c38e9d8ee463985.png', 'https://metprommebel.ru/upload/iblock/eda/edadd38bfafb9869617e4079f039ae44.png')
+									+cardList('Тип', 'сборный')
+									+cardList('Грузоподъёмность (нагрузка)', '300кг')
+									+cardList('Наличие колёс', 'есть')
+									+cardList('Высота', '825мм')
+									+cardList('Ширина', '1000мм')
+									+cardList('Глубина', '700мм')
+							.col-12
+								+oneInRowcard( 'Шкаф картотечный ШК-4 формат А4', '10703', 'https://metprommebel.ru/upload/iblock/a0b/a0ba3ce9ead3530fb9ba4738d4156a84.png', 'https://metprommebel.ru/upload/iblock/bd4/bd40e0ad7ee3f30091f2f0d5065d99de.png', 'https://metprommebel.ru/upload/iblock/413/41356e34f67c3ec3092d2dc149852aa4.png', 'https://metprommebel.ru/upload/iblock/467/46720831bf570ec260ba7d6a6cdf70f5.png')
+										+cardList('Тип', 'сварной')
+										+cardList('Количество ящиков', '4')
+										+cardList('Высота', '1310мм')
+										+cardList('Ширина', '485мм')
+										+cardList('Глубина', '600мм')
+										+cardList('Цвет ', 'светло-серый (RAL 7035)')
+							.col-12
+								+oneInRowcard('Ящик почтовый на 5 квартир Базис Лайт', '15605', 'https://metprommebel.ru/upload/iblock/461/461751d3c3e7215326c690ce49c4e9b8.png', 'https://metprommebel.ru/upload/iblock/b35/b35a413186423477c39041b17eb8750d.png')
+									+cardList('Тип', 'сварной')
+									+cardList('Количество секций (ячеек)', '5')
+									+cardList('Вес', '5,37кг')
+									+cardList('Высота', '550мм')
+									+cardList('Ширина', '330мм')
+									+cardList('Глубина', '150мм')
 			+e.catalog-bottom
 				+pugin()
 				+e.text Стеллажи с&nbsp;нагрузкой до&nbsp;120&nbsp;кг недорого от&nbsp;официального дилера. Доступная цена без дилерской наценки. В&nbsp;каталоге более 9&nbsp;моделей в&nbsp;наличии или под заказ. Вы можете купить, уточнить цену, получить информацию, оставив заявку или позвонить по&nbsp;телефону: + 7 (495) 172-21-96. Железная мебель в&nbsp;интернет-магазине “МетПромМебель.” Доставка по&nbsp;Москве и&nbsp;в&nbsp;другие города и&nbsp;регионы России.
