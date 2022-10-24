@@ -270,12 +270,12 @@
 		}
 	}
 	&__catalog-col {
-		@include media-breakpoint-up(md) {
-			width: calc(100% / 2);
-		}
-		@include media-breakpoint-up(xxl) {
-			width: calc(100% / 3);
-		}
+		// @include media-breakpoint-up(md) {
+		// 	width: calc(100% / 2);
+		// }
+		// @include media-breakpoint-up(xxl) {
+		// 	width: calc(100% / 3);
+		// }
 		@media (min-width: 1500px) {
 			width: calc(100% / 4);
 		}
