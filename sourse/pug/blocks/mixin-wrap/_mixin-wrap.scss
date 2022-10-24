@@ -341,15 +341,19 @@
 	}
 	.swiper-pagination {
 		bottom: 0;
-		height: 100%;
+		@include media-breakpoint-up(sm) {
+			height: 100%;
+		}
 		&-bullet {
 			position: relative;
 			width: 20px;
 			// height: 2px;
-			height: 100%;
 			margin: 0 3.5px;
 			background-color: transparent;
 			// border-radius: 1px;
+			@include media-breakpoint-up(sm) {
+				height: 100%;
+			}
 			&:before {
 				content: '';
 				display: block;
