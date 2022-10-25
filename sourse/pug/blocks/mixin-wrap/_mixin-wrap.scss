@@ -284,6 +284,9 @@
 				opacity: 1;
 				pointer-events: all;
 			}
+			.card__title {
+				color: $primary;
+			}
 			&::before {
 				box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
 			}
@@ -374,6 +377,7 @@
 		}
 	}
 	&__title {
+		@include mt;
 		color: #000;
 		font-size: rem(14);
 		margin-bottom: rem(9);

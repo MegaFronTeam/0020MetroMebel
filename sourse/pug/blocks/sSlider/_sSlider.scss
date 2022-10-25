@@ -85,9 +85,15 @@
 	&__slider {
 		padding: rem(20) 0;
 		margin: rem(-20) rem(-16);
+		overflow: visible;
 		// @include media-breakpoint-up(xxl) {
 		// 	overflow: hidden;
 		// }
+		@include media-breakpoint-down(xxl) {
+			max-width: calc(100% - 118px);
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	&__slide {
 		max-width: max-content;

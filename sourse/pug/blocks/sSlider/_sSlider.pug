@@ -9,7 +9,7 @@ mixin sSlider(images, title, subtitle, label, plus=true)
 				+img('img/svg/square.svg').img-3
 			+headline(title, '', subtitle, plus)
 			+e.slider-wrapper.default-slider-wrap
-				+e.slider.default-slider
+				+e.slider.default-slider.swiper
 					.swiper-wrapper
 						-for(let i = 0; i < 2; i++)
 							+e.slide.swiper-slide.zIndex
@@ -59,7 +59,7 @@ mixin sSlider2(title, subtitle)
 							.h4.tabs__btn!= subtitle
 				.tabs__content.active
 					+e.slider-wrapper.default-slider-wrap
-						+e.slider.default-slider
+						+e.slider.default-slider.swiper
 							.swiper-wrapper
 								-for(let i = 0; i < 2; i++)
 									+e.slide.swiper-slide.zIndex

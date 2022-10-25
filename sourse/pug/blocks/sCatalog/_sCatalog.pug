@@ -83,7 +83,7 @@ mixin sCatalog(card='true')
 							+e.btn--secondary(href="#") Сбросить
 						+e.categories
 							+ddGroup()
-								+ddGroupItem('Категории')
+								+ddGroupItem('Категории', 'active')
 									mixin item(i)
 										+e.wrap
 											+e.header
@@ -145,7 +145,7 @@ mixin sCatalog(card='true')
 										+item(i)
 						+e.news.d-none.d-xl-block
 							+ddGroup()
-								+ddGroupItem('Свежие новости')
+								+ddGroupItem('Свежие новости', 'active')
 									+e.news-item
 										+e.news-title “Расширение ассортиметра”
 										p В нашем ассортименте появились гидравлические штабелёры
