@@ -1,5 +1,6 @@
 "use strict";
 const JSCCommon = { 
+	// Работа с модальнами окнами (Открытие, закрытие)
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -52,6 +53,7 @@ const JSCCommon = {
 			setValue(data.order, '.order');
 		})
 	},
+	// Открытие, закрытие моб. меню
 	// /modalCall
 	toggleMenu() {
 		document.addEventListener("click", function (event) {
@@ -64,6 +66,7 @@ const JSCCommon = {
 			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
+	// кнопка для закрытя меню
 	closeMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
 		const menu = document.querySelector(".menu-mobile--js");
@@ -75,6 +78,7 @@ const JSCCommon = {
 		}
 
 	},
+	// Мобильное меню
 	mobileMenu() { 
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
@@ -91,6 +95,7 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 
+	// Работа с вкладками
 	// tabs  .
 	tabscostume(tab) {
 		// const tabs = document.querySelectorAll(tab);
@@ -144,61 +149,14 @@ const JSCCommon = {
 
 	},
 	// /tabs
-
+	// маска для инпута в котором вводится номер телефона
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
 	},
-	// /inputMask
-	ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
-	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				Fancybox.close();
-				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
-	},
+	// Вычесляет высоту экрана
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -212,6 +170,7 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
+	// Анимация скрола
 	animateScroll() {
 		$(document).on('click', " .menu li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
@@ -225,11 +184,13 @@ const JSCCommon = {
 			}
 		});
 	},
+	// Получение текущего года
 	getCurrentYear(el) {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
 	},
+	// расскрытие, закрытие каталога
 	toggleShow(toggle, drop) {
 
 		let catalogDrop = drop;
@@ -250,6 +211,7 @@ const JSCCommon = {
 			};
 		}, { passive: true });
 	},
+	// Функция для выпадашки, как в каталоге
 	makeDDGroup() {
 		let parents = document.querySelectorAll('.dd-group-js');
 		for (let parent of parents) {
@@ -279,6 +241,7 @@ const JSCCommon = {
 			}
 		}
 	},
+	//  парсит картинку в свг
 	imgToSVG() {
     const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
@@ -302,10 +265,88 @@ const JSCCommon = {
 	
 		convertImages('.img-svg-js');
   },
+	// включает ползунки
+	customRange() {
+		$('.default-ion-slider').each(function () {
+			var $range = $(this);
+			var $itemsInGroup = $( '[data-slider-group="' + $range.data('slider-group') + '"]' );
+			var $fromInput = $itemsInGroup.filter(".js-input-from");
+			var $toInput = $itemsInGroup.filter(".js-input-to");
+
+			// Initialize some global variables
+			var range, min, max, from, to;
+
+			// Update the input fields with the correct to and from values
+			var updateValues = function () {
+					$fromInput.prop("value", from);
+					$toInput.prop("value", to);
+			};
+
+			// Set properties from ionRangeSlider
+			var getProps = function (data) {
+					from = data.from;
+					to = data.to;
+					min = data.min;
+					max = data.max;
+			}
+
+			// Attach change and start events to the slider
+			$range.ionRangeSlider({
+					onChange: function (data) {
+							getProps(data);
+							updateValues();
+					},
+					onStart: function (data) {
+							getProps(data);
+							updateValues();
+					}
+			});
+
+			// Save the slider instance to a variable
+			range = $range.data("ionRangeSlider");
+
+			// Update the slider values with the variables from our inputs
+			var updateRange = function () {
+					range.update({
+							from: from,
+							to: to
+					});
+			};
+
+			// Attach change events to the "from" input field
+			$fromInput.on("change", function () {
+					from = +$(this).prop("value");
+					if (typeof min !== "undefined" && from < min) {
+							from = min;
+					}
+					if (from > to) {
+							from = to;
+					}
+
+					updateValues();
+					updateRange();
+			});
+
+			// Attach change events to the "to" input field
+			$toInput.on("change", function () {
+					to = +$(this).prop("value");
+					if (typeof max !== "undefined" && to > max) {
+							to = max;
+					}
+					if (to < from) {
+							to = from;
+					}
+
+					updateValues();
+					updateRange();
+			});
+	});
+	},
 };
 const $ = jQuery;
 
 function eventHandler() {
+	//  вызов всех функций выше
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -314,10 +355,12 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+	JSCCommon.customRange();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
+	//  ПиксельПерфект
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;
@@ -325,7 +368,7 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-
+	// Добовляет классы для фиксации меню
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
@@ -333,7 +376,7 @@ function eventHandler() {
 			? topNav.classList.add('fixed')
 			: topNav.classList.remove('fixed');
 	}
-
+	//  проверка ширины экрана
 	function whenResize() {
 		setFixedNav();
 	}
@@ -348,7 +391,7 @@ function eventHandler() {
 
 	whenResize();
 
-
+	//  параметры по умолчанию для слайдера
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -370,13 +413,13 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+	//  вызов слайдера
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
-	
+	//  вызов слайдера
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -388,7 +431,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-
+	//  вызов слайдера
 	// modal window
 	let defSlidersWraps = document.querySelectorAll('.default-slider-wrap');
 	defSlidersWraps.forEach(defSlidersWrap => {
@@ -401,7 +444,7 @@ function eventHandler() {
 			},
 		});
 	});
-
+	//  вызов слайдера
 	const cardtSwiper = new Swiper('.card__img-slider--js', {
 		slidesPerView: 1,
 		spaceBetween: 2,
@@ -411,11 +454,11 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-
+	//  при наведении меняется картинки на слайдере 
 	$('.card__img-slider--js .swiper-pagination-bullet').hover(function() {
 		$( this ).trigger( "click" );
 	});
-
+	//  меняет z-index
 	$('.zIndex').hover(function() {
 		if(window.innerWidth >= 992) {
 			$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
@@ -429,13 +472,14 @@ function eventHandler() {
 		}
 	});
 
+	// параметры по умолчанию для слайдера
 	let mainSl = {
 		slidesPerView: 1,
 		simulateTouch: false,
 		effect: 'fade',
 		loop: true,
 		// reverseDirection: true,
-		enabled: false,
+		// enabled: false,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -443,13 +487,13 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		breakpoints: {
-			768: {
-				enabled: true,
-			},
-		}
+		// breakpoints: {
+		// 	768: {
+		// 		enabled: true,
+		// 	},
+		// }
 	}
-
+	//  вызов слайдера
 	const headerBlockMiddleSwiper = new Swiper('.headerBlock__swiper-middle--js', {
 		...mainSl,
 	});
@@ -494,6 +538,7 @@ function eventHandler() {
 		// },
 	});
 
+	//  открывает, закрывает Фильтр
 	let category = document.querySelector('.filter__category--js');
 	if(category) {
 		category.addEventListener('click', function() {
@@ -502,94 +547,6 @@ function eventHandler() {
 		});
 	}
 
-	(function rangeSlider( $ ){
-
-    if ( $('.default-ion-slider').length == 0 ) {
-        return false;
-    }
-
-    $(function() {
-
-        $('.default-ion-slider').each(function () {
-            // Grab our DOM elements
-            var $range = $(this);
-            var $itemsInGroup = $( '[data-slider-group="' + $range.data('slider-group') + '"]' );
-            var $fromInput = $itemsInGroup.filter(".js-input-from");
-            var $toInput = $itemsInGroup.filter(".js-input-to");
-
-            // Initialize some global variables
-            var range, min, max, from, to;
-
-            // Update the input fields with the correct to and from values
-            var updateValues = function () {
-                $fromInput.prop("value", from);
-                $toInput.prop("value", to);
-            };
-
-            // Set properties from ionRangeSlider
-            var getProps = function (data) {
-                from = data.from;
-                to = data.to;
-                min = data.min;
-                max = data.max;
-            }
-
-            // Attach change and start events to the slider
-            $range.ionRangeSlider({
-                onChange: function (data) {
-                    getProps(data);
-                    updateValues();
-                },
-                onStart: function (data) {
-                    getProps(data);
-                    updateValues();
-                }
-            });
-
-            // Save the slider instance to a variable
-            range = $range.data("ionRangeSlider");
-
-            // Update the slider values with the variables from our inputs
-            var updateRange = function () {
-                range.update({
-                    from: from,
-                    to: to
-                });
-            };
-
-            // Attach change events to the "from" input field
-            $fromInput.on("change", function () {
-                from = +$(this).prop("value");
-                if (typeof min !== "undefined" && from < min) {
-                    from = min;
-                }
-                if (from > to) {
-                    from = to;
-                }
-
-                updateValues();
-                updateRange();
-            });
-
-            // Attach change events to the "to" input field
-            $toInput.on("change", function () {
-                to = +$(this).prop("value");
-                if (typeof max !== "undefined" && to > max) {
-                    to = max;
-                }
-                if (to < from) {
-                    to = from;
-                }
-
-                updateValues();
-                updateRange();
-            });
-        });
-
-    });
-
-	})( jQuery );
-
 	let filterBtn = document.querySelector('.sCatalog__cotrol-btn--js');
 	if(filterBtn) {
 		filterBtn.addEventListener('click', function(e) {
@@ -597,7 +554,7 @@ function eventHandler() {
 			$('.filter').toggleClass('active');
 		});
 	};
-
+	//  по клику во вне фильтра - фильтр закроется
 	document.addEventListener('click', function(event) {
 		// let filter = document.querySelector('.filter');
 		let filter = event.target.closest(".filter"); // (1)
@@ -606,7 +563,7 @@ function eventHandler() {
 			$('.filter').removeClass('active');
 		}
 	})
-
+	// Кастомное добавление файлов
 	FilePond.registerPlugin(
 		FilePondPluginImagePreview
 	);
@@ -623,6 +580,7 @@ function eventHandler() {
 		},
 	});
 
+	//  Когда от верха страницы прокручено больше 800пх добавляет класс .active на кнопку скролла верх
 	let scrollTopBtn = document.querySelector('.scrollTop');
 	$(document).scroll(function() {
 		let y = $(this).scrollTop();
@@ -632,7 +590,7 @@ function eventHandler() {
 			$(scrollTopBtn).removeClass('active');
 		}
 	});
-
+	//  по нажатию на кнопку скролит наверх 
 	scrollTopBtn.addEventListener('click', () => window.scrollTo(0, 0));
 };
 if (document.readyState !== 'loading') {

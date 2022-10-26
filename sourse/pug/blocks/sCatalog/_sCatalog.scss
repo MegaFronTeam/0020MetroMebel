@@ -358,17 +358,18 @@
 		min-width: rem(340);
 	}
 	@include media-breakpoint-down(md) {
-		top: 1046px;
+		// top: 1046px;
 	}
 	@include media-breakpoint-down(lg) {
-		top: 1064px;
+		// top: 1064px;
 	}
 	@include media-breakpoint-down(xl) {
 		position: absolute;
 		@include mt;
 		// transform: translateX(-100vw);
 		z-index: 12;
-    top: 764px;
+    // top: 764px;
+    top: calc(100% + 7px);
     width: 100%;
 		padding-top: rem(42);
 		transform: scaleY(0);

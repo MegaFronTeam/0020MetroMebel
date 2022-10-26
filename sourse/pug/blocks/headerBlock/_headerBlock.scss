@@ -16,7 +16,7 @@
 		--sPB: #{rem(0)};
 	}
 	.swiper {
-		pointer-events: none;
+		// pointer-events: none;
 		// .swiper-wrapper {
 		// 	@include media-breakpoint-down(md) {
 		// 		transform: none !important;
@@ -82,7 +82,7 @@
 			max-width: rem(189);
 			top: 49px;
 			right: 5%;
-			z-index: -1;
+			z-index: 0;
 		}
 	}
 	&__img-slide {
@@ -94,6 +94,7 @@
 	}
 	&__img-wrap {
 		text-align: center;
+		display: block;
 		img {
 			width: 100%;
 			max-width: rem(189);
@@ -171,7 +172,9 @@
 		}
 	}
 	&__swiper-text {
+		// pointer-events: none;
 		@include media-breakpoint-up(md) {
+			// pointer-events: all;
 			margin-bottom: rem(53);
 		}
 	}

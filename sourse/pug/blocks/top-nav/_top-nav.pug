@@ -17,15 +17,21 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(mainPage=false) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		//- .container
 		+e.row.row
 			.col-6.col-lg-auto.order-1.order-lg-1
-				+e.logo(href="#")
-					+img('img/logo.png')
-					+e.text Продажа металлической мебели и оборудования для бизнеса и дома
+				if mainPage
+					+e.logo
+						a(href="#")
+							+img('img/logo.png')
+						+e.text Продажа металлической мебели и оборудования для бизнеса и дома
+				else
+					+e.logo(href="#")
+						+img('img/logo.png')
+						+e.text Продажа металлической мебели и оборудования для бизнеса и дома
 			//- .col-auto
 			.col.order-4.order-lg-last.order-xxl-2
 				+e.search

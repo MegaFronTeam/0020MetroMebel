@@ -8,12 +8,13 @@ mixin sPopular(def, plus=true)
 				+e.slide.swiper-slide
 					+e.item
 						+e.content
-							+e.title(href='#')!= title
+							+e.title!= title
 							+e.sub-link-wrap 
 								each item in items
 									+e.sub-link(href="#")!= item
-							+icon('arrow-right')
-						+e.img-wrap
+							a(href="#").text-end
+								+icon('arrow-right')
+						+e.img-wrap(href='#')
 							+img(`img/sPopular-img-${i}.png`)
 			if def
 				+e.def-slider-wrap.default-slider-wrap

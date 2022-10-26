@@ -93,7 +93,7 @@ mixin card(label, title='Цветной четырехсекционный шк�
 				block
 			+e.price 8 000 руб.
 			+e.footer
-				+e.btn.btn.btn-secondary Заказать
+				+e.btn.btn.btn-secondary(href="#") Заказать
 				+addblock
 		+e.bottom-card
 				+e.buy
@@ -154,7 +154,7 @@ mixin oneInRowcard(title, articul, ...imgs)
 							+e.price 33 037 руб.
 							+e.old-price 34 000 руб.
 						+e.footer
-							+e.btn.btn.btn-secondary Заказать
+							+e.btn.btn.btn-secondary(href="#") Заказать
 							+addblock
 						+e.buy
 							a(href="#") Купить в 1 клик
