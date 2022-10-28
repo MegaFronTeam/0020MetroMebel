@@ -96,10 +96,25 @@
 		}
 	}
 	&__slide {
-		max-width: max-content;
+		width: auto;
+		// max-width: max-content;
 		height: auto;
+		--slideCount: 2;
+		--gutter-x: #{rem(16)};
 
-		margin: 0 rem(16);
+		margin: 0 var(--gutter-x);
+		@include media-breakpoint-up(md) {
+			max-width: calc(100% / var(--slideCount) + (var(--gutter-x) * -2));
+		}
+		@include media-breakpoint-up(lg) {
+			--slideCount: 3;
+		}
+		@include media-breakpoint-up(xl) {
+			--slideCount: 4;
+		}
+		@include media-breakpoint-up(xxl) {
+			--slideCount: 5;
+		}
 	}
 	.swiper-button-hand {
 		top: 110px;
