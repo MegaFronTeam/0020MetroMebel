@@ -37,7 +37,12 @@ block pagecontent
 		+page-head('Офисный архивный шкаф со стеклянными дверцами', 'Каталог', 'Металлическая офисная мебель', 'Металлические офисные шкафы', 'Шкафы архивные металлические')
 		//- +headerBlock 
 		//- +sAdvantages
-		+sProdCard(false, 'true')
+		//- +sProdCard(false, 'true', '', 'true')
+		+sProdCard({
+			firstVariant: false,
+			secondVariant: true,
+			isMainRow: true
+		})
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2

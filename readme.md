@@ -7,3 +7,6 @@
 <https://megafronteam.github.io/0020MetroMebel/public/02-product-card-3.html>
 <https://megafronteam.github.io/0020MetroMebel/public/03-catalog.html>
 <https://megafronteam.github.io/0020MetroMebel/public/03-catalog-2.html>
+
+#### Новые карточки товара
+<https://megafronteam.github.io/0020MetroMebel/public/02-product-card-4.html>

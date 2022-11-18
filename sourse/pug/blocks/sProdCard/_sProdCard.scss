@@ -69,6 +69,7 @@
 		}
 	}
 	&__slide {
+		background-color: #fff;
 		@include media-breakpoint-down(md) {
 			width: 100% !important;
 		}
@@ -1018,6 +1019,7 @@
 		}
 	}
 	&__slide-thumb {
+		background-color: #fff;
 		&.swiper-slide-thumb-active {
 			.sProdCard {
 				&__img-wrap {
@@ -1029,6 +1031,127 @@
 	&__main-col {
 		position: relative;
     z-index: 2;
+	}
+
+	&__content-wrap {
+		background-color: #fff;
+		padding: rem(30) rem(40) rem(35) rem(36);
+		margin-top: rem(29);
+		border: 0.5px solid #F0F0F0;
+		p {
+			font-size: rem(14);
+			color: #000;
+			line-height: 1.43em;
+			margin-bottom: 0;
+		}
+	}
+	&--2 {
+		--sPT: #{rem(20)};
+		.sProdCard {
+			&__container {
+				z-index: 1;
+				&:before {
+					content: "";
+					background-color: #f5f5f5;
+					display: block;
+					height: calc(100% + var(--sPT) + var(--sPB));
+					left: -542px;
+					position: absolute;
+					top: calc(var(--sPT)*-1);
+					width: 680px;
+					z-index: -2;
+				}
+			}
+			&__row {
+				--bs-gutter-x: #{rem(50)};
+				--bs-gutter-y: #{rem(50)};
+			}
+			&__swiper-wrap {
+				max-width: none;
+				min-width: 0;
+			}
+			&__img-wrap {
+				img {
+					max-height: 100%;
+				}
+			}
+			&__products {
+				--bs-gutter-y: #{rem(12)};
+				margin-top: calc(var(--bs-gutter-y) * -1);
+				& > * {
+					margin-top: var(--bs-gutter-y);
+				}
+				h6 {
+					font-weight: 400;
+					font-size: 14px;
+					margin-bottom: 0;
+					color: #000;
+				}
+			}
+			&__radio-wrap {
+				align-items: center;
+				.custom-input {
+					padding: rem(7.5) rem(14);
+					&__input {
+						@include mt;
+						box-shadow: none;
+						border: 0.5px solid #F0F0F0;
+					}
+					&__count {
+						@include mt;
+						margin-bottom: 0;
+					}
+					&:checked {
+						.custom-input__input {
+							background-color: $primary;
+						}
+						.custom-input__count {
+							color: #fff;
+						}
+					}
+				}
+				&--filling {
+					--bs-gutter-x: 12px;
+					--bs-gutter-y: 12px;
+					margin-top: 0;
+					.custom-input {
+						padding: rem(17) rem(14) rem(12);
+						width: 100%;
+						max-width: calc(100% / 5 - var(--bs-gutter-x));
+						.custom-input__input {
+							&:checked {
+								background-color: #fff;
+								border-color: $primary;
+								box-shadow: 0 0 0 1px #177ec0;
+							}
+						}
+						img {
+							position: relative;
+							z-index: 2;
+							pointer-events: none;
+						}
+					}
+				}
+			}
+			&__radio-wrap-name {
+				min-width: rem(72);
+				font-size: 14px;
+				color: $gray-600;
+			}
+			&__footer-row {
+				--bs-gutter-x: #{rem(29)};
+				p {
+					margin-bottom: 0;
+					font-size: rem(14);
+					span {
+						color: #000;
+						font-size: rem(24);
+						font-weight: 700;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

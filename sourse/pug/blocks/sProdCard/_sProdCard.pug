@@ -1,11 +1,12 @@
-mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
+//- mixin sProdCard(firstVariant=true, secondVariant, thumbSlider, isMainRow)
+mixin sProdCard(data)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		+e.container.container
 			+img('img/svg/square.svg').square.square--1
 			+e.row.row
 				+e.col.col-lg-auto
-					if thumbSlider
+					if data.thumbSlider
 						+e.full-slider-wrap
 							+e.thumb-arrow-wrap
 								+e.thumb-slider--thumb-js.swiper
@@ -50,126 +51,305 @@ mixin sProdCard(firstVariant=true, secondVariant, thumbSlider)
 								+e.link(href="#")
 									+icon('cart')
 				.col-lg
-					.row
-						.col
-							+e.head-wrap
-								+img('img/stars.png')
-								+e.creator 
-									| Производитель:
-									+img('img/logo.png')
-					+e.main-row.row
-						//- .col
-						+e.main-col.col-md.col-lg-12.col-xl
-							+e.text-wrap
-								p Габариты: ВxШxГ в мм / 1860x500x530
-								p Тип: сборный
-								p Количество человек: 1
-							+e.headline
-								h4 29 010 руб.
-								+e.has Есть в наличии
-							if firstVariant
-								+e.products
-									h6 Выберите товар:
-									+e.radio-wrap
-										-for(let i = 3; i<=8; i++)
-											+in-c('radio', '', 'product')
-												+e.count Количество полок: #[!= i]
-												+e.articul Артикул: 21500
-								+e.accessories
-									h6 Аксессуары:
-									-for(let i = 0; i<2; i++)
-										+e.inner-row.row
-											.col-12.col-sm.order-xl-1.order-xxl-1
-												+in-c('checkbox', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
-											.col-auto.order-xl-3.order-xxl-2
-												+e.articul 
-													| Артикул: 21500
-													+addblock()
-											.col-auto.order-xl-2.order-xxl-3
+					if data.isMainRow
+						.row
+							.col
+								+e.head-wrap
+									+img('img/stars.png')
+									+e.creator 
+										| Производитель:
+										+img('img/logo.png')
+						+e.main-row.row
+							//- .col
+							+e.main-col.col-md.col-lg-12.col-xl
+								+e.text-wrap
+									p Габариты: ВxШxГ в мм / 1860x500x530
+									p Тип: сборный
+									p Количество человек: 1
+								+e.headline
+									h4 29 010 руб.
+									+e.has Есть в наличии
+								if data.firstVariant
+									+e.products
+										h6 Выберите товар:
+										+e.radio-wrap
+											-for(let i = 3; i<=8; i++)
+												+in-c('radio', '', 'product')
+													+e.count Количество полок: #[!= i]
+													+e.articul Артикул: 21500
+									+e.accessories
+										h6 Аксессуары:
+										-for(let i = 0; i<2; i++)
+											+e.inner-row.row
+												.col-12.col-sm.order-xl-1.order-xxl-1
+													+in-c('checkbox', 'ВЛ-К Панель облицовочная к опоре', 'accessory')
+												.col-auto.order-xl-3.order-xxl-2
+													+e.articul 
+														| Артикул: 21500
+														+addblock()
+												.col-auto.order-xl-2.order-xxl-3
+													+e.price Цена: 10 500 руб.
+									+e.choose-colors
+										h6 Выберите цвет:
+										+e.colors-row.row
+											.col-12.col-sm-auto
+												+e.color-head ВЛ-К Панель облицовочная к опоре
+											.col-auto
+												+e.colors
+													+in-c('radio', '', 'color')(style='--bg: #fedd51')
+													+in-c('radio', '', 'color')(style='--bg: #fe7e37')
+													+in-c('radio', '', 'color')(style='--bg: #ca1c18')
+													+in-c('radio', '', 'color')(style='--bg: #80257f')
+													+in-c('radio', '', 'color')(style='--bg: #346cb4')
+													+in-c('radio', '', 'color')(style='--bg: #84c5be')
+													+in-c('radio', '', 'color')(style='--bg: #31823c')
+											.col-auto
+												+addblock()
+											.col-auto
 												+e.price Цена: 10 500 руб.
-								+e.choose-colors
-									h6 Выберите цвет:
-									+e.colors-row.row
-										.col-12.col-sm-auto
-											+e.color-head ВЛ-К Панель облицовочная к опоре
-										.col-auto
-											+e.colors
-												+in-c('radio', '', 'color')(style='--bg: #fedd51')
-												+in-c('radio', '', 'color')(style='--bg: #fe7e37')
-												+in-c('radio', '', 'color')(style='--bg: #ca1c18')
-												+in-c('radio', '', 'color')(style='--bg: #80257f')
-												+in-c('radio', '', 'color')(style='--bg: #346cb4')
-												+in-c('radio', '', 'color')(style='--bg: #84c5be')
-												+in-c('radio', '', 'color')(style='--bg: #31823c')
-										.col-auto
-											+addblock()
-										.col-auto
-											+e.price Цена: 10 500 руб.
-							if secondVariant
-								+e.arrow-wrap
-									+e.color-slider--js.swiper
-										.swiper-wrapper
-											-for(let i = 0; i < 8; i++)
-												+e.color-slide.swiper-slide
-													+in-c('radio', '', 'color')
-														+e.articul Артикул: 21500
-														+e.price Цена: 6 560 р.
-														+e.color 
-														+e.status Разобранный
-									+arrow()
-							+e.footer-row.row
+								if data.secondVariant
+									+e.arrow-wrap
+										+e.color-slider--js.swiper
+											.swiper-wrapper
+												-for(let i = 0; i < 8; i++)
+													+e.color-slide.swiper-slide
+														+in-c('radio', '', 'color')
+															+e.articul Артикул: 21500
+															+e.price Цена: 6 560 р.
+															+e.color 
+															+e.status Разобранный
+										+arrow()
+								+e.footer-row.row
+									.col-auto
+										+e.btn.btn.btn-secondary В корзину
+									.col-auto
+										+addblock()
+									.col-auto
+										+e.buy(href="#") Купить в 1 клик
+									.col-auto
+										+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
+							.col-lg-auto.col-lg-12.col-xl-auto
+								+e.head-row.row
+									//- .col
+									//- 	+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
+									.col-auto.ms-auto
+										+e.print(href='#')
+											+icon('print')
+								+e.delivery
+									h6 Доставка
+									p Доставка по Москве в пределах МКАД - 
+										span 1 000 руб.
+									p Доставка по&nbsp;Москве в&nbsp;пределах МКАД при заказе от&nbsp;10&nbsp;000&nbsp;руб.&nbsp;&mdash;
+										span &nbsp;бесплатно
+								+e.calculate.btn.btn-outline-primary(href="#")
+									| Расчитать<br>стоимость доставки
+									+icon('arrow-right')
+								+e.payment
+									h6 Доставка
+									p
+										+icon('money')
+										| Наличные
+									+e.payment-wrap
+										+img('img/card-money.png')
+										p Безналичные
+							.col-12
+								+e.advantages-row.row
+									.col-6.col-md-auto
+										+e.item
+											+icon('refund')
+											| Гарантия<br>возврата
+									.col-6.col-md-auto
+										+e.item
+											+icon('track')
+											| Круглосуточная<br>доставка по всей России
+									.col-6.col-md-auto
+										+e.item
+											+icon('award')
+											| Товар<br>сертифицирован
+									.col-6.col-md-auto
+										+e.item
+											//- +icon('wallet')
+											//- +icon('award')
+											+img('img/wallet.png')
+											| Возможность<br>отсрочки платежа
+					else
+						block
+			.tabs
+				+e.footer-btn-row.tabs__caption
+					+e.footer-btn.btn.tabs__btn.active Характеристики
+					+e.footer-btn.btn.tabs__btn Описание
+					+e.footer-btn.btn.tabs__btn Отзывы
+					+e.footer-btn.btn.tabs__btn Сертификат соответствия
+					//- +e.footer-btn-row.row
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+					//- 	.col-6.col-md-auto
+				.tabs__content.active
+					+e.features
+						ul
+							li
+								span Гарантия (мес)
+								span.doted
+								span 12
+							li
+								span Страна производства
+								span.doted
+								span Россия
+						+e.features-title основные характеристики:
+						ul
+							li
+								span Цвет
+								span.doted
+								span светло-серый (RAL 7035)
+							li
+								span Габариты ВxШxГ в мм
+								span.doted
+								span 1950x800x400
+							li
+								span Тип
+								span.doted
+								span сварной
+							li
+								span Количество человек
+								span.doted
+								span 1
+				.tabs__content
+					+e.desc
+						p Для бухгалтерских, финансовых, других офисных документов в папках типа "Корона".
+						p Комплектация: 4 металлические полки, 2 запираемые дверцы с ручками, замок с 2 ключами.
+						p Дверцы: стекло 4 мм в металлической раме.
+						p Нагрузка на полку: 
+							span 25 кг.
+						p Покрытие: порошковая краска.: 
+							span светло-серый (RAL 7035)
+						p Габариты ВxШxГ в мм: 
+							span 1950x800x400
+						p Тип: 
+							span сварной
+				.tabs__content
+					+e.review
+						+e.real-review-row.row
+							.col-md-6
+								+e.real-review
+									+e.real-review-head
+										+e.name Сергей
+										+e.date 19.09.2022
+									+img('img/stars.png')
+									p Спасибо огромное. Шкаф идеально вписался в&nbsp;наш офис. Отличное качество и&nbsp;прекрасный сервис. Шкафом остались довольны. Цена, сроки установки.
+							.col-md-6
+								+e.real-review
+									+e.real-review-head
+										+e.name Сергей
+										+e.date 19.09.2022
+									+img('img/stars.png')
+									p Спасибо огромное. Шкаф идеально вписался в&nbsp;наш офис. Отличное качество и&nbsp;прекрасный сервис. Шкафом остались довольны. Цена, сроки установки.
+						+form-wrap
+							.h4 Отзыв к товару “Офисный архивный шкаф со стеклянными дверцами”
+							+e.stars
+								| Оцените товар
+								+img('img/grayStars.png')
+							+e.row.row
+								.col-12
+									+input('', 'text', 'Ваше Имя')
+								.col-sm-6
+									+input('', 'textarea', 'Достоинства')
+								.col-sm-6
+									+input('', 'textarea', 'Недостатки')
+								.col-12
+									+input('', 'textarea', '* Комментарий')
+								.col-12
+									+e.file-wrap
+										label
+											+e.SPAN.input-title Загрузите до 5 фотографий
+											input(type="file" class="filepond" multiple)
+										+e.file-content
+											+e.file-title Нажмите на область с иконкой
+											+e.file-text Фото до 10 МБ. Формат JPG, JPEG, PNG, BMP, GIF
+								.col-auto 
+									+e.BUTTON.btn--cancel.btn Отменить
 								.col-auto
-									+e.btn.btn.btn-secondary В корзину
-								.col-auto
-									+addblock()
-								.col-auto
-									+e.buy(href="#") Купить в 1 клик
-								.col-auto
-									+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
-						.col-lg-auto.col-lg-12.col-xl-auto
-							+e.head-row.row
-								//- .col
-								//- 	+e.btn-dicount.btn.btn-primary(href='#') Запросить скидку
-								.col-auto.ms-auto
-									+e.print(href='#')
-										+icon('print')
-							+e.delivery
-								h6 Доставка
-								p Доставка по Москве в пределах МКАД - 
-									span 1 000 руб.
-								p Доставка по&nbsp;Москве в&nbsp;пределах МКАД при заказе от&nbsp;10&nbsp;000&nbsp;руб.&nbsp;&mdash;
-									span &nbsp;бесплатно
-							+e.calculate.btn.btn-outline-primary(href="#")
-								| Расчитать<br>стоимость доставки
-								+icon('arrow-right')
-							+e.payment
-								h6 Доставка
-								p
-									+icon('money')
-									| Наличные
-								+e.payment-wrap
-									+img('img/card-money.png')
-									p Безналичные
-						.col-12
-							+e.advantages-row.row
-								.col-6.col-md-auto
-									+e.item
-										+icon('refund')
-										| Гарантия<br>возврата
-								.col-6.col-md-auto
-									+e.item
-										+icon('track')
-										| Круглосуточная<br>доставка по всей России
-								.col-6.col-md-auto
-									+e.item
-										+icon('award')
-										| Товар<br>сертифицирован
-								.col-6.col-md-auto
-									+e.item
-										//- +icon('wallet')
-										//- +icon('award')
-										+img('img/wallet.png')
-										| Возможность<br>отсрочки платежа
+									+e.BUTTON.btn.btn.btn-secondary(type='submit') Отправить
+				.tabs__content
+					+e.certificates
+						a(href="#")
+							+img('img/certificates-img-1.png')
+							| Инструкция по эксплуатации / установке
+						a(href="#")
+							+img('img/certificates-img-2.png')
+							| Вкладыш по энергоэффективности и шумам
+						a(href="#")
+							+img('img/certificates-img-3.png')
+							| Характеристики продукта
+	// end sProdCard
+
+//- mixin sProdCard(firstVariant=true, secondVariant, thumbSlider, isMainRow)
+mixin sProdCard2(data)
+	// start sProdCard
+	+b.SECTION.sProdCard--2.section#sProdCard&attributes(attributes)
+		+e.container.container
+			//- +img('img/svg/square.svg').square.square--1
+			+e.row.row
+				.col-lg-6
+					if data.thumbSlider
+						+e.full-slider-wrap
+							+e.thumb-arrow-wrap
+								+e.thumb-slider--thumb-js.swiper
+									.swiper-wrapper
+										-for(let i = 0; i < 6; i++)
+											+e.slide-thumb.swiper-slide
+												+e.img-wrap
+													.img-wrap-center
+														+img('img/sProdCard-img-1.png')
+								+arrow()
+							+e.swiper-wrap
+								+e.slider--js2.swiper
+									.swiper-wrapper
+										-for(let i = 0; i < 6; i++)
+											+e.slide.swiper-slide
+												+e.img-wrap
+													.img-wrap-center
+														+img('img/sProdCard-img-1.png')
+								+arrow()
+								+e.links
+									+e.link(href="#")
+										+icon('like')
+									+e.link(href="#")
+										+icon('diagram')
+									+e.link(href="#")
+										+icon('cart')
+					else
+						+e.swiper-wrap
+							+e.slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 6; i++)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.png')
+							+arrow()
+							+e.links
+								+e.link(href="#")
+									+icon('like')
+								+e.link(href="#")
+									+icon('diagram')
+								+e.link(href="#")
+									+icon('cart')
+					if data.content
+						+e.content-wrap
+							if data.contentText
+								p!= data.contentText
+				.col-lg-6
+					block
+					+e.footer-row.row
+						.col-auto
+							p Итого: 
+								| 
+								span 29 010 руб.
+						.col-auto
+							+e.btn.btn.btn-secondary В корзину
+						.col-auto
+							+addblock()
 			.tabs
 				+e.footer-btn-row.tabs__caption
 					+e.footer-btn.btn.tabs__btn.active Характеристики

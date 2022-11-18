@@ -665,6 +665,8 @@
 }
 
 .page-head {
+	position: relative;
+	z-index: 6;
 	padding-top: rem(48);
 	padding-bottom: rem(41);
 	background-color: #fff;

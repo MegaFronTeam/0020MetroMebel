@@ -43,8 +43,10 @@ mixin page-head(t,...items)
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
-
-			h1= t
+			if t
+				h1= t
+			else 
+				block
 
 mixin headline(text, all, innertext, plus=true)
 	+b.headline
