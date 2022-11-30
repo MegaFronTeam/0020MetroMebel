@@ -1,0 +1,99 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
+
+block variables
+	- let  mainPage= 'prod-card prod-card-2' 
+	- let  bg= null
+
+block title
+	- let  title= 'Карточка товара'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		.container-fluid
+			.header__inner
+				+topLine
+				+top-nav()
+	main
+		+page-head('', 'Каталог', ' Стеллажи металлические сборные', 'Стеллажи усиленные серии СТ 200 (СТФУ) 200 кг на полку')
+			+headline('Стеллажи усиленные серии СТ 200 (СТФУ) 200 кг на полку')
+		//- +headerBlock 
+		//- +sAdvantages
+		//- +sProdCard(false, false, 'true') 
+		+sProdCard2({
+			thumbSlider: true,
+			content: true,
+			contentText: "Стеллажи полочные усиленные СТ-200 (СТФУ) сборно-разборной конструкции предназначены для установки в&nbsp;офисных, торговых, бытовых, складских помещениях, в&nbsp;камерах хранения, архивах, гаражах. Конструкция позволяет монтировать комплексы любой длины с&nbsp;любым количеством секций.<br>Максимальная распределенная нагрузка на&nbsp;полку длиной до&nbsp;1000&nbsp;мм и&nbsp;шириной до&nbsp;700&nbsp;мм&nbsp;&mdash; 200&nbsp;кг (на&nbsp;полку 200-100&times;80&nbsp;см&nbsp;&mdash; 180&nbsp;кг).<br>Грузоподъемность одной секции высотой до&nbsp;2&nbsp;м составляет 850&nbsp;кг, многосекционного стеллажа&nbsp;&mdash; 600&nbsp;кг. Распределённая нагрузка на&nbsp;верхнюю полку не&nbsp;должна превышать 60&nbsp;кг. Расстояние от&nbsp;пола до&nbsp;нижней полки не&nbsp;должно превышать 150&nbsp;мм для обеспечения жёсткости конструкции.<br>Габариты приведены без учета габаритов выступающих деталей (стоек, болтов и&nbsp;т.д.). Для металлических усиленных стеллажей высотой от&nbsp;2&nbsp;м нагрузка на&nbsp;секцию&nbsp;&mdash; 700&nbsp;кг, на&nbsp;секцию в&nbsp;линии&nbsp;&mdash; 550&nbsp;кг. Нагрузка на&nbsp;верхнюю полку&nbsp;&mdash; 60&nbsp;кг и&nbsp;30&nbsp;кг соответственно.<br>Секция формируется поэлементно, комплектуется стойками, полками, подпятниками, крепежом, уголками жесткости. Стойки и&nbsp;полки окрашены порошковой краской RAL 7035 светло-серого цвета. Поставка производится в&nbsp;разобранном виде с&nbsp;комплектом крепежа. Продукция проста в&nbsp;сборке."
+		})
+			+e.main-content
+				.row
+					.col-12
+						+e.spec-row.row
+							.col-auto
+								+e.spec до&nbsp;200&nbsp;кг<br>нагрузка на&nbsp;полку
+							.col-auto
+								+e.spec до&nbsp;850&nbsp;кг<br>нагрузка на&nbsp;секцию
+					.col-12
+						.tabs
+							+e.tabs-caption.tabs__caption
+								+e.tabs-btn.tabs__btn.active Расчет стоимости стеллажа
+								+e.tabs-btn.tabs__btn Список элементов
+							.tabs__content.active
+								+e.inputs-wrap
+									+in-c('radio', 'Односекционный', 'type')
+									+in-c('radio', 'Многосекционный', 'type')
+								mixin selectItem(title, text)
+									+e.selectItem
+										+e.selectItem-title!= title
+										+input(text, 'select')
+								mixin wrap(headline)
+									+e.selectitem-wrap
+										if title
+											+e.selectitem-headline!= headline
+										block
+								+wrap()
+									+selectItem('Высота мм', '1800')
+									+selectItem('Ширина мм', '1000')
+									+selectItem('Глубина мм', '300')
+									+selectItem('Количество ярусов', '3')
+									+e.selectItem--second-variant
+										+in-c('checkbox', 'Двери')
+										+input('Сетчатые', 'select')
+		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
+		+sSlider('', 'Похожие товары', '', 'true')
+			+img('img/svg/square.svg').square.square--2
+		+sSlider('', 'Вы просматривали', '', 'true')
+			+img('img/svg/square.svg').square.square--3
+		+sPopular('true')
+			+img('img/svg/square.svg').square.square--4
+			+img('img/svg/square.svg').square.square--5
+			+img('img/svg/square.svg').square.square--6
+		//- +sPopularManufacturers
+		//- +sOurClients
+		+sForm2
+	+footer()
+		+img('img/svg/square.svg').square.square--7
+		+img('img/svg/square.svg').square.square--8
+      
+
+
+
