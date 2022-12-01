@@ -1,0 +1,39 @@
+mixin sSettings4(data)
+	// start sSettings4
+	+b.sSettings4&attributes(attributes)
+		.row
+			.col-12
+				+e.products
+					h6 Габариты:
+					+e.radio-wrap
+						+e.radio-wrap-name Высота
+						+in-c('radio', '', 'product')
+							+e.count 2000 мм
+						+in-c('radio', '', 'product')
+							+e.count 2500 мм
+						+in-c('radio', '', 'product')
+							+e.count 2000 мм
+					+e.radio-wrap
+						+e.radio-wrap-name Ширина
+						+in-c('radio', '', 'product2')
+							+e.count 2000 мм
+						+in-c('radio', '', 'product2')
+							+e.count 2500 мм
+						+in-c('radio', '', 'product2')
+							+e.count 2000 мм
+					+e.radio-wrap
+						+e.radio-wrap-name Глубина
+						+in-c('radio', '', 'product3')
+							+e.count 2000 мм
+						+in-c('radio', '', 'product3')
+							+e.count 2500 мм
+						+in-c('radio', '', 'product3')
+							+e.count 2000 мм
+			.col-12
+				+e.products
+					h6 Наполнение:
+					+e.radio-wrap--filling
+						-for(let i = 1; i <= 10; i++)
+							+in-c('radio', '', 'product4')
+								+img(`img/svg/wardrobe-img-${i}.svg`)
+	// end sSettings4

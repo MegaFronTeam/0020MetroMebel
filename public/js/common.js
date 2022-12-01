@@ -592,6 +592,19 @@ function eventHandler() {
 	});
 	//  по нажатию на кнопку скролит наверх 
 	scrollTopBtn.addEventListener('click', () => window.scrollTo(0, 0));
+
+	let colorPicker = document.querySelector('.sSettings6__input-wrap--js');
+	if(colorPicker) {
+		let chososeColor = document.querySelector('.choose-color');
+		colorPicker.addEventListener('click', function() {
+			$(chososeColor).toggleClass('active');
+		});
+		document.addEventListener('click', function(e) {
+			if (!e.target.closest('.choose-color') && !e.target.closest('.sSettings6__input-wrap--js')) {
+				$(chososeColor).removeClass('active');
+			}
+		})
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -184,3 +184,15 @@ mixin oneInRowcard(title, articul, ...imgs)
 mixin scrollTop()
 	+b.scrollTop
 		+icon('arrow-up')
+
+mixin chooseColor()
+	+b.choose-color
+		- for(let i = 0; i < 100; i++)
+			+in-c('radio', '', 'color')
+				+e.color(style='--bgColor: #D0BF8D;')
+			+in-c('radio', '', 'color')
+				+e.color(style='--bgColor: #D8B68B;')
+			+in-c('radio', '', 'color')
+				+e.color(style='--bgColor: #DBB173;')
+			+in-c('radio', '', 'color')
+				+e.color(style='--bgColor: #D99705;')

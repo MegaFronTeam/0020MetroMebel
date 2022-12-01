@@ -16,6 +16,7 @@ include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sSettings4/_sSettings4.pug
 
 block variables
 	- let  mainPage= 'prod-card prod-card-2' 
@@ -45,41 +46,7 @@ block pagecontent
 			contentText: "Стеллажи (вешала) для одежды серии SFC предназначены для хранения одежды.Устанавливаются в&nbsp;торговых и&nbsp;складских помещениях магазинов одежды, секонд-хэндов, стоков, на&nbsp;пошивочных предприятиях, в&nbsp;мастерских, ателье, химчистках.<br>Состоит из&nbsp;рамы, нескольких полок и&nbsp;перекладины (штанги) для размещения одежды на&nbsp;плечиках. На&nbsp;полках можно размещать одежду в&nbsp;сложенном виде, коробки, обувь, фурнитуру и&nbsp;аксессуары.<br>Полки выдерживают распределенную нагрузку до&nbsp;100&nbsp;кг. Перекладина для размещения одежды на&nbsp;плечиках выдерживает до&nbsp;60&nbsp;кг нагрузки.<br>Габариты приведены без учета габаритов выступающих деталей (стоек, болтов и&nbsp;т.д.). Поставляется со&nbsp;склада в&nbsp;разобранном виде с&nbsp;комплектом необходимого крепежа. Элементы окрашены порошковой краской серого цвета RAL 7035 и&nbsp;соединяются между собой болтами.<br>Крепеж поставляется в&nbsp;комплекте.<br>Вешало можно монтировать в&nbsp;линию любой длины с&nbsp;любым количеством секций. Нагрузочная способность сохраняется при выставлении секций в&nbsp;линию.<br>При расчете стоимости многосекционного стеллажа необходимо учитывать:<br>Отдельно стоящий состоит из&nbsp;четырех стоек, полок и&nbsp;штанги.<br>Два смежных вешала состоят из&nbsp;шести стоек (промежуточные стойки не&nbsp;дублируются)."
 		})
 			+e.main-content
-				.row
-					.col-12
-						+e.products
-							h6 Габариты:
-							+e.radio-wrap
-								+e.radio-wrap-name Высота
-								+in-c('radio', '', 'product')
-									+e.count 2000 мм
-								+in-c('radio', '', 'product')
-									+e.count 2500 мм
-								+in-c('radio', '', 'product')
-									+e.count 2000 мм
-							+e.radio-wrap
-								+e.radio-wrap-name Ширина
-								+in-c('radio', '', 'product2')
-									+e.count 2000 мм
-								+in-c('radio', '', 'product2')
-									+e.count 2500 мм
-								+in-c('radio', '', 'product2')
-									+e.count 2000 мм
-							+e.radio-wrap
-								+e.radio-wrap-name Глубина
-								+in-c('radio', '', 'product3')
-									+e.count 2000 мм
-								+in-c('radio', '', 'product3')
-									+e.count 2500 мм
-								+in-c('radio', '', 'product3')
-									+e.count 2000 мм
-					.col-12
-						+e.products
-							h6 Наполнение:
-							+e.radio-wrap--filling
-								-for(let i = 1; i <= 10; i++)
-									+in-c('radio', '', 'product4')
-										+img(`img/svg/wardrobe-img-${i}.svg`)
+				+sSettings4
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2

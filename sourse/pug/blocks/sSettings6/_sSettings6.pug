@@ -1,0 +1,57 @@
+mixin sSettings6(data)
+	// start sSettings6
+	+b.sSettings6&attributes(attributes)
+		+e.main-content
+			+e.choose Выберите параметры:
+			+e.dimensions
+				h6 Габариты:
+				p ВхШхГ мм: 710х380х200
+			+e.filter-row.row
+				.col-auto
+					+e.fill-wrap--2
+						h6 Наполнение:
+						+e.chekboxs-wrap
+							+in-c('radio', 'Окошко', 'fill')
+							+in-c('radio', 'Нумерация', 'fill')
+				.col
+					+e.fill-wrap
+						h6 Шрифт нумерации на ящике:
+						+e.chekboxs-wrap
+							+in-c('radio', 'Stencil', 'font')
+							+in-c('radio', 'PT Sans Narrow', 'font')
+							+in-c('radio', 'a_LCDNova', 'font')
+							+in-c('radio', 'Boyarsky', 'font')
+							+in-c('radio', 'Arial Regular', 'font')
+			+e.parametrs
+				h6 Количество ячеек
+				+e.radio-wrap.d-none.d-sm-flex
+					+in-c('radio', '4', 'amount')
+					+in-c('radio', '5', 'amount')
+					+in-c('radio', '6', 'amount')
+					+in-c('radio', '7', 'amount')
+					+in-c('radio', '8', 'amount')
+					+in-c('radio', '9', 'amount')
+					+in-c('radio', '10', 'amount')
+					+in-c('radio', '11', 'amount')
+					+in-c('radio', '12', 'amount')
+				+e.selectItem.d-sm-none
+					+input('4', 'select')
+			+e.parametrs
+				h6 Цвет корпуса:
+				//- +input('RUL 7021', 'select')
+				+e.input-wrap--2.--js
+					+e.input RUL 7021
+					+e.color
+				+chooseColor()
+			+e.parametrs
+				h6 Количество ящиков:
+				+b.addBlock.d-none.d-sm-flex
+					input(type="text" value="1")
+					+e.btn-wrap
+						+e.btn--minus.disabled(type="button")
+						+e.btn--plus(type="button")
+				+e.selectItem.d-sm-none
+					+input('1', 'select')
+			+e.final-price Стоимость ячейки: 
+				span 2 420 руб.
+	// end sSettings6
