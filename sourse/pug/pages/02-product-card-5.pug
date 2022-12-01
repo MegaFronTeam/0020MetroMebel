@@ -57,27 +57,175 @@ block pagecontent
 							+e.tabs-caption.tabs__caption
 								+e.tabs-btn.tabs__btn.active Расчет стоимости стеллажа
 								+e.tabs-btn.tabs__btn Список элементов
-							.tabs__content.active
+							.tabs__content
 								+e.inputs-wrap
 									+in-c('radio', 'Односекционный', 'type')
 									+in-c('radio', 'Многосекционный', 'type')
-								mixin selectItem(title, text)
-									+e.selectItem
-										+e.selectItem-title!= title
-										+input(text, 'select')
+								mixin selectItem(title, text, modification)
+									+e.selectItem(class=(modification=='modification' ? '--second-variant' : ''))
+										if modification == "modification"
+											block
+										else
+											+e.selectItem-title!= title
+											+input(text, 'select')
 								mixin wrap(headline)
 									+e.selectitem-wrap
-										if title
+										if headline
 											+e.selectitem-headline!= headline
 										block
 								+wrap()
 									+selectItem('Высота мм', '1800')
 									+selectItem('Ширина мм', '1000')
 									+selectItem('Глубина мм', '300')
-									+selectItem('Количество ярусов', '3')
-									+e.selectItem--second-variant
+									+selectItem('', '', 'modification')
 										+in-c('checkbox', 'Двери')
 										+input('Сетчатые', 'select')
+								+wrap('Дополнительные опции:')
+									+selectItem('', '', 'modification')
+										+in-c('checkbox', 'Замок')
+										+input('Петли под навесной замок', 'select')
+								+wrap('Свойства элементов:')
+									+selectItem('Тип покрытия рам', 'Оцинкованные')
+									+selectItem('Тип покрытия полок', 'Окрашенные')
+								+wrap('Состав заказа:')
+									+selectItem('', '', 'modification')
+										+e.selectItem-title Количество секций
+										+addblock
+									+selectItem('', '', 'modification')
+										+e.selectItem-title Количество рядов
+										+addblock
+								+e.table-wrap
+									table
+										tr
+											th Элемент:
+											th Количество:
+											th Стоимость:
+										tr
+											td Стойка 1800 мм, окрашенная
+											td 4
+											td 1892 руб.
+										tr
+											td Полка 1000*300 мм, окрашенная
+											td 3
+											td 2466 руб.
+							.tabs__content.active
+								+e.list-wrap
+									table
+										tr
+											th
+											th Элемент:
+											th Артикул:
+											th Цена:
+											th Кол-во
+										tr
+											td(rowspan="4")
+												+e.img-wrap
+													.img-wrap-center
+														+img('img/product-img-8.png')
+											td Стойка СТ200-180
+											td 718000
+											td 473 руб.
+											td 
+												+b.addBlock
+													input(type="text" value="1")
+													+e.btn-wrap
+														+e.btn--minus.disabled(type="button")
+														+e.btn--plus(type="button")
+										tr
+											td Стойка СТ200-200
+											td 720000
+											td 512 руб.
+											td 
+												+b.addBlock
+													input(type="text" value="1")
+													+e.btn-wrap
+														+e.btn--minus.disabled(type="button")
+														+e.btn--plus(type="button")
+										tr
+											td Стойка СТ200-220
+											td 722000
+											td 557 руб.
+											td 
+												+b.addBlock
+													input(type="text" value="1")
+													+e.btn-wrap
+														+e.btn--minus.disabled(type="button")
+														+e.btn--plus(type="button")
+										tr
+											td Стойка СТ200-250
+											td 725000
+											td 630 руб.
+											td 
+												+b.addBlock
+													input(type="text" value="1")
+													+e.btn-wrap
+														+e.btn--minus.disabled(type="button")
+														+e.btn--plus(type="button")
+										-for(let i = 0; i < 4; i++)
+											tr
+												td(rowspan="6")
+													+e.img-wrap
+														.img-wrap-center
+															+img('img/product-img-9.png')
+												td Полка СТ 100х30 (200)
+												td 710310
+												td 822 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
+											tr
+												td Полка СТ 100х40 (200)
+												td 710410
+												td 930 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
+											tr
+												td Полка СТ 100х50 (200)
+												td 710510
+												td 1077 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
+											tr
+												td Полка СТ 100х60 (200)
+												td 710610
+												td 1217 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
+											tr
+												td Полка СТ 100х70 (200)
+												td 710710
+												td 1460 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
+											tr
+												td Полка СТ 100х80 (200)
+												td 710810
+												td 1685 руб.
+												td 
+													+b.addBlock
+														input(type="text" value="1")
+														+e.btn-wrap
+															+e.btn--minus.disabled(type="button")
+															+e.btn--plus(type="button")
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2

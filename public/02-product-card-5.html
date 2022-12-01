@@ -831,7 +831,7 @@
 													<div class="sProdCard__tabs-btn tabs__btn">Список элементов
 													</div>
 												</div>
-												<div class="tabs__content active">
+												<div class="tabs__content">
 													<div class="sProdCard__inputs-wrap">
 														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="radio"/><span class="custom-input__text form-check-label">Односекционный</span>
 														</label>
@@ -839,8 +839,6 @@
 														</label>
 													</div>
 																	<div class="sProdCard__selectitem-wrap">
-																		<div class="sProdCard__selectitem-headline">
-																		</div>
 																						<div class="sProdCard__selectItem">
 																							<div class="sProdCard__selectItem-title">Высота мм
 																							</div>
@@ -883,12 +881,12 @@
 																							</div>
 																							<!-- +e.input-wrap-->
 																						</div>
-																						<div class="sProdCard__selectItem">
-																							<div class="sProdCard__selectItem-title">Количество ярусов
-																							</div>
+																						<div class="sProdCard__selectItem sProdCard__selectItem--second-variant">
+																							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Двери</span>
+																							</label>
 																							<div class="sProdCard__input-wrap form-group">
 																								<select class="sProdCard__input form-select" name="select">
-																									<option value="3">3</option>
+																									<option value="Сетчатые">Сетчатые</option>
 																									<option value=" placeholder 1">placeholder 1</option>
 																									<option value=" placeholder 2">placeholder 2</option>
 																									<option value=" placeholder 3">placeholder 3</option>
@@ -897,21 +895,593 @@
 																							</div>
 																							<!-- +e.input-wrap-->
 																						</div>
-																		<div class="sProdCard__selectItem sProdCard__selectItem--second-variant">
-																			<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Двери</span>
-																			</label>
-																			<div class="sProdCard__input-wrap form-group">
-																				<select class="sProdCard__input form-select" name="select">
-																					<option value="Сетчатые">Сетчатые</option>
-																					<option value=" placeholder 1">placeholder 1</option>
-																					<option value=" placeholder 2">placeholder 2</option>
-																					<option value=" placeholder 3">placeholder 3</option>
-																					<option value=" placeholder 4">placeholder 4</option>
-																				</select>
-																			</div>
-																			<!-- +e.input-wrap-->
+																	</div>
+																	<div class="sProdCard__selectitem-wrap">
+																		<div class="sProdCard__selectitem-headline">Дополнительные опции:
+																		</div>
+																						<div class="sProdCard__selectItem sProdCard__selectItem--second-variant">
+																							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Замок</span>
+																							</label>
+																							<div class="sProdCard__input-wrap form-group">
+																								<select class="sProdCard__input form-select" name="select">
+																									<option value="Петли под навесной замок">Петли под навесной замок</option>
+																									<option value=" placeholder 1">placeholder 1</option>
+																									<option value=" placeholder 2">placeholder 2</option>
+																									<option value=" placeholder 3">placeholder 3</option>
+																									<option value=" placeholder 4">placeholder 4</option>
+																								</select>
+																							</div>
+																							<!-- +e.input-wrap-->
+																						</div>
+																	</div>
+																	<div class="sProdCard__selectitem-wrap">
+																		<div class="sProdCard__selectitem-headline">Свойства элементов:
+																		</div>
+																						<div class="sProdCard__selectItem">
+																							<div class="sProdCard__selectItem-title">Тип покрытия рам
+																							</div>
+																							<div class="sProdCard__input-wrap form-group">
+																								<select class="sProdCard__input form-select" name="select">
+																									<option value="Оцинкованные">Оцинкованные</option>
+																									<option value=" placeholder 1">placeholder 1</option>
+																									<option value=" placeholder 2">placeholder 2</option>
+																									<option value=" placeholder 3">placeholder 3</option>
+																									<option value=" placeholder 4">placeholder 4</option>
+																								</select>
+																							</div>
+																							<!-- +e.input-wrap-->
+																						</div>
+																						<div class="sProdCard__selectItem">
+																							<div class="sProdCard__selectItem-title">Тип покрытия полок
+																							</div>
+																							<div class="sProdCard__input-wrap form-group">
+																								<select class="sProdCard__input form-select" name="select">
+																									<option value="Окрашенные">Окрашенные</option>
+																									<option value=" placeholder 1">placeholder 1</option>
+																									<option value=" placeholder 2">placeholder 2</option>
+																									<option value=" placeholder 3">placeholder 3</option>
+																									<option value=" placeholder 4">placeholder 4</option>
+																								</select>
+																							</div>
+																							<!-- +e.input-wrap-->
+																						</div>
+																	</div>
+																	<div class="sProdCard__selectitem-wrap">
+																		<div class="sProdCard__selectitem-headline">Состав заказа:
+																		</div>
+																						<div class="sProdCard__selectItem sProdCard__selectItem--second-variant">
+																							<div class="sProdCard__selectItem-title">Количество секций
+																							</div>
+																							<div class="addBlock">
+																								<button class="addBlock__btn addBlock__btn--plus" type="button">
+																								</button>
+																								<input type="text" value="1"/>
+																								<button class="addBlock__btn addBlock__btn--minus" type="button">
+																								</button>
+																							</div>
+																						</div>
+																						<div class="sProdCard__selectItem sProdCard__selectItem--second-variant">
+																							<div class="sProdCard__selectItem-title">Количество рядов
+																							</div>
+																							<div class="addBlock">
+																								<button class="addBlock__btn addBlock__btn--plus" type="button">
+																								</button>
+																								<input type="text" value="1"/>
+																								<button class="addBlock__btn addBlock__btn--minus" type="button">
+																								</button>
+																							</div>
+																						</div>
+																	</div>
+													<div class="sProdCard__table-wrap">
+														<table>
+															<tr>
+																<th>Элемент:</th>
+																<th>Количество:</th>
+																<th>Стоимость:</th>
+															</tr>
+															<tr>
+																<td>Стойка 1800 мм, окрашенная</td>
+																<td>4</td>
+																<td>1892 руб.</td>
+															</tr>
+															<tr>
+																<td>Полка 1000*300 мм, окрашенная</td>
+																<td>3</td>
+																<td>2466 руб.</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+												<div class="tabs__content active">
+													<div class="sProdCard__list-wrap">
+														<table>
+															<tr>
+																<th></th>
+																<th>Элемент:</th>
+																<th>Артикул:</th>
+																<th>Цена:</th>
+																<th>Кол-во</th>
+															</tr>
+															<tr>
+																<td rowspan="4">
+																	<div class="sProdCard__img-wrap">
+																		<div class="img-wrap-center"><img src="img/product-img-8.png" alt="" loading="lazy"/>
 																		</div>
 																	</div>
+																</td>
+																<td>Стойка СТ200-180</td>
+																<td>718000</td>
+																<td>473 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Стойка СТ200-200</td>
+																<td>720000</td>
+																<td>512 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Стойка СТ200-220</td>
+																<td>722000</td>
+																<td>557 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Стойка СТ200-250</td>
+																<td>725000</td>
+																<td>630 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td rowspan="6">
+																	<div class="sProdCard__img-wrap">
+																		<div class="img-wrap-center"><img src="img/product-img-9.png" alt="" loading="lazy"/>
+																		</div>
+																	</div>
+																</td>
+																<td>Полка СТ 100х30 (200)</td>
+																<td>710310</td>
+																<td>822 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х40 (200)</td>
+																<td>710410</td>
+																<td>930 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х50 (200)</td>
+																<td>710510</td>
+																<td>1077 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х60 (200)</td>
+																<td>710610</td>
+																<td>1217 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х70 (200)</td>
+																<td>710710</td>
+																<td>1460 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х80 (200)</td>
+																<td>710810</td>
+																<td>1685 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td rowspan="6">
+																	<div class="sProdCard__img-wrap">
+																		<div class="img-wrap-center"><img src="img/product-img-9.png" alt="" loading="lazy"/>
+																		</div>
+																	</div>
+																</td>
+																<td>Полка СТ 100х30 (200)</td>
+																<td>710310</td>
+																<td>822 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х40 (200)</td>
+																<td>710410</td>
+																<td>930 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х50 (200)</td>
+																<td>710510</td>
+																<td>1077 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х60 (200)</td>
+																<td>710610</td>
+																<td>1217 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х70 (200)</td>
+																<td>710710</td>
+																<td>1460 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х80 (200)</td>
+																<td>710810</td>
+																<td>1685 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td rowspan="6">
+																	<div class="sProdCard__img-wrap">
+																		<div class="img-wrap-center"><img src="img/product-img-9.png" alt="" loading="lazy"/>
+																		</div>
+																	</div>
+																</td>
+																<td>Полка СТ 100х30 (200)</td>
+																<td>710310</td>
+																<td>822 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х40 (200)</td>
+																<td>710410</td>
+																<td>930 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х50 (200)</td>
+																<td>710510</td>
+																<td>1077 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х60 (200)</td>
+																<td>710610</td>
+																<td>1217 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х70 (200)</td>
+																<td>710710</td>
+																<td>1460 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х80 (200)</td>
+																<td>710810</td>
+																<td>1685 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td rowspan="6">
+																	<div class="sProdCard__img-wrap">
+																		<div class="img-wrap-center"><img src="img/product-img-9.png" alt="" loading="lazy"/>
+																		</div>
+																	</div>
+																</td>
+																<td>Полка СТ 100х30 (200)</td>
+																<td>710310</td>
+																<td>822 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х40 (200)</td>
+																<td>710410</td>
+																<td>930 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х50 (200)</td>
+																<td>710510</td>
+																<td>1077 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х60 (200)</td>
+																<td>710610</td>
+																<td>1217 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х70 (200)</td>
+																<td>710710</td>
+																<td>1460 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Полка СТ 100х80 (200)</td>
+																<td>710810</td>
+																<td>1685 руб.</td>
+																<td> 
+																	<div class="addBlock">
+																		<input type="text" value="1">
+																		<div class="addBlock__btn-wrap">
+																			<button class="addBlock__btn addBlock__btn--minus disabled" type="button">
+																			</button>
+																			<button class="addBlock__btn addBlock__btn--plus" type="button">
+																			</button>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</div>
 												</div>
 											</div>
 										</div>
