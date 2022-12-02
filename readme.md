@@ -12,3 +12,4 @@
 <https://megafronteam.github.io/0020MetroMebel/public/02-product-card-4.html>
 <https://megafronteam.github.io/0020MetroMebel/public/02-product-card-5.html>
 <https://megafronteam.github.io/0020MetroMebel/public/02-product-card-6.html>
+<https://megafronteam.github.io/0020MetroMebel/public/02-product-card-7.html>
