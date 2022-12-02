@@ -39,10 +39,11 @@ mixin sSettings6(data)
 			+e.parametrs
 				h6 Цвет корпуса:
 				//- +input('RUL 7021', 'select')
-				+e.input-wrap--2.--js
-					+e.input RUL 7021
-					+e.color
-				+chooseColor()
+				+b.custom-dropdown--js
+					+e.wrap
+						+e.input RUL 7021
+						+e.color
+					+chooseColor()
 			+e.parametrs
 				h6 Количество ящиков:
 				+b.addBlock.d-none.d-sm-flex

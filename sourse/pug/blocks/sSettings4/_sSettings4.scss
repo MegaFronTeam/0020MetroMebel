@@ -84,7 +84,7 @@
 				padding: rem(17) rem(14) rem(12);
 				width: 100%;
 				max-width: calc(100% / 5 - var(--bs-gutter-x));
-				.custom-input__input {
+				&__input {
 					&:checked {
 						background-color: #fff;
 						border-color: $primary;

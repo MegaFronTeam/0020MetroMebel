@@ -593,17 +593,18 @@ function eventHandler() {
 	//  по нажатию на кнопку скролит наверх 
 	scrollTopBtn.addEventListener('click', () => window.scrollTo(0, 0));
 
-	let colorPicker = document.querySelector('.sSettings6__input-wrap--js');
-	if(colorPicker) {
-		let chososeColor = document.querySelector('.choose-color');
-		colorPicker.addEventListener('click', function() {
-			$(chososeColor).toggleClass('active');
-		});
-		document.addEventListener('click', function(e) {
-			if (!e.target.closest('.choose-color') && !e.target.closest('.sSettings6__input-wrap--js')) {
-				$(chososeColor).removeClass('active');
-			}
-		})
+	let customDropdowns = document.querySelectorAll('.custom-dropdown--js');
+	if(customDropdowns) {
+		for (let customDropdown of customDropdowns) {
+			customDropdown.querySelector('.custom-dropdown__wrap').addEventListener('click', function() {
+				$(customDropdown.querySelector('.choose-color')).toggleClass('active');
+			});
+			document.addEventListener('click', function(e) {
+				if (!e.target.closest('.custom-dropdown--js')) {
+					$(customDropdown.querySelector('.choose-color')).removeClass('active');
+				}
+			})
+		}
 	}
 };
 if (document.readyState !== 'loading') {

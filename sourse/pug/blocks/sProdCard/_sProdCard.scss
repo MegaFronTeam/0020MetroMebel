@@ -1099,6 +1099,68 @@
 					}
 				}
 			}
+			&__text {
+				font-size: rem(12);
+				color: #F1A10E;
+				line-height: 1.33em;
+				max-width: rem(339);
+				a {
+					color: #F1A10E;
+					text-decoration: none;
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+		}
+		.custom-dropdown {
+			width: 100%;
+			max-width: rem(285);
+			border: 0.5px solid #F0F0F0;
+			border-radius: 0;
+			cursor: pointer;
+			&__wrap {
+				position: relative;
+				padding: rem(8);
+				@include media-breakpoint-up(sm) {
+					padding: rem(8) rem(27) rem(8) rem(51);
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: rem(27);
+					height: 100%;
+					background-color: $primary;
+					background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 16px 12px;	
+					top: 0;
+					right: 0;
+					pointer-events: none;
+				}
+			}
+			&__input {
+				color: #000;
+				background-image: none;
+				border-radius: 0;
+				font-size: rem(14);
+				padding: 0;
+				border: none;
+				@include media-breakpoint-down(sm) {
+					text-align: center;
+				}
+			}
+			&__color {
+				@include a-cent(y);
+				position: absolute;
+				left: rem(9);
+				width: rem(20);
+				height: rem(20);
+				border-radius: 5px;
+				background-color: #000;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

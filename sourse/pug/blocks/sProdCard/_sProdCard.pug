@@ -341,15 +341,23 @@ mixin sProdCard2(data)
 								p!= data.contentText
 				.col-lg-6
 					block
-					+e.footer-row.row
-						.col-auto
-							p Итого: 
-								| 
-								span 29 010 руб.
-						.col-auto
-							+e.btn.btn.btn-secondary В корзину
-						.col-auto
-							+addblock()
+					if data.notDefaultFooterRow
+						+e.footer-row.row
+							.col-auto
+								+e.btn.btn.btn-secondary Заказать
+							.col
+								+e.text Цена рассчитывается индивидуально<br>Подробности уточняйте у наших менеджеров по телефону: 
+									a(href="#") +7&nbsp;(495)&nbsp;172-30-24
+					else
+						+e.footer-row.row
+							.col-auto
+								p Итого: 
+									| 
+									span 29 010 руб.
+							.col-auto
+								+e.btn.btn.btn-secondary В корзину
+							.col-auto
+								+addblock()
 			.tabs
 				+e.footer-btn-row.tabs__caption
 					+e.footer-btn.btn.tabs__btn.active Характеристики
