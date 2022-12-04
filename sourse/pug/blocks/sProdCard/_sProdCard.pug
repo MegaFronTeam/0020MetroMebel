@@ -358,6 +358,17 @@ mixin sProdCard2(data)
 								+e.btn.btn.btn-secondary В корзину
 							.col-auto
 								+addblock()
+				if data.specifications
+					.col-12
+						+e.specifications
+							h5 Технические характеристики:
+							.row
+								.col-auto
+									+e.specifications-title Размеры ячеек, мм
+									+img('img/specifications-img-1.png').res-i
+								.col-auto
+									+e.specifications-title Настенный
+									+img('img/specifications-img-2.png').res-i
 			.tabs
 				+e.footer-btn-row.tabs__caption
 					+e.footer-btn.btn.tabs__btn.active Характеристики

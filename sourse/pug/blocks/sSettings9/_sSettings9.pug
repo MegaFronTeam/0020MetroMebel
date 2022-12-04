@@ -1,0 +1,37 @@
+mixin sSettings9(data)
+	// start sSettings9
+	+b.SECTION.sSettings9.section#sSettings9&attributes(attributes)
+		.row
+			.col
+				+e.text ВхШхГ мм: 1380&times;2270&times;250 (60&nbsp;ячеек)
+				+e.outline-input-wrap
+					+e.title Выберите параметры:
+					+e.outline-input
+						+in-c('radio', 'Настенный', 'params')
+						+in-c('radio', 'Встраивавемый', 'params')
+				+e.dropdown-wrap
+					h6 Цвет корпуса:
+					+b.custom-dropdown--js
+						+e.wrap
+							+e.input RAL 1000 L
+							+e.color
+						+chooseColor()
+				+e.dropdown-wrap
+					h6 Цвет дверец:
+					+b.custom-dropdown--js
+						+e.wrap
+							+e.input RAL 1000 L
+							+e.color
+						+chooseColor()
+				+e.dropdown-wrap
+					h6 Цвет заглушек:
+					+b.custom-dropdown--js
+						+e.wrap
+							+e.input RAL 1000 L
+							+e.color
+						+chooseColor()
+				+e.dropdown-wrap
+					h6 Цвет уголков:
+					
+			.col-auto
+	// end sSettings9

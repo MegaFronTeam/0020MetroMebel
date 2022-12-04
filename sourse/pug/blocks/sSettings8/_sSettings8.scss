@@ -1,0 +1,250 @@
+// start .sSettings8
+.sSettings8 {
+	&__spec-wrap {
+		margin-bottom: rem(16);
+	}
+	&__spec {
+		font-size: rem(14);
+		color: #000;
+		margin-bottom: rem(5);
+		span {
+			color: $gray-600;
+		}
+	}
+	&__wrap {
+		position: relative;
+		margin-bottom: rem(23);
+	}
+	&__headline {
+		font-size: rem(14);
+		color: #000;
+		margin-bottom: rem(14);
+	}
+	&__selectItem {
+		display: flex;
+		// flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: rem(11);
+		position: relative;
+		.custom-input {
+			padding: rem(7.5) rem(14);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+			position: relative;
+			width: rem(42);
+			height: rem(36);
+			&__input {
+				@include mt;
+				box-shadow: none;
+				border: 0.5px solid #F0F0F0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				margin-left: 0;
+				margin-top: 0;
+				border-color: #f3f3f3;
+				border-radius: 0;
+				background-color: transparent;
+				&:checked {
+					background-image: none;
+					box-shadow: none;
+					border-color: $primary;
+					background-color: $primary;
+					& ~ span {
+						color: #fff;
+					}
+				}
+				&:focus {
+					box-shadow: none;
+				}
+
+			}
+			&__text {
+				@include mt;
+				margin-bottom: 0;
+				font-size: rem(14);
+				position: relative;
+			}
+		}
+		.sSettings8 {
+			&__input-wrap {
+				width: 100%;
+				max-width: rem(166);
+				border: 0.5px solid #F0F0F0;
+				border-radius: 0;
+				position: relative;
+				padding: rem(8) rem(27) rem(8) rem(8);
+				cursor: pointer;
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: rem(27);
+					height: 100%;
+					background-color: $primary;
+					background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 16px 12px;	
+					top: 0;
+					right: 0;
+					pointer-events: none;
+				}
+				&--2 {
+					.sSettings6__input {
+						@include media-breakpoint-up(sm) {
+							padding-right: rem(27);
+							padding-left: rem(51);
+						}
+					}
+				}
+			}
+			&__input {
+				color: #000;
+				background-image: none;
+				border-radius: 0;
+				font-size: rem(14);
+				padding: 0;
+				border: none;
+				@include media-breakpoint-down(sm) {
+					text-align: center;
+				}
+			}
+			&__color {
+				@include a-cent(y);
+				position: absolute;
+				left: rem(9);
+				width: rem(20);
+				height: rem(20);
+				border-radius: 5px;
+				background-color: #000;
+			}
+		}
+	}
+	&__selectItem-title {
+		font-size: rem(14);
+		width: 100%;
+		max-width: rem(157);
+	}
+	&__custom-input-wrap{
+		@include roww('9px', 'm');
+		--bs-gutter-y: #{rem(9)};
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		&--with-svg {
+			--bs-gutter-x: 30px;
+			.custom-input {
+				width: rem(67);
+				height: rem(41);
+				padding: 0;
+				&__input {
+					border: none;
+					&:checked {
+						background-color: transparent;
+						& ~ svg {
+							fill: $primary;
+							stroke: $primary;
+						}
+					}
+				}
+				svg {
+					@include mt;
+					fill: transparent;
+					stroke: $gray-600;
+					stroke-width: 2;
+				}
+			}
+		}
+	}
+	&__custom-dropdown-wrap {
+		// position: relative;
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(20);
+		.custom-dropdown {
+			max-width: rem(166);
+			&__wrap {
+				@include media-breakpoint-up(sm) {
+					padding-left: rem(10);
+				}
+			}
+		}
+		.choose-color {
+			top: 0;
+			left: 0;
+			height: rem(316);
+			max-height: rem(316);
+			flex-wrap: nowrap;
+			&__title {
+				font-size: rem(14);
+				width: 100%;
+				max-width: rem(50);
+				@include media-breakpoint-up(md) {
+					max-width: rem(125);
+				}
+			}
+			&__wrap {
+				@include roww('5px', 'm');
+				--bs-gutter-y: #{rem(5)};
+				margin-top: calc(var(--bs-gutter-y) * -1);
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				text-align: center;
+				align-content: flex-start;
+				& > * {
+					margin-top: var(--bs-gutter-y);
+				}
+			}
+			.custom-input {
+				max-width: calc(100% / 4 - var(--bs-gutter-x));
+				padding: rem(8) rem(8) rem(8) rem(8);
+				height: auto !important;
+				&::before {
+					content: unset;
+				}
+				&__input {
+					border-color: #F0F0F0;
+					border-radius: 0;
+					&:checked {
+						border-width: 2px;
+						border-color: $primary;
+					}
+				}
+				&__img-wrap {
+					@include block(79, 42);
+					margin-bottom: rem(2);
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
+				}
+				&__text {
+					font-size: rem(12);
+					display: block;
+					line-height: 1;
+					word-wrap: break-word;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSettings8

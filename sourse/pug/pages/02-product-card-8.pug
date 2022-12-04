@@ -16,7 +16,7 @@ include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sSlider/_sSlider.pug
-include ../blocks/sSettings7/_sSettings7.pug
+include ../blocks/sSettings8/_sSettings8.pug
 
 block variables
 	- let  mainPage= 'prod-card prod-card-2' 
@@ -43,8 +43,9 @@ block pagecontent
 		+sProdCard2({
 			thumbSlider: false,
 			content: false,
+			notDefaultFooterRow: true
 		})
-			+sSettings7
+			+sSettings8
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2

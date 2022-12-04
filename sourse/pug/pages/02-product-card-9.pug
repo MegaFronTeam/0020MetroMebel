@@ -16,7 +16,7 @@ include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sSlider/_sSlider.pug
-include ../blocks/sSettings7/_sSettings7.pug
+include ../blocks/sSettings9/_sSettings9.pug
 
 block variables
 	- let  mainPage= 'prod-card prod-card-2' 
@@ -41,10 +41,12 @@ block pagecontent
 		//- +sAdvantages
 		//- +sProdCard(false, false, 'true')
 		+sProdCard2({
-			thumbSlider: false,
-			content: false,
+			thumbSlider: true,
+			content: true,
+			contentText: 'Производство&nbsp;&mdash; Италия<br>Произведены из&nbsp;качественного алюминия и&nbsp;ABS-пластика, имеют закруглённые углы, а&nbsp;так&nbsp;же защиту от&nbsp;дождя.<br>Возможна установка на&nbsp;стену или забор, а&nbsp;также встраивание в&nbsp;стену<br>Установлены замки европейского качества с&nbsp;защитой от&nbsp;попадания пыли и&nbsp;влаги. В&nbsp;комплекте 2&nbsp;ключа.',
+			specifications: true
 		})
-			+sSettings7
+			+sSettings9
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2
