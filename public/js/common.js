@@ -625,6 +625,22 @@ function eventHandler() {
 		};
 		getCellNum('.radio-buttons.vertical', 'vertical');
 		getCellNum('.radio-buttons.horizontal', 'horizontal');
+
+		let table = document.querySelector('.table');
+		let trs = table.querySelectorAll('.tr');
+		for (let i = 0; i < trs.length; i ++) {
+			let tds = trs[i].querySelectorAll('.td');
+			for (let j = 0; j < tds.length; j ++) {
+				tds[j].addEventListener('click', function() {
+					caseContainer.querySelector('.pb_front_cells').style.setProperty('--verticalCells', i + 1);
+					caseContainer.querySelector('.pb_front_cells').style.setProperty('--horizontalCells', j + 1);
+					let verticalBtns = document.querySelector('.radio-buttons.vertical').querySelectorAll('.custom-input');
+					let horizontalBtns = document.querySelector('.radio-buttons.horizontal').querySelectorAll('.custom-input');
+					verticalBtns[i].querySelector('input').checked = 'checked';
+					horizontalBtns[j].querySelector('input').checked = 'checked';
+				});
+			};
+		};
 	}
 };
 if (document.readyState !== 'loading') {

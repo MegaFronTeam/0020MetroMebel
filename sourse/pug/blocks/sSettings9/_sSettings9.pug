@@ -20,6 +20,15 @@ mixin sSettings9(data)
 						.pb_front_left.grey(style="background-image: url('img/corner-left.png')")
 						.pb_front_right.grey(style="background-image: url('img/corner-right.png')")
 						.pb_front_bottom(style="background-image: url('img/corner-bottom.png')")
+					.table
+						- for(let i = 0; i < 10; i++)
+							.tr
+								.td
+								.td
+								.td
+								.td
+								.td
+								.td
 			.radio-buttons.horizontal
 				+in-c('radio', '1', 'sections_outer')(value='1')
 				+in-c('radio', '2', 'sections_outer')(value='2' checked)
