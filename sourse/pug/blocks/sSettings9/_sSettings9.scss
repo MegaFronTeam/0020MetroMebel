@@ -208,14 +208,15 @@
     	height: calc(100% - 2%);
 		}
 		.pb_front_cells {
-			// @include mt;
+			@include mt;
 			left: 0;
 			top: 0;
 			width: calc((100% / 6) * var(--horizontalCells, 2));
 			height: calc((100% / 10) * var(--verticalCells, 6));
 			// width: 16.6667%;
 			// padding-bottom: 5.8974%;
-			background-size: calc(100% / var(--horizontalCells, 2));
+			// background-size: calc(100% / var(--horizontalCells, 2));
+			background-size: 60px;
 			background-position: left top;
 			position: absolute;
 		}
