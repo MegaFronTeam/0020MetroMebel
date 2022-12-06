@@ -1,7 +1,70 @@
 mixin sSettings9(data)
 	// start sSettings9
 	+b.SECTION.sSettings9.section#sSettings9&attributes(attributes)
-		.row
+		+e.sizes
+			.radio-buttons.vertical
+				input#cells_outer1.cells_outer(type='radio' name='cells_outer' value='1')
+				label(for='cells_outer1') 1
+				input#cells_outer2.cells_outer(type='radio' name='cells_outer' value='2')
+				label(for='cells_outer2') 2
+				input#cells_outer3.cells_outer(type='radio' name='cells_outer' value='3')
+				label(for='cells_outer3') 3
+				input#cells_outer4.cells_outer(type='radio' name='cells_outer' value='4')
+				label(for='cells_outer4') 4
+				input#cells_outer5.cells_outer(type='radio' checked='' name='cells_outer' value='5')
+				label(for='cells_outer5') 5
+				input#cells_outer6.cells_outer(type='radio' name='cells_outer' value='6')
+				label(for='cells_outer6') 6
+				input#cells_outer7.cells_outer(type='radio' name='cells_outer' value='7')
+				label(for='cells_outer7') 7
+				input#cells_outer8.cells_outer(type='radio' name='cells_outer' value='8')
+				label(for='cells_outer8') 8
+				input#cells_outer9.cells_outer(type='radio' name='cells_outer' value='9')
+				label(for='cells_outer9') 9
+				input#cells_outer10.cells_outer(type='radio' name='cells_outer' value='10')
+				label(for='cells_outer10') 10
+				.hover
+					.cont
+						span 1
+						span 2
+						span 3
+						span 4
+						span 5
+						span 6
+						span 7
+						span 8
+						span 9
+						span 10
+			.pb_front
+				#bx_3114341347_85134_front_cells.pb_front_container
+					#bx_3114341347_85134_front_image.pb_front_cells(style='background-image: url("../img/box.png"), url("../img/box-bottom.png"), url("../img/box-border.png");')
+						#bx_3114341347_85134_front_top.pb_front_top(style="background-image: url('../img/corner-top.png')")
+						#bx_3114341347_85134_front_left.pb_front_left.grey(style="background-image: url('../img/corner-left.png')")
+						#bx_3114341347_85134_front_right.pb_front_right.grey(style="background-image: url('../img/corner-right.png')")
+						#bx_3114341347_85134_front_bottom.pb_front_bottom(style="background-image: url('../img/corner-bottom.png')")
+			.radio-buttons.horizontal
+				input#sections_outer1.sections_outer(type='radio' checked='' name='sections_outer' value='1')
+				label(for='sections_outer1') 1
+				input#sections_outer2.sections_outer(type='radio' name='sections_outer' value='2')
+				label(for='sections_outer2') 2
+				input#sections_outer3.sections_outer(type='radio' name='sections_outer' value='3')
+				label(for='sections_outer3') 3
+				input#sections_outer4.sections_outer(type='radio' name='sections_outer' value='4')
+				label(for='sections_outer4') 4
+				input#sections_outer5.sections_outer(type='radio' name='sections_outer' value='5')
+				label(for='sections_outer5') 5
+				input#sections_outer6.sections_outer(type='radio' name='sections_outer' value='6')
+				label(for='sections_outer6') 6
+				.hover
+					.cont
+						span 1
+						span 2
+						span 3
+						span 4
+						span 5
+						span 6
+
+		+e.row.row
 			.col
 				+e.text ВхШхГ мм: 1380&times;2270&times;250 (60&nbsp;ячеек)
 				+e.outline-input-wrap
@@ -32,6 +95,21 @@ mixin sSettings9(data)
 						+chooseColor()
 				+e.dropdown-wrap
 					h6 Цвет уголков:
-					
-			.col-auto
+					+e.colors
+						+in-c('radio', '', 'colorСorner')(style='--bgColor: #000;')
+						+in-c('radio', '', 'colorСorner')(style='--bgColor: #fff;')
+						+in-c('radio', '', 'colorСorner')(style='--bgColor: #CDCDCD;')
+			.col-12.col-md-auto.col-lg-12.col-xl-auto
+				+e.decor-wrap
+					+e.decor
+						h6 Наполнение:
+						+in-c('checkbox', 'Окошко', 'decor')
+						+in-c('checkbox', 'Нумерация', 'decor')
+					+e.decor
+						h6 Шрифт номера на ящике:
+						+in-c('checkbox', 'Stencil', 'font')
+						+in-c('checkbox', 'a_LCDNova', 'font')
+						+in-c('checkbox', 'Arial Regular', 'font')
+						+in-c('checkbox', 'PT Sans Narrow', 'font')
+						+in-c('checkbox', 'Boyarsky', 'font')
 	// end sSettings9
