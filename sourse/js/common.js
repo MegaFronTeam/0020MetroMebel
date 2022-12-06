@@ -605,6 +605,26 @@ function eventHandler() {
 				}
 			})
 		}
+	};
+
+	let caseContainer = document.querySelector('.pb_front');
+	if(caseContainer) {
+		function getCellNum(elem, setDirection) {
+			// let verticalCells = document.querySelector('.radio-buttons.vertical').querySelectorAll('.custom-input');
+			let cells = document.querySelector(elem).querySelectorAll('.custom-input');
+			for (let cell of cells) {
+				cell.addEventListener('click', function() {
+					let cellNum = cell.querySelector('input').value;
+					if (setDirection == "vertical") {
+						caseContainer.querySelector('.pb_front_cells').style.setProperty('--verticalCells', cellNum);
+					} if (setDirection == "horizontal") {
+						caseContainer.querySelector('.pb_front_cells').style.setProperty('--horizontalCells', cellNum);
+					}
+				});
+			}
+		};
+		getCellNum('.radio-buttons.vertical', 'vertical');
+		getCellNum('.radio-buttons.horizontal', 'horizontal');
 	}
 };
 if (document.readyState !== 'loading') {
