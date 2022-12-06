@@ -1,0 +1,67 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sSettings11/_sSettings11.pug
+
+block variables
+	- let  mainPage= 'prod-card prod-card-2' 
+	- let  bg= null
+
+block title
+	- let  title= 'Карточка товара'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		.container-fluid
+			.header__inner
+				+topLine
+				+top-nav()
+	main
+		+page-head('', 'Каталог', ' Почтовые ящики', 'Почтовые ящики из нержавеющей стали Ящики почтовые серии Эталон')
+			+headline('Ящики почтовые серии Эталон')
+		//- +headerBlock 
+		//- +sAdvantages
+		//- +sProdCard(false, false, 'true')
+		+sProdCard2({
+			thumbSlider: false,
+			content: false,
+			empty: true
+		})
+			+sSettings11
+		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
+		+sSlider('', 'Похожие товары', '', 'true')
+			+img('img/svg/square.svg').square.square--2
+		+sSlider('', 'Вы просматривали', '', 'true')
+			+img('img/svg/square.svg').square.square--3
+		+sPopular('true')
+			+img('img/svg/square.svg').square.square--4
+			+img('img/svg/square.svg').square.square--5
+			+img('img/svg/square.svg').square.square--6
+		//- +sPopularManufacturers
+		//- +sOurClients
+		+sForm2
+	+footer()
+		+img('img/svg/square.svg').square.square--7
+		+img('img/svg/square.svg').square.square--8
+      
+
+
+

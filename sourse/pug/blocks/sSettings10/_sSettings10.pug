@@ -1,0 +1,62 @@
+mixin sSettings10(data)
+	// start sSettings10
+	+b.sSettings10&attributes(attributes)
+		+e.type
+			+in-c('radio', 'СР-Б', 'type')
+			+in-c('radio', 'СР-С', 'type')
+			+in-c('radio', 'СР-П', 'type')
+			+in-c('radio', 'СР-Л', 'type')
+		h5 Габариты:
+		+e.select
+			span ШxГxВ, мм:
+			+input('600', 'select')
+			| &nbsp;x&nbsp;
+			+input('600', 'select')
+			| &nbsp;х 870
+		h5 Конфигурация:
+		+e.configuration
+			+e.headline Полка
+			+e.checkboxes
+				+in-c('radio', 'Решётчатая', 'configuration')
+				+in-c('radio', 'Сплошная', 'configuration')
+		+e.configuration
+			+e.headline Каркас
+			+e.checkboxes
+				+in-c('radio', 'Оцинкованный', 'configuration2')
+				+in-c('radio', 'Нержавеющая сталь AISI 430', 'configuration2')
+				+in-c('radio', 'Нержавеющая сталь AISI 201', 'configuration2')
+		+e.configuration
+			+e.headline Борт
+			+e.checkboxes--img
+				+in-c('radio', '', 'configuration3')
+					.img-wrap-center
+						+img('img/svg/board-img-1.svg')
+				+in-c('radio', '', 'configuration3')
+					.img-wrap-center
+						+img('img/svg/board-img-2.svg')
+				+in-c('radio', '', 'configuration3')
+					.img-wrap-center
+						+img('img/svg/board-img-3.svg')
+				+in-c('radio', '', 'configuration3')
+					.img-wrap-center
+						+img('img/svg/board-img-4.svg')
+		+e.configuration
+			+e.headline--width Крепление столешницы
+			+e.checkboxes--img
+				+in-c('radio', '', 'configuration4')
+					.img-wrap-center
+						+img('img/svg/board-img-1.svg')
+				+in-c('radio', '', 'configuration4')
+					.img-wrap-center
+						+img('img/svg/board-img-1.svg')
+		+e.footer
+			h5 Услуги:
+			+e.wrap
+				+e.input-wrapper
+					+in-c('checkbox', 'Двери')
+				+e.articul Артикул:&nbsp;
+					span 21500
+				+e.count
+					| Количество: 
+					+addblock()
+	// end sSettings10

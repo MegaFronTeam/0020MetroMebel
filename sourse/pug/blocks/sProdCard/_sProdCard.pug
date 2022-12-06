@@ -348,6 +348,7 @@ mixin sProdCard2(data)
 							.col
 								+e.text Цена рассчитывается индивидуально<br>Подробности уточняйте у наших менеджеров по телефону: 
 									a(href="#") +7&nbsp;(495)&nbsp;172-30-24
+					if data.empty
 					else
 						+e.footer-row.row
 							.col-auto
@@ -357,7 +358,9 @@ mixin sProdCard2(data)
 							.col-auto
 								+e.btn.btn.btn-secondary В корзину
 							.col-auto
-								+addblock()
+								if (data.addblock)
+								else
+									+addblock()
 				if data.specifications
 					.col-12
 						+e.specifications

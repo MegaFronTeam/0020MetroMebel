@@ -632,10 +632,12 @@ function eventHandler() {
 			let tds = trs[i].querySelectorAll('.td');
 			for (let j = 0; j < tds.length; j ++) {
 				tds[j].addEventListener('click', function() {
-					caseContainer.querySelector('.pb_front_cells').style.setProperty('--verticalCells', i + 1);
-					caseContainer.querySelector('.pb_front_cells').style.setProperty('--horizontalCells', j + 1);
 					let verticalBtns = document.querySelector('.radio-buttons.vertical').querySelectorAll('.custom-input');
 					let horizontalBtns = document.querySelector('.radio-buttons.horizontal').querySelectorAll('.custom-input');
+
+					caseContainer.querySelector('.pb_front_cells').style.setProperty('--verticalCells', i + 1);
+					caseContainer.querySelector('.pb_front_cells').style.setProperty('--horizontalCells', j + 1);
+					
 					verticalBtns[i].querySelector('input').checked = 'checked';
 					horizontalBtns[j].querySelector('input').checked = 'checked';
 				});
