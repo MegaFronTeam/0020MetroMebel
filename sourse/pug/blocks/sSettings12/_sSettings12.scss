@@ -1,5 +1,5 @@
-// start .sSettings11
-.sSettings11 {
+// start .sSettings12
+.sSettings12 {
 	&__row {
 		--bs-gutter-x: #{rem(9)};
 		--bs-gutter-y: #{rem(9)};
@@ -76,4 +76,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sSettings11
+} // end.sSettings12

@@ -16,7 +16,7 @@ include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sSlider/_sSlider.pug
-include ../blocks/sSettings10/_sSettings10.pug
+include ../blocks/sSettings13/_sSettings13.pug
 
 block variables
 	- let  mainPage= 'prod-card prod-card-2' 
@@ -43,10 +43,10 @@ block pagecontent
 		+sProdCard2({
 			thumbSlider: false,
 			content: true,
-			addblock: true,
-			contentText: 'Каркас&nbsp;&mdash; оцинкованная сталь.<br>Столешница&nbsp;&mdash; AISI 430, углы имеют подгиб по&nbsp;типу &laquo;конверт&raquo;, кромки завальцованы.<br>Возможно создание единой рабочей поверхности при помощи болтового соединения.<br>Оснащены полкой-решёткой.',
+			contentText: 'Характеристики:',
+			list: true
 		})
-			+sSettings10-2
+			+sSettings13(true, true, true)
 		//- +sSlider('true', 'Лучшие предложения на', '5 июня 2022').sSlider--bg
 		+sSlider('', 'Похожие товары', '', 'true')
 			+img('img/svg/square.svg').square.square--2

@@ -60,3 +60,55 @@ mixin sSettings10(data)
 					| Количество: 
 					+addblock()
 	// end sSettings10
+
+mixin sSettings10-2(data)
+	// start sSettings10
+	+b.sSettings10--2&attributes(attributes)
+		+e.configuration
+			+e.headline Полка
+			+e.select
+				+input('600', 'select')
+		+e.configuration
+			+e.headline Количество моек
+			+e.type
+				+in-c('radio', '1', 'count')
+				+in-c('radio', '2', 'count')
+				+in-c('radio', '3', 'count')
+		+e.configuration
+			+e.headline Стол
+			+e.checkboxes
+				+in-c('radio', 'Нет', 'configuration')
+				+in-c('radio', 'Да', 'configuration')
+		+e.configuration
+			+e.headline Материал каркаса
+			+e.checkboxes
+				+in-c('radio', 'Оцинкованный', 'configuration2')
+				+in-c('radio', 'Крашенная углеродистая сталь', 'configuration2')
+		+e.configuration--fullWidth
+			+e.headline Материал раковины
+			+e.checkboxes
+				+in-c('radio', 'Нержавеющая сталь AISI 430 толщиной 0.7 мм', 'configuration3')
+				+in-c('radio', 'Нержавеющая сталь AISI 304 толщиной 0.8 мм', 'configuration3')
+		+e.configuration
+			+e.headline Борт
+			+e.checkboxes--img
+				+in-c('radio', '', 'configuration4')
+					.img-wrap-center
+						+img('img/svg/board-img-1.svg')
+				+in-c('radio', '', 'configuration4')
+					.img-wrap-center
+						+img('img/svg/board-img-2.svg')
+		+e.wrap
+			+in-c('checkbox', 'Отверстие под кран')
+		+e.text Габариты ВxШxГ в мм: 870x1550x800
+		+e.footer
+			h5 Услуги:
+			+e.wrap
+				+e.input-wrapper
+					+in-c('checkbox', 'Сборка')
+				+e.articul Артикул:&nbsp;
+					span 21500
+				+e.count
+					| Количество: 
+					+addblock()
+	// end sSettings10
