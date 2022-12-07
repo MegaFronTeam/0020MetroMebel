@@ -1380,6 +1380,10 @@
 			z-index: 4;
 			.sProdCard__plus {
 				border-color: #0B77BF;
+				background-color: #fff;
+				&:before, &::after {
+					background-color: #0B77BF;
+				}
 			}
 		}
 		&:nth-child(1) {

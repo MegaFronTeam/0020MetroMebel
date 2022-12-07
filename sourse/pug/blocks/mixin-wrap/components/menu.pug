@@ -1,17 +1,18 @@
 
 mixin mnu()
-	nav
-		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	nav.swiper.swiper-nav.swiper-nav--js
+		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement").swiper-wrapper
 			li.menu-item.menu-item--hover(itemprop="item" )
 				a(href="#" itemprop="url")
 					+icon('squares')
 					| каталог продукции
 				+catalogDropdown()
 			each link in nav
-				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+				if link.name
+					li.menu-item(itemprop="item" ).swiper-slide: a(href= link.url itemprop="url")= link.name
 				if link.subnav
-					li.menu-item.menu-item-has-children
-						a(href="#" itemprop="url") О нас
+					li.menu-item.menu-item-has-children.swiper-slide
+						span!= link.subname
 						ul.sub-menu
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name

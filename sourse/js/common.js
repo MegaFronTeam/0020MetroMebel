@@ -63,7 +63,7 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+			// [document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
 	// кнопка для закрытя меню
@@ -74,7 +74,7 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			toggle.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+			// [document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 		}
 
 	},
@@ -419,6 +419,12 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
+
+	const swipermenu = new Swiper('.swiper-nav--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
 	//  вызов слайдера
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
@@ -655,6 +661,14 @@ function eventHandler() {
 		}
 	};
 	inputFile();
+
+	$('.menu-item-has-children').on('click', function() {
+		if (window.matchMedia("(max-width: 992px)").matches) {
+			$('.sub-menu').slideToggle();
+		};
+		// window.addEventListener('resize', () => {
+		// });
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

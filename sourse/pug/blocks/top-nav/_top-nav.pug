@@ -12,8 +12,8 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+		//- +b.toggle-menu-mobile--js
+		//- 	span
 		+e.inner
 			+mnu()
 	//  мобильное меню
@@ -70,12 +70,13 @@ mixin top-nav(mainPage=false)
 					.menu-mobile__inner
 						//- +menu-toggle()
 						+mnu()
+						+catalogDropdown()
 
 	// end top-nav
 mixin catalogDropdown()
 	+b.catalog-dropdown
 		+e.dropdown-content
-			mixin item(i, text)
+			mixin item(i, text, variant)
 				+e.wrap
 					+e.catalog-item
 						+e.img-wrap
@@ -83,21 +84,83 @@ mixin catalogDropdown()
 								+img(`img/category-img-${i}.png`)
 						p!= text 
 					+e.show-more
-						.h4!= text
-						ul
-							mixin listItem(link)
-								li
-									a(href="#")!= link
-							+listItem('Слесарные верстаки ВЛ-К')
-							+listItem('Верстаки ВЛ')
-							+listItem('Верстаки ВС')
-							+listItem('Столярные верстаки')
-							+listItem('Верстаки Эксперт и Мастер')
-							+listItem('Верстаки РМ')
-							+listItem('Столы монтажные')
-							+listItem('Столы монтажные СР нагрузка на столешницу 250 кг')
-							+listItem('Столы монтажные СР-М нагрузка на столешницу 300 кг')
-			+item(1, 'Металлические стеллажи')
+						if variant == 'first'
+							+e.list-row.row
+								.col-auto
+									ul
+										li: h5 по типу
+										li: a(href="#") Стеллажи архивные
+										li: a(href="#") Стеллажи усиленные
+										li: a(href="#") Стеллажи серии МКФ
+										li: a(href="#") Среднегрузовые стеллажи
+										li: a(href="#") Стеллажи полочные
+										li: a(href="#") Для одежды
+										li: a(href="#") Для колес
+										li: a(href="#") Стеллажи с дверьми
+										li: a(href="#") Для бутылей
+										li: a(href="#") Стеллажи универсальные
+										li: a(href="#") Грузовые стеллажи
+										li: a(href="#") Стеллажи из нержавеющей стали
+										li: a(href="#") Оцинкованные стеллажи
+										li: a(href="#") Складские
+										li: a(href="#") Офисные
+										li: a(href="#") Для дома
+										li: a(href="#") Стеллажи на зацепах
+								.col-auto
+									ul
+										li: h5 по назначению
+										li: a(href="#") Для гаража
+										li: a(href="#") Для балконов
+										li: a(href="#") Для кладовки
+										li: a(href="#") Для инструментов
+										li: a(href="#") Для автозапчастей
+										li: a(href="#") Стеллажи с перфорированными полками
+										li: a(href="#") Стеллажи с пластиковыми ящиками
+										li: a(href="#") Стеллажи с наклонными полками
+										li: a(href="#") Стеллажи с выкатными платформами
+										li: a(href="#") Антистатические стеллажи
+										li: a(href="#") Стеллажи серии СТ
+										li: a(href="#") Стеллажи серии СТП
+										li: a(href="#") Стеллажи серии СКУ
+										li: a(href="#") Стеллажи паллетные
+										li: a(href="#") Стеллажи консольные 
+										li: a(href="#") Мобильные стеллажи
+										li: a(href="#") Лотки, кассетницы и системы хранения
+								.col
+									ul
+										li: h5 по типу
+										li: a(href="#") 100
+										li: a(href="#") 120
+										li: a(href="#") 140
+										li: a(href="#") 150
+										li: a(href="#") 200
+										li: a(href="#") 220
+										li: a(href="#") 300
+										li: a(href="#") 450
+										li: a(href="#") 550
+										li: a(href="#") 750
+										li: a(href="#") 850
+										li: a(href="#") 1300
+										li: a(href="#") 4,5 т
+								.col
+									ul
+										li: h5 серия
+										li: a(href="#") ст-031
+										li: a(href="#") ст-120
+										li: a(href="#") ст-200
+										li: a(href="#") мкф
+										li: a(href="#") мку
+										li: a(href="#") ст-031
+										li: a(href="#") ст-120
+										li: a(href="#") ст-200
+										li: a(href="#") мкф
+										li: a(href="#") мку
+										li: a(href="#") ст-031
+										li: a(href="#") ст-120
+										li: a(href="#") ст-200
+										li: a(href="#") мкф
+										li: a(href="#") мку
+			+item(1, 'Металлические стеллажи', 'first')
 			+item(2, 'Верстаки')
 			+item(3, 'Металлические шкафы')
 			+item(4, 'Мебель для раздевалок')

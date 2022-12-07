@@ -29,5 +29,16 @@ mixin modal()
 			+item(2, 'Экран ВЛ-К-150-Э1')
 			+item(3, 'Экран ВЛ-К-200-Э1')
 	// #modal-choose
+
+	div(id="modal-city"  style="display: none" )
+		+b.modal-win--city
+			.h4 Выберите город
+			ul
+				li: a(href="#") Москва
+				li: a(href="#") Санкт-Петербург
+				li: a(href="#") Новосибирск
+				li: a(href="#") Екатеринбург
+				li: a(href="#") Нижний Новгород
+	// #modal-city
 	
 	// end modals
