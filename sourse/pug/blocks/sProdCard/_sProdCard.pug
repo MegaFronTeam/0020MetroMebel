@@ -372,6 +372,30 @@ mixin sProdCard2(data)
 								.col-auto.col-xl
 									+e.specifications-title Настенный
 									+img('img/specifications-img-2.png').res-i
+				if data.form
+					.col-12
+						+ddGroup()
+							+ddGroupItem("Заполните форму заявки")
+								+form-wrap
+									+e.row.row
+										.col-lg-6 
+											+e.inner-row.row
+												.col-12
+													+input('Ваше Имя', 'text', 'Ваше Имя:<sup>*</sup>')
+												.col-12
+													+input('E-mail', 'email', 'E-mail:')
+												.col-12
+													+input('Телефон', 'tel', 'Телефон:<sup>*</sup>')
+												.col-12
+													+input('Название компании', 'text', 'Название компании')
+										.col-lg-6 
+											+e.inner-row.row
+												+e.col.col-12
+													+input('Сообщение', 'textarea', 'Сообщение')
+												.col-12
+													+upload-field('Выбрать файл')
+												.col-12
+													+e.btn.BUTTON.btn.btn-secondary(type="submit") Отправить
 			.tabs
 				+e.footer-btn-row.tabs__caption
 					+e.footer-btn.btn.tabs__btn.active Характеристики

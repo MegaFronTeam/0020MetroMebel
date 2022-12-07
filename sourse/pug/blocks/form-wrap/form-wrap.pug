@@ -24,7 +24,7 @@ mixin input(placeholder,  t='text', label, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.input-title= label
+				+e.SPAN.input-title!= label
 				+t(t,placeholder, name)&attributes(attributes)
 				block
 		else

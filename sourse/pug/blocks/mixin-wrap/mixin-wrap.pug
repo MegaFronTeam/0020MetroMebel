@@ -199,3 +199,13 @@ mixin chooseColor(notDef)
 					+e.color(style='--bgColor: #DBB173;')
 				+in-c('radio', '', 'color')
 					+e.color(style='--bgColor: #D99705;')
+
+mixin upload-field()
+	+b.upload-field
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL.btn.btn.btn-light
+					input.input-upload(type='file' name='file')
+					+img('img/clip.png')
+					span Выбрать файл
+			+e.file-name 
