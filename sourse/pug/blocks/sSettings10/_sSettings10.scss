@@ -150,10 +150,12 @@
 		margin-bottom: rem(69);
 		// background-color: #fff;
 		h5 {
-			// background-color: #fff;
 			position: relative;
 			z-index: 1;
 			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				background-color: #fff;
+			}
 			&:before {
 				content: '';
 				position: absolute;

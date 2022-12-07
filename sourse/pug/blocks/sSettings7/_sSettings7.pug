@@ -1,2 +1,43 @@
 mixin sSettings7(data)
-	
+  +b.sSettings7&attributes(attributes)
+    +e.text Ширина:
+    +e.wrap
+      +in-c('radio', '', 'width')
+        +e.img-wrap
+          .img-wrap-center
+            +img('img/width-img-1.png')
+        p 1000 мм
+      +in-c('radio', '', 'width')
+        +e.img-wrap
+          .img-wrap-center
+            +img('img/width-img-2.png')
+        p 1500 мм
+      +in-c('radio', '', 'width')
+        +e.img-wrap
+          .img-wrap-center
+            +img('img/width-img-3.png')
+        p 2000 мм
+    +e.elements
+      +e.headline
+        h5 Элементы:
+        a(href="#") Очистить
+      +e.row.row
+        .col-6.col-md.col-lg-6.col-xxl
+          +e.item.disabled
+            +e.cross
+            | Верстак ВЛ-К-100
+        .col-6.col-md.col-lg-6.col-xxl
+          +e.item
+            +e.cross
+            | Тумба ВЛ-К-003
+        .col-6.col-md.col-lg-6.col-xxl
+          +e.item
+            +e.cross
+            | Тумба ВЛ-К-003
+    +e.count
+      h6 Количество:
+      +b.addBlock
+        input(type="text" value="1")
+        +e.btn-wrap
+          +e.btn--minus.disabled(type="button")
+          +e.btn--plus(type="button")

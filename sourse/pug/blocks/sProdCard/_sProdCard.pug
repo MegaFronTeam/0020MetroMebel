@@ -335,6 +335,13 @@ mixin sProdCard2(data)
 									+icon('diagram')
 								+e.link(href="#")
 									+icon('cart')
+							if data.details
+								+e.details
+									-for(let i = 0; i < 6; i++)
+										+e.detail(data-src='modal-choose' data-fancybox="modal")
+											+e.plus
+											| Правая тумба |&nbsp;
+											a(href="#") Удалить
 					if data.content
 						+e.content-wrap
 							if data.contentText

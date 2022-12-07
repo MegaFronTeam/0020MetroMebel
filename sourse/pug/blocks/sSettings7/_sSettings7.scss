@@ -1,6 +1,235 @@
 // start .sSettings7
 .sSettings7 {
-	
+	&__text {
+		font-size: rem(14);
+		margin-bottom: rem(9);
+	}
+	&__wrap {
+		@include roww('13px', 'm');
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.custom-input {
+			position: relative;
+			min-height: auto;
+			padding-left: 0;
+			margin-bottom: 0;
+			width: 100%;
+			max-width: rem(83);
+			&__input {
+				margin-left: 0;
+				margin-top: 0;
+				border-radius: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+				background-color: transparent;
+				&:checked {
+					background-image: none;
+					& ~ .custom-input__img-wrap {
+						&:after {
+							border-color: $primary;
+						}
+					}
+				}
+				&:focus {
+					box-shadow: none;
+				}
+			}
+			&__img-wrap {
+				@include block(83, 103);
+				margin-bottom: rem(5);
+				border: 0.5px solid #F1F0F0;
+				display: block;
+				background-color: #fff;
+				&:after {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					border: 2px solid transparent;
+					left: 0;
+					top: 0;
+				}
+			}
+			p {
+				font-size: rem(14);
+				text-align: center;
+			}
+		}
+	}
+	&__headline {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		margin-bottom: rem(22);
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: #F0F0F0;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: -1;
+		}
+		h5 {
+			font-weight: 400;
+			margin-bottom: 0;
+			font-size: rem(16);
+			padding-right: rem(16);
+			color: #000;
+			@include media-breakpoint-up(lg) {
+				background-color: #fff;
+			}
+		}
+		a {
+			font-size: rem(14);
+			text-decoration: underline;
+			color: $gray-600;
+			background-color: #fff;
+			padding-left: rem(17);
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(13)};
+		--bs-gutter-y: #{rem(15)};
+
+		margin-bottom: rem(31);
+	}
+	&__item {
+		@include mt;
+		background: #FFFFFF;
+		border: 2px solid #0B77BF;
+		border-radius: 42px;
+		padding: rem(6.5) rem(20) rem(6.5) rem(42);
+		font-size: rem(14);
+		color: #3D3D3D;
+		position: relative;
+		&.disabled {
+			border-color: #F3F3F3;
+			background-color: #F3F3F3;
+			.sSettings7__cross {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+	}
+	&__cross {
+		@include mt;
+		position: absolute;
+		left: 3px;
+		top: 50%;
+		transform: translateY(-50%);
+		border: 2px solid #0B77BF;
+		border-radius: 50%;
+		width: rem(30);
+		height: rem(30);
+		cursor: pointer;
+		&:before, &:after {
+			@include mt;
+			content: '';
+			position: absolute;
+			display: block;
+			@include a-cent;
+			width: rem(10);
+			height: 2px;
+			background-color: #0B77BF;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		&:hover {
+			background-color: #F13939;
+			border-color: #F13939;
+			&:before, &:after {
+				background-color: #fff;
+			}
+		}
+	}
+	&__count {
+		@include roww('18px', 'm');
+		display: flex;
+		align-items: center;
+		padding-top: rem(32);
+		padding-bottom: rem(32);
+		border-top: 1px solid #F0F0F0;
+		border-bottom: 1px solid #F0F0F0;
+		margin-bottom: rem(44);
+		.addBlock {
+			justify-content: center;
+			padding: rem(7) rem(15);
+			border: 0.5px solid #F0F0F0;
+			background-color: #fff;
+			input {
+				height: rem(20);
+				width: rem(20);
+				margin-right: rem(16);
+			}
+			&__btn-wrap {
+				display: flex;
+				flex-direction: column;
+				justify-content: center; 
+			}
+			&__btn {
+				@include mt;
+				border-radius: 0;
+				border: 0.5px solid $primary;
+				width: rem(25);
+				height: rem(9);
+				&:not(:last-child) {
+					margin-bottom: rem(2);
+				}
+				&::before {
+					@include mt;
+					width: 5px;
+					height: 3px;
+					clip-path: polygon(0 0, 50% 100%, 100% 0);
+					background-color: $primary;
+				}
+				&::after {
+					content: unset;
+				}
+				&:hover {
+					background-color: $primary !important;
+					&::before {
+						background-color: #fff;
+					}
+				}
+				&--minus {
+					&::before {
+						transform: rotate(-180deg);
+					}
+				}
+				&.disabled {
+					pointer-events: none;
+					border-color: #F0F0F0;
+					&::before {
+						background-color: #F0F0F0;
+					}
+				}
+			} 
+		}
+		h6 {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
