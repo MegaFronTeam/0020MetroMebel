@@ -2,11 +2,11 @@
 mixin mnu()
 	nav.swiper.swiper-nav.swiper-nav--js
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement").swiper-wrapper
-			li.menu-item.menu-item--hover(itemprop="item" )
+			li.menu-item.menu-item--js(itemprop="item" )
 				a(href="#" itemprop="url")
 					+icon('squares')
 					| каталог продукции
-				+catalogDropdown()
+				//- +catalogDropdown()
 			each link in nav
 				if link.name
 					li.menu-item(itemprop="item" ).swiper-slide: a(href= link.url itemprop="url")= link.name
