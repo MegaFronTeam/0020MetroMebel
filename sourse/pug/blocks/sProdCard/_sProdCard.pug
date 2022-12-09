@@ -322,11 +322,29 @@ mixin sProdCard2(data)
 						+e.swiper-wrap
 							+e.slider--js.swiper
 								.swiper-wrapper
-									-for(let i = 0; i < 6; i++)
+									-for(let i = 0; i < 3; i++)
 										+e.slide.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
 													+img('img/sProdCard-img-1.png')
+											if data.details
+												+e.details
+													-for(let i = 0; i < 6; i++)
+														+e.detail(data-src='modal-choose' data-fancybox="modal")
+															+e.plus
+															| Правая тумба |&nbsp;
+															a(href="#") Удалить
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.png')
+											if data.details
+												+e.details
+													-for(let i = 0; i < 3; i++)
+														+e.detail(data-src='modal-choose' data-fancybox="modal")
+															+e.plus
+															| Правая тумба |&nbsp;
+															a(href="#") Удалить
 							+arrow()
 							+e.links
 								+e.link(href="#")
@@ -335,13 +353,6 @@ mixin sProdCard2(data)
 									+icon('diagram')
 								+e.link(href="#")
 									+icon('cart')
-							if data.details
-								+e.details
-									-for(let i = 0; i < 6; i++)
-										+e.detail(data-src='modal-choose' data-fancybox="modal")
-											+e.plus
-											| Правая тумба |&nbsp;
-											a(href="#") Удалить
 					if data.content
 						+e.content-wrap
 							if data.contentText
