@@ -1185,14 +1185,21 @@
 		}
 	}
 	&__specifications {
-		h5 {
-			text-align: center;
-			margin-bottom: rem(26);
-			font-size: rem(16);
-			color: $primary;
-			text-decoration: underline;
-			font-weight: 400;
-			max-width: rem(1160);
+		.dd-group {
+			&__head {
+				@include mt;
+				text-align: center;
+				margin-bottom: rem(26);
+				font-size: rem(16);
+				color: $primary;
+				text-decoration: underline;
+				font-weight: 400;
+				max-width: rem(1160);
+				cursor: pointer;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 		.row {
 			--bs-gutter-x: #{rem(21)};
@@ -1228,125 +1235,127 @@
 			bottom: 0;
 		}
 	}
-	.dd-group {
-		border: 2px dashed #0B77BF;
-		background-color: #fff;
-		&__item {
-			&.active {
-				.dd-group__head {
-					&::after {
-						transform: rotateX(0);
+	&__form-ddgroup {
+		.dd-group {
+			border: 2px dashed #0B77BF;
+			background-color: #fff;
+			&__item {
+				&.active {
+					.dd-group__head {
+						&::after {
+							transform: rotateX(0);
+						}
 					}
 				}
 			}
-		}
-		&__head {
-			font-size: rem(24);
-			font-weight: 400;
-			margin-bottom: 0;
-			color: #000;
-			text-align: center;
-			padding: rem(48) 0;
-			cursor: pointer;
-			position: relative;
-			&::after {
-				@include mt;
-				content: '';
-				position: absolute;
-				display: block;
-				width: 29px;
-				height: 25px;
-				background-image: url("data:image/svg+xml,%3Csvg width='25' height='30' viewBox='0 0 25 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='29.5678' height='25' transform='matrix(0 1 1 0 0 0)' fill='%230B77BF'/%3E%3Cg clip-path='url(%23clip0_136_8332)'%3E%3Cpath d='M11.7799 11.542L7.09219 16.4172C6.93401 16.583 6.85806 16.7963 6.88096 17.0104C6.90386 17.2246 7.02376 17.4222 7.21439 17.5599C7.40502 17.6976 7.65085 17.7642 7.89805 17.7452C8.14525 17.7262 8.37367 17.623 8.53328 17.4583L12.5005 13.3322L16.4677 17.4583C16.6271 17.6236 16.8557 17.7274 17.1032 17.7467C17.3508 17.7661 17.5972 17.6994 17.7881 17.5615C17.9791 17.4236 18.099 17.2256 18.1216 17.011C18.1443 16.7965 18.0677 16.5829 17.9088 16.4172L13.221 11.542C13.1329 11.4506 13.0227 11.3771 12.8982 11.3266C12.7737 11.2762 12.6379 11.25 12.5004 11.25C12.363 11.25 12.2272 11.2762 12.1027 11.3266C11.9782 11.3771 11.868 11.4506 11.7799 11.542Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_136_8332'%3E%3Crect width='13' height='15' fill='white' transform='translate(5 21) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-				top: 26px;
-				right: 26px;
-				transform: rotateX(180deg);
+			&__head {
+				font-size: rem(24);
+				font-weight: 400;
+				margin-bottom: 0;
+				color: #000;
+				text-align: center;
+				padding: rem(48) 0;
+				cursor: pointer;
+				position: relative;
+				&::after {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					width: 29px;
+					height: 25px;
+					background-image: url("data:image/svg+xml,%3Csvg width='25' height='30' viewBox='0 0 25 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='29.5678' height='25' transform='matrix(0 1 1 0 0 0)' fill='%230B77BF'/%3E%3Cg clip-path='url(%23clip0_136_8332)'%3E%3Cpath d='M11.7799 11.542L7.09219 16.4172C6.93401 16.583 6.85806 16.7963 6.88096 17.0104C6.90386 17.2246 7.02376 17.4222 7.21439 17.5599C7.40502 17.6976 7.65085 17.7642 7.89805 17.7452C8.14525 17.7262 8.37367 17.623 8.53328 17.4583L12.5005 13.3322L16.4677 17.4583C16.6271 17.6236 16.8557 17.7274 17.1032 17.7467C17.3508 17.7661 17.5972 17.6994 17.7881 17.5615C17.9791 17.4236 18.099 17.2256 18.1216 17.011C18.1443 16.7965 18.0677 16.5829 17.9088 16.4172L13.221 11.542C13.1329 11.4506 13.0227 11.3771 12.8982 11.3266C12.7737 11.2762 12.6379 11.25 12.5004 11.25C12.363 11.25 12.2272 11.2762 12.1027 11.3266C11.9782 11.3771 11.868 11.4506 11.7799 11.542Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_136_8332'%3E%3Crect width='13' height='15' fill='white' transform='translate(5 21) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+					top: 26px;
+					right: 26px;
+					transform: rotateX(180deg);
+				}
 			}
-		}
-		&__content {
-			padding: rem(26) rem(20) rem(50);
-			display: none;
-			&.active {
-				display: block;
-			}
-			.form-wrap {
-				max-width: rem(1279);
-				margin-left: auto;
-				margin-right: auto;
-				&__row {
-					--bs-gutter-x: #{rem(32)};
-					--bs-gutter-y: #{rem(6)};
-					@include media-breakpoint-up(xl) {
-						--bs-gutter-x: #{rem(141)};
+			&__content {
+				padding: rem(26) rem(20) rem(50);
+				display: none;
+				&.active {
+					display: block;
+				}
+				.form-wrap {
+					max-width: rem(1279);
+					margin-left: auto;
+					margin-right: auto;
+					&__row {
+						--bs-gutter-x: #{rem(32)};
+						--bs-gutter-y: #{rem(6)};
+						@include media-breakpoint-up(xl) {
+							--bs-gutter-x: #{rem(141)};
+						}
 					}
-				}
-				&__inner-row {
-					--bs-gutter-x: 0;
-					--bs-gutter-y: #{rem(6)};
-				}
-				&__col {
-					.form-wrap__input-wrap {
-						label {
+					&__inner-row {
+						--bs-gutter-x: 0;
+						--bs-gutter-y: #{rem(6)};
+					}
+					&__col {
+						.form-wrap__input-wrap {
+							label {
+								@include media-breakpoint-down(lg) {
+									flex-direction: column;
+								}
+							}
+						}
+						.form-wrap__input-title {
 							@include media-breakpoint-down(lg) {
-								flex-direction: column;
+								margin-bottom: rem(24);
 							}
 						}
 					}
-					.form-wrap__input-title {
-						@include media-breakpoint-down(lg) {
-							margin-bottom: rem(24);
+					&__input-wrap {
+						label {
+							display: flex;
 						}
 					}
-				}
-				&__input-wrap {
-					label {
-						display: flex;
-					}
-				}
-				&__input-title {
-					flex: 0 0 auto;
-					font-size: rem(14);
-					width: 100%;
-					margin-top: rem(9);
-					color: #3D3D3D;
-					max-width: rem(171);
-					@include media-breakpoint-up(lg) {
-						max-width: rem(135);
-					}
-					@include media-breakpoint-up(xl) {
+					&__input-title {
+						flex: 0 0 auto;
+						font-size: rem(14);
+						width: 100%;
+						margin-top: rem(9);
+						color: #3D3D3D;
 						max-width: rem(171);
+						@include media-breakpoint-up(lg) {
+							max-width: rem(135);
+						}
+						@include media-breakpoint-up(xl) {
+							max-width: rem(171);
+						}
+						sup {
+							font-weight: 700;
+							color:#F11111;
+						}
 					}
-					sup {
-						font-weight: 700;
-						color:#F11111;
+					&__input {
+						border-radius: 0;
+						border: 0.5px solid $gray-600;
+						padding: rem(10.5) rem(24);
+						font-size: rem(14);
 					}
-				}
-				&__input {
-					border-radius: 0;
-					border: 0.5px solid $gray-600;
-					padding: rem(10.5) rem(24);
-					font-size: rem(14);
-				}
-				textarea {
-					min-height: rem(94);
-				}
-				&__btn {
-					--bs-btn-padding-x: #{rem(25)};
-					--bs-btn-padding-y: #{rem(9)};
-					--bs-btn-font-size: #{rem(14)};
-					--bs-btn-border-radius: 0;
-
-					margin-top: rem(12);
-					display: block;
-					margin-left: auto;
-					margin-right: auto;
-					@include media-breakpoint-up(lg) {
-						margin-left: rem(135);
+					textarea {
+						min-height: rem(94);
 					}
-					@include media-breakpoint-up(xl) {
-						margin-left: rem(171);
+					&__btn {
+						--bs-btn-padding-x: #{rem(25)};
+						--bs-btn-padding-y: #{rem(9)};
+						--bs-btn-font-size: #{rem(14)};
+						--bs-btn-border-radius: 0;
+	
+						margin-top: rem(12);
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+						@include media-breakpoint-up(lg) {
+							margin-left: rem(135);
+						}
+						@include media-breakpoint-up(xl) {
+							margin-left: rem(171);
+						}
 					}
 				}
 			}

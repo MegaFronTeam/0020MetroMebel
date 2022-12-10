@@ -48,13 +48,27 @@ mixin top-nav(mainPage=false)
 					+e.modal-call(href='#' data-src='modal-call' data-fancybox="modal").d-none.d-sm-block Заказать обратный звонок
 			.col-auto.order-5.order-lg-4
 				+e.links
+					+e.link.active(href="#")
+						//- +img('img/svg/heart.svg')
+						+icon('like')
+					+e.link.active(href="#")
+						//- +img('img/svg/diagram.svg')
+						+icon('diagram')
+					+e.link.active(href="#")
+						//- +img('img/svg/basket.svg')
+						+icon('cart')
+						+e.counter 3
+					+e.link.active(href="#")
+						//- +img('img/svg/user.svg')
+						+icon('person')
+				+e.links
 					+e.link(href="#")
 						//- +img('img/svg/heart.svg')
 						+icon('like')
 					+e.link(href="#")
 						//- +img('img/svg/diagram.svg')
 						+icon('diagram')
-					+e.link.active(href="#")
+					+e.link(href="#")
 						//- +img('img/svg/basket.svg')
 						+icon('cart')
 						+e.counter 3

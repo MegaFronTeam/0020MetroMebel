@@ -75,6 +75,9 @@
 					background-image: none;
 					background-color: $secondary;
 					border-color: $secondary;
+					& ~ .custom-input__text {
+						color: #000;
+					}
 				}
 				&:focus {
 					box-shadow: none;
@@ -236,6 +239,7 @@
 				height: rem(20);
 				width: rem(20);
 				margin-right: rem(16);
+				border: 1px solid $gray-300;
 			}
 			&__btn-wrap {
 				display: flex;
@@ -267,7 +271,7 @@
 						background-color: #fff;
 					}
 				}
-				&--minus {
+				&--plus {
 					&::before {
 						transform: rotate(-180deg);
 					}

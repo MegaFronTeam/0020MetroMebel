@@ -102,6 +102,30 @@
 								</div>
 								<div class="col-auto order-5 order-lg-4">
 									<div class="top-nav__links">
+										<a class="top-nav__link active" href="#">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg>
+										</a>
+										<a class="top-nav__link active" href="#">
+											<svg class="icon icon-diagram ">
+												<use xlink:href="img/svg/sprite.svg#diagram"></use>
+											</svg>
+										</a>
+										<a class="top-nav__link active" href="#">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+											<div class="top-nav__counter">3
+											</div>
+										</a>
+										<a class="top-nav__link active" href="#">
+											<svg class="icon icon-person ">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg>
+										</a>
+									</div>
+									<div class="top-nav__links">
 										<a class="top-nav__link" href="#">
 											<svg class="icon icon-like ">
 												<use xlink:href="img/svg/sprite.svg#like"></use>
@@ -112,7 +136,7 @@
 												<use xlink:href="img/svg/sprite.svg#diagram"></use>
 											</svg>
 										</a>
-										<a class="top-nav__link active" href="#">
+										<a class="top-nav__link" href="#">
 											<svg class="icon icon-cart ">
 												<use xlink:href="img/svg/sprite.svg#cart"></use>
 											</svg>
@@ -1714,76 +1738,78 @@
 								<!-- end sSettings12-->
 							</div>
 							<div class="col-12">
-								<div class="dd-group dd-group-js">
-									<div class="dd-group__item">
-										<div class="dd-group__head dd-head-js">Заполните форму заявки
-										</div>
-										<div class="dd-group__content dd-content-js">
-											<div class="form-wrap">
-												<form>
-													<div class="form-wrap__row row">
-														<div class="col-lg-6"> 
-															<div class="form-wrap__inner-row row">
-																<div class="col-12">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><span class="form-wrap__input-title">Ваше Имя:<sup>*</sup></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/>
-																		</label>
+								<div class="sProdCard__form-ddgroup">
+									<div class="dd-group dd-group-js">
+										<div class="dd-group__item">
+											<div class="dd-group__head dd-head-js">Заполните форму заявки
+											</div>
+											<div class="dd-group__content dd-content-js">
+												<div class="form-wrap">
+													<form>
+														<div class="form-wrap__row row">
+															<div class="col-lg-6"> 
+																<div class="form-wrap__inner-row row">
+																	<div class="col-12">
+																		<div class="form-wrap__input-wrap form-group">
+																			<label><span class="form-wrap__input-title">Ваше Имя:<sup>*</sup></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/>
+																			</label>
+																		</div>
+																		<!-- +e.input-wrap-->
 																	</div>
-																	<!-- +e.input-wrap-->
-																</div>
-																<div class="col-12">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><span class="form-wrap__input-title">E-mail:</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
-																		</label>
+																	<div class="col-12">
+																		<div class="form-wrap__input-wrap form-group">
+																			<label><span class="form-wrap__input-title">E-mail:</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
+																			</label>
+																		</div>
+																		<!-- +e.input-wrap-->
 																	</div>
-																	<!-- +e.input-wrap-->
-																</div>
-																<div class="col-12">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><span class="form-wrap__input-title">Телефон:<sup>*</sup></span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
-																		</label>
+																	<div class="col-12">
+																		<div class="form-wrap__input-wrap form-group">
+																			<label><span class="form-wrap__input-title">Телефон:<sup>*</sup></span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+																			</label>
+																		</div>
+																		<!-- +e.input-wrap-->
 																	</div>
-																	<!-- +e.input-wrap-->
-																</div>
-																<div class="col-12">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><span class="form-wrap__input-title">Название компании</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Название компании"/>
-																		</label>
+																	<div class="col-12">
+																		<div class="form-wrap__input-wrap form-group">
+																			<label><span class="form-wrap__input-title">Название компании</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Название компании"/>
+																			</label>
+																		</div>
+																		<!-- +e.input-wrap-->
 																	</div>
-																	<!-- +e.input-wrap-->
 																</div>
 															</div>
-														</div>
-														<div class="col-lg-6"> 
-															<div class="form-wrap__inner-row row">
-																<div class="form-wrap__col col-12">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение"></textarea>
-																		</label>
+															<div class="col-lg-6"> 
+																<div class="form-wrap__inner-row row">
+																	<div class="form-wrap__col col-12">
+																		<div class="form-wrap__input-wrap form-group">
+																			<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение"></textarea>
+																			</label>
+																		</div>
+																		<!-- +e.input-wrap-->
 																	</div>
-																	<!-- +e.input-wrap-->
-																</div>
-																<div class="col-12">
-																	<div class="upload-field">
-																		<div class="upload-field__wrap">
-																			<div class="upload-field__input-wrap">
-																				<label class="upload-field__btn btn btn-light">
-																					<input class="input-upload" type="file" name="file"/><img src="img/clip.png" alt="" loading="lazy"/><span>Выбрать файл</span>
-																				</label>
-																			</div>
-																			<div class="upload-field__file-name"> 
+																	<div class="col-12">
+																		<div class="upload-field">
+																			<div class="upload-field__wrap">
+																				<div class="upload-field__input-wrap">
+																					<label class="upload-field__btn btn btn-light">
+																						<input class="input-upload" type="file" name="file"/><img src="img/clip.png" alt="" loading="lazy"/><span>Выбрать файл</span>
+																					</label>
+																				</div>
+																				<div class="upload-field__file-name"> 
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="form-wrap__btn btn btn-secondary" type="submit">Отправить
-																	</button>
+																	<div class="col-12">
+																		<button class="form-wrap__btn btn btn-secondary" type="submit">Отправить
+																		</button>
+																	</div>
 																</div>
 															</div>
 														</div>
-													</div>
-												</form>
+													</form>
+												</div>
 											</div>
 										</div>
 									</div>

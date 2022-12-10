@@ -51,6 +51,15 @@
 	}
 }
 
+.custom-input {
+	&__input {
+		&:checked {
+			& ~ .custom-input__text {
+				color: #000;
+			}
+		}
+	}
+}
 
 .parsley-error{
 	border-image: none;

@@ -5,9 +5,11 @@
 		--bs-gutter-y: #{rem(9)};
 
 		margin-bottom: rem(18);
+		max-width: rem(513);
 	}
 	&__spec {
-		max-width: rem(151);
+		// max-width: rem(151);
+		width: 100%;
 		border: 0.5px solid $primary;
 		font-size: rem(14);
 		line-height: 1.29em;
@@ -102,6 +104,9 @@
 					background-size: 18px 16px;
 					background-repeat: no-repeat;
 					background-position: center;
+					& ~ .custom-input__text {
+						color: #000;
+					}
 				}
 				&:focus {
 					box-shadow: none;
@@ -285,7 +290,7 @@
 						background-color: #fff;
 					}
 				}
-				&--minus {
+				&--plus {
 					&::before {
 						transform: rotate(-180deg);
 					}

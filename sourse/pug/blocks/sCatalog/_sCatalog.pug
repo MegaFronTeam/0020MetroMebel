@@ -4,13 +4,13 @@ mixin sCatalog(card='true')
 		+e.container.container
 			img(src="img/svg/square.svg" alt='').square
 			+e.row.row 
-				.col-auto
+				.col-auto.col-xl-3
 					+b.filter.d-none.d-xl-block
 						//- +e.filter-btn
 						h5.d-none.d-xl-block фильтр по параметрам
 						+e.parameters
 							+ddGroup()
-								+ddGroupItem('Цена')
+								+ddGroupItem('Цена', 'active')
 									+e.slide
 										+e.extra-controls.extra-controls
 											<input type="text" class="js-input-from" value="0" data-slider-group="price"/>
@@ -154,21 +154,22 @@ mixin sCatalog(card='true')
 										+e.news-title “Поздравляем с майскими праздниками”
 										p График работы нашей компании в майские праздники
 										+e.news-date 28 апреля 2022
-				.col
-					+e.other-products
+				.col.col-xl-9
+					+e.other-products--js.swiper
 						mixin other-product(i, title)
-							+e.other-product(href='#')
+							+e.other-product.swiper-slide(href='#')
 								+e.img-wrap
 									.img-wrap-center 
 										+img(`img/product-img-${i}.png`)
 								+e.product-title!= title
 								+e.product-desc Нагрузка - 300 кг
-						+other-product(1, 'Слесарные верстаки&nbsp;ВЛ-К')
-						+other-product(2, 'Верстаки ВЛ')
-						+other-product(3, 'Верстаки ВС')
-						+other-product(4, 'Столярные верстаки')
-						+other-product(5, 'Верстаки Эксперт и Мастер')
-						+other-product(6, 'Верстаки PM')
+						.swiper-wrapper
+							+other-product(1, 'Слесарные верстаки&nbsp;ВЛ-К')
+							+other-product(2, 'Верстаки ВЛ')
+							+other-product(3, 'Верстаки ВС')
+							+other-product(4, 'Столярные верстаки')
+							+other-product(5, 'Верстаки Эксперт и Мастер')
+							+other-product(6, 'Верстаки PM')
 					+e.show-more(href="#")
 						| Смотреть все
 						+icon('arrow-right')

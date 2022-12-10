@@ -33,6 +33,12 @@
 						&:after {
 							border-color: $primary;
 						}
+						img {
+							opacity: 1;
+						}
+					}
+					& ~ p {
+						color: #000;
 					}
 				}
 				&:focus {
@@ -55,6 +61,9 @@
 					border: 2px solid transparent;
 					left: 0;
 					top: 0;
+				}
+				img {
+					opacity: .6;
 				}
 			}
 			p {
@@ -180,6 +189,7 @@
 				height: rem(20);
 				width: rem(20);
 				margin-right: rem(16);
+				border: 1px solid $gray-300;
 			}
 			&__btn-wrap {
 				display: flex;
@@ -211,7 +221,7 @@
 						background-color: #fff;
 					}
 				}
-				&--minus {
+				&--plus {
 					&::before {
 						transform: rotate(-180deg);
 					}
