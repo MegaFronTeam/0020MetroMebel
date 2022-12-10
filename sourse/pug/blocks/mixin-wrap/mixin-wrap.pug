@@ -71,11 +71,11 @@ mixin card(label, title='Цветной четырехсекционный шк�
 		+e.aside--left
 		+e.aside--right
 			+e.links
-				+e.link(href="#")
+				+e.link&attributes(attributes)(href="#")
 					+icon('like')
-				+e.link(href="#")
+				+e.link&attributes(attributes)(href="#")
 					+icon('diagram')
-				+e.link(href="#")
+				+e.link&attributes(attributes)(href="#")
 					+icon('cart')
 		+e.content
 			if label

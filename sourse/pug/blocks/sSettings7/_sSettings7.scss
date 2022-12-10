@@ -70,9 +70,15 @@
 				}
 			}
 			span {
+				@include mt;
 				display: block;
 				font-size: rem(14);
 				text-align: center;
+			}
+			&:hover {
+				span {
+					color: #000;
+				}
 			}
 		}
 	}

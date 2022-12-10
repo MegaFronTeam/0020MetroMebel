@@ -19,6 +19,7 @@
 			position: relative;
 			margin-bottom: 0;
 			&__input {
+				@include mt;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -40,7 +41,16 @@
 				}
 			}
 			&__text {
+				@include mt;
 				position: relative;
+			}
+			&:hover {
+				.custom-input__input {
+					background-color: #0B78BD;
+				}
+				.custom-input__text {
+					color: #fff;
+				}
 			}
 		}
 	}
@@ -103,6 +113,7 @@
 			display: flex;
 			padding: rem(6) rem(23);
 			&__input {
+				@include mt;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -124,6 +135,7 @@
 				}
 			}
 			&__text {
+				@include mt;
 				position: relative;
 				color: $gray-600;
 				z-index: 2;
@@ -133,6 +145,14 @@
 				// margin: auto;
 				position: relative;
 				z-index: 2;
+			}
+			&:hover {
+				.custom-input__input {
+					border-color: #0B77BF;
+				}
+				.custom-input__text {
+					color: $gray-600;
+				}
 			}
 		}
 		&--img {

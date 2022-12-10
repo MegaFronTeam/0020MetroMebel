@@ -70,6 +70,14 @@
 				font-size: rem(14);
 				position: relative;
 			}
+			&:hover {
+				.custom-input__input {
+					background-color: $primary;
+				}
+				.custom-input__text {
+					color: #fff;
+				}
+			}
 		}
 		.sSettings8 {
 			&__input-wrap {
@@ -161,6 +169,15 @@
 					fill: transparent;
 					stroke: $gray-600;
 					stroke-width: 2;
+				}
+				&:hover {
+					.custom-input__input {
+						background-color: transparent ;
+					}
+					svg {
+						fill: $primary;
+							stroke: $primary;
+					}
 				}
 			}
 		}

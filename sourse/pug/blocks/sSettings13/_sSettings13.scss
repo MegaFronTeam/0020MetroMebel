@@ -30,6 +30,7 @@
     	align-items: center;
 			min-width: rem(172);
 			&__input {
+				@include mt;
 				@include a-cent(y);
 				width: 16px;
 				height: 16px;
@@ -48,6 +49,7 @@
 				}
 			}
 			&__text {
+				@include mt;
 				display: block;
 				color: $gray-600;
 				font-size: rem(14);
@@ -110,6 +112,14 @@
 				margin-bottom: 0;
 				font-size: rem(14);
 				position: relative;
+			}
+			&:hover {
+				.custom-input__input {
+					background-color:$primary;
+				}
+				.custom-input__text {
+					color: #fff;
+				}
 			}
 		}
 		.custom-dropdown {

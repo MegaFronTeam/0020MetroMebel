@@ -39,6 +39,7 @@
 			position: relative;
 			margin-bottom: 0;
 			&__input {
+				@include mt;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -58,6 +59,11 @@
 			}
 			&__text {
 				position: relative;
+			}
+			&:hover {
+				.custom-input__input {
+					border-color: #0B78BD;
+				}
 			}
 		}
 	}

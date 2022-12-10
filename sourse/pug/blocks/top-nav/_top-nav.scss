@@ -92,20 +92,25 @@
 			margin-left: auto;
 			max-width: rem(278);
 		}
+		@media (max-width: 502px) {
+			max-width: rem(220);
+		}
 		form {
-			@include media-breakpoint-down(sm) {
-				display: none;
-			}
+			// @include media-breakpoint-down(sm) {
+			// 	display: none;
+			// }
 			// @include media-breakpoint-between(lg, xxl) {
 			// 	display: none;
 			// }
 		}
 		input {
 			width: 100%;
-			min-width: rem(228);
 			padding: rem(12) rem(38) rem(12) rem(36);
 			border-radius: 1px;
 			border: 1px solid #737373;
+			@media (min-width: 502px) {
+				min-width: rem(228);
+			}
 		}
 		button {
 			border: none;
@@ -120,7 +125,9 @@
 		}
 	}
 	&__hidden {
-		display: flex;
+		display: none;
+
+		// display: flex;
 		align-items: center;
 		justify-content: center;
 		background-color: #fbfafa;

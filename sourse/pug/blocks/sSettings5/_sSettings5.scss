@@ -38,6 +38,9 @@
 			border: 2px solid #0B78BD;
 			box-shadow: none;
 		}
+		&:hover {
+			border: 2px solid #0B78BD;
+		}
 	}
 	&__inputs-wrap {
 		display: flex;
@@ -50,6 +53,7 @@
 			position: relative;
 			padding-left: 0;
 			&__input {
+				@include mt;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -69,6 +73,7 @@
 				}
 			}
 			&__text {
+				@include mt;
 				font-size: rem(14);
 				color: #000;
 				line-height: 1.71em;
@@ -78,6 +83,14 @@
 				display: block;
 				position: relative;
 				z-index: 2;
+			}
+			&:hover {
+				.custom-input__input {
+					background-color: $primary;
+				}
+				.custom-input__text {
+					color: #fff;
+				}
 			}
 		}
 	}
