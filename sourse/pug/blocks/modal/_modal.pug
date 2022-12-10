@@ -24,7 +24,7 @@ mixin modal()
 			mixin item(i, text)
 				+in-c('radio', '', 'choose')
 					+img(`img/crafting-table-${i}.png`).res-i
-					p!= text
+					span!= text
 			+item(1, 'Экран ВЛ-К-100-Э1')
 			+item(2, 'Экран ВЛ-К-150-Э1')
 			+item(3, 'Экран ВЛ-К-200-Э1')

@@ -37,7 +37,7 @@
 							opacity: 1;
 						}
 					}
-					& ~ p {
+					& ~ span {
 						color: #000;
 					}
 				}
@@ -62,11 +62,15 @@
 					left: 0;
 					top: 0;
 				}
+				.img-wrap-center {
+					display: flex;
+				}
 				img {
 					opacity: .6;
 				}
 			}
-			p {
+			span {
+				display: block;
 				font-size: rem(14);
 				text-align: center;
 			}
