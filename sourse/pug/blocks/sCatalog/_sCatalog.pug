@@ -187,9 +187,9 @@ mixin sCatalog(card='true')
 						+radio-btn('2 000 мм')
 					+e.sort
 						+e.sort-title Сортировать по:
-						+input('По названию', 'select')
-						+input('Цене', 'select')
-						+input('Популярности', 'select')
+						+input('По названию', 'select').js-choice
+						+input('Цене', 'select').js-choice
+						+input('Популярности', 'select').js-choice
 						+e.sort-link(href="#").d-none.d-md-block Новинки
 						+e.control-row.row
 							.col-auto.d-xl-none

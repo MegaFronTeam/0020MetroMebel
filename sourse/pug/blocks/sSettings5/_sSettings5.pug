@@ -23,7 +23,7 @@ mixin sSettings5(data)
 									block
 								else
 									+e.selectItem-title!= title
-									+input(text, 'select')
+									+input(text, 'select').js-choice
 						mixin wrap(headline)
 							+e.selectitem-wrap
 								if headline
@@ -35,11 +35,11 @@ mixin sSettings5(data)
 							+selectItem('Глубина мм', '300')
 							+selectItem('', '', 'modification')
 								+in-c('checkbox', 'Двери')
-								+input('Сетчатые', 'select')
+								+input('Сетчатые', 'select').js-choice
 						+wrap('Дополнительные опции:')
 							+selectItem('', '', 'modification')
 								+in-c('checkbox', 'Замок')
-								+input('Петли под навесной замок', 'select')
+								+input('Петли под навесной замок', 'select').js-choice
 						+wrap('Свойства элементов:')
 							+selectItem('Тип покрытия рам', 'Оцинкованные')
 							+selectItem('Тип покрытия полок', 'Окрашенные')

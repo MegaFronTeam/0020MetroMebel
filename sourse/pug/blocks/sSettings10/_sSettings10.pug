@@ -9,9 +9,9 @@ mixin sSettings10(data)
 		h5 Габариты:
 		+e.select
 			span ШxГxВ, мм:
-			+input('600', 'select')
+			+input('600', 'select').js-choice
 			| &nbsp;x&nbsp;
-			+input('600', 'select')
+			+input('600', 'select').js-choice
 			| &nbsp;х 870
 		h5 Конфигурация:
 		+e.configuration
@@ -67,7 +67,7 @@ mixin sSettings10-2(data)
 		+e.configuration
 			+e.headline Полка
 			+e.select
-				+input('600', 'select')
+				+input('600', 'select').js-choice
 		+e.configuration
 			+e.headline Количество моек
 			+e.type

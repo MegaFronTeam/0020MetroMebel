@@ -937,3 +937,26 @@
 .input-upload {
 	display: none;
 }
+
+.choices {
+	&__inner {
+		padding-bottom: 0 !important;
+	}
+	&__list {
+		&--dropdown {
+			width: max-content !important;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 12 !important;
+		}
+	}
+	&__item {
+		color: $gray-900;
+		&--choice {
+			padding: rem(10) !important;
+		}
+		&--selectable {
+			@include ellips;
+		}
+	}
+}

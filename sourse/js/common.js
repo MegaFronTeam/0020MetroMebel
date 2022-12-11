@@ -702,6 +702,16 @@ function eventHandler() {
 				catalogWrap.querySelector('.catalog-dropdown__show-more').classList.remove('active');
 			};
 		});
+	};
+
+	let customSelects = document.querySelectorAll('.js-choice');
+	if (customSelects) {
+		for (let customSelect of customSelects) {
+			const choices = new Choices(customSelect, {
+				searchEnabled: false,
+				itemSelectText: ''
+			});
+		};
 	}
 };
 if (document.readyState !== 'loading') {

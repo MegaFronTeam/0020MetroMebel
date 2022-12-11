@@ -173,6 +173,45 @@
 			}
 		}
 	}
+	.choices {
+		&:after {
+			content: unset;
+		}
+		&__inner {
+			padding: 0;
+			min-height: auto;
+			border-color: $gray-400;
+			background: #fff;
+			border-radius: 0;
+		}
+		&__list {
+			&--single {
+				position: relative;
+				padding: rem(6) rem(27) rem(6) rem(12);
+				&:after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: rem(27);
+					height: 100%;
+					background-color: $primary;
+					background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 16px 12px;	
+					top: 0;
+					right: 0;
+					pointer-events: none;
+				}
+			}
+			&--dropdown {
+				width: 100% !important;
+			}
+		}
+		&__item {
+			color: #000;
+		}
+	}
 	&__selectItem-title {
 		font-size: rem(14);
 		width: 100%;
