@@ -38,7 +38,10 @@ block pagecontent
 	main
 		+page-head('Столярные и слесарные верстаки', 'Каталог', 'Верстаки', 'Столярные и слесарные верстаки')
 		+sCatalog(false)
-		+sMetalFurniture
+		#content
+		script(src="js/content.js")
+		script.
+			document.querySelector('#content').innerHTML = contentsMetalFurniture;
 		+sSlider('', 'С этими товарами покупают', '', 'true')
 			img(src="img/svg/square.svg" alt='').square.square--1
 			img(src="img/svg/square.svg" alt='').square.square--2

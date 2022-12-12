@@ -273,6 +273,9 @@
 		left: 0;
 		top: 100%;
 	}
+	@include media-breakpoint-down(lg) {
+		display: block !important;
+	}
 	&__catalog-dropdown-row {
 		--bs-gutter-x: 0;
 	}
