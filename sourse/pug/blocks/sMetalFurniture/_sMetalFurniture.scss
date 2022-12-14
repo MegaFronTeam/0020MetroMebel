@@ -118,14 +118,14 @@
 		counter-reset: num;
 		margin-bottom: 0;
 		li {
-			font-size: rem(14);
+			font-size: rem(18);
 			position: relative;
 			margin-bottom: rem(30);
 			&:last-child {
 				margin-bottom: 0;
 			}
 			@include media-breakpoint-up(sm) {
-				font-size: rem(16);
+				font-size: rem(18);
 			}
 			span {
 				color: $secondary;

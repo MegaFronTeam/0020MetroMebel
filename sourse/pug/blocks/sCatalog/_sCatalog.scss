@@ -120,7 +120,7 @@
 	&__product-desc {
 		@include mt;
 		max-width: rem(162);
-		font-size: rem(14);
+		font-size: rem(16);
 		color: $gray-600;
 	}
 	&__show-more {
@@ -166,7 +166,7 @@
 		}
 		span {
 			@include mt;
-			font-size: rem(14);
+			font-size: rem(16);
 			color: $gray-600;
 		}
 		input {
@@ -252,7 +252,7 @@
 		margin-right: rem(20);
 		@include media-breakpoint-down(md) {
 			margin-right: rem(5);
-			font-size: rem(12);
+			font-size: rem(16);
 		}
 	}
 	&__sort-link {

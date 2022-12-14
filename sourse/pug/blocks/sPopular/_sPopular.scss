@@ -148,7 +148,7 @@
 		flex-grow: 1;
 	}
 	&__sub-link {
-		font-size: rem(14);
+		font-size: rem(16);
 		line-height: 1.71em;
 		color: $body-color;
 		margin-bottom: 0;
@@ -156,6 +156,9 @@
 		position: relative;
 		z-index: 2;
 		display: block;
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
 	}
 	&__title {
 		@include mt;
@@ -163,7 +166,8 @@
 		color: #000000;
 		flex-grow: 1;
 		margin-bottom: 0;
-		font-size: rem(14);
+		font-size: rem(16);
+		// font-size: rem(18);
 		text-decoration: none;
 		margin-bottom: 6px;
 		// &:before {

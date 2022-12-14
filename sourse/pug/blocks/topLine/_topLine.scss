@@ -20,7 +20,7 @@
 	}
 	&__city {
 		color: $gray-900;
-		font-size: rem(12);
+		font-size: rem(16);
 		line-height: normal;
 		cursor: pointer;
 		@include media-breakpoint-up(xl) {
@@ -65,7 +65,7 @@
 			margin-right: rem(10);
 		}
 		span {
-			font-size: rem(12);
+			font-size: rem(16);
 			text-decoration: underline;
 			@include media-breakpoint-up(xl) {
 				font-size: rem(14);
