@@ -712,7 +712,14 @@ function eventHandler() {
 				itemSelectText: ''
 			});
 		};
-	}
+	};
+
+	$('.sCatalog__show-more').on('click', function() {
+		$(this).hide();
+		$('.sCatalog__radio-btn:hidden').slideDown(function() {
+			$(this).show('active');
+		});
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -170,9 +170,6 @@ mixin sCatalog(card='true')
 							+other-product(4, 'Столярные верстаки')
 							+other-product(5, 'Верстаки Эксперт и Мастер')
 							+other-product(6, 'Верстаки PM')
-					+e.show-more(href="#")
-						| Смотреть все
-						+icon('arrow-right')
 					+e.radio-btns
 						mixin radio-btn(text)
 							+e.LABEL.radio-btn
@@ -185,6 +182,16 @@ mixin sCatalog(card='true')
 						+radio-btn('1 000 мм')
 						+radio-btn('1 500 мм')
 						+radio-btn('2 000 мм')
+						+radio-btn('Однотумбовые')
+						+radio-btn('Двухтумбовые')
+						+radio-btn('Бестумбовые')
+						+radio-btn('Мобильные')
+						+radio-btn('1 000 мм')
+						+radio-btn('1 500 мм')
+						+radio-btn('2 000 мм')
+					+e.show-more(href="#")
+						| Смотреть все
+						+icon('arrow-right')
 					+e.sort
 						+e.sort-title Сортировать по:
 						+input('По названию', 'select').js-choice

@@ -23,6 +23,9 @@
 		font-size: rem(16);
 		line-height: normal;
 		cursor: pointer;
+		@include media-breakpoint-up(md) {
+			font-size: rem(12);
+		}
 		@include media-breakpoint-up(xl) {
 			font-size: rem(14);
 		}
@@ -67,6 +70,9 @@
 		span {
 			font-size: rem(16);
 			text-decoration: underline;
+			@include media-breakpoint-up(md) {
+				font-size: rem(12);
+			}
 			@include media-breakpoint-up(xl) {
 				font-size: rem(14);
 			}

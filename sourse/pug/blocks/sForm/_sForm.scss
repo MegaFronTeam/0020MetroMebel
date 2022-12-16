@@ -97,7 +97,7 @@
 				color: #f4f3f3;
 				font-size: rem(16);
 				@include media-breakpoint-up(md) {
-					font-size: rem(16);
+					font-size: rem(14);
 				}
 			}
 			span {
@@ -176,6 +176,9 @@
 				font-size: rem(16);
 				color: $body-color;
 				border-radius: 0;
+				@include media-breakpoint-up(md) {
+					font-size: rem(14);
+				}
 			}
 			&__policy {
 				padding-top: rem(48);
@@ -183,6 +186,9 @@
 				margin-bottom: rem(21);
 				font-size: rem(16);
 				line-height: 1.28em;
+				@include media-breakpoint-up(md) {
+					font-size: rem(14);
+				}
 			}
 			&__btn {
 				width: 100%;
@@ -197,6 +203,9 @@
 				--bs-btn-border-radius: 0;
 				--bs-btn-hover-border-color:#454545;
 				--bs-btn-hover-bg: rgb(240, 240, 240);
+				@include media-breakpoint-up(md) {
+					--bs-btn-font-size: #{rem(14)};
+				}
 			}
 		}
 	}

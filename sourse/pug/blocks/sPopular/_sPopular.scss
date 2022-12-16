@@ -181,6 +181,9 @@
 		// 	left: 0;
 		// 	top: 0;
 		// }
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
 		@include media-breakpoint-up(xl) {
 			font-size: rem(16);
 		}
