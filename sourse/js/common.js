@@ -714,7 +714,8 @@ function eventHandler() {
 		};
 	};
 
-	$('.sCatalog__show-more').on('click', function() {
+	$('.sCatalog__show-more').on('click', function(event) {
+		event,preventDefault();
 		$(this).hide();
 		$('.sCatalog__radio-btn:hidden').slideDown(function() {
 			$(this).show('active');
