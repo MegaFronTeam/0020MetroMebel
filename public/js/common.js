@@ -721,6 +721,18 @@ function eventHandler() {
 			$(this).show('active');
 		});
 	});
+
+	let sPopularSlides = document.querySelectorAll('.sPopular__item');
+	if (sPopularSlides) {
+		for (let sPopularSlide of sPopularSlides) {
+			sPopularSlide.querySelector('.show-more-js').addEventListener('click', function(event) {
+				event.preventDefault();
+				let self = $(this);
+				self.hide();
+				$(sPopularSlide).find(`.sPopular__sub-link:hidden`).show();
+			});
+		};
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

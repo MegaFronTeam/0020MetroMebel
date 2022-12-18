@@ -607,7 +607,10 @@
 					}
 				}
 				li {
-					margin-bottom: 0;
+					margin-bottom: 2px;
+					@include media-breakpoint-up(md) {
+						margin-bottom: 0;
+					}
 					a {
 						color: $gray-600;
 						font-weight: 400;
