@@ -728,11 +728,16 @@ function eventHandler() {
 			sPopularSlide.querySelector('.show-more-js').addEventListener('click', function(event) {
 				event.preventDefault();
 				let self = $(this);
-				self.hide();
-				$(sPopularSlide).find(`.sPopular__sub-link:hidden`).show();
+				self.toggleClass('active');
+				$(sPopularSlide).find(`.sPopular__sub-link.active`).slideUp(function() {
+					$(this).removeClass('active');
+				});
+				$(sPopularSlide).find(`.sPopular__sub-link:hidden`).slideDown(function() {
+					$(this).addClass('active');
+				});
 			});
 		};
-	}
+	};
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

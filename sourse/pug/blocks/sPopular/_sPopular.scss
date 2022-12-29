@@ -142,12 +142,21 @@
 			font-size: rem(31);
 			margin-left: auto;
 			margin-right: rem(30);
+
+		}
+	}
+	&__show-more {
+		text-align: right;
+		&.active {
+			.icon {
+				transform: rotateY(-180deg);
+			}
 		}
 	}
 	&__sub-link-wrap {
 		display: flex;
 		flex-direction: column;
-		flex-grow: 1;
+		// flex-grow: 1;
 	}
 	&__sub-link {
 		font-size: rem(16);
@@ -169,7 +178,7 @@
 		@include mt;
 		text-transform: uppercase;
 		color: #000000;
-		flex-grow: 1;
+		// flex-grow: 1;
 		margin-bottom: 0;
 		font-size: rem(16);
 		// font-size: rem(18);

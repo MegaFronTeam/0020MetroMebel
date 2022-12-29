@@ -8,11 +8,11 @@ mixin sPopular(def, plus=true)
 				+e.slide.swiper-slide
 					+e.item
 						+e.content
-							+e.title!= title
+							+e.title(href="#")!= title
 							+e.sub-link-wrap 
 								each item in items
 									+e.sub-link(href="#")!= item
-							a(href="#").text-end.show-more-js
+							+e.show-more(href="#").show-more-js
 								+icon('arrow-right')
 						+e.img-wrap(href='#')
 							+img(`img/sPopular-img-${i}.png`)

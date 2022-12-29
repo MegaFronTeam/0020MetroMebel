@@ -219,7 +219,7 @@
 				color: $gray-600;
 				text-decoration: dotted;
 				text-decoration-line: underline;
-				&:hover {
+				&.active, &:hover {
 					color: $secondary;
 				}
 			}

@@ -6,8 +6,8 @@ mixin sOurClients(data)
 			+e.row.row
 				mixin item(i)
 					+e.col.col-auto
-						+e.item
-							+e.img-wrap 
+						+e.item(href='#')
+							+e.img-wrap
 								.img-wrap-center
 									+img(`img/sOurClients-img-${i}.png`)
 				-for(let i =0; i < 2; i++)
