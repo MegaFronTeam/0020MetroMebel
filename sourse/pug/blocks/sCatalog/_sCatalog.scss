@@ -167,7 +167,7 @@
 		border-radius: 20px;
 		text-align: center;
 		cursor: pointer;
-		&:nth-child(n+7) {
+		&:nth-child(n+8) {
 			display: none;
 		}
 		@include media-breakpoint-up(xxl) {
