@@ -723,7 +723,7 @@ function eventHandler() {
 	};
 
 	$('.sCatalog__show-more').on('click', function(event) {
-		event,preventDefault();
+		event.preventDefault();
 		$(this).hide();
 		$('.sCatalog__radio-btn:hidden').slideDown(function() {
 			$(this).show('active');
@@ -746,6 +746,7 @@ function eventHandler() {
 			});
 		};
 	};
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
