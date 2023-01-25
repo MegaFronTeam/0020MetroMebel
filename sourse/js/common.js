@@ -598,7 +598,11 @@ function eventHandler() {
 	const sCatalogSwiper = new Swiper('.sCatalog__other-products--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 12,
-		watchOverflow: true
+		watchOverflow: true,
+		navigation: {
+			nextEl: '.sCatalog__other-products .swiper-button-next',
+			prevEl: '.sCatalog__other-products .swiper-button-prev',
+		},
 	});
 
 	//  Когда от верха страницы прокручено больше 800пх добавляет класс .active на кнопку скролла верх

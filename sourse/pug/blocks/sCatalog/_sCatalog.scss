@@ -58,6 +58,9 @@
 			padding: 20px;
 			margin: -20px -20px 20px -20px;
 		}
+		.swiper-button-hand {
+			--swiperArrowPosition: #{rem(17)};
+		}
 	}
 	&__other-product {
 		padding: rem(9) rem(9) rem(15);
