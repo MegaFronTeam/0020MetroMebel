@@ -728,9 +728,12 @@ function eventHandler() {
 
 	$('.sCatalog__show-more').on('click', function(event) {
 		event.preventDefault();
-		$(this).hide();
+		$(this).toggleClass('active');
 		$('.sCatalog__radio-btn:hidden').slideDown(function() {
-			$(this).show('active');
+			$(this).addClass('active');
+		});
+		$('.sCatalog__radio-btn.active').slideUp(function() {
+			$(this).removeClass('active');
 		});
 	});
 
