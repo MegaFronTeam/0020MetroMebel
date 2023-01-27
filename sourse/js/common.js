@@ -728,13 +728,14 @@ function eventHandler() {
 
 	$('.sCatalog__show-more').on('click', function(event) {
 		event.preventDefault();
-		$('.sCatalog__radio-btn:hidden').slideToggle(function() {
-			$(this).addClass('active');
-		});
-		$('.sCatalog__radio-btn.active').slideUp(function() {
-			$('.sCatalog__radio-btn').removeClass('active');
-			// $(this).removeClass('active');
-		});
+		$('.sCatalog__radio-btn').toggleClass('active');
+		// $('.sCatalog__radio-btn:hidden').slideToggle(function() {
+		// 	$(this).addClass('active');
+		// });
+		// $('.sCatalog__radio-btn.active').slideUp(function() {
+		// 	$('.sCatalog__radio-btn').removeClass('active');
+		// 	// $(this).removeClass('active');
+		// });
 	});
 
 	let sPopularSlides = document.querySelectorAll('.sPopular__item');
