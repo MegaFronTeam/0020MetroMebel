@@ -728,12 +728,12 @@ function eventHandler() {
 
 	$('.sCatalog__show-more').on('click', function(event) {
 		event.preventDefault();
-		$(this).toggleClass('active');
-		$('.sCatalog__radio-btn:hidden').slideDown(function() {
+		$('.sCatalog__radio-btn:hidden').slideToggle(function() {
 			$(this).addClass('active');
 		});
 		$('.sCatalog__radio-btn.active').slideUp(function() {
-			$(this).removeClass('active');
+			$('.sCatalog__radio-btn').removeClass('active');
+			// $(this).removeClass('active');
 		});
 	});
 
