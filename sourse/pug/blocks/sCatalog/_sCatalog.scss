@@ -220,28 +220,51 @@
 				}
 			}
 		}
+		&:nth-child(n+8) {
+			display: none;
+		}
+		@include media-breakpoint-down(sm) {
+			&:nth-child(n+4) {
+				display: none;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			&:nth-child(n+4) {
+				display: none;
+			}
+		}
+		@include media-breakpoint-down(xl) {
+			&:nth-child(n+6) {
+				display: none;
+			}
+		}
+		@include media-breakpoint-down(xxl) {
+			&:nth-child(n+7) {
+				display: none;
+			}
+		}
 		&.active {
 			&:nth-child(n+8) {
-				display: none;
+				display: inline-block;
 			}
 			@include media-breakpoint-down(sm) {
 				&:nth-child(n+4) {
-					display: none;
+					display: inline-block;
 				}
 			}
 			@include media-breakpoint-down(md) {
 				&:nth-child(n+4) {
-					display: none;
+					display: inline-block;
 				}
 			}
 			@include media-breakpoint-down(xl) {
 				&:nth-child(n+6) {
-					display: none;
+					display: inline-block;
 				}
 			}
 			@include media-breakpoint-down(xxl) {
 				&:nth-child(n+7) {
-					display: none;
+					display: inline-block;
 				}
 			}
 		}
