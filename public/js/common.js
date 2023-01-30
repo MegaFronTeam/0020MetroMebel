@@ -755,6 +755,25 @@ function eventHandler() {
 		};
 	};
 
+	let customSelectsJs = document.querySelectorAll('.sCatalog__select--js');
+	if(customSelectsJs) {
+		for (let customSelectJs of customSelectsJs) {
+			let link = customSelectJs.querySelector('.sCatalog__select-title');
+			link.addEventListener('click', function() {
+				this.classList.toggle('active');
+				customSelectJs.querySelector('.sCatalog__select-dropdown').classList.toggle('active');
+			});
+			document.addEventListener('mouseup', (event) => {
+				let targetLink = event.target.closest(".sCatalog__select-title.active")
+				let container = event.target.closest(".sCatalog__select-dropdown.active");
+				if(!container && !targetLink) {
+					link.classList.remove('active');
+					customSelectJs.querySelector('.sCatalog__select-dropdown').classList.remove('active');
+				}
+			});
+		}
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
