@@ -744,7 +744,7 @@
 		position: fixed;
 		@include mt;
 		// transform: translateX(-100vw);
-		z-index: 12;
+		z-index: 1200;
     // top: 764px;
     top: 0;
 		left: 0;
@@ -752,6 +752,8 @@
 		height: 100%;
 		transform: translateX(-100%);
 		padding: rem(40) rem(16) rem(20);
+		overflow-x: hidden;
+		overflow-y: auto;
 		&.active {
 			transform: translateX(0);
 		}
