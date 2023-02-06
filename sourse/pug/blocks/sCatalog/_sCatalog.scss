@@ -944,6 +944,9 @@
 		top: rem(5);
 		right: rem(16);
 		cursor: pointer;
+		@include media-breakpoint-up(xl) {
+			display: none;
+		}
 		&::before, &::after {
 			content: '';
 			position: absolute;
