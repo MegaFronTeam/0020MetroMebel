@@ -562,21 +562,21 @@ function eventHandler() {
 	}
 
 	let filterBtn = document.querySelector('.sCatalog__cotrol-btn--js');
+	let filterCloseBtn = document.querySelector('.filter__filter-btn-close');
 	if(filterBtn) {
 		filterBtn.addEventListener('click', function(e) {
 			e.preventDefault();
 			$('.filter').toggleClass('active');
+			$('body').toggleClass('fixed2');
 		});
-	};
-	//  по клику во вне фильтра - фильтр закроется
-	document.addEventListener('click', function(event) {
-		// let filter = document.querySelector('.filter');
-		let filter = event.target.closest(".filter"); // (1)
-		let filterBtn = event.target.closest('.sCatalog__cotrol-btn--js'); // (1)
-		if(!filter && !filterBtn) {
-			$('.filter').removeClass('active');
+		if (filterCloseBtn) {
+			filterCloseBtn.addEventListener('click', function() {
+				$('.filter').removeClass('active');
+				$('body').removeClass('fixed2');
+			})
 		}
-	})
+	};
+	
 	// Кастомное добавление файлов
 	FilePond.registerPlugin(
 		FilePondPluginImagePreview
@@ -773,6 +773,11 @@ function eventHandler() {
 			});
 		}
 	}
+
+	$('.sCatalog__show-all-slides--js').on('click', function(){
+		$('.sCatalog__other-products--js').toggleClass('active');
+		$(this).toggleClass('active');
+	})
 
 };
 if (document.readyState !== 'loading') {

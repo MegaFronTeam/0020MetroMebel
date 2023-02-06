@@ -5,8 +5,8 @@ mixin sCatalog(card='true')
 			img(src="img/svg/square.svg" alt='').square
 			+e.row.row 
 				.col-auto.col-xl-3
-					+b.filter.d-none.d-xl-block
-						//- +e.filter-btn
+					+b.filter
+						+e.filter-btn-close
 						.h5.d-none.d-xl-block фильтр по параметрам
 						+e.parameters
 							+ddGroup()
@@ -174,29 +174,32 @@ mixin sCatalog(card='true')
 							+other-product(5, 'Верстаки Эксперт и Мастер')
 							+other-product(6, 'Верстаки PM')
 						+arrow
-					+e.radio-btns
-						mixin radio-btn(text)
-							+e.LABEL.radio-btn
-								input(type="radio" name="radio-btn")
-								span!= text
-						+radio-btn('Однотумбовые')
-						+radio-btn('Двухтумбовые')
-						+radio-btn('Бестумбовые')
-						+radio-btn('Мобильные')
-						+radio-btn('1 000 мм')
-						+radio-btn('1 500 мм')
-						+radio-btn('2 000 мм')
-						+radio-btn('Однотумбовые')
-						+radio-btn('Двухтумбовые')
-						+radio-btn('Бестумбовые')
-						+radio-btn('Мобильные')
-						+radio-btn('1 000 мм')
-						+radio-btn('1 500 мм')
-						+radio-btn('2 000 мм')
-					+e.show-more(href="#")
-						span.show Смотреть все
+					+e.show-all-slides--js 
 						span.hide Скрыть
-						+icon('arrow-right')
+						span.show Показать все
+					//- +e.radio-btns
+					//- 	mixin radio-btn(text)
+					//- 		+e.LABEL.radio-btn
+					//- 			input(type="radio" name="radio-btn")
+					//- 			span!= text
+					//- 	+radio-btn('Однотумбовые')
+					//- 	+radio-btn('Двухтумбовые')
+					//- 	+radio-btn('Бестумбовые')
+					//- 	+radio-btn('Мобильные')
+					//- 	+radio-btn('1 000 мм')
+					//- 	+radio-btn('1 500 мм')
+					//- 	+radio-btn('2 000 мм')
+					//- 	+radio-btn('Однотумбовые')
+					//- 	+radio-btn('Двухтумбовые')
+					//- 	+radio-btn('Бестумбовые')
+					//- 	+radio-btn('Мобильные')
+					//- 	+radio-btn('1 000 мм')
+					//- 	+radio-btn('1 500 мм')
+					//- 	+radio-btn('2 000 мм')
+					//- +e.show-more(href="#")
+					//- 	span.show Смотреть все
+					//- 	span.hide Скрыть
+					//- 	+icon('arrow-right')
 					+e.sort
 						+e.sort-title Сортировать по:
 						//- +input('По названию', 'select').js-choice
@@ -225,82 +228,6 @@ mixin sCatalog(card='true')
 							.col-auto.d-none.d-lg-block
 								+e.cotrol-btn(href='#')
 									+icon('control-2')
-						+b.filter.d-block.d-xl-none
-							//- +e.filter-btn
-							h5.d-none.d-xl-block фильтр по параметрам
-							+e.parameters
-								+ddGroup()
-									+ddGroupItem('Цена')
-										+e.slide
-											+e.extra-controls.extra-controls
-												<input type="text" class="js-input-from" value="0" data-slider-group="price"/>
-												<input type="text" class="js-input-to" value="0" data-slider-group="price"/>
-											input.default-ion-slider(
-												data-slider-group="price"
-												data-min="0"
-												data-max="1000000"
-												data-type="double"
-											)
-									+ddGroupItem('Длина столешницы')
-										+b.form-wrap--2
-											.row
-												.col-6
-													+in-c('radio', '200 мм (10)')
-												.col-6
-													+in-c('radio', '1000 мм (1)')
-												.col-6
-													+in-c('radio', '1110 мм (10)')
-												.col-6
-													+in-c('radio', '1200 мм (10)')
-												.col-6
-													+in-c('radio', '1400 мм (3)')
-												.col-6
-													+in-c('radio', '1700 мм (10)')
-												.col-6
-													+in-c('radio', '2000 мм (5)')
-									+ddGroupItem('Высота в мм')
-										+e.slide
-											+e.extra-controls.extra-controls
-												<input type="text" class="js-input-from" value="0" data-slider-group="height"/>
-												<input type="text" class="js-input-to" value="0" data-slider-group="height"/>
-											input.default-ion-slider(
-												data-slider-group="height"
-												data-min="0"
-												data-max="1000000"
-												data-type="double"
-											)
-									+ddGroupItem('Длина в мм')
-										+e.slide
-											+e.extra-controls.extra-controls
-												<input type="text" class="js-input-from" value="0" data-slider-group="width"/>
-												<input type="text" class="js-input-to" value="0" data-slider-group="width"/>
-											input.default-ion-slider(
-												data-slider-group="width"
-												data-min="0"
-												data-max="1000000"
-												data-type="double"
-											)
-									+ddGroupItem('Глубина в мм')
-										+e.slide
-											+e.extra-controls.extra-controls
-												<input type="text" class="js-input-from" value="0" data-slider-group="depth"/>
-												<input type="text" class="js-input-to" value="0" data-slider-group="depth"/>
-											input.default-ion-slider(
-												data-slider-group="depth"
-												data-min="0"
-												data-max="1000000"
-												data-type="double"
-											)
-									+ddGroupItem('По назначению')
-										+b.form-wrap
-											+in-c('radio', 'для балкона')
-											+in-c('radio', 'для цветов')
-											+in-c('radio', 'для кладовки')
-											+in-c('radio', 'для подвала')
-											+in-c('radio', 'для склада')
-							+e.btns
-								+e.btn(href="#") Показать
-								+e.btn--secondary(href="#") Сбросить
 					if card 
 						+e.catalog-row.row
 							+e.catalog-col.col.col-md-6.col-lg-4.col-xl-6.col-xxl-4.zIndex
@@ -408,4 +335,27 @@ mixin sCatalog(card='true')
 					+pugin()
 			+e.catalog-bottom
 				+e.text Стеллажи с&nbsp;нагрузкой до&nbsp;120&nbsp;кг недорого от&nbsp;официального дилера. Доступная цена без дилерской наценки. В&nbsp;каталоге более 9&nbsp;моделей в&nbsp;наличии или под заказ. Вы можете купить, уточнить цену, получить информацию, оставив заявку или позвонить по&nbsp;телефону: + 7 (495) 172-21-96. Железная мебель в&nbsp;интернет-магазине “МетПромМебель.” Доставка по&nbsp;Москве и&nbsp;в&nbsp;другие города и&nbsp;регионы России.
+			+e.radio-btns
+				mixin radio-btn(text)
+					+e.LABEL.radio-btn
+						input(type="radio" name="radio-btn")
+						span!= text
+				+radio-btn('Однотумбовые')
+				+radio-btn('Двухтумбовые')
+				+radio-btn('Бестумбовые')
+				+radio-btn('Мобильные')
+				+radio-btn('1 000 мм')
+				+radio-btn('1 500 мм')
+				+radio-btn('2 000 мм')
+				+radio-btn('Однотумбовые')
+				+radio-btn('Двухтумбовые')
+				+radio-btn('Бестумбовые')
+				+radio-btn('Мобильные')
+				+radio-btn('1 000 мм')
+				+radio-btn('1 500 мм')
+				+radio-btn('2 000 мм')
+			+e.show-more(href="#")
+				span.show Смотреть все
+				span.hide Скрыть
+				+icon('arrow-right')
 	// end sCatalog
