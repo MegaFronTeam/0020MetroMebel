@@ -312,6 +312,9 @@
 	&__select {
 		position: relative;
 		margin-right: rem(20);
+		@include media-breakpoint-down(md) {
+			margin-right: rem(10);
+		}
 	}
 	&__select-title {
 		cursor: pointer;
@@ -356,6 +359,9 @@
 	}
 	&__sort-link {
 		margin-right: rem(20);
+		@include media-breakpoint-down(md) {
+			margin-right: rem(10);
+		}
 	}
 	.choices {
 		&::after {
@@ -394,7 +400,10 @@
 		margin-right: rem(20);
 		@include media-breakpoint-down(md) {
 			margin-right: rem(5);
-			font-size: rem(16);
+			// font-size: rem(16);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: rem(12);
 		}
 	}
 	&__sort-link {
