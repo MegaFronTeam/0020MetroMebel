@@ -80,7 +80,7 @@
 			font-size: rem(12);
 			line-height: calc(24/12);
 			letter-spacing: 7px;
-			opacity: .07;
+			// opacity: .07;
 			text-transform: uppercase;
 			color: #fff;
 			display: flex;
@@ -227,6 +227,7 @@
 	}
 }
 .fancybox__content>.carousel__button.is-close {
+	@include mt;
 	width: 59px;
 	height: 59px;
 	background-color: #fff;
@@ -242,6 +243,9 @@
 		--carousel-button-svg-height: 16px;
 
 		filter: none;
+	}
+	&:hover {
+		color: $primary;
 	}
 }
 a {

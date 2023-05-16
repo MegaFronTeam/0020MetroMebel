@@ -704,7 +704,7 @@ function eventHandler() {
 
 	let catalogWraps = document.querySelectorAll('.catalog-dropdown__wrap');
 	for (let catalogWrap of catalogWraps) {
-		catalogWrap.querySelector('.catalog-dropdown__catalog-item').addEventListener('click', function() {
+		catalogWrap.querySelector('.catalog-dropdown__toggle-sub-menu').addEventListener('click', function() {
 			if (window.matchMedia("(max-width: 992px)").matches) {
 				catalogWrap.querySelector('.catalog-dropdown__show-more').classList.add('active');
 			};

@@ -715,13 +715,13 @@
 }
 
 .advatages {
-	margin-bottom: rem(95);
-	@include media-breakpoint-up(md) {
-		margin-bottom: rem(75);
-	}
-	@include media-breakpoint-up(lg) {
-		margin-bottom: rem(150);
-	}
+	margin-bottom: rem(30);
+	// @include media-breakpoint-up(md) {
+	// 	margin-bottom: rem(75);
+	// }
+	// @include media-breakpoint-up(lg) {
+	// 	margin-bottom: rem(150);
+	// }
 	&__row-item {
 		--bs-gutter-x: #{rem(10)};
 		--bs-gutter-y: #{rem(38)};

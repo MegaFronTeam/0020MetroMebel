@@ -97,7 +97,9 @@ mixin catalogDropdown()
 						+e.img-wrap
 							.img-wrap-center
 								+img(`img/category-img-${i}.png`)
-						p!= text 
+						a(href='#')!= text 
+						+e.toggle-sub-menu
+							+icon('chevron-down')
 					+e.show-more
 						+e.back
 							+icon('chevron-left')

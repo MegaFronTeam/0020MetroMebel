@@ -8,7 +8,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(60)};
-		--sPB: #{rem(119)};
+		// --sPB: #{rem(119)};
 	}
 	&__container {
 		@include media-breakpoint-up(lg) {

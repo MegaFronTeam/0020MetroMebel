@@ -220,6 +220,7 @@
 			top: 0;
 			right: 50%;
 			transform: translateX(50%);
+			max-height: 100%;
 			@include media-breakpoint-down(xl) {
 				width: 100%;
 				max-width: rem(114);
