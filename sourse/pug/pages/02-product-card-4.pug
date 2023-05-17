@@ -35,7 +35,9 @@ block pagecontent
 				+topLine
 				+top-nav()
 	main
-		+page-head('', 'Каталог', ' Стеллажи металлические сборные', 'Металлические стеллажи для одежды SFC')
+		.container
+			+breadcrumb('Главная', 'Каталог', ' Стеллажи металлические сборные', 'Металлические стеллажи для одежды SFC')
+		+page-head('')
 			+headline('Металлические стеллажи для одежды SFC')
 		//- +headerBlock 
 		//- +sAdvantages

@@ -12,7 +12,8 @@ mixin mnu()
 					li.menu-item(itemprop="item" ).swiper-slide: a(href= link.url itemprop="url")= link.name
 				if link.subnav
 					li.menu-item.menu-item-has-children.swiper-slide
-						span!= link.subname
+						span
+							a(href="#")!= link.subname
 						ul.sub-menu
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name

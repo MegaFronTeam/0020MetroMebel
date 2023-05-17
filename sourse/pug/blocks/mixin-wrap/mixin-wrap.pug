@@ -38,11 +38,12 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
+//- +breadcrumb('Главная',...items)
+
+mixin page-head(t)
+	+b.page-title-wrapper
 		- let l = items.length
 		.container
-			+breadcrumb('Главная',...items)
 			if t
 				h1= t
 			else 

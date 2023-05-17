@@ -36,7 +36,9 @@ block pagecontent
 				+topLine
 				+top-nav()
 	main
-		+page-head('Столярные и слесарные верстаки', 'Каталог', 'Верстаки', 'Столярные и слесарные верстаки')
+		.container
+			+breadcrumb('Главная', 'Каталог', 'Верстаки', 'Столярные и слесарные верстаки')
+		+page-head('Столярные и слесарные верстаки')
 		+sCatalog
 		//- +sMetalFurniture
 		#content

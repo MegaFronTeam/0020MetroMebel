@@ -79,6 +79,13 @@
 				}
 			}
 		}
+		& > span {
+			a {
+				padding: 0;
+				text-decoration: none;
+				color: $gray-600;
+			}
+		}
 		&:hover {
 			& > a:before {
 				background-color: $secondary;
