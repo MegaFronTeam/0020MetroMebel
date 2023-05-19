@@ -399,22 +399,37 @@
 		list-style-type: none;
 		margin-bottom: rem(17);
 		flex-grow: 1;
-		li {
-			display: flex;
-			justify-content: space-between;
-			font-size: rem(16);
-			line-height: 1.28em;
-			@include media-breakpoint-up(md) {
-				font-size: rem(14);
-			}
+	}
+	li {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		font-size: rem(16);
+		line-height: 1.28em;
+		z-index: 1;
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
 		}
-		span {
-			&.doted {
-				flex: 1 0;
-  			border-bottom: 1px dotted #000;
-				margin-bottom: 5px;
-			}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			left: 0;
+			bottom: 4.3px;
+			width: 100%;
+			border-bottom: 1px dotted #000;
+			z-index: -1;
 		}
+	}
+	.wrap-left {
+		margin-right: 5px;
+	}
+	.wrap-right {
+		text-align: right;
+	}
+	.text {
+		background-color: #fff;
 	}
 	&__price {
 		color: #000;

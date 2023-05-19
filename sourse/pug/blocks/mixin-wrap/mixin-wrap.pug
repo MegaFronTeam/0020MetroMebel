@@ -63,9 +63,11 @@ mixin headline(text, all, innertext, plus=true)
 
 mixin cardList(listTitle, listText)
 	li
-		span!= listTitle
-		span.doted
-		span!= listText
+		span.wrap-left
+			span.text!= listTitle
+			//- span.doted
+		span.wrap-right
+			span.text!= listText
 
 mixin card(label, title='Цветной четырехсекционный шкаф для одежды', articul='23388, 23389', ...imgs)
 	+b.card
