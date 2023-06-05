@@ -92,7 +92,7 @@ mixin catalogDropdown()
 	+b.catalog-dropdown&attributes(attributes)
 		+e.dropdown-content
 			mixin item(i, text, variant)
-				+e.wrap
+				+e.wrap&attributes(attributes)
 					+e.catalog-item
 						+e.img-wrap
 							.img-wrap-center
@@ -543,7 +543,7 @@ mixin catalogDropdown()
 										li: +e.link(href="#") Велопарковки
 										li: +e.link(href="#") Навесное оборудование
 										li: +e.link(href="#") Колесоотбойники
-			+item(1, 'Металлические стеллажи', 'first')
+			+item(1, 'Металлические стеллажи', 'first').active2
 			+item(2, 'Верстаки', 'second')
 			+item(3, 'Металлические шкафы', 'third')
 			+item(4, 'Мебель для раздевалок', 'forth')

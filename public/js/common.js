@@ -689,18 +689,28 @@ function eventHandler() {
 		// });
 	});
 
-	$('.menu-item--js').on('click', function() {
-		this.classList.toggle('active');
-		$('.catalog-dropdown').fadeToggle();
+	$('.menu-item--js').hover(function(event) {
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			this.classList.add('active');
+			$('.catalog-dropdown').fadeIn();
+		}
 	});
-	document.addEventListener('click', function(event) {
-		let container = event.target.closest(".catalog-dropdown");
-		let toggle = event.target.closest(".menu-item--js");
-		if (!container && !toggle) {
+
+	$( ".catalog-dropdown" ).on( "mouseleave", function (event) {
+		console.log(!event.target.closest('.menu-item--js'));
+		if (window.matchMedia("(min-width: 992px)").matches) {
 			$('.menu-item--js').removeClass('active');
 			$('.catalog-dropdown').fadeOut();
-		};
-	});
+		}
+	} );
+	// $(document).hover( function(event) {
+	// 	let container = event.target.closest(".catalog-dropdown");
+	// 	let toggle = event.target.closest(".menu-item--js");
+	// 	if (!container && !toggle) {
+	// 		$('.menu-item--js').removeClass('active');
+	// 		$('.catalog-dropdown').fadeOut();
+	// 	};
+	// });
 
 	let catalogWraps = document.querySelectorAll('.catalog-dropdown__wrap');
 	for (let catalogWrap of catalogWraps) {
@@ -714,6 +724,21 @@ function eventHandler() {
 				catalogWrap.querySelector('.catalog-dropdown__show-more').classList.remove('active');
 			};
 		});
+
+		catalogWrap.addEventListener('mouseover', function() {
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				document.querySelectorAll('.catalog-dropdown__wrap').forEach((item) => {
+					item.classList.remove('active');
+					item.classList.remove('active2');
+				});
+				catalogWrap.classList.add('active');
+			};
+		});
+		// catalogWrap.addEventListener('mouseout', function() {
+		// 	if (window.matchMedia("(min-width: 992px)").matches) {
+		// 		catalogWrap.querySelector('.catalog-dropdown__show-more').classList.remove('active');
+		// 	};
+		// });
 	};
 
 	let customSelects = document.querySelectorAll('.js-choice');
