@@ -194,52 +194,47 @@ mixin catalogDropdown()
 									li: +e.link(href="#")  Столы монтажные СР-М нагрузка на&nbsp;столешницу 300&nbsp;кг
 						if variant == 'third'
 							+e.list-third.row
-								.col
-									ul
-										li: +e.link(href="#") Шкафы сушильные 
-										li: +e.link(href="#") Шкафы для обуви
-										li: +e.link(href="#") Шкафы для раздевалок
-										li: +e.link(href="#") Шкафы для одежды 
-										li: +e.link(href="#") Шкафы инструментальные
-										li: +e.link(href="#") Шкафы для газовых баллонов
-										li: +e.link(href="#") Шкафы для кислородных баллонов
-										li: +e.link(href="#") Абонентские ящики
-										li: +e.link(href="#") Многоящичные шкафы
-										li: +e.link(href="#") Шкафы для документов
-								.col
-									ul
-										li: +e.link(href="#") Бухгалтерские шкафы
-										li: +e.link(href="#") Архивные шкафы
-										li 
-											+e.link(href="#") Медицинские шкафы
-											ul
-												li: +e.inner-link(href="#") Медицинские шкафы ШМС
-												li: +e.inner-link(href="#") Одностворчатые медицинские шкафы
-												li: +e.inner-link(href="#") Двустровчатые медицинские шкафы
-												li: +e.inner-link(href="#") Медицинские шкафы ШММ
-												li: +e.inner-link(href="#") Медицинские шкафы ШСС
-												li: +e.inner-link(href="#") Шкафы для медикаментов и&nbsp;документации
-												li: +e.inner-link(href="#") Шкафы медицинские для одежды
-												li: +e.inner-link(href="#") Шкафы для уборочного инвентаря
-												li: +e.inner-link(href="#") Шкафы палатные
-												li: +e.inner-link(href="#") Белые медицинские шкафы
-								.col
-									ul
-										li: +e.link(href="#") Шкафы для ключей
-										li: +e.link(href="#") Шкафы для сумок
-										li 
-											+e.link(href="#") Картотечные шкафы
-											ul
-												li: +e.inner-link(href="#") Картотека формата А4
-												li: +e.inner-link(href="#") Картотеки формата А5
-												li: +e.inner-link(href="#") Картотеки формата А6
-												li: +e.inner-link(href="#") Картотеки больших форматов
-												li: +e.inner-link(href="#") Передвижные картотеки
-												li: +e.inner-link(href="#") Прочие картотеки
-												li: +e.inner-link(href="#") Многоящичные шкафы
-												li: +e.inner-link(href="#") Медицинские картотеки
-												li: +e.inner-link(href="#") Настольные картотеки
-												li: +e.inner-link(href="#") Шариковые направляющие
+								ul
+									li: +e.link(href="#") Шкафы сушильные 
+									li: +e.link(href="#") Шкафы для обуви
+									li: +e.link(href="#") Шкафы для раздевалок
+									li: +e.link(href="#") Шкафы для одежды 
+									li: +e.link(href="#") Шкафы инструментальные
+									li: +e.link(href="#") Шкафы для газовых баллонов
+									li: +e.link(href="#") Шкафы для кислородных баллонов
+									li: +e.link(href="#") Абонентские ящики
+									li: +e.link(href="#") Многоящичные шкафы
+									li: +e.link(href="#") Шкафы для документов
+									li: +e.link(href="#") Бухгалтерские шкафы
+									li: +e.link(href="#") Архивные шкафы
+									li: +e.link(href="#") Медицинские шкафы
+									li 
+										+e.inner-link(href="#") Медицинские шкафы ШМС
+										ul 
+											li: +e.inner-link(href="#") Одностворчатые медицинские шкафы
+											li: +e.inner-link(href="#") Двустровчатые медицинские шкафы
+											li: +e.inner-link(href="#") Медицинские шкафы ШММ
+											li: +e.inner-link(href="#") Медицинские шкафы ШСС
+											li: +e.inner-link(href="#") Шкафы для медикаментов и&nbsp;документации
+											li: +e.inner-link(href="#") Шкафы медицинские для одежды
+											li: +e.inner-link(href="#") Шкафы для уборочного инвентаря
+											li: +e.inner-link(href="#") Шкафы палатные
+											li: +e.inner-link(href="#") Белые медицинские шкафы
+									li: +e.link(href="#") Шкафы для ключей
+									li: +e.link(href="#") Шкафы для сумок
+									li: +e.link(href="#") Картотечные шкафы
+									li
+										+e.inner-link(href="#") Картотека формата А4
+										ul
+											li: +e.inner-link(href="#") Картотеки формата А5
+											li: +e.inner-link(href="#") Картотеки формата А6
+											li: +e.inner-link(href="#") Картотеки больших форматов
+											li: +e.inner-link(href="#") Передвижные картотеки
+											li: +e.inner-link(href="#") Прочие картотеки
+											li: +e.inner-link(href="#") Многоящичные шкафы
+											li: +e.inner-link(href="#") Медицинские картотеки
+											li: +e.inner-link(href="#") Настольные картотеки
+											li: +e.inner-link(href="#") Шариковые направляющие
 						if variant == 'forth'
 							+e.list
 								ul
@@ -250,299 +245,269 @@ mixin catalogDropdown()
 									li: +e.link(href="#") Замки для металлических шкафов
 						if variant == 'fifth'
 							+e.list-third.row
-								.col
-									ul
-										li
-											+e.link(href="#") Верстаки
-											ul
-												li: +e.inner-link(href="#") Слесарные верстаки ВЛ-К
-												li: +e.inner-link(href="#") Верстаки ВЛ
-												li: +e.inner-link(href="#") Верстаки ВС
-												li: +e.inner-link(href="#") Столярные верстаки
-												li: +e.inner-link(href="#") Верстаки Экспер и&nbsp;Мастер
-												li: +e.inner-link(href="#") Верстаки РМ
-												li: +e.inner-link(href="#") Столы монтажные
-										li: +e.link(href="#") Шкафы для одежды
-										li: +e.link(href="#") Шкафы инструментальные
-										li
-											+e.link(href="#") Оборудование для газовых баллонов
-											ul
-												li: +e.inner-link(href="#") Шкафы для газовых баллонов
-												li: +e.inner-link(href="#") Шкафы для кислородных баллонов 
-												li: +e.inner-link(href="#") Контейнеры для газовых баллонов
-												li: +e.inner-link(href="#") Тележки для газовых баллонов
-												li: +e.inner-link(href="#") Хранилища для кислородных баллонов
-												li: +e.inner-link(href="#") Хранилища для пропановых баллоков
-												li: +e.inner-link(href="#") Клети для газовых боллонов
-												li: +e.inner-link(href="#") Ложементы для газовых баллонов
-												li: +e.inner-link(href="#") Стойки для газовых баллонов
-												li: +e.inner-link(href="#") Настенные крепления для газовых баллонов
-										li: +e.link(href="#") Архивно-складские шкафы
-								.col
-									ul
-										li
-											+e.link(href="#") Грузовые тележки
-											ul
-												li: +e.inner-link(href="#") Тележки двухколесные
-												li: +e.inner-link(href="#") Тележки для баллонов 
-												li: +e.inner-link(href="#") Тележки платформенные
-												li: +e.inner-link(href="#") Тележки для бочек (бидонов)
-												li: +e.inner-link(href="#") Лестничные тележки
-												li: +e.inner-link(href="#") Контейнеры сетчатые металлические
-												li: +e.inner-link(href="#") Тележки с&nbsp;поворотной осью
-												li: +e.inner-link(href="#") Тележки антикоррозийные
-												li: +e.inner-link(href="#") Тележки большегрузные
-												li: +e.inner-link(href="#") Специализированные тележки
-												li: +e.inner-link(href="#") Колеса
-										li
-											+e.link(href="#") Гидравлические тележки
-											ul
-												li: +e.inner-link(href="#") Гидравлические рохли 
-												li: +e.inner-link(href="#") Подъемные столы
-												li: +e.inner-link(href="#") Тележки гидравлические с&nbsp;весами
-												li: +e.inner-link(href="#") Тележки гидравлические с&nbsp;функцией подъема
-												li: +e.inner-link(href="#") Ролики к&nbsp;рохлям
-										li
-											+e.link(href="#") Для хранения бочек
-											ul
-												li: +e.inner-link(href="#") Паплеты для бочек
-												li: +e.inner-link(href="#") Подставки для бочек
-												li: +e.inner-link(href="#") Шкафы для бочек
-												li: +e.inner-link(href="#") Поддоны для бочек
-										li: +e.link(href="#") Хранение листовых материалов
-										li: +e.link(href="#") Тележки для инструментов
-								.col
-									ul
-										li: +e.link(href="#") Тумбы инструментальные
-										li: +e.link(href="#") Хранение лвж
-										li
-											+e.link(href="#") Поддоны (палеты) и&nbsp;ограждения
-											ul
-												li: +e.inner-link(href="#") Поддоны (палеты) металлические
-												li: +e.inner-link(href="#") Ограждения для поддонов (палет)
-										li
-											+e.link(href="#") Контейнеры для производства и&nbsp;склада
-											ul
-												li: +e.inner-link(href="#") Контейнеры складные с&nbsp;откидным дном
-												li: +e.inner-link(href="#") Распашные контейнеры для производственных отходов
-												li: +e.inner-link(href="#") Контейнеры КО, КОА
-												li: +e.inner-link(href="#") Грузовые контейнеры
-												li: +e.inner-link(href="#") Контейнера сетчатые
-										li: +e.link(href="#") Компьютерные шкафы
-										li: +e.link(href="#") Лотки, кассетницы и&nbsp;системы хранения
-										li: +e.link(href="#") Стулья промышленные
-										li: +e.link(href="#") Металлические шкафы с&nbsp;рольставнями (роллетные шкафы)
-										li: +e.link(href="#") Оборудование для кабеля
-										li: +e.link(href="#") Стойки подкатные
-										li: +e.link(href="#") Штабелёры
+								ul
+									li
+										+e.link(href="#") Верстаки
+										ul
+											li: +e.inner-link(href="#") Слесарные верстаки ВЛ-К
+											li: +e.inner-link(href="#") Верстаки ВЛ
+											li: +e.inner-link(href="#") Верстаки ВС
+											li: +e.inner-link(href="#") Столярные верстаки
+											li: +e.inner-link(href="#") Верстаки Экспер и&nbsp;Мастер
+											li: +e.inner-link(href="#") Верстаки РМ
+											li: +e.inner-link(href="#") Столы монтажные
+									li: +e.link(href="#") Шкафы для одежды
+									li: +e.link(href="#") Шкафы инструментальные
+									li
+										+e.link(href="#") Оборудование для газовых баллонов
+										ul
+											li: +e.inner-link(href="#") Шкафы для газовых баллонов
+											li: +e.inner-link(href="#") Шкафы для кислородных баллонов 
+											li: +e.inner-link(href="#") Контейнеры для газовых баллонов
+											li: +e.inner-link(href="#") Тележки для газовых баллонов
+											li: +e.inner-link(href="#") Хранилища для кислородных баллонов
+											li: +e.inner-link(href="#") Хранилища для пропановых баллоков
+											li: +e.inner-link(href="#") Клети для газовых боллонов
+											li: +e.inner-link(href="#") Ложементы для газовых баллонов
+											li: +e.inner-link(href="#") Стойки для газовых баллонов
+											li: +e.inner-link(href="#") Настенные крепления для газовых баллонов
+									li: +e.link(href="#") Архивно-складские шкафы
+									li
+										+e.link(href="#") Грузовые тележки
+										ul
+											li: +e.inner-link(href="#") Тележки двухколесные
+											li: +e.inner-link(href="#") Тележки для баллонов 
+											li: +e.inner-link(href="#") Тележки платформенные
+											li: +e.inner-link(href="#") Тележки для бочек (бидонов)
+											li: +e.inner-link(href="#") Лестничные тележки
+											li: +e.inner-link(href="#") Контейнеры сетчатые металлические
+											li: +e.inner-link(href="#") Тележки с&nbsp;поворотной осью
+											li: +e.inner-link(href="#") Тележки антикоррозийные
+											li: +e.inner-link(href="#") Тележки большегрузные
+											li: +e.inner-link(href="#") Специализированные тележки
+											li: +e.inner-link(href="#") Колеса
+									li
+										+e.link(href="#") Гидравлические тележки
+										ul
+											li: +e.inner-link(href="#") Гидравлические рохли 
+											li: +e.inner-link(href="#") Подъемные столы
+											li: +e.inner-link(href="#") Тележки гидравлические с&nbsp;весами
+											li: +e.inner-link(href="#") Тележки гидравлические с&nbsp;функцией подъема
+											li: +e.inner-link(href="#") Ролики к&nbsp;рохлям
+									li
+										+e.link(href="#") Для хранения бочек
+										ul
+											li: +e.inner-link(href="#") Паплеты для бочек
+											li: +e.inner-link(href="#") Подставки для бочек
+											li: +e.inner-link(href="#") Шкафы для бочек
+											li: +e.inner-link(href="#") Поддоны для бочек
+									li: +e.link(href="#") Хранение листовых материалов
+									li: +e.link(href="#") Тележки для инструментов
+									li: +e.link(href="#") Тумбы инструментальные
+									li: +e.link(href="#") Хранение лвж
+									li
+										+e.link(href="#") Поддоны (палеты) и&nbsp;ограждения
+										ul
+											li: +e.inner-link(href="#") Поддоны (палеты) металлические
+											li: +e.inner-link(href="#") Ограждения для поддонов (палет)
+									li
+										+e.link(href="#") Контейнеры для производства и&nbsp;склада
+										ul
+											li: +e.inner-link(href="#") Контейнеры складные с&nbsp;откидным дном
+											li: +e.inner-link(href="#") Распашные контейнеры для производственных отходов
+											li: +e.inner-link(href="#") Контейнеры КО, КОА
+											li: +e.inner-link(href="#") Грузовые контейнеры
+											li: +e.inner-link(href="#") Контейнера сетчатые
+									li: +e.link(href="#") Компьютерные шкафы
+									li: +e.link(href="#") Лотки, кассетницы и&nbsp;системы хранения
+									li: +e.link(href="#") Стулья промышленные
+									li: +e.link(href="#") Металлические шкафы с&nbsp;рольставнями (роллетные шкафы)
+									li: +e.link(href="#") Оборудование для кабеля
+									li: +e.link(href="#") Стойки подкатные
+									li: +e.link(href="#") Штабелёры
 						if variant == 'sixth'
 							+e.list-third.row
-								.col
-									ul
-										li: +e.link(href="#") Почтовые ящики для частных домов
-										li: +e.link(href="#") Почтовые ящики в&nbsp;подъезд многоквартирного дома
-										//- li: +e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали
-										li
-											+e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали
-											ul
-												li: +e.inner-link(href="#") Почтовые ящики серии Эталон
-												li: +e.inner-link(href="#") Почтовые ящики серии Эталон Премиум
-										li: +e.link(href="#") Деревянные почтовые ящики
-								.col
-									ul
-										li: +e.link(href="#") Ящики Базис
-										li: +e.link(href="#") Ящики базис лайт
-										li: +e.link(href="#") Ящики в&nbsp;подъезд базис плюс
-										li: +e.link(href="#") Ящики базис элит
-										li: +e.link(href="#") Ящики базис премиум
-								.col
-									ul
-										li: +e.link(href="#") Серия евро
-										li: +e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали серии слим
-										li: +e.link(href="#") Абонентские ящики
-										li: +e.link(href="#") Замки для почтовых ящиков
-										li: +e.link(href="#") Почтовые ящики для спама
+								ul
+									li: +e.link(href="#") Почтовые ящики для частных домов
+									li: +e.link(href="#") Почтовые ящики в&nbsp;подъезд многоквартирного дома
+									//- li: +e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали
+									li
+										+e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали
+										ul
+											li: +e.inner-link(href="#") Почтовые ящики серии Эталон
+											li: +e.inner-link(href="#") Почтовые ящики серии Эталон Премиум
+									li: +e.link(href="#") Деревянные почтовые ящики
+									li: +e.link(href="#") Ящики Базис
+									li: +e.link(href="#") Ящики базис лайт
+									li: +e.link(href="#") Ящики в&nbsp;подъезд базис плюс
+									li: +e.link(href="#") Ящики базис элит
+									li: +e.link(href="#") Ящики базис премиум
+									li: +e.link(href="#") Серия евро
+									li: +e.link(href="#") Почтовые ящики из&nbsp;нержавеющей стали серии слим
+									li: +e.link(href="#") Абонентские ящики
+									li: +e.link(href="#") Замки для почтовых ящиков
+									li: +e.link(href="#") Почтовые ящики для спама
 						if variant == 'seventh'
 							+e.list-third.row
-								.col
-									ul
-										li
-											+e.link(href="#") Медицинские шкафы
-											ul
-												li: +e.inner-link(href="#") Медицинские шкафы ШМС
-												li: +e.inner-link(href="#") Одностворчатые медицинские шкафы
-												li: +e.inner-link(href="#") Двухстворчатые медицинские шкафы
-												li: +e.inner-link(href="#") Медицинские шкафы ШММ
-												li: +e.inner-link(href="#") Медицинские шкафы ШСС
-												li: +e.inner-link(href="#") Шкафы для медикаментов и&nbsp;документации
-												li: +e.inner-link(href="#") Шкафы медицинские для одежды
-												li: +e.inner-link(href="#") Шкафы для уборочного инвентаря
-												li: +e.inner-link(href="#") Шкафы палатные
-												li: +e.inner-link(href="#") Белые медицинские шкафы
-								.col
-									ul
-										li: +e.link(href="#") Столы медицинские 
-										li: +e.link(href="#") Тележки медицинские
-										li: +e.link(href="#") Мебель для переливания крови
-										li: +e.link(href="#") Медицинские прикроватные тумбы
-										li: +e.link(href="#") Медицинские кровати 
-										li: +e.link(href="#") Аптечки металлические
-										li: +e.link(href="#") Медицинские банкетки
-								.col
-									ul
-										li: +e.link(href="#") Медицинские кушетки
-										li: +e.link(href="#") Массажные столы
-										li: +e.link(href="#") Медицинские кресла
-										li: +e.link(href="#") Медицинские табуреты
-										li: +e.link(href="#") Косметологические кресла
-										li: +e.link(href="#") Стеллажи медицинские
-										li: +e.link(href="#") Полки медицинские
+								ul
+									li
+										+e.link(href="#") Медицинские шкафы
+										ul
+											li: +e.inner-link(href="#") Медицинские шкафы ШМС
+											li: +e.inner-link(href="#") Одностворчатые медицинские шкафы
+											li: +e.inner-link(href="#") Двухстворчатые медицинские шкафы
+											li: +e.inner-link(href="#") Медицинские шкафы ШММ
+											li: +e.inner-link(href="#") Медицинские шкафы ШСС
+											li: +e.inner-link(href="#") Шкафы для медикаментов и&nbsp;документации
+											li: +e.inner-link(href="#") Шкафы медицинские для одежды
+											li: +e.inner-link(href="#") Шкафы для уборочного инвентаря
+											li: +e.inner-link(href="#") Шкафы палатные
+											li: +e.inner-link(href="#") Белые медицинские шкафы
+									li: +e.link(href="#") Столы медицинские 
+									li: +e.link(href="#") Тележки медицинские
+									li: +e.link(href="#") Мебель для переливания крови
+									li: +e.link(href="#") Медицинские прикроватные тумбы
+									li: +e.link(href="#") Медицинские кровати 
+									li: +e.link(href="#") Аптечки металлические
+									li: +e.link(href="#") Медицинские банкетки
+									li: +e.link(href="#") Медицинские кушетки
+									li: +e.link(href="#") Массажные столы
+									li: +e.link(href="#") Медицинские кресла
+									li: +e.link(href="#") Медицинские табуреты
+									li: +e.link(href="#") Косметологические кресла
+									li: +e.link(href="#") Стеллажи медицинские
+									li: +e.link(href="#") Полки медицинские
 						if variant == 'eigth'
 							+e.list-third.row
-								.col
-									ul
-										li
-											+e.link(href="#") Нейтральное оборудование
-											ul
-												li: +e.inner-link(href="#") Ванны моечные из&nbsp;нержавеющей стали
-												li: +e.inner-link(href="#") Столы из&nbsp;нержавеющей стали
-												li: +e.inner-link(href="#") Стеллажи из&nbsp;нержавейки для кухни
-												li: +e.inner-link(href="#") Стеллажи из&nbsp;нержавеющей стали
-												li: +e.inner-link(href="#") Ванны-рукомойники
-												li: +e.inner-link(href="#") Тележки для общепита
-												li: +e.inner-link(href="#") Тележки платформенные из&nbsp;нержавеющей стали
-												li: +e.inner-link(href="#") Тележки-шпильки для противней и&nbsp;гастроемкостей
-												li: +e.inner-link(href="#") Шкафы из&nbsp;нержавейки
-												li: +e.inner-link(href="#") Полки кухонные
-												li: +e.inner-link(href="#") Разделочные доски и&nbsp;колоды для рубки мяса
-								.col
-									ul
-										li
-											+e.link(href="#") Вентиляционное оборудование
-											ul
-												li: +e.inner-link(href="#") Зонты вытяжные
-												li: +e.inner-link(href="#") Местные вентоотсосы
-										li: +e.link(href="#") Готовые решения для бизнеса
-										li
-											+e.link(href="#") Оборудование для фастфуда
-											ul
-												li: +e.inner-link(href="#") Аппараты для пончиков
-												li: +e.inner-link(href="#") Блинные аппараты
-												li: +e.inner-link(href="#") Грили из&nbsp;нержавеющей стали
-												li: +e.inner-link(href="#") Жарочные поверхности
-												li: +e.inner-link(href="#") Мармиты для первых и&nbsp;вторых блюд
-												li: +e.inner-link(href="#") Установка для приготовления шаурмы
-												li: +e.inner-link(href="#") Фритюрницы промышленные
-												li: +e.inner-link(href="#") Чебуречницы
-												li: +e.inner-link(href="#") Электроплиты
-								.col
-									ul
-										li
-											+e.link(href="#") Тепловое оборудование
-											ul
-												li: +e.inner-link(href="#") Печи (пароконвектоматы) для приготовления блюд
-												li: +e.inner-link(href="#") Средства для стерилизации ножей
-												li: +e.inner-link(href="#") Кипятильники
-										li: +e.link(href="#") Колеса для пищевого оборудования
+								ul
+									li
+										+e.link(href="#") Нейтральное оборудование
+										ul
+											li: +e.inner-link(href="#") Ванны моечные из&nbsp;нержавеющей стали
+											li: +e.inner-link(href="#") Столы из&nbsp;нержавеющей стали
+											li: +e.inner-link(href="#") Стеллажи из&nbsp;нержавейки для кухни
+											li: +e.inner-link(href="#") Стеллажи из&nbsp;нержавеющей стали
+											li: +e.inner-link(href="#") Ванны-рукомойники
+											li: +e.inner-link(href="#") Тележки для общепита
+											li: +e.inner-link(href="#") Тележки платформенные из&nbsp;нержавеющей стали
+											li: +e.inner-link(href="#") Тележки-шпильки для противней и&nbsp;гастроемкостей
+											li: +e.inner-link(href="#") Шкафы из&nbsp;нержавейки
+											li: +e.inner-link(href="#") Полки кухонные
+											li: +e.inner-link(href="#") Разделочные доски и&nbsp;колоды для рубки мяса
+									li
+										+e.link(href="#") Вентиляционное оборудование
+										ul
+											li: +e.inner-link(href="#") Зонты вытяжные
+											li: +e.inner-link(href="#") Местные вентоотсосы
+									li: +e.link(href="#") Готовые решения для бизнеса
+									li
+										+e.link(href="#") Оборудование для фастфуда
+										ul
+											li: +e.inner-link(href="#") Аппараты для пончиков
+											li: +e.inner-link(href="#") Блинные аппараты
+											li: +e.inner-link(href="#") Грили из&nbsp;нержавеющей стали
+											li: +e.inner-link(href="#") Жарочные поверхности
+											li: +e.inner-link(href="#") Мармиты для первых и&nbsp;вторых блюд
+											li: +e.inner-link(href="#") Установка для приготовления шаурмы
+											li: +e.inner-link(href="#") Фритюрницы промышленные
+											li: +e.inner-link(href="#") Чебуречницы
+											li: +e.inner-link(href="#") Электроплиты
+									li
+										+e.link(href="#") Тепловое оборудование
+										ul
+											li: +e.inner-link(href="#") Печи (пароконвектоматы) для приготовления блюд
+											li: +e.inner-link(href="#") Средства для стерилизации ножей
+											li: +e.inner-link(href="#") Кипятильники
+									li: +e.link(href="#") Колеса для пищевого оборудования
 						if variant == 'ninth'
 							+e.list-third.row
-								.col
-									ul
-										li
-											+e.link(href="#") Картотечные шкафы
-											ul
-												li: +e.inner-link(href="#") Картотеки формата А4
-												li: +e.inner-link(href="#") Картотеки формата А5
-												li: +e.inner-link(href="#") Картотеки формата А6
-												li: +e.inner-link(href="#") Картотеки больших форматов
-												li: +e.inner-link(href="#") Передвижные картотеки
-												li: +e.inner-link(href="#") Прочие картотеки
-												li: +e.inner-link(href="#") Многоящичные шкафы
-												li: +e.inner-link(href="#") Медицинские картотеки
-												li: +e.inner-link(href="#") Настольные картотеки
-												li: +e.inner-link(href="#") Шариковые направляющие
-								.col
-									ul
-										li
-											+e.link(href="#") Металлические офисные шкафы
-											ul
-												li: +e.inner-link(href="#") Офисные шкафы для одежды
-												li: +e.inner-link(href="#") Шкафы для документов
-												li: +e.inner-link(href="#") Бухгалтерские шкафы
-												li: +e.inner-link(href="#") Шкафы-купе
-												li: +e.inner-link(href="#") Архивные шкафы
-												li: +e.inner-link(href="#") Шкафы с дверями жалюзи
-												li: +e.inner-link(href="#") Шкафы для ключей
-												li: +e.inner-link(href="#") Шкафы для пеналов
-												li: +e.inner-link(href="#") Шкафы для тубусов
-												li: +e.inner-link(href="#") Шкафы для корреспонденции
-										li: +e.link(href="#") Офисные тумбы для документов
-										li: +e.link(href="#") Металлические офисные столы
-								.col
-									ul
-										li
-											+e.link(href="#") Сейфы
-											ul
-												li: +e.inner-link(href="#") Кэш-боксы
-												li: +e.inner-link(href="#") Мебельные сейфы
-												li: +e.inner-link(href="#") Офисные сейфы
-												li: +e.inner-link(href="#") Огнестойкие сейфы valberg
-												li: +e.inner-link(href="#") Встраиваемые сейфы
-												li: +e.inner-link(href="#") Взломостойкие сейфы
-												li: +e.inner-link(href="#") Огневзломостойкие сейфы
-												li: +e.inner-link(href="#") Депозитные сейфы
-												li: +e.inner-link(href="#") Банковское оборудование
-										li: +e.link(href="#") Папки для документов А4
-										li
-											+e.link(href="#") Офисные стулья и&nbsp;табуретки
-											ul
-												li: +e.inner-link(href="#") Офисные кресла
-												li: +e.inner-link(href="#") Офисные табуреты
+								ul
+									li
+										+e.link(href="#") Картотечные шкафы
+										ul
+											li: +e.inner-link(href="#") Картотеки формата А4
+											li: +e.inner-link(href="#") Картотеки формата А5
+											li: +e.inner-link(href="#") Картотеки формата А6
+											li: +e.inner-link(href="#") Картотеки больших форматов
+											li: +e.inner-link(href="#") Передвижные картотеки
+											li: +e.inner-link(href="#") Прочие картотеки
+											li: +e.inner-link(href="#") Многоящичные шкафы
+											li: +e.inner-link(href="#") Медицинские картотеки
+											li: +e.inner-link(href="#") Настольные картотеки
+											li: +e.inner-link(href="#") Шариковые направляющие
+									li
+										+e.link(href="#") Металлические офисные шкафы
+										ul
+											li: +e.inner-link(href="#") Офисные шкафы для одежды
+											li: +e.inner-link(href="#") Шкафы для документов
+											li: +e.inner-link(href="#") Бухгалтерские шкафы
+											li: +e.inner-link(href="#") Шкафы-купе
+											li: +e.inner-link(href="#") Архивные шкафы
+											li: +e.inner-link(href="#") Шкафы с дверями жалюзи
+											li: +e.inner-link(href="#") Шкафы для ключей
+											li: +e.inner-link(href="#") Шкафы для пеналов
+											li: +e.inner-link(href="#") Шкафы для тубусов
+											li: +e.inner-link(href="#") Шкафы для корреспонденции
+									li: +e.link(href="#") Офисные тумбы для документов
+									li: +e.link(href="#") Металлические офисные столы
+									li
+										+e.link(href="#") Сейфы
+										ul
+											li: +e.inner-link(href="#") Кэш-боксы
+											li: +e.inner-link(href="#") Мебельные сейфы
+											li: +e.inner-link(href="#") Офисные сейфы
+											li: +e.inner-link(href="#") Огнестойкие сейфы valberg
+											li: +e.inner-link(href="#") Встраиваемые сейфы
+											li: +e.inner-link(href="#") Взломостойкие сейфы
+											li: +e.inner-link(href="#") Огневзломостойкие сейфы
+											li: +e.inner-link(href="#") Депозитные сейфы
+											li: +e.inner-link(href="#") Банковское оборудование
+									li: +e.link(href="#") Папки для документов А4
+									li
+										+e.link(href="#") Офисные стулья и&nbsp;табуретки
+										ul
+											li: +e.inner-link(href="#") Офисные кресла
+											li: +e.inner-link(href="#") Офисные табуреты
 						if variant == 'tenth'
 							+e.list-third.row
-								.col
-									ul
-										li: +e.link(href="#") Ключницы металлические
-										li: +e.link(href="#") Шкафы для сумок
-										li: +e.link(href="#") Замки для металлической мебели
-										li
-											+e.link(href="#") Оружейные шкафы
-											ul
-												li: +e.inner-link(href="#") Шкафы для оружейных комнат
-												li: +e.inner-link(href="#") Столы для чистки оружия
-												li: +e.inner-link(href="#") Шкафы для частного использования
-										li: +e.link(href="#") Пластиковые мусорные контейнеры
-										li: +e.link(href="#") Скамейки и&nbsp;лавки
-										li: +e.link(href="#") Стойки ограждений с&nbsp;лентой
-								.col
-									ul
-										li
-											+e.link(href="#") Колёса
-											ul
-												li: +e.inner-link(href="#") Пневматические колёса и камеры
-												li: +e.inner-link(href="#") Промышленные колёса
-												li: +e.inner-link(href="#") Аппаратные колёса и ролики
-												li: +e.inner-link(href="#") Большегрузные колёса и опоры
-												li: +e.inner-link(href="#") Колёса с литой резиной
-												li: +e.inner-link(href="#") Полиуретановые колёса
-												li: +e.inner-link(href="#") Комплекты колёс
-												li: +e.inner-link(href="#") Колёса термостойкие 
-												li: +e.inner-link(href="#") Колёса для рохли
-												li: +e.inner-link(href="#") Колёса для покупательских тележек
-												li: +e.inner-link(href="#") Траволатоные колёса
-										li: +e.link(href="#") Опечатывающие устройства
-										li: +e.link(href="#") Контейнеры для ртутных ламп
-								.col
-									ul
-										li: +e.link(href="#") Ящики и&nbsp;контейнеры для ветоши
-										li: +e.link(href="#") Лестницы передвижные
-										li: +e.link(href="#") Телескопические направляющие
-										li: +e.link(href="#") Цветная металлическая мебель 
-										li: +e.link(href="#") Металлические урны
-										li: +e.link(href="#") Металлические кровати для хостелов
-										li: +e.link(href="#") Велопарковки
-										li: +e.link(href="#") Навесное оборудование
-										li: +e.link(href="#") Колесоотбойники
+								ul
+									li: +e.link(href="#") Ключницы металлические
+									li: +e.link(href="#") Шкафы для сумок
+									li: +e.link(href="#") Замки для металлической мебели
+									li
+										+e.link(href="#") Оружейные шкафы
+										ul
+											li: +e.inner-link(href="#") Шкафы для оружейных комнат
+											li: +e.inner-link(href="#") Столы для чистки оружия
+											li: +e.inner-link(href="#") Шкафы для частного использования
+									li: +e.link(href="#") Пластиковые мусорные контейнеры
+									li: +e.link(href="#") Скамейки и&nbsp;лавки
+									li: +e.link(href="#") Стойки ограждений с&nbsp;лентой
+									li
+										+e.link(href="#") Колёса
+										ul
+											li: +e.inner-link(href="#") Пневматические колёса и камеры
+											li: +e.inner-link(href="#") Промышленные колёса
+											li: +e.inner-link(href="#") Аппаратные колёса и ролики
+											li: +e.inner-link(href="#") Большегрузные колёса и опоры
+											li: +e.inner-link(href="#") Колёса с литой резиной
+											li: +e.inner-link(href="#") Полиуретановые колёса
+											li: +e.inner-link(href="#") Комплекты колёс
+											li: +e.inner-link(href="#") Колёса термостойкие 
+											li: +e.inner-link(href="#") Колёса для рохли
+											li: +e.inner-link(href="#") Колёса для покупательских тележек
+											li: +e.inner-link(href="#") Траволатоные колёса
+									li: +e.link(href="#") Опечатывающие устройства
+									li: +e.link(href="#") Контейнеры для ртутных ламп
+									li: +e.link(href="#") Ящики и&nbsp;контейнеры для ветоши
+									li: +e.link(href="#") Лестницы передвижные
+									li: +e.link(href="#") Телескопические направляющие
+									li: +e.link(href="#") Цветная металлическая мебель 
+									li: +e.link(href="#") Металлические урны
+									li: +e.link(href="#") Металлические кровати для хостелов
+									li: +e.link(href="#") Велопарковки
+									li: +e.link(href="#") Навесное оборудование
+									li: +e.link(href="#") Колесоотбойники
 			+item(1, 'Металлические стеллажи', 'first').active2
 			+item(2, 'Верстаки', 'second')
 			+item(3, 'Металлические шкафы', 'third')

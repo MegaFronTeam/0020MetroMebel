@@ -103,7 +103,7 @@
 		display: none !important;
 	}
 	&.active {
-		a {
+		span {
 			&::before {
 				background-color: $secondary;
 			}
