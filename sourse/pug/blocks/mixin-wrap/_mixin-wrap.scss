@@ -276,22 +276,24 @@
 	background-color: #fff;
 	position: relative;
 	box-shadow: 0 0 13px transparent;
+	border: 1px solid #f1f0f0;
 	&:hover{
 		@include media-breakpoint-up(xl) {
 			.card__aside{
-				opacity: 1;
-				pointer-events: all;
+				// opacity: 1;
+				// pointer-events: all;
 			}
 			.card__bottom-card {
 				// display: block;
 				opacity: 1;
 				pointer-events: all;
 			}
-			.card__title {
-				color: $primary;
-			}
-			&::before {
-				box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+			// &::before {
+			// 	box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
+			// }
+			.card__links {
+				opacity: 1;
+				pointer-events: all;
 			}
 		}
 	}
@@ -312,6 +314,7 @@
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 16px;
+		z-index: 11;
 	}
 	&__content {
 		height: 100%;
@@ -377,6 +380,9 @@
 					background-color: $secondary;
 				}
 			}
+			&:hover {
+				pointer-events: none;
+			}
 		}
 	}
 	&__title {
@@ -385,9 +391,24 @@
 		font-size: rem(18);
 		margin-bottom: rem(9);
 		line-height: 1.28em;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color: $primary;
+		}
 		@include media-breakpoint-up(md) {
 			max-width: rem(202);
 			font-size: rem(14);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 10;
 		}
 	}
 	.stars {
@@ -442,6 +463,10 @@
 	&__footer {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(12);
+		position: relative;
+		z-index: 11;
 	}
 	&__btn {
 		--bs-btn-padding-x: #{rem(30)};
@@ -462,9 +487,14 @@
 		--bs-gutter-y: #{rem(2)};
 		margin-top: calc(var(--bs-gutter-y) * -1);
 
-		transform: translate(-72%,30px);
+		// transform: translate(-72%,30px);
     z-index: 100;
-    position: relative;
+    position: absolute;
+		top: rem(60);
+		right: rem(5);
+		@include mt;
+		opacity: 0;
+		pointer-events: none;
 	}
 	&__link {
 		display: inline-block;
@@ -505,9 +535,11 @@
 		position: absolute;
 		background-color: #fff;
 		top: 100%;
-		left: -100px;
-		width: calc(100% + 200px);
-		padding: 0 rem(28) rem(29);
+		// left: -100px;
+		left: 0;
+		// width: calc(100% + 200px);
+		width: calc(100%);
+		padding: 0 rem(10) rem(29);
 		z-index: 1;
 		&:before {
 			content: '';
@@ -619,6 +651,8 @@
 				position: absolute;
 				left: 6px;
     		top: 30px;
+				opacity: 1;
+				pointer-events: all;
 				@include media-breakpoint-up(md) {
 					left: -15px;
 				}

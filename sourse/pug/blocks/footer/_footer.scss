@@ -4,7 +4,7 @@
 	background-color: #fff;
 	@include media-breakpoint-up(sm) {
 		--sPT: #{rem(88)};
-		--sPB: #{rem(48)};
+		--sPB: #{rem(35)};
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(60)};

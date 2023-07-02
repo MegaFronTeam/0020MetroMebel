@@ -71,20 +71,20 @@ mixin cardList(listTitle, listText)
 
 mixin card(label, title='Цветной четырехсекционный шкаф для одежды', articul='23388, 23389', ...imgs)
 	+b.card
-		+e.aside--left
-		+e.aside--right
-			+e.links
-				+e.link&attributes(attributes)(href="#")
-					+icon('like')
-				+e.link&attributes(attributes)(href="#")
-					+icon('diagram')
-				+e.link&attributes(attributes)(href="#")
-					+icon('cart')
+		//- +e.aside--left
+		//- +e.aside--right
+		+e.links
+			+e.link&attributes(attributes)(href="#")
+				+icon('like')
+			+e.link&attributes(attributes)(href="#")
+				+icon('diagram')
+			+e.link&attributes(attributes)(href="#")
+				+icon('cart')
 		+e.content
 			if label
 				+e.label(style="--bg: #6ab40b") -35%
 				+e.label--right(style="--bg: #fb4420") NEW
-			+e.img-slider--js
+			+e.img-slider--js(href='#')
 				.swiper-wrapper
 					each img in imgs
 						+e.slide.swiper-slide
@@ -92,7 +92,7 @@ mixin card(label, title='Цветной четырехсекционный шк�
 								.img-wrap-center
 									+img(img)
 				.swiper-pagination
-			+e.title!= title 
+			+e.title(href='#')!= title 
 			+img('img/stars.png').stars
 			ul 
 				block

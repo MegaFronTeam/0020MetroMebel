@@ -427,7 +427,7 @@
 		--bs-gutter-x: #{rem(35)};
 		--bs-gutter-y: #{rem(35)};
 		@include media-breakpoint-up(xl) {
-			max-width: rem(778px);
+			// max-width: rem(778px);
 		}
 		@include media-breakpoint-up(xxl) {
 			max-width: rem(1038px);
@@ -558,10 +558,10 @@
 				// }
 				&:hover {
 					.dd-group__header {
-						background-color: $secondary;
-						color: #fff;
+						// background-color: $secondary;
+						color: $primary;
 						&:after {
-							opacity: 0;
+							transform: rotate(90deg) translateX(-50%);
 						}
 					}
 					.dd-group__body {
@@ -580,6 +580,8 @@
 				align-items: center;
 				padding: rem(8) rem(25) rem(8) rem(13);
 				font-size: rem(14);
+				text-decoration: none;
+				color: $body-color;
 				&:after {
 					@include mt;
 					content: '';
@@ -615,7 +617,7 @@
 				// min-width: rem(1176);
 				background-color: #fff;
 				border: 1px solid #eaeaea;
-				padding: rem(87) rem(100);
+				padding: rem(87) rem(50);
 				z-index: 12;
 				min-width: rem(700);
 				@include media-breakpoint-up(xxl) {
@@ -645,7 +647,7 @@
 							color: $gray-900;
 							font-size: rem(14);
 							&:hover {
-								color: $secondary;
+								color: $primary;
 							}
 						}
 					}
