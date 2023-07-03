@@ -269,6 +269,7 @@
 }
 
 .card {
+	@include mt;
 	width: 100%;
 	height: 100%;
 	max-width: rem(257);
@@ -278,6 +279,8 @@
 	box-shadow: 0 0 13px transparent;
 	border: 1px solid #f1f0f0;
 	&:hover{
+		box-shadow: 0 0 13px rgba(0,0,0,.18);
+		z-index: 20;
 		@include media-breakpoint-up(xl) {
 			.card__aside{
 				// opacity: 1;
@@ -297,19 +300,19 @@
 			}
 		}
 	}
-	&:before {
-		@include mt;
-		content: '';
-		position: absolute;
-		display: block;
-		width: calc(100% + 200px);
-		height: 100%;
-		top: 0;
-		left: -100px;
-		box-shadow: 0 0 13px transparent;
-		z-index: -1;
-		pointer-events: none;
-	}
+	// &:before {
+	// 	@include mt;
+	// 	content: '';
+	// 	position: absolute;
+	// 	display: block;
+	// 	width: calc(100% + 200px);
+	// 	height: 100%;
+	// 	top: 0;
+	// 	left: -100px;
+	// 	box-shadow: 0 0 13px transparent;
+	// 	z-index: -1;
+	// 	pointer-events: none;
+	// }
 	&__img-slider {
 		position: relative;
 		overflow: hidden;

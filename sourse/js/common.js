@@ -473,18 +473,18 @@ function eventHandler() {
 		$( this ).trigger( "click" );
 	});
 	//  меняет z-index
-	$('.zIndex').hover(function() {
-		if(window.innerWidth >= 992) {
-			$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
-		}
-	}, function() {
-		if(window.innerWidth >= 992) {
-			$(this).removeClass('zIndexHover');
-			setTimeout(() => {
-				$(this).removeClass('zIndexHoverImportant');
-			}, 360);
-		}
-	});
+	// $('.zIndex').hover(function() {
+	// 	if(window.innerWidth >= 992) {
+	// 		$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
+	// 	}
+	// }, function() {
+	// 	if(window.innerWidth >= 992) {
+	// 		$(this).removeClass('zIndexHover');
+	// 		setTimeout(() => {
+	// 			$(this).removeClass('zIndexHoverImportant');
+	// 		}, 360);
+	// 	}
+	// });
 
 	// параметры по умолчанию для слайдера
 	let mainSl = {

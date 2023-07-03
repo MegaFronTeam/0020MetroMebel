@@ -1,10 +1,10 @@
 .footer {
 	--sPT: #{rem(53)};
-	--sPB: #{rem(41)};
+	--sPB: #{rem(16)};
 	background-color: #fff;
 	@include media-breakpoint-up(sm) {
 		--sPT: #{rem(88)};
-		--sPB: #{rem(35)};
+		// --sPB: #{rem(35)};
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(60)};
