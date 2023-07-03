@@ -617,11 +617,11 @@
 				// min-width: rem(1176);
 				background-color: #fff;
 				border: 1px solid #eaeaea;
-				padding: rem(87) rem(50);
+				padding: rem(30) rem(50);
 				z-index: 12;
 				min-width: rem(700);
 				@include media-breakpoint-up(xxl) {
-					min-width: rem(1176);
+					min-width: rem(750);
 				}
 				&:before {
 					content: '';
