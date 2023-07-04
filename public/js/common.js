@@ -458,20 +458,27 @@ function eventHandler() {
 			},
 		});
 	});
+
 	//  вызов слайдера
-	const cardtSwiper = new Swiper('.card__img-slider--js', {
-		slidesPerView: 1,
-		spaceBetween: 2,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-	});
-	//  при наведении меняется картинки на слайдере 
-	$('.card__img-slider--js .swiper-pagination-bullet').hover(function() {
-		$( this ).trigger( "click" );
-	});
+	const catalogCards = $(".card");
+	for (const card of catalogCards) {
+		
+		const cardtSwiper = new Swiper(card.querySelector('.card__img-slider--js'), {
+			slidesPerView: 1,
+			spaceBetween: 2,
+			pagination: {
+				el: card.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+		//  при наведении меняется картинки на слайдере 
+		$(card).on('mouseenter', '.swiper-pagination-bullet', function() {
+			// $( this ).trigger( "click" );
+			cardtSwiper.slideTo($(this).index()) ;
+			// cardtSwiper.pagination.bullets[2]
+		});
+	}
 	//  меняет z-index
 	// $('.zIndex').hover(function() {
 	// 	if(window.innerWidth >= 992) {
@@ -800,6 +807,7 @@ function eventHandler() {
 	}
 
 	$('.sCatalog__show-all-slides--js').on('click', function(){
+
 		$('.sCatalog__other-products--js').toggleClass('active');
 		$(this).toggleClass('active');
 	})
