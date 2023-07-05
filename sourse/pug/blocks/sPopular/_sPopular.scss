@@ -248,7 +248,8 @@
 	&__def-slider-wrap {
 		.swiper-button-hand {
 			@include media-breakpoint-up(xxl) {
-				--swiperArrowPosition: -120px;
+				// --swiperArrowPosition: -120px;
+				--swiperArrowPosition: -48px;
 			}
 		}
 	}
@@ -256,7 +257,7 @@
 		@include media-breakpoint-up(xxl) {
 			padding: 20px;
 			margin: -20px;
-			overflow: hidden;
+			// overflow: hidden;
 		}
 		.sPopular {
 			&__slide {

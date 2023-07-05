@@ -362,7 +362,7 @@
 			// height: 2px;
 			margin: 0 3.5px;
 			background-color: transparent;
-			// border-radius: 1px;
+			border-radius: 0;
 			@include media-breakpoint-up(sm) {
 				height: 100%;
 			}
@@ -385,6 +385,7 @@
 			}
 			&:hover {
 				pointer-events: none;
+				z-index: -1;
 			}
 		}
 	}
@@ -403,16 +404,16 @@
 			max-width: rem(202);
 			font-size: rem(14);
 		}
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			z-index: 10;
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	left: 0;
+		// 	top: 0;
+		// 	z-index: 10;
+		// }
 	}
 	.stars {
 		width: 100%;

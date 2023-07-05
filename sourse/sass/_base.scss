@@ -115,6 +115,13 @@ body {
 }
 main{
 	flex-grow: 1;
+
+	@include media-breakpoint-up(xxl) {
+		max-width: 1560px;
+		margin-right: auto;
+		margin-left: auto;
+		overflow: hidden;
+	}
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;

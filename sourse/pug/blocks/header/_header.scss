@@ -15,6 +15,12 @@
 		@include media-breakpoint-down(xxl) {
 			padding: 0;
 		}
+		@include media-breakpoint-up(xxl) {
+			position: static;
+			&:before, &:after {
+				content: unset;
+			}
+		}
 	}
 	&__inner {
 		box-shadow: 0 0 49px rgba(0, 0, 0, 0.1);

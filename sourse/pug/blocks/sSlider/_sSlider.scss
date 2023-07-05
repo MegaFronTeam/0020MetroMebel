@@ -124,7 +124,8 @@
 		}
 		@media (min-width: 1623px) {
 			
-			--swiperArrowPosition: -81px;
+			// --swiperArrowPosition: -81px;
+			--swiperArrowPosition: 0;
 		}
 		&-prev {
 			// @include media-breakpoint-up(xxl) {

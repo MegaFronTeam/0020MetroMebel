@@ -10,6 +10,12 @@
 		--sPT: #{rem(60)};
 		// --sPB: #{rem(119)};
 	}
+	@include media-breakpoint-up(xxl) {
+		max-width: 1560px;
+		margin-right: auto;
+		margin-left: auto;
+		overflow: hidden;
+	}
 	&__container {
 		@include media-breakpoint-up(lg) {
 			position: relative;
