@@ -2,7 +2,7 @@
 // start .header
 .header {
 	position: relative;
-	z-index: 10;
+	z-index: 40;
 	background-color: #fff;
 	.container-fluid {
 		@include media-breakpoint-up(xxl) {
