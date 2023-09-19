@@ -73,6 +73,7 @@
 	&__swiper-img {
 		@include media-breakpoint-up(md) {
 			margin-right: rem(-160);
+			overflow: visible;
 		}
 		@include media-breakpoint-up(lg) {
 			margin-right: 0;
@@ -95,6 +96,27 @@
 	&__img-wrap {
 		text-align: center;
 		display: block;
+		position: relative;
+		&:before {
+			@include media-breakpoint-up(md) {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: rem(-70);
+			}
+			@include media-breakpoint-up(xl) {
+				top: rem(-102);
+				height: 134%;
+				width: 130%;
+			}
+			@include media-breakpoint-up(xxl) {
+				top: rem(-102);
+				height: 104%;
+				width: 130%;
+			}
+		}
 		img {
 			width: 100%;
 			max-width: rem(189);
@@ -136,7 +158,7 @@
 			left: 56%;
 		}
 		@include media-breakpoint-up(xxl) {
-			width: rem(132);
+			width: rem(186);
 			left: 50%;
 		}
 		.icon {
@@ -168,7 +190,8 @@
 		color: $gray-900;
 		background-color: #fff;
 		@include media-breakpoint-up(xxl) {
-			max-width: rem(80);
+			// max-width: rem(80);
+			margin-bottom: rem(6);
 		}
 	}
 	&__swiper-text {

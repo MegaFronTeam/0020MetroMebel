@@ -161,8 +161,11 @@
 		line-height: normal;
 		white-space: nowrap;
 		text-align: right;
+		color: $gray-900;
+		&:hover {
+			color: $primary;
+		}
 		&--gray {
-			color: $gray-900;
 		}
 	}
 	&__modal-call {
@@ -170,6 +173,11 @@
 		font-size: rem(14);
 		border-bottom: 1px dashed $primary;
 		text-decoration: none;
+		max-width: max-content;
+    margin-left: auto;
+		&:hover {
+			border-bottom-color: transparent;
+		}
 	}
 	&__links {
 		@include roww('17px', 'm');

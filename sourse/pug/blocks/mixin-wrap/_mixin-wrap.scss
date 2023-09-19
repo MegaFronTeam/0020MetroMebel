@@ -327,7 +327,7 @@
 		padding: rem(37) rem(21) rem(41);
 	}
 	&__img-wrap {
-		@include block(213, 275);
+		@include block(213, 207);
 	}
 	&__aside {
 		@include mt;
@@ -396,6 +396,7 @@
 		margin-bottom: rem(9);
 		line-height: 1.28em;
 		text-decoration: none;
+		font-weight: 600;
 		&:hover {
 			text-decoration: underline;
 			color: $primary;
@@ -460,6 +461,7 @@
 		color: #000;
 		margin-bottom: rem(15);
 		font-size: rem(18);
+		font-weight: 600;
 		@include media-breakpoint-up(md) {
 			font-size: rem(16);
 		}
