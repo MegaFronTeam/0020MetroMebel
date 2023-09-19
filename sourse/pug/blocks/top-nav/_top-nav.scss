@@ -739,7 +739,7 @@
 		color: $gray-900;
 		text-decoration: none;
 		font-size: rem(18);
-		font-weight: 600;
+		// font-weight: 600;
 		padding: 0 !important;
 		@include media-breakpoint-up(md) {
 			font-size: rem(15.6);
