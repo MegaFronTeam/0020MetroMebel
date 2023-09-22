@@ -32,7 +32,7 @@ mixin headerBlock()
 			+e.swiper-middle--js.swiper.d-none.d-md-block
 				.swiper-wrapper
 					-for(let i = 0; i<3; i++)
-						+e.slide-middle.swiper-slide
+						+e.slide-middle.swiper-slide 
 							a(href=contentArr[i].link target='_blank') 
 								+e.text!= contentArr[i].text
 									!= i
