@@ -1,13 +1,40 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		-
+			let contentArr = [
+				{
+					link: 'https://www.youtube.com/',
+					title: 'металлическая мебель',
+					subtitle: 'Комплексная установка под ключ для вашего бизнеса!',
+					text: 'Камера хранения для сумок на 20 ячеек',
+					bannerImg: 'header-img-1.png',
+					bg: 'header-bg-1.jpg',
+				},
+				{
+					link: 'https://www.facebook.com/',
+					title: 'деревянная дверь',
+					subtitle: 'Установка под заказ!',
+					text: 'Без камеры хранения',
+					bannerImg: 'header-img-2.png',
+					bg: 'header-bg-2.jpg',
+				},
+				{
+					link: 'https://www.wikipedia.org/',
+					title: 'пластмассовая дверь',
+					subtitle: 'Без установки!',
+					text: 'Камера хранения для обуви',
+					bannerImg: 'header-img-3.png',
+					bg: 'header-bg-3.jpg',
+				},
+			]
 		.container
 			+e.swiper-middle--js.swiper.d-none.d-md-block
 				.swiper-wrapper
 					-for(let i = 0; i<3; i++)
 						+e.slide-middle.swiper-slide
-							a(href="#") 
-								+e.text Камера хранения для сумок на 20 ячеек 
+							a(href=contentArr[i].link target='_blank') 
+								+e.text!= contentArr[i].text
 									!= i
 								+icon('arrow-right')
 			+e.row.row
@@ -16,9 +43,9 @@ mixin headerBlock()
 						.swiper-wrapper
 							-for(let i = 0; i<3; i++)
 								+e.slide-txt.swiper-slide
-									.h1 металлическая мебель 
+									.h1!= contentArr[i].title
 										!= i
-									p Комплексная установка под ключ для вашего бизнеса!
+									p!= contentArr[i].subtitle
 					+e.row-item.row
 						.col-6
 							+e.item
@@ -42,14 +69,14 @@ mixin headerBlock()
 							.swiper-wrapper
 								-for(let i = 0; i<3; i++)
 									+e.img-slide.swiper-slide
-										+e.img-wrap(href="#")
-											+img('img/header-img-1.png')
+										+e.img-wrap(href=contentArr[i].link target='_blank')
+											+img(`img/${contentArr[i].bannerImg}`)
 					+e.bg-wrap
 						+e.swiper-bg--js.swiper
 							.swiper-wrapper
 								-for(let i = 0; i<3; i++)
 									+e.slide-bg.swiper-slide
-										img(src='img/header-bg-1.jpg' alt='')
+										img(src=`img/${contentArr[i].bg}` alt='')
 			+e.swiper-wrapper.d-none.d-md-block
 				+arrow
 	// end headerBlock
