@@ -42,7 +42,7 @@ mixin headerBlock()
 					+e.swiper-text--js.swiper
 						.swiper-wrapper
 							-for(let i = 0; i<3; i++)
-								+e.slide-txt.swiper-slide
+								+e.slide-txt.swiper-slide(href=contentArr[i].link target='_blank')
 									.h1!= contentArr[i].title
 										!= i
 									p!= contentArr[i].subtitle
@@ -77,7 +77,7 @@ mixin headerBlock()
 								-for(let i = 0; i<3; i++)
 									+e.slide-bg.swiper-slide
 										img(src=`img/${contentArr[i].bg}` alt='')
-			+e.swiper-wrapper.d-none.d-md-block
+			+e.swiper-wrapper
 				+arrow
 	// end headerBlock
 
